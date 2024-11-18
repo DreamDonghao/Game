@@ -11,7 +11,7 @@ namespace sfui {
 
     public:
         MainPage() {
-            setBackgroundColor(sf::Color(100, 1, 2));
+            setBackgroundColor(sf::Color(0, 0, 0));
 
         };
         void init() override {
@@ -43,10 +43,10 @@ namespace sfui {
             }
         }
         void handleEventInput(const sf::Event &windowEvent) override {
+
                 if (windowEvent.key.code == sf::Keyboard::F) {
-                    std::cout << "hello";
+                    
                 }
-            
         }
         // 渲染页面内容到窗口
         void render() override {

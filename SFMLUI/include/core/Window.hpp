@@ -18,12 +18,18 @@ namespace sfui {
     using PageMap = std::unordered_map<Title, PagePtr<Page>>;
     // 窗口大小
     using WindowSize = sf::Vector2u;
+    // 表示窗口状态
+    enum class WindowState {
+        Windowed,  // 窗口模式
+        Fullscreen // 全屏模式
+    };
 
     //窗口类
     class Window {
     public:
 
-        Window(const int &width, const int &heigth);
+        Window(const int &width, const int &heigth, const WindowState &winsowState);
+
         //向该窗口添加页面
         //参数：界面标题 构造界面指针
         void addPage(const Title &pageTitle, PagePtr<Page> page);
@@ -45,16 +51,25 @@ namespace sfui {
         PageMap m_pages;
         Title m_nowPageTitle;
         sf::Event m_event;
+
+        WindowState m_winsowState;
+    private:
         // 更新当前界面的视图
         void updateView();
         // 更新消息，并在收到关闭窗口时将窗口关闭
         void procesMessage();
-        // 实时输入处理
+        // 处理实时输入
         void handleRealTimeInput();
-        // 事件输入处理
+        // 处理事件输入
         void  handleEventInput();
         // 加载并显示界面画面到窗口
         void drawFrame();
+    private:
+        //控制窗口自身的方法
+        void toggleFullscreen();
+
+        void toFullscreen();
+        void toWindowed();
     };
 
 }

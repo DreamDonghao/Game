@@ -4,11 +4,18 @@
 
 namespace sfui {
 
-    Window::Window(const int &width, const int &heigth) {
+    Window::Window(const int &width, const int &heigth, const WindowState &winsowState)
+    :m_winsowState(winsowState){
         sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
         m_maxWindowSize.x = desktopMode.width;
         m_maxWindowSize.y = desktopMode.height;
-        m_window.create(sf::VideoMode(width, heigth), "" );
+        m_windowSize = WindowSize(width, heigth);
+        if (winsowState == WindowState::Windowed) {
+            m_window.create(sf::VideoMode(width, heigth), "");
+        } else {
+            m_window.create(sf::VideoMode::getDesktopMode(),
+                "", sf::Style::Fullscreen);
+        }
     }
 
     void Window::addPage(const Title &pageTitle, PagePtr<Page> page) {
@@ -19,7 +26,7 @@ namespace sfui {
     void Window::startShow(const Title &firstPageTitle) {
         //切换到首界面
         requestPageSwitch(firstPageTitle);
-
+        m_window.setTitle(m_nowPageTitle);
         //持续更新该窗口，直到点击关闭
         while (m_window.isOpen()) {
             // 获取窗口消息
@@ -39,6 +46,10 @@ namespace sfui {
     void Window::handleEventInput() {
         if (m_event.type == sf::Event::Closed) {
             m_window.close();
+        } else if (m_event.type == sf::Event::KeyPressed) {
+            if (m_event.key.code == sf::Keyboard::F11) {
+                toggleFullscreen();
+            }
         }
     }
     void Window::handleRealTimeInput() {
@@ -86,18 +97,24 @@ namespace sfui {
         m_window.setView(m_pages[m_nowPageTitle]->getView());
     }
 
+    void Window::toggleFullscreen() {
+        if (m_winsowState == WindowState::Windowed) {
+            toFullscreen();
+        } else {
+            toWindowed();
+        }
+    }
 
-    //        if (event.type == sf::event::resized) {
-    //            // 动态调整视图
-    //            sf::view view(sf::floatrect(0, 0, event.size.width, event.size.height));
-    //            m_window.setview(view);
-    //        }
-    //    }    
-    //    std::cout << (std::to_string(size.x) + "   " + std::to_string(size.y)) << std::endl;
-    //    
-    //    m_window.clear(m_backbackgroundcolor);
-    //    m_window.draw(sizetext);
-    //    
-    //    m_window.display();
-    ////}
+    void Window::toFullscreen() {
+        m_winsowState = WindowState::Fullscreen;
+        m_windowSize = m_window.getSize();
+        //m_window.close();
+        m_window.create(sf::VideoMode::getDesktopMode(),
+            "", sf::Style::Fullscreen);
+    }
+    void Window::toWindowed() {
+        m_winsowState = WindowState::Windowed;
+        //m_window.close();
+        m_window.create(sf::VideoMode(m_windowSize.x, m_windowSize.y), "");
+    }
 }

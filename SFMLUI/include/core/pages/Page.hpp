@@ -48,7 +48,7 @@ namespace sfui {
         sf::Color m_backgroundColor;
         //界面视图
         sf::View m_view;
-
+        
         //设置界面背景颜色
         void setBackgroundColor(const sf::Color &backgroundColor) {
             m_backgroundColor = backgroundColor;
