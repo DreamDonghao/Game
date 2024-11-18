@@ -1,0 +1,60 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <string>
+#include <Page.hpp>
+#include <unordered_map>
+#include <locale>
+#include <codecvt>
+namespace sfui {
+    // 界面指针
+    template <typename PageType>
+    using PagePtr = std::unique_ptr<PageType>;
+    // 创建界面
+    template <typename PageType, typename... Args>
+    inline PagePtr<PageType> makePage(Args&&... args) {
+        return std::make_unique<PageType>(std::forward<Args>(args)...);
+    }
+    // 标题界面对应表
+    using PageMap = std::unordered_map<Title, PagePtr<Page>>;
+    // 窗口大小
+    using WindowSize = sf::Vector2u;
+
+    //窗口类
+    class Window {
+    public:
+
+        Window(const int &width, const int &heigth);
+        //向该窗口添加页面
+        //参数：界面标题 构造界面指针
+        void addPage(const Title &pageTitle, PagePtr<Page> page);
+        // 开始显示首页面
+        void startShow(const Title &firstPageTitle);
+        
+        // 切换为指定标题界面
+        void requestPageSwitch(const Title &pageTitle);
+
+        sf::RenderWindow &getWindow();
+        // 获取窗口大小
+        const WindowSize getWindowSize();
+
+        const WindowSize &getMaxWindowSize() const;
+    private:
+        sf::RenderWindow m_window;
+        WindowSize m_windowSize;
+        WindowSize m_maxWindowSize;
+        PageMap m_pages;
+        Title m_nowPageTitle;
+        sf::Event m_event;
+        // 更新当前界面的视图
+        void updateView();
+        // 更新消息，并在收到关闭窗口时将窗口关闭
+        void procesMessage();
+        // 实时输入处理
+        void handleRealTimeInput();
+        // 事件输入处理
+        void  handleEventInput();
+        // 加载并显示界面画面到窗口
+        void drawFrame();
+    };
+
+}
