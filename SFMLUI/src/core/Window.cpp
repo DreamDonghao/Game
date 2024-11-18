@@ -36,10 +36,16 @@ namespace sfui {
             drawFrame();
         }
     }
+    //处理窗口和窗口当前界面的消息
     void Window::procesMessage() {
+        // 处理窗口实时消息
         handleRealTimeInput();
+        // 处理页面实时消息
+        m_pages[m_nowPageTitle]->executeKeyPressOnce();
         while (m_window.pollEvent(m_event)) {
+            // 处理窗口事件消息
             handleEventInput();
+            // 处理页面事件消息
             m_pages[m_nowPageTitle]->handleEventInput(m_event);
         }
     }
@@ -53,7 +59,7 @@ namespace sfui {
         }
     }
     void Window::handleRealTimeInput() {
-        m_pages[m_nowPageTitle]->handleRealTimeInput();
+        
     }
     void Window::drawFrame() {
         updateView();

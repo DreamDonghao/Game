@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <locale>
 #include <codecvt>
+#include <ActiveKeyBinding .hpp>
 namespace sfui {
     // 标题
     using Title = std::wstring;
@@ -36,9 +37,11 @@ namespace sfui {
         // 初始化界面
         virtual void init() = 0;
         // 根据绑定窗口的大小来更新界面视图 
-        virtual void updateView() = 0;
+        virtual void updateView() = 0;  
         // 实时输入处理
-        virtual void handleRealTimeInput() = 0;
+        void executeKeyPressOnce() {
+            activeKeyBinding.update();
+        }
         // 事件输入处理
         virtual void handleEventInput(const sf::Event &windowEvent) = 0;
     protected:
@@ -48,6 +51,8 @@ namespace sfui {
         sf::Color m_backgroundColor;
         //界面视图
         sf::View m_view;
+
+        ActiveKeyBinding activeKeyBinding;
         
         //设置界面背景颜色
         void setBackgroundColor(const sf::Color &backgroundColor) {

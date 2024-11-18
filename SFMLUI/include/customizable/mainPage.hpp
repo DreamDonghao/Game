@@ -5,12 +5,12 @@
 #include <iostream>
 
 namespace sfui {
-
-    class MainPage :public InteractivePage {
+    // 测试界面
+    class TestPage :public ControlPage {
     private:
 
     public:
-        MainPage() {
+        TestPage() {
             setBackgroundColor(sf::Color(0, 0, 0));
 
         };
@@ -22,28 +22,13 @@ namespace sfui {
             rectangle.setPosition(0, 0);
             // 设置矩形颜色
             rectangle.setFillColor(sf::Color::Blue); // 填充颜色：蓝色
+            activeKeyBinding.bindKey(Key::A, []() {std::cout << "A\n"; });
         };
     private:
         sf::RectangleShape rectangle;
         sf::Clock clock;
         // 处理事件
-        void handleRealTimeInput() override {
-            float deltaTime = clock.restart().asSeconds();
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-                requestPageSwitch(L"2");
-            }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-                requestPageSwitch(L"1");
-            }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-                mp_window->getWindow().setSize(mp_window->getMaxWindowSize());
-            }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-                rectangle.move(100 * deltaTime, 0);
-            }
-        }
         void handleEventInput(const sf::Event &windowEvent) override {
-
                 if (windowEvent.key.code == sf::Keyboard::F) {
                     
                 }

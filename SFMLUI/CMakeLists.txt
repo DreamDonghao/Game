@@ -12,7 +12,8 @@ include_directories(
     "include"               
     "include/core"          
     "include/customizable"  
-    "include/core/pages"    
+    "include/core/pages"
+    "include/core/message"
 )
 
 # 添加源文件并生成可执行文件 SFMLUI

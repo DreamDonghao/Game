@@ -12,7 +12,8 @@ namespace sfui {
     protected:
         // 根据绑定窗口的大小来更新界面视图
         void updateView() override {
-            m_view.setSize(float(mp_window->getWindowSize().x), float(mp_window->getWindowSize().y));
+            m_view.setSize(float(mp_window->getWindowSize().x), 
+                float(mp_window->getWindowSize().y));
             m_view.setCenter(0, 0);
         }
         // 页面跳转请求
