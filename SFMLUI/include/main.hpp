@@ -2,3 +2,4 @@
 #include "Window.hpp"
 #include <Page.hpp>
 #include <TestPage.hpp>
+#include <ImageItem.hpp>

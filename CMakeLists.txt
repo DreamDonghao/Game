@@ -15,10 +15,7 @@ if (POLICY CMP0141)
 endif()
 
 # 设置项目名称为 "SFMLUI"
-project ("SFMLUI")
+project ("MY")
 
-# 包含名为 "SFMLUI" 的子项目，通常是一个外部库或者模块
+# 包含名为 "SFMLUI" 的子项目
 add_subdirectory ("SFMLUI")
-
-
-add_subdirectory("SFML")
