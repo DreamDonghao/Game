@@ -35,15 +35,26 @@ namespace sfui {
         //获取界面在窗口中的视图
         sf::View &getView() { return m_view; };
         // 初始化界面
-        virtual void init() = 0;
+        void init() {
+            // 初始化界面元素
+            initializePageElements();
+            // 初始化实时消息-事件映射
+            initActiveKeyBinding();
+        }
+        // 初始化界面元素
+        virtual void initializePageElements() = 0;
+        // 初始化实时消息-事件映射
+        virtual void initActiveKeyBinding() = 0;
         // 根据绑定窗口的大小来更新界面视图 
         virtual void updateView() = 0;  
         // 实时输入处理
         void executeKeyPressOnce() {
-            activeKeyBinding.update();
+            m_activeKeyBinding.update();
         }
         // 事件输入处理
         virtual void handleEventInput(const sf::Event &windowEvent) = 0;
+
+        sf::Color getBackgroundColor() const { return m_backgroundColor; }
     protected:
         //界面绑定的窗口
         Window *mp_window = nullptr;
@@ -52,7 +63,7 @@ namespace sfui {
         //界面视图
         sf::View m_view;
 
-        ActiveKeyBinding activeKeyBinding;
+        ActiveKeyBinding m_activeKeyBinding;
         
         //设置界面背景颜色
         void setBackgroundColor(const sf::Color &backgroundColor) {

@@ -4,7 +4,7 @@
 #include <unordered_map>
 
 namespace sfui {
-
+    
     using Key = sf::Keyboard::Key;
     using Action = std::function<void()>;
     // 瞬间消息与事件绑定

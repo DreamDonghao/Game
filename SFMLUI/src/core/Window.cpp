@@ -67,6 +67,7 @@ namespace sfui {
         m_pages[m_nowPageTitle]->updateFrame();
         // 显示当前窗口的画面
         m_window.display();
+        m_window.clear(m_pages[m_nowPageTitle]->getBackgroundColor());
     }
 
     void Window::requestPageSwitch(const Title &pageTitle) {
