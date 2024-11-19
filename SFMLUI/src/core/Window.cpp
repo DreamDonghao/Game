@@ -5,15 +5,15 @@
 namespace sfui {
 
     Window::Window(const int &width, const int &heigth, const WindowState &winsowState)
-    :m_winsowState(winsowState){
+        :m_winsowState(winsowState), m_event() {
         sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
         m_maxWindowSize.x = desktopMode.width;
         m_maxWindowSize.y = desktopMode.height;
         m_windowSize = WindowSize(width, heigth);
         if (winsowState == WindowState::Windowed) {
-            m_window.create(sf::VideoMode(width, heigth), "");
+            m_sfml_renderWindow.create(sf::VideoMode(width, heigth), "");
         } else {
-            m_window.create(sf::VideoMode::getDesktopMode(),
+            m_sfml_renderWindow.create(sf::VideoMode::getDesktopMode(),
                 "", sf::Style::Fullscreen);
         }
     }
@@ -21,14 +21,15 @@ namespace sfui {
     void Window::addPage(const Title &pageTitle, PagePtr<Page> page) {
         m_pages[pageTitle] = move(page);
         m_pages[pageTitle]->setWindow(this);
+        m_pages[pageTitle]->setMouseWindow(&m_sfml_renderWindow);
     }
 
     void Window::startShow(const Title &firstPageTitle) {
         //切换到首界面
         requestPageSwitch(firstPageTitle);
-        m_window.setTitle(m_nowPageTitle);
+        m_sfml_renderWindow.setTitle(m_nowPageTitle);
         //持续更新该窗口，直到点击关闭
-        while (m_window.isOpen()) {
+        while (m_sfml_renderWindow.isOpen()) {
             // 获取窗口消息
             procesMessage();
 
@@ -42,7 +43,7 @@ namespace sfui {
         handleRealTimeInput();
         // 处理页面实时消息
         m_pages[m_nowPageTitle]->executeKeyPressOnce();
-        while (m_window.pollEvent(m_event)) {
+        while (m_sfml_renderWindow.pollEvent(m_event)) {
             // 处理窗口事件消息
             handleEventInput();
             // 处理页面事件消息
@@ -51,7 +52,7 @@ namespace sfui {
     }
     void Window::handleEventInput() {
         if (m_event.type == sf::Event::Closed) {
-            m_window.close();
+            m_sfml_renderWindow.close();
         } else if (m_event.type == sf::Event::KeyPressed) {
             if (m_event.key.code == sf::Keyboard::F11) {
                 toggleFullscreen();
@@ -59,15 +60,15 @@ namespace sfui {
         }
     }
     void Window::handleRealTimeInput() {
-        
+
     }
     void Window::drawFrame() {
         updateView();
         // 更新页面，并把页面的图形加载到窗口
         m_pages[m_nowPageTitle]->updateFrame();
         // 显示当前窗口的画面
-        m_window.display();
-        m_window.clear(m_pages[m_nowPageTitle]->getBackgroundColor());
+        m_sfml_renderWindow.display();
+        m_sfml_renderWindow.clear(m_pages[m_nowPageTitle]->getBackgroundColor());
     }
 
     void Window::requestPageSwitch(const Title &pageTitle) {
@@ -81,27 +82,27 @@ namespace sfui {
         }
 
         m_nowPageTitle = pageTitle;
-        m_window.setTitle(m_nowPageTitle);
+        m_sfml_renderWindow.setTitle(m_nowPageTitle);
         // 初始化界面
         m_pages[m_nowPageTitle]->init();
         // 根据界面视图调整窗口
-        m_window.setView(m_pages[m_nowPageTitle]->getView());
+        m_sfml_renderWindow.setView(m_pages[m_nowPageTitle]->getView());
     }
 
 
     sf::RenderWindow &Window::getWindow() {
-        return m_window;
+        return m_sfml_renderWindow;
     }
 
     const WindowSize Window::getWindowSize() {
-        return m_window.getSize();
+        return m_sfml_renderWindow.getSize();
     }
     const WindowSize &Window::getMaxWindowSize() const {
         return m_maxWindowSize;
     }
     void Window::updateView() {
         m_pages[m_nowPageTitle]->updateView();
-        m_window.setView(m_pages[m_nowPageTitle]->getView());
+        m_sfml_renderWindow.setView(m_pages[m_nowPageTitle]->getView());
     }
 
     void Window::toggleFullscreen() {
@@ -114,14 +115,14 @@ namespace sfui {
 
     void Window::toFullscreen() {
         m_winsowState = WindowState::Fullscreen;
-        m_windowSize = m_window.getSize();
+        m_windowSize = m_sfml_renderWindow.getSize();
         //m_window.close();
-        m_window.create(sf::VideoMode::getDesktopMode(),
+        m_sfml_renderWindow.create(sf::VideoMode::getDesktopMode(),
             "", sf::Style::Fullscreen);
     }
     void Window::toWindowed() {
         m_winsowState = WindowState::Windowed;
         //m_window.close();
-        m_window.create(sf::VideoMode(m_windowSize.x, m_windowSize.y), "");
+        m_sfml_renderWindow.create(sf::VideoMode(m_windowSize.x, m_windowSize.y), "");
     }
 }

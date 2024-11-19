@@ -1,9 +1,13 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 #include <unordered_map>
 #include <locale>
 #include <codecvt>
 #include <ActiveKeyBinding .hpp>
+#include <Mouse.hpp>
+
 namespace sfui {
     // 标题
     using Title = std::wstring;
@@ -32,6 +36,11 @@ namespace sfui {
         void setWindow(Window *const p_window) {
             mp_window = p_window;
         }
+
+        void setMouseWindow(sf::RenderWindow *const p_sfml_RenderWindow) {
+            m_mouse.setWindow(p_sfml_RenderWindow);
+        }
+
         //获取界面在窗口中的视图
         sf::View &getView() { return m_view; };
         // 初始化界面
@@ -62,6 +71,8 @@ namespace sfui {
         sf::Color m_backgroundColor;
         //界面视图
         sf::View m_view;
+
+        Mouse m_mouse;
 
         ActiveKeyBinding m_activeKeyBinding;
         

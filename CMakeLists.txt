@@ -19,3 +19,6 @@ project ("SFMLUI")
 
 # 包含名为 "SFMLUI" 的子项目，通常是一个外部库或者模块
 add_subdirectory ("SFMLUI")
+
+
+add_subdirectory("SFML")

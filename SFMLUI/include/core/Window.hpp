@@ -45,7 +45,7 @@ namespace sfui {
 
         const WindowSize &getMaxWindowSize() const;
     private:
-        sf::RenderWindow m_window;
+        sf::RenderWindow m_sfml_renderWindow;
         WindowSize m_windowSize;
         WindowSize m_maxWindowSize;
         PageMap m_pages;
