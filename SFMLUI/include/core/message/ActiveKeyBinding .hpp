@@ -4,9 +4,11 @@
 #include <unordered_map>
 
 namespace sfui {
-    
+    // 按键消息
     using Key = sf::Keyboard::Key;
+    // 事件
     using Action = std::function<void()>;
+
     // 瞬间消息与事件绑定
     class ActiveKeyBinding {
     public:
