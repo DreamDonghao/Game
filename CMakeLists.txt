@@ -18,4 +18,6 @@ endif()
 project ("MY")
 
 # 包含名为 "SFMLUI" 的子项目
-add_subdirectory ("SFMLUI")
+add_subdirectory (SFMLUI)
+
+add_subdirectory (Game)
