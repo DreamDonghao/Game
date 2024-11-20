@@ -4,33 +4,22 @@
 #include <Window.hpp>
 #include <random>
 #include <iostream>
-#include <SFML/Window/Event.hpp>
-#include <SFML/Window/Keyboard.hpp>
-#include <SFML/Window/Event.hpp>
-#include <SFML/Window/Keyboard.hpp>
-#include <SFML/Graphics/View.hpp>
-#include <SFML/Window/Keyboard.hpp>
-
-#include <SFML/Window/WindowHandle.hpp>
-
-
-#include <SFML/System/Vector2.hpp>
-
-
+#include <TextureItem.hpp>
 #include <cstdint>
 namespace sfui {
     // 测试界面
-    class TestPage :public InteractivePage {
+    class TestPage :public ControlPage {
+    private:
+        TextureItem t;
+        sf::CircleShape circle;
     public:
         TestPage() ://---------------
-            circle(1)
-        
+            circle(1),
+            t("images/Abc.jpg", 10, 10)
         {
             setBackgroundColor(sf::Color(0, 0, 0));
         };
-    private:
-       
-        sf::CircleShape circle;
+    
 
        
         
@@ -56,6 +45,7 @@ namespace sfui {
        
         void render() override { // 渲染页面内容到窗口-----------------------------------------------
             mp_window->getWindow().draw(circle);
+            mp_window->getWindow().draw(t.getSprite());
         }//----------------------------------------------------------------------------------------
     };
 
