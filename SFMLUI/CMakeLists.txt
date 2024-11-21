@@ -1,9 +1,6 @@
 ﻿# 设置最低所需的 CMake 版本为 3.8 或更高
 cmake_minimum_required(VERSION 3.8)
 
-# 设置项目的 C++ 标准为 C++17
-set(CMAKE_CXX_STANDARD 17)
-
 # 项目名称
 project(SFMLUI)
 
@@ -24,6 +21,7 @@ include_directories(
     "include/core/pages"     
     "include/core/message"   
     "include/core/window" 
+    "include/test" 
     "${SFML_DIR}/include"
 )
 
@@ -32,9 +30,8 @@ link_directories(${SFML_DIR}/lib)
 
 # 添加源文件
 add_executable(SFMLUI 
-    "src/core/Window.cpp"      
-    "src/main.cpp"              
-    "src/customizable/mainpage.cpp" 
+    "src/core/window/Window.cpp"      
+    "src/test/main.cpp"              
 )
 
 
@@ -47,7 +44,9 @@ target_link_libraries(SFMLUI
     sfml-window
 )
 
-file(COPY ${SFML_DIR}/bin DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${SFML_DIR}/bin/ DESTINATION ${CMAKE_BINARY_DIR}/SFMLUI)
+
+
 
 
 

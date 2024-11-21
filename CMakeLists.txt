@@ -2,7 +2,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 # 设置 vcpkg 工具链文件的路径，指定使用 vcpkg 来管理第三方库
-set(CMAKE_TOOLCHAIN_FILE "C:/Programs/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+#  set(CMAKE_TOOLCHAIN_FILE "C:/Programs/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
 
 # 如果支持，启用 MSVC 编译器的热重载功能（用于调试时的更高效率）
 if (POLICY CMP0141)
@@ -13,6 +13,9 @@ if (POLICY CMP0141)
   # 对于 Debug 和 RelWithDebInfo 配置，使用 EditAndContinue 或 ProgramDatabase 格式
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
+
+# 设置项目的 C++ 标准为 C++23
+set(CMAKE_CXX_STANDARD 23)
 
 # 设置项目名称为 "SFMLUI"
 project ("MY")
