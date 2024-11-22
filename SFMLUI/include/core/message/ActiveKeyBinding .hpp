@@ -12,20 +12,11 @@ namespace sfui {
     // 瞬间消息与事件绑定
     class ActiveKeyBinding {
     public:
-        ActiveKeyBinding() {};
+        ActiveKeyBinding();
         // 绑定瞬间消息与事件
-        void bindKey(Key key, Action action) {
-            keyBindings[key] = action;
-        }
-
+        void bindKey(Key key, Action action);
         // 检查消息并执行消息对应的事件
-        void update() {
-            for (const auto &[key, action] : keyBindings) {
-                if (sf::Keyboard::isKeyPressed(key)) {
-                    action(); 
-                }
-            }
-        }
+        void update();
 
     private:
         std::unordered_map<Key, Action> keyBindings;

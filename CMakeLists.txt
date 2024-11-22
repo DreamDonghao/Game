@@ -15,7 +15,7 @@ if (POLICY CMP0141)
 endif()
 
 # 设置项目的 C++ 标准为 C++23
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 17)
 
 # 设置项目名称为 "SFMLUI"
 project ("MY")

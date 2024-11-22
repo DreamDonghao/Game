@@ -69,6 +69,7 @@ namespace sfui {
         // 显示当前窗口的画面
         m_sfml_renderWindow.display();
         m_sfml_renderWindow.clear(m_pages[m_nowPageTitle]->getBackgroundColor());
+        
     }
 
     void Window::requestPageSwitch(const Title &pageTitle) {
