@@ -3,6 +3,7 @@
 
 namespace sfui {
     using Position = sf::Vector2i;
+    //  µ ± Û±Í
     class Mouse {
     public:
         Mouse();

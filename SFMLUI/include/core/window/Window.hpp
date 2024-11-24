@@ -36,25 +36,29 @@ namespace sfui {
         //向该窗口添加页面
         //参数：界面标题 构造界面指针
         void addPage(const Title &pageTitle, PagePtr<Page> page);
+
         // 开始显示首页面
         void startShow(const Title &firstPageTitle);
         
         // 切换为指定标题界面
         void requestPageSwitch(const Title &pageTitle);
 
-        sf::RenderWindow &getWindow();
+        //获取sfml的窗口
+        sf::RenderWindow &getSfRenderWindow();
+
         // 获取窗口大小
         const WindowSize getWindowSize();
 
-        const WindowSize &getMaxWindowSize() const;
+        // 获取屏幕分辨率
+        const WindowSize &getScreenSize() const;
+
     private:
         sf::RenderWindow m_sfml_renderWindow;
         WindowSize m_windowSize;
-        WindowSize m_maxWindowSize;
+        WindowSize m_screenSize;
         PageMap m_pages;
         Title m_nowPageTitle;
         sf::Event m_event;
-
         WindowState m_winsowState;
     private:
         // 更新当前界面的视图
@@ -70,8 +74,9 @@ namespace sfui {
     private:
         //控制窗口自身的方法
         void toggleFullscreen();
-
+        // 切换为全屏模式
         void toFullscreen();
+        //切换为窗口模式
         void toWindowed();
     };
 

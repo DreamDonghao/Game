@@ -20,11 +20,13 @@ namespace sfui {
     using viewSize = sf::Vector2f;
     // 使窗口类对界面类可见
     class Window;
+
     // 界面抽象基类
     class Page {
     public:
         // 子类的析构函数为默认析构函数
         virtual ~Page() = default;
+
         //更新界面一帧画面
         void updateFrame() {
             // 根据绑定窗口的大小来更新界面视图
@@ -32,6 +34,7 @@ namespace sfui {
             // 渲染页面内容到窗口
             render();
         }
+
         // 绑定界面与包含它的窗口
         void setWindow(Window *const p_window) {
             mp_window = p_window;
@@ -43,6 +46,7 @@ namespace sfui {
 
         //获取界面在窗口中的视图
         sf::View &getView() { return m_view; };
+
         // 初始化界面
         void init() {
             // 初始化界面元素
@@ -50,16 +54,24 @@ namespace sfui {
             // 初始化实时消息-事件映射
             initActiveKeyBinding();
         }
+
         // 初始化界面元素
         virtual void initializePageElements() = 0;
+
         // 初始化实时消息-事件映射
         virtual void initActiveKeyBinding() = 0;
+
         // 根据绑定窗口的大小来更新界面视图 
         virtual void updateView() = 0;  
+
         // 实时输入处理
         void executeKeyPressOnce() {
             m_activeKeyBinding.update();
         }
+
+        // 更新内容
+        virtual void update() = 0;
+
         // 事件输入处理
         virtual void handleEventInput(const sf::Event &windowEvent) = 0;
 

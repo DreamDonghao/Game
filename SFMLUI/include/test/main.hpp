@@ -3,3 +3,4 @@
 #include <Page.hpp>
 #include <TestPage.hpp>
 #include <TextureItem.hpp>
+#include <EventBinding.hpp>

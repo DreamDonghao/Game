@@ -33,7 +33,9 @@ add_executable(SFMLUI
     "src/core/window/Window.cpp"      
     "src/test/main.cpp"              
     "src/core/message/ActiveKeyBinding .cpp"
- "src/core/message/Mouse.cpp" "src/core/pages/Page.cpp" "src/customizable/components/AnimatedSprite.cpp")
+    "src/core/message/Mouse.cpp" "src/core/pages/Page.cpp" 
+    "src/customizable/components/AnimatedSprite.cpp"
+)
 
 
 # 链接 SFML 的库

@@ -13,8 +13,10 @@ namespace sfui {
     class ActiveKeyBinding {
     public:
         ActiveKeyBinding();
+
         // 绑定瞬间消息与事件
         void bindKey(Key key, Action action);
+
         // 检查消息并执行消息对应的事件
         void update();
 

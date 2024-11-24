@@ -7,8 +7,8 @@ namespace sfui {
     Window::Window(const int &width, const int &heigth, const WindowState &winsowState)
         :m_winsowState(winsowState), m_event() {
         sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
-        m_maxWindowSize.x = desktopMode.width;
-        m_maxWindowSize.y = desktopMode.height;
+        m_screenSize.x = desktopMode.width;
+        m_screenSize.y = desktopMode.height;
         m_windowSize = WindowSize(width, heigth);
         if (winsowState == WindowState::Windowed) {
             m_sfml_renderWindow.create(sf::VideoMode(width, heigth), "");
@@ -16,6 +16,7 @@ namespace sfui {
             m_sfml_renderWindow.create(sf::VideoMode::getDesktopMode(),
                 "", sf::Style::Fullscreen);
         }
+        m_sfml_renderWindow.setVerticalSyncEnabled(true);
     }
 
     void Window::addPage(const Title &pageTitle, PagePtr<Page> page) {
@@ -32,6 +33,9 @@ namespace sfui {
         while (m_sfml_renderWindow.isOpen()) {
             // 获取窗口消息
             procesMessage();
+
+            // 更新界面内容
+            m_pages[m_nowPageTitle]->update();
 
             // 显示一帧的画面
             drawFrame();
@@ -62,6 +66,7 @@ namespace sfui {
     void Window::handleRealTimeInput() {
 
     }
+
     void Window::drawFrame() {
         updateView();
         // 更新页面，并把页面的图形加载到窗口
@@ -91,15 +96,15 @@ namespace sfui {
     }
 
 
-    sf::RenderWindow &Window::getWindow() {
+    sf::RenderWindow &Window::getSfRenderWindow() {
         return m_sfml_renderWindow;
     }
 
     const WindowSize Window::getWindowSize() {
         return m_sfml_renderWindow.getSize();
     }
-    const WindowSize &Window::getMaxWindowSize() const {
-        return m_maxWindowSize;
+    const WindowSize &Window::getScreenSize() const {
+        return m_screenSize;
     }
     void Window::updateView() {
         m_pages[m_nowPageTitle]->updateView();

@@ -1,1 +1,1 @@
-#include <AnimatedSprite.hpp>
+#include <FrameAnimatedSprite.hpp>

@@ -25,6 +25,11 @@ namespace sfui {
             return *this;
         }
 
+        TextureItem(const TextureItem &other)
+            :m_sf_sprite(other.m_sf_sprite),m_sf_texture(other.m_sf_texture) {
+            
+        }
+
 
         bool init(const FilePath &filepath = "images/unspecified.png",
             const int &width = 0, const int &height = 0,
@@ -100,8 +105,8 @@ namespace sfui {
         ~TextureItem() = default;
 
     private: 
-        sf::Sprite m_sf_sprite;
         sf::Texture m_sf_texture;
+        sf::Sprite m_sf_sprite;
     };
 
 
