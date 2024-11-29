@@ -6,7 +6,6 @@ namespace sfui {
     public:
         TextureItem();
 
-
         TextureItem(TextureItem &&other) noexcept;
 
         TextureItem &operator=(TextureItem &&other) noexcept;
@@ -62,6 +61,4 @@ namespace sfui {
         sf::Texture m_sf_texture;
         sf::Sprite m_sf_sprite;
     };
-
-
 }
