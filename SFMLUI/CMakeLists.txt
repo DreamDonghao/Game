@@ -18,6 +18,7 @@ include_directories(
     "include"               
     "include/core"           
     "include/customizable/components"   
+    "include/customizable/controls"   
     "include/core/pages"     
     "include/core/message"   
     "include/core/window" 
@@ -34,8 +35,8 @@ add_executable(SFMLUI
     "src/test/main.cpp"              
     "src/core/message/ActiveKeyBinding .cpp"
     "src/core/message/Mouse.cpp" "src/core/pages/Page.cpp" 
-    "src/customizable/components/AnimatedSprite.cpp"
-)
+    
+ "src/customizable/components/TimeAnimatedSprite.cpp" "src/customizable/components/TextureItem.cpp")
 
 
 # 链接 SFML 的库

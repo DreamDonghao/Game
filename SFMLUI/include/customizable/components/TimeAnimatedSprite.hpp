@@ -1,59 +1,31 @@
 #pragma once
-
+#include <TextureItem.hpp>
 namespace sfui {
 
 	class TimeAnimatedSprite {
 	public:
-		TimeAnimatedSprite() {}
+        TimeAnimatedSprite();
 
         // 初始化循环动图的持续帧，大小，坐标
         bool init(const float &continuationtTime,
-            const int &width, const int &height, const int &x, const int &y) {
-            m_continuationTime = sf::seconds(continuationtTime);
-            m_width = width;
-            m_height = height;
-            m_x = x;
-            m_y = y;
-            return true;
-        }
+            const int &width, const int &height, const float &x, const float &y);
 
         // 添加循环播放的图片
-        void addTextureItems(const FilePath &filepath) {
-            m_textureItems.emplace_back().init(filepath, m_width, m_height, m_x, m_y);
-        }
+        void addTextureItems(const FilePath &filepath);
 
-        //设置大小和坐标
+        //重新设置大小和坐标
         void set(const float &continuationtTime,
-            const int &width, const int &height, const int &x, const int &y) {
-            m_continuationTime = sf::seconds(continuationtTime);
-            m_width = width;
-            m_height = height;
-            m_x = x;
-            m_y = y;;
-            for (auto &textureItem : m_textureItems) {
-                textureItem.setPosition(m_x, m_y);
-                textureItem.setShowSize(m_width, m_height);
-            }
-        }
+            const int &width, const int &height, const float &x, const float &y);
 
-        // 获取加载内容
-        const sf::Sprite &getSprite() {
-            if (m_clock.getElapsedTime()>=m_continuationTime) {
-                m_clock.restart();
-                ++m_nowTextureItemsIndex;
-                if (m_nowTextureItemsIndex == m_textureItems.size()) {
-                    m_nowTextureItemsIndex = 0;
-                }
-            }
-            return m_textureItems[m_nowTextureItemsIndex].getSprite();
-        }
+        // 获取加载内容,每次获取切换为下一个图片,最后一个图片的下一个为第一个图片
+        const sf::Sprite &getSprite();
 
     private:
         std::vector< TextureItem> m_textureItems;
-        int m_x;
-        int m_y;
-        int m_width;
-        int m_height;
+        float m_x = 0.0;
+        float m_y = 0.0;
+        int m_width = 0;
+        int m_height = 0;
         std::size_t m_nowTextureItemsIndex = 0;
         sf::Clock m_clock;
         sf::Time m_continuationTime;

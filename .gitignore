@@ -1,2 +1,6 @@
 /out
 /.vs
+/SFMLUI/html
+/SFMLUI/latex
+SFMLUI/custom.css
+SFMLUI/Doxyfile

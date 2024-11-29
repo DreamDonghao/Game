@@ -1,7 +1,5 @@
 #include <Page.hpp>
-#include <Window.hpp>
-#include <iostream>
-#include <Windows.h>
+
 namespace sfui {
     // 动态或实时更新的交互页面
     // 界面视图大小为窗口大小

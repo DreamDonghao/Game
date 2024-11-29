@@ -1,6 +1,6 @@
 #pragma once
 #include <TextureItem.hpp>
-#include <iostream>
+
 namespace sfui {
 
     // 窗口帧率循环动图
@@ -10,7 +10,7 @@ namespace sfui {
 
         // 初始化循环动图的持续帧，大小，坐标
         bool init(const size_t &continuationFrame,
-            const int &width, const int &height,const int &x,const int &y) {
+            const int &width, const int &height,const float &x,const float &y) {
             m_continuationFrame = continuationFrame;
             m_width = width;
             m_height = height;
@@ -26,7 +26,7 @@ namespace sfui {
 
         //设置大小和坐标
         void set(const size_t &continuationFrame,
-            const int &width, const int &height, const int &x, const int &y) {
+            const int &width, const int &height, const float &x, const float &y) {
             m_continuationFrame = continuationFrame;
             m_width = width;
             m_height = height;
@@ -53,10 +53,10 @@ namespace sfui {
 
     private:
         std::vector< TextureItem> m_textureItems;
-        int m_x;
-        int m_y;
-        int m_width;
-        int m_height;
+        float m_x = 0.0;
+        float m_y = 0.0;
+        int m_width = 0;
+        int m_height = 0;
         std::size_t m_frame = 0;
         std::size_t m_nowTextureItemsIndex = 0;
         std::size_t m_continuationFrame = 0;
