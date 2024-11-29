@@ -5,6 +5,7 @@
 #include <ActiveKeyBinding .hpp>
 #include <Mouse.hpp>
 #include <windows.h>
+#include <EventBinding.hpp>
 
 namespace sfui {
     // 标题
@@ -42,11 +43,15 @@ namespace sfui {
         // 初始化实时消息-事件映射
         virtual void initActiveKeyBinding() = 0;
 
+        virtual void initEventBinding() = 0;
+
         // 根据绑定窗口的大小来更新界面视图 
         virtual void updateView() = 0;
 
         // 实时输入处理
         void executeKeyPressOnce();
+
+        void executeEventBinding();
 
         // 更新界面内容
         virtual void update() = 0;
@@ -68,6 +73,9 @@ namespace sfui {
         Mouse m_mouse;
         // 按键事件绑定
         ActiveKeyBinding m_activeKeyBinding;
+
+        // 消息事件绑定
+        EvectBingding m_eventBinding;
 
         //设置界面背景颜色
         void setBackgroundColor(const sf::Color &backgroundColor);

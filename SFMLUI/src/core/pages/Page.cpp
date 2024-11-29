@@ -33,10 +33,13 @@ namespace sfui {
         initializePageElements();
         // 初始化实时消息-事件映射
         initActiveKeyBinding();
+
+        initEventBinding();
     }
 
     void Page::executeKeyPressOnce() {
         m_activeKeyBinding.update();
+        
     }
 
     sf::Color Page::getBackgroundColor() const { return m_backgroundColor; }

@@ -3,6 +3,7 @@
 #include <InteractivePage.hpp>
 #include <FrameAnimatedSprite.hpp>
 #include <TimeAnimatedSprite.hpp>
+
 namespace sfui {
     // 测试界面
     class TestPage :public ControlPage {
@@ -20,16 +21,16 @@ namespace sfui {
 
         }//----------------------------------------------------------------------------------------
 
-        void initActiveKeyBinding()override {//初始化实时消息-事件映射-------------------------------
+        void initActiveKeyBinding() override {//初始化实时消息-事件映射-------------------------------
            
         }//----------------------------------------------------------------------------------------
 
+        void initEventBinding() override {
+            m_eventBinding.bindEvent(Key::A, []() {std::printf("A"); });
+        }
+
         void handleEventInput(const sf::Event &windowEvent) override {//处理事件消息----------------
-            if (windowEvent.type == sf::Event::EventType::KeyPressed) {
-                if (windowEvent.key.code == sf::Keyboard::A) {
-                   
-                }
-            }
+            m_eventBinding.update(windowEvent);
         }//----------------------------------------------------------------------------------------
 
         void update() override {
@@ -40,8 +41,6 @@ namespace sfui {
            
            
             
-            
-          
         }//----------------------------------------------------------------------------------------
     };
 }
