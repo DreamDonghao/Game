@@ -18,7 +18,6 @@ namespace sfui {
         // 绑定瞬间消息与事件
         void bindEvent(Key key, Action action) {
             m_keyBindings[key] = action;
-            m_keyBindings[Key::A]();
         }
         void bindEvent(sf::Mouse::Button mouseButton, Button::ButtonArea buttonArea, Action action) {
             m_mouseBindings[mouseButton].push_back(std::make_pair(buttonArea, action));
@@ -42,14 +41,7 @@ namespace sfui {
                     }
                 }
             }
-
         }
-
-        void update(sf::RenderWindow &window, sf::Event &sf_event) {
-
-        }
-
-        void handleClosed();
 
     private:
 

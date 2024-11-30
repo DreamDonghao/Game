@@ -31,19 +31,21 @@ namespace sfui {
         // 为界面鼠标绑定窗口
         void setMouseWindow(sf::RenderWindow *const p_sfml_RenderWindow);
 
-        //获取界面在窗口中的视图
-        sf::View &getView();
-
         // 初始化界面
         void init();
 
         // 初始化界面元素
         virtual void initializePageElements() = 0;
 
-        // 初始化实时消息-事件映射
-        virtual void initActiveKeyBinding() = 0;
+       // 初始化消息与事件绑定
+        virtual void initMessageBinding() = 0;
 
-        virtual void initEventBinding() = 0;
+        // 事件映射
+        void activeMap(Key key, Action action);
+
+        // 消息映射
+        void eventMap(Key key, Action action);
+        void eventMap(sf::Mouse::Button mouseButton, Button::ButtonArea buttonArea, Action action);
 
         // 根据绑定窗口的大小来更新界面视图 
         virtual void updateView() = 0;
@@ -51,13 +53,14 @@ namespace sfui {
         // 实时输入处理
         void executeKeyPressOnce();
 
-        void executeEventBinding();
+        // 事件输入处理
+        void executeEventBinding(const sf::Event event);
 
         // 更新界面内容
         virtual void update() = 0;
 
         // 事件输入处理
-        virtual void handleEventInput(const sf::Event &windowEvent) = 0;
+        //virtual void handleEventInput(const sf::Event &windowEvent) = 0;
 
         //获取界面背景颜色
         sf::Color getBackgroundColor() const;
@@ -67,8 +70,7 @@ namespace sfui {
         Window *mp_window = nullptr;
         // 界面背景颜色
         sf::Color m_backgroundColor;
-        // 界面视图
-        sf::View m_view;
+       
         // 鼠标
         Mouse m_mouse;
         // 按键事件绑定
@@ -84,7 +86,7 @@ namespace sfui {
         virtual void render() = 0;
 
         // 界面跳转请求（由子类调用）
-        virtual void requestPageSwitch(const Title &targetPageTitle) = 0;
+        void requestPageSwitch(const Title &targetPageTitle);
     };
 
 }

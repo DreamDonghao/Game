@@ -33,6 +33,8 @@ namespace sfui {
 
         Window(const int &width, const int &heigth, const WindowState &winsowState);
 
+        bool init(const int &framerateLimit, const bool &verticalSyncEnabled);
+
         //向该窗口添加页面
         void addPage(const Title &pageTitle, PagePtr<Page> page);
 
@@ -59,6 +61,8 @@ namespace sfui {
         Title m_nowPageTitle;
         sf::Event m_event;
         WindowState m_winsowState;
+        int m_framerateLimit = 60;// 刷新率
+        bool m_verticalSyncEnabled = false;// 垂直同步是否开启
 
         // 更新当前界面的视图
         void updateView();

@@ -1,5 +1,5 @@
 #include <Page.hpp>
-
+#include <Window.hpp>
 namespace sfui {
     Title TitleName(const std::string &str) {
         int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), nullptr, 0);
@@ -24,27 +24,40 @@ namespace sfui {
         m_mouse.setWindow(p_sfml_RenderWindow);
     }
 
-    sf::View &Page::getView() {
-        return m_view;
-    };
 
     void Page::init() {
         // 初始化界面元素
         initializePageElements();
-        // 初始化实时消息-事件映射
-        initActiveKeyBinding();
+       
+        initMessageBinding();
+    }
 
-        initEventBinding();
+    void Page::activeMap(Key key, Action action) {
+        m_activeKeyBinding.bindKey(key, action);
+    }
+
+    void Page::eventMap(Key key, Action action) {
+        m_eventBinding.bindEvent(key, action);
+    }
+    void Page::eventMap(sf::Mouse::Button mouseButton, Button::ButtonArea buttonArea, Action action) {
+        m_eventBinding.bindEvent(mouseButton, buttonArea, action);
     }
 
     void Page::executeKeyPressOnce() {
         m_activeKeyBinding.update();
         
     }
+    void Page::executeEventBinding(const sf::Event event) {
+        m_eventBinding.update(event);
+    }
 
     sf::Color Page::getBackgroundColor() const { return m_backgroundColor; }
 
     void Page::setBackgroundColor(const sf::Color &backgroundColor) {
         m_backgroundColor = backgroundColor;
+    }
+
+    void Page::requestPageSwitch(const Title &targetPageTitle) {
+        mp_window->requestPageSwitch(targetPageTitle);
     }
 }

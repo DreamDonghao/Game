@@ -15,7 +15,7 @@ if (POLICY CMP0141)
 endif()
 
 # 设置项目的 C++ 标准为 C++23
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 26)
 
 #set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Ox /fp:fast")
 

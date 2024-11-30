@@ -16,7 +16,14 @@ namespace sfui {
             m_sf_renderWindow.create(sf::VideoMode::getDesktopMode(),
                 "", sf::Style::Fullscreen);
         }
-        m_sf_renderWindow.setVerticalSyncEnabled(true);
+    }
+
+    bool Window::init(const int &framerateLimit, const bool &verticalSyncEnabled){
+        m_framerateLimit = framerateLimit;
+        m_verticalSyncEnabled = verticalSyncEnabled;
+        m_sf_renderWindow.setVerticalSyncEnabled(m_verticalSyncEnabled);
+        m_sf_renderWindow.setFramerateLimit(m_framerateLimit);
+        return false;
     }
 
     void Window::addPage(const Title &pageTitle, PagePtr<Page> page) {
@@ -51,7 +58,7 @@ namespace sfui {
             // 处理窗口事件消息
             handleEventInput();
             // 处理页面事件消息
-            m_pages[m_nowPageTitle]->handleEventInput(m_event);
+            m_pages[m_nowPageTitle]->executeEventBinding(m_event);
         }
     }
     void Window::handleEventInput() {
@@ -91,8 +98,6 @@ namespace sfui {
         m_sf_renderWindow.setTitle(m_nowPageTitle);
         // 初始化界面
         m_pages[m_nowPageTitle]->init();
-        // 根据界面视图调整窗口
-        m_sf_renderWindow.setView(m_pages[m_nowPageTitle]->getView());
     }
 
 
@@ -108,7 +113,7 @@ namespace sfui {
     }
     void Window::updateView() {
         m_pages[m_nowPageTitle]->updateView();
-        m_sf_renderWindow.setView(m_pages[m_nowPageTitle]->getView());
+        //m_sf_renderWindow.setView(m_pages[m_nowPageTitle]->getView());
     }
 
     void Window::toggleFullscreen() {
@@ -125,10 +130,14 @@ namespace sfui {
         //m_window.close();
         m_sf_renderWindow.create(sf::VideoMode::getDesktopMode(),
             "", sf::Style::Fullscreen);
+        m_sf_renderWindow.setVerticalSyncEnabled(m_verticalSyncEnabled);
+        m_sf_renderWindow.setFramerateLimit(m_framerateLimit);
     }
     void Window::toWindowed() {
         m_winsowState = WindowState::Windowed;
         //m_window.close();
         m_sf_renderWindow.create(sf::VideoMode(m_windowSize.x, m_windowSize.y), "");
+        m_sf_renderWindow.setVerticalSyncEnabled(m_verticalSyncEnabled);
+        m_sf_renderWindow.setFramerateLimit(m_framerateLimit);
     }
 }
