@@ -5,6 +5,8 @@
 #include <FrameAnimatedSprite.hpp>
 #include <TimeAnimatedSprite.hpp>
 #include <print>
+#include <Interactive.hpp>
+
 namespace sfui {
     // 测试界面
     class TestPage :public ComplexPage {
@@ -12,6 +14,7 @@ namespace sfui {
         TextureItem image2;
         Button WindowButton;
         Button ViewButton;
+        Interactive ib;
         float x = 0;
         float y = 0;
     public:
@@ -26,17 +29,21 @@ namespace sfui {
             setViewCenter(x, y);
             WindowButton.init(0, 0, 300, 300, "images/unspecified.png");
             ViewButton.init(0, 0, 300, 300, "images/unspecified.png");
+            ib.init(0, 0, 500, 500, "images/unspecified.png");
         }
 
         // 初始化消息-事件映射
         void initMessageBinding() override {
-            eventMap(Key::A, []() {std::println("A"); });
-            eventMap(sf::Mouse::Button::Left, WindowButton.getButtonArea(), []() {std::println("button"); });
+            
+            eventMap(sf::Mouse::Button::Left, WindowButton.getArea(), []() {std::println("button"); });
             activeMap(Key::B, [&]() {std::println("B"); });
             activeMap(Key::W, [&]() { --y; });
             activeMap(Key::A, [&]() { --x; });
             activeMap(Key::S, [&]() { ++y; });
             activeMap(Key::D, [&]() { ++x; });
+            eventMap(sf::Mouse::Button::Left, ib.getArea(), []() {std::println("interActive"); });
+            eventMap(Key::P, [&]() {requestPageSwitch(TitleName("2")); });
+            eventMap(Key::O, [&]() {requestPageSwitch(TitleName("1")); });
         }
 
         // 执行界面逻辑
@@ -44,6 +51,7 @@ namespace sfui {
             //std::println("{} {}", x, y);
             image2.setPosition(x, y);
             setViewCenter(x, y);
+            ib.updateArea(x, y,getWindowSize().x,getWindowSize().y);
         }
 
         // 渲染页面内容到窗口
@@ -51,7 +59,7 @@ namespace sfui {
            drawForView(image);
            drawForView(image2);
            drawForWindow(WindowButton);
-          
+           drawForView(ib);
         }
     };
 }

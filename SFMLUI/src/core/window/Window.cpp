@@ -1,7 +1,7 @@
 #include <Window.hpp>
-#include <iostream>
+#include <print>
 #include <Windows.h>
-
+#include <iostream>
 namespace sfui {
 
     Window::Window(const int &width, const int &heigth, const WindowState &winsowState)
@@ -58,7 +58,7 @@ namespace sfui {
             // 处理窗口事件消息
             handleEventInput();
             // 处理页面事件消息
-            m_pages[m_nowPageTitle]->executeEventBinding(m_event);
+           m_pages[m_nowPageTitle]->executeEventBinding(m_event);
         }
     }
     void Window::handleEventInput() {
@@ -71,7 +71,7 @@ namespace sfui {
         }
     }
     void Window::handleRealTimeInput() {
-
+        
     }
 
     void Window::drawFrame() {

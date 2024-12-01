@@ -10,6 +10,7 @@ namespace sfui {
 
     using Key = sf::Keyboard::Key;
 
+    using MouseButton = sf::Mouse::Button;
 
     class EvectBingding {
     public:
@@ -19,8 +20,8 @@ namespace sfui {
         void bindEvent(Key key, Action action) {
             m_keyBindings[key] = action;
         }
-        void bindEvent(sf::Mouse::Button mouseButton, Button::ButtonArea buttonArea, Action action) {
-            m_mouseBindings[mouseButton].push_back(std::make_pair(buttonArea, action));
+        void bindEvent(MouseButton mouseButton,Area *const area, Action action) {
+            m_mouseBindings[mouseButton].push_back(std::make_pair(area, action));
         }
         // 检查消息并执行消息对应的事件
         void update(sf::Event event) {
@@ -36,7 +37,7 @@ namespace sfui {
             // 处理按钮点击事件
             if (event.type == sf::Event::MouseButtonPressed) {
                 for (const auto &[buttonArea, action] : m_mouseBindings[event.mouseButton.button]) {
-                    if (buttonArea.isInButtonArea(event.mouseButton.x, event.mouseButton.y)) {
+                    if (buttonArea->isInArea(event.mouseButton.x, event.mouseButton.y)) {
                         action();
                     }
                 }
@@ -48,7 +49,7 @@ namespace sfui {
         std::unordered_map<Key, Action> m_keyBindings;  // 键盘按键与事件的映射
 
 
-        std::unordered_map<sf::Mouse::Button, std::vector<std::pair<Button::ButtonArea, Action>>> m_mouseBindings;
+        std::unordered_map<sf::Mouse::Button, std::vector<std::pair<Area*, Action>>> m_mouseBindings;
 
     };
 }

@@ -32,6 +32,8 @@ namespace sfui {
     public:
 
         Window(const int &width, const int &heigth, const WindowState &winsowState);
+        ~Window() = default;
+
 
         bool init(const int &framerateLimit, const bool &verticalSyncEnabled);
 

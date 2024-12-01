@@ -1,46 +1,40 @@
 #pragma once
-#include <TextureItem.hpp>
-#include <Area.hpp>
+#include <print>
 namespace sfui {
-    // 按钮
-    class Button {
+
+    class Interactive {
     public:
-        // 按钮的区域
-
-
-        Button() {}
-
-        ~Button() {}
-
-        // 初始化
         bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath) {
             m_x = x;
             m_y = y;
             m_width = width;
             m_height = heigth;
             m_textureItem.init(filepath, m_width, m_height, m_x, m_y);
-            m_area.init(static_cast<int>(m_x),
-                static_cast<int>(m_y),
-                static_cast<int>(m_x + m_width),
-                static_cast<int>(m_x + m_height));
             return true;
         }
-
         //获取按钮区域
         Area *const getArea() {
             return &m_area;
+            
+        }
+        void updateArea(const float x, const float y,const unsigned width,const unsigned height) {
+            m_area.init(
+                m_x - x+width/2, 
+                m_y - y+height/2,
+                m_x - x + m_width+ width / 2,
+                m_y - y + m_height+height / 2
+            );
         }
         const sf::Sprite getSprite()const {
             return m_textureItem.getSprite();
         }
-
-    protected:
+    private:
         float m_x = 0.0;
         float m_y = 0.0;
         int m_width = 0;
         int m_height = 0;
         Area m_area;
-        
+        sf::RenderWindow *m_sf_window_p = nullptr;
 
         TextureItem m_textureItem;
     };

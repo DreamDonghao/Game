@@ -12,6 +12,14 @@ namespace sfui {
             InteractivePage::updateView();
         }
 
+        sf::View getWindowView() {
+            return InteractivePage::m_view;
+        }
+
+        sf::View getWorldView() {
+            return ControlPage::m_view;
+        }
+
         // 以窗口为依据绘制
         template<typename DrawObject>
         void drawForWindow(const DrawObject &drawObject ) {

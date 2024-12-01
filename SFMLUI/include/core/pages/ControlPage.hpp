@@ -7,7 +7,7 @@ namespace sfui {
     // (0,0)Îª×óÉÏ½Ç
     class ControlPage :virtual public Page {
     public:
-       
+        
     protected:
         sf::View m_view;
        

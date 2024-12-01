@@ -14,7 +14,12 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-# 设置项目的 C++ 标准为 C++23
+if(MSVC)
+    add_definitions(-D_CRTDBG_MAP_ALLOC)  # 启用堆调试
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /RTC1")  # 启用运行时检查
+endif()
+
+# 设置项目的 C++ 标准为 C++26
 set(CMAKE_CXX_STANDARD 26)
 
 #set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Ox /fp:fast")

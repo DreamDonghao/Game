@@ -6,7 +6,7 @@
 #include <Mouse.hpp>
 #include <windows.h>
 #include <EventBinding.hpp>
-
+#include <iostream>
 namespace sfui {
     // 标题
     using Title = std::wstring;
@@ -22,6 +22,9 @@ namespace sfui {
     // 界面抽象基类
     class Page {
     public:
+        // 虚析构函数
+        virtual ~Page() = default;
+
         //更新界面一帧画面
         void updateFrame();
 
@@ -45,7 +48,7 @@ namespace sfui {
 
         // 消息映射
         void eventMap(Key key, Action action);
-        void eventMap(sf::Mouse::Button mouseButton, Button::ButtonArea buttonArea, Action action);
+        void eventMap(sf::Mouse::Button mouseButton, Area* area, Action action);
 
         // 根据绑定窗口的大小来更新界面视图 
         virtual void updateView() = 0;

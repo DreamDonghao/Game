@@ -39,8 +39,8 @@ namespace sfui {
     void Page::eventMap(Key key, Action action) {
         m_eventBinding.bindEvent(key, action);
     }
-    void Page::eventMap(sf::Mouse::Button mouseButton, Button::ButtonArea buttonArea, Action action) {
-        m_eventBinding.bindEvent(mouseButton, buttonArea, action);
+    void Page::eventMap(sf::Mouse::Button mouseButton,Area *const area, Action action) {
+        m_eventBinding.bindEvent(mouseButton, area, action);
     }
 
     void Page::executeKeyPressOnce() {
