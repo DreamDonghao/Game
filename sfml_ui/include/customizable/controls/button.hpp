@@ -8,7 +8,7 @@ namespace sfui {
         // °´Å¥µÄÇøÓò
 
 
-        Button() {}
+        Button():m_area() {}
 
         ~Button() {}
 
@@ -19,10 +19,8 @@ namespace sfui {
             m_width = width;
             m_height = heigth;
             m_textureItem.init(filepath, m_width, m_height, m_x, m_y);
-            m_area.init(static_cast<int>(m_x),
-                static_cast<int>(m_y),
-                static_cast<int>(m_x + m_width),
-                static_cast<int>(m_x + m_height));
+            m_area.init(m_x,m_y,
+                m_x + m_width,m_x + m_height);
             return true;
         }
 
@@ -30,7 +28,7 @@ namespace sfui {
         Area *const getArea() {
             return &m_area;
         }
-        const sf::Sprite getSprite()const {
+        const sf::Sprite &getSprite()const {
             return m_textureItem.getSprite();
         }
 

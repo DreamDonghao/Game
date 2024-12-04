@@ -1,33 +1,62 @@
 ﻿# 指定最低的 CMake 版本要求，这里要求版本 3.8 或更高
 cmake_minimum_required (VERSION 3.8)
 
-# 设置 vcpkg 工具链文件的路径，指定使用 vcpkg 来管理第三方库
-#  set(CMAKE_TOOLCHAIN_FILE "C:/Programs/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
-
 # 如果支持，启用 MSVC 编译器的热重载功能（用于调试时的更高效率）
-if (POLICY CMP0141)
+if(POLICY CMP0141)
   # 设置 CMake 策略 CMP0141 为 NEW，启用热重载功能
   cmake_policy(SET CMP0141 NEW)
-  
-  # 设置 MSVC 编译器的调试信息格式为 EditAndContinue（支持热重载）
-  # 对于 Debug 和 RelWithDebInfo 配置，使用 EditAndContinue 或 ProgramDatabase 格式
-  set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
-endif()
-
-if(MSVC)
-    add_definitions(-D_CRTDBG_MAP_ALLOC)  # 启用堆调试
-    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /RTC1")  # 启用运行时检查
-endif()
+endif()  # 确保 endif() 正确关闭
 
 # 设置项目的 C++ 标准为 C++26
 set(CMAKE_CXX_STANDARD 26)
 
-#set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Ox /fp:fast")
+# 设置项目名称为 "GAME"
+project (GAME)
 
-# 设置项目名称为 "SFMLUI"
-project ("MY")
+# 设置 SFML动态库 路径
+set(SFML_DIR sfml_ui/SFML)
 
-# 包含名为 "SFMLUI" 的子项目
-add_subdirectory (SFMLUI)
+set(SFMLUI_INCLUDE sfml_ui/include)
+# 添加项目的头文件目录
+include_directories(              
+    "${SFMLUI_INCLUDE}/core"
+    "${SFMLUI_INCLUDE}/customizable/components"   
+    "${SFMLUI_INCLUDE}/customizable/controls"   
+    "${SFMLUI_INCLUDE}/core/pages"     
+    "${SFMLUI_INCLUDE}/core/message"   
+    "${SFMLUI_INCLUDE}/core/window" 
+    "${SFMLUI_INCLUDE}/test" 
+    "${SFML_DIR}/include"
+)
 
-add_subdirectory (Game)
+# 添加 SFML 的库文件路径
+link_directories(${SFML_DIR}/lib)
+
+# 添加源文件
+add_executable(GAME 
+    "sfml_ui/src/core/window/Window.cpp"      
+    "sfml_ui/src/test/main.cpp"              
+    "sfml_ui/src/core/message/ActiveKeyBinding .cpp"
+    "sfml_ui/src/core/message/Mouse.cpp" 
+    "sfml_ui/src/core/pages/Page.cpp" 
+    "sfml_ui/src/customizable/components/TimeAnimatedSprite.cpp" 
+    "sfml_ui/src/customizable/components/TextureItem.cpp" 
+    "sfml_ui/src/core/message/EventBinding.cpp"
+)
+
+# 链接 SFML 的库
+target_link_libraries(GAME
+    sfml-audio
+    sfml-graphics
+    sfml-network
+    sfml-system
+    sfml-window
+)
+
+file(COPY ${SFML_DIR}/bin/ DESTINATION ${CMAKE_BINARY_DIR}/)
+
+# 设置资源文件路径
+set(ASSETS_DIR assets)
+
+# 将资源文件复制到构建目录中
+file(COPY ${ASSETS_DIR}/images DESTINATION ${CMAKE_BINARY_DIR}/)

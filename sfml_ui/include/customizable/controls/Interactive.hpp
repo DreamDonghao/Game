@@ -4,7 +4,9 @@ namespace sfui {
 
     class Interactive {
     public:
-        bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath) {
+        Interactive() :m_area(), m_textureItem() {}
+        bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath)
+        {
             m_x = x;
             m_y = y;
             m_width = width;
@@ -25,7 +27,7 @@ namespace sfui {
                 m_y - y + m_height+height / 2
             );
         }
-        const sf::Sprite getSprite()const {
+        const sf::Sprite &getSprite()const {
             return m_textureItem.getSprite();
         }
     private:

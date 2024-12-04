@@ -1,12 +1,10 @@
 #pragma once
-#include <ControlPage.hpp>
-#include <InteractivePage.hpp>
 #include <ComplexPage.hpp>
 #include <FrameAnimatedSprite.hpp>
 #include <TimeAnimatedSprite.hpp>
 #include <print>
 #include <Interactive.hpp>
-
+#include <SFML/Network.hpp>
 namespace sfui {
     // 测试界面
     class TestPage :public ComplexPage {
@@ -18,9 +16,7 @@ namespace sfui {
         float x = 0;
         float y = 0;
     public:
-        TestPage() {
-
-        };
+        TestPage() = default;
 
         // 初始化界面元素
         void initializePageElements() override {

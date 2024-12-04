@@ -4,7 +4,7 @@ namespace sfui {
 
     class Area {
     public:
-        bool init(const int left, const int up, const int rigth, const int lower) {
+        bool init(const float left, const float up, const float rigth, const float lower) {
             m_left = left;
             m_up = up;
             m_right = rigth;
@@ -21,9 +21,9 @@ namespace sfui {
         }
 
     private:
-        int m_left;
-        int m_up;
-        int m_right;
-        int m_lower;
+        float m_left;
+        float m_up;
+        float m_right;
+        float m_lower;
     };
 }
