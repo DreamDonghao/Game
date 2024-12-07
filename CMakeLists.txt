@@ -3,20 +3,18 @@ cmake_minimum_required (VERSION 3.8)
 
 # 如果支持，启用 MSVC 编译器的热重载功能（用于调试时的更高效率）
 if(POLICY CMP0141)
-  # 设置 CMake 策略 CMP0141 为 NEW，启用热重载功能
   cmake_policy(SET CMP0141 NEW)
-endif()  # 确保 endif() 正确关闭
+endif() 
 
-# 设置项目的 C++ 标准为 C++26
 set(CMAKE_CXX_STANDARD 26)
 
-# 设置项目名称为 "GAME"
 project (GAME)
 
 # 设置 SFML动态库 路径
-set(SFML_DIR sfml_ui/SFML)
+set(SFML_DIR _library/sfml)
 
 set(SFMLUI_INCLUDE sfml_ui/include)
+
 # 添加项目的头文件目录
 include_directories(              
     "${SFMLUI_INCLUDE}/core"
@@ -27,21 +25,28 @@ include_directories(
     "${SFMLUI_INCLUDE}/core/window" 
     "${SFMLUI_INCLUDE}/test" 
     "${SFML_DIR}/include"
+    
+    "game/include/"
 )
 
 # 添加 SFML 的库文件路径
 link_directories(${SFML_DIR}/lib)
-
+# 设置库文件目录
+#link_directories("_library/box2d/lib")
 # 添加源文件
 add_executable(GAME 
     "sfml_ui/src/core/window/Window.cpp"      
-    "sfml_ui/src/test/main.cpp"              
+    #"sfml_ui/src/test/main.cpp"              
     "sfml_ui/src/core/message/ActiveKeyBinding .cpp"
+
     "sfml_ui/src/core/message/Mouse.cpp" 
     "sfml_ui/src/core/pages/Page.cpp" 
     "sfml_ui/src/customizable/components/TimeAnimatedSprite.cpp" 
     "sfml_ui/src/customizable/components/TextureItem.cpp" 
     "sfml_ui/src/core/message/EventBinding.cpp"
+
+    "game/src/main.cpp"
+
 )
 
 # 链接 SFML 的库
@@ -55,6 +60,11 @@ target_link_libraries(GAME
 
 file(COPY ${SFML_DIR}/bin/ DESTINATION ${CMAKE_BINARY_DIR}/)
 
+
+
+
+# 链接 Box2D 静态库
+#target_link_libraries(GAME box2d)
 # 设置资源文件路径
 set(ASSETS_DIR assets)
 

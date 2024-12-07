@@ -1,7 +1,10 @@
 #include <Window.hpp>
 #include <print>
-#include <Windows.h>
 #include <iostream>
+#include <stdexcept>
+#include <type_traits>
+#include <Page.hpp>
+
 namespace sfui {
 
     Window::Window(const int &width, const int &heigth, const WindowState &winsowState)
@@ -18,7 +21,7 @@ namespace sfui {
         }
     }
 
-    bool Window::init(const int &framerateLimit, const bool &verticalSyncEnabled){
+    bool Window::init(const int &framerateLimit, const bool &verticalSyncEnabled) {
         m_framerateLimit = framerateLimit;
         m_verticalSyncEnabled = verticalSyncEnabled;
         m_sf_renderWindow.setVerticalSyncEnabled(m_verticalSyncEnabled);
@@ -38,6 +41,7 @@ namespace sfui {
         m_sf_renderWindow.setTitle(m_nowPageTitle);
         //持续更新该窗口，直到点击关闭
         while (m_sf_renderWindow.isOpen()) {
+
             // 获取窗口消息
             procesMessage();
 
@@ -58,7 +62,7 @@ namespace sfui {
             // 处理窗口事件消息
             handleEventInput();
             // 处理页面事件消息
-           m_pages[m_nowPageTitle]->executeEventBinding(m_event);
+            m_pages[m_nowPageTitle]->executeEventBinding(m_event);
         }
     }
     void Window::handleEventInput() {
@@ -71,7 +75,7 @@ namespace sfui {
         }
     }
     void Window::handleRealTimeInput() {
-        
+
     }
 
     void Window::drawFrame() {
@@ -81,7 +85,7 @@ namespace sfui {
         // 显示当前窗口的画面
         m_sf_renderWindow.display();
         m_sf_renderWindow.clear(m_pages[m_nowPageTitle]->getBackgroundColor());
-        
+
     }
 
     void Window::requestPageSwitch(const Title &pageTitle) {
@@ -106,6 +110,7 @@ namespace sfui {
     }
 
     const WindowSize Window::getWindowSize() {
+        //return m_windowSize;
         return m_sf_renderWindow.getSize();
     }
     const WindowSize &Window::getScreenSize() const {
@@ -116,26 +121,31 @@ namespace sfui {
         //m_sf_renderWindow.setView(m_pages[m_nowPageTitle]->getView());
     }
 
+    // 切换窗口模式
     void Window::toggleFullscreen() {
         if (m_winsowState == WindowState::Windowed) {
             toFullscreen();
         } else {
             toWindowed();
         }
+        // 在窗口切换时，会将窗口标题清除，即使全屏模式并看不到窗口标题，但是返回桌面在任
+        // 务栏仍可以看到窗口标题，因此在切换窗口后应将窗口标题重新设置
+        m_sf_renderWindow.setTitle(m_nowPageTitle);
     }
 
+    // 切换为全屏模式
     void Window::toFullscreen() {
         m_winsowState = WindowState::Fullscreen;
         m_windowSize = m_sf_renderWindow.getSize();
-        //m_window.close();
         m_sf_renderWindow.create(sf::VideoMode::getDesktopMode(),
             "", sf::Style::Fullscreen);
         m_sf_renderWindow.setVerticalSyncEnabled(m_verticalSyncEnabled);
         m_sf_renderWindow.setFramerateLimit(m_framerateLimit);
     }
+
+    //切换为窗口模式
     void Window::toWindowed() {
         m_winsowState = WindowState::Windowed;
-        //m_window.close();
         m_sf_renderWindow.create(sf::VideoMode(m_windowSize.x, m_windowSize.y), "");
         m_sf_renderWindow.setVerticalSyncEnabled(m_verticalSyncEnabled);
         m_sf_renderWindow.setFramerateLimit(m_framerateLimit);

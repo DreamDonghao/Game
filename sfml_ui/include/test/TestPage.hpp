@@ -4,7 +4,7 @@
 #include <TimeAnimatedSprite.hpp>
 #include <print>
 #include <Interactive.hpp>
-#include <SFML/Network.hpp>
+
 namespace sfui {
     // ≤‚ ‘ΩÁ√Ê
     class TestPage :public ComplexPage {

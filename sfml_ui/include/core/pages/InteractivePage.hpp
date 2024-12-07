@@ -1,6 +1,7 @@
 #pragma once
 #include <Page.hpp>
 #include <Interactive.hpp>
+#include <Window.hpp>
 namespace sfui {
     // 动态或实时更新的交互页面
     // 界面视图大小为窗口大小

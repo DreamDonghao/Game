@@ -1,10 +1,13 @@
 #pragma once
 #include <ComplexPage.hpp>
-
+#include <button.hpp>
 namespace sfui {
     
     class PageName :public PageClass {
-       
+    private:
+        Button beginGameButton;
+        Button setupButton;
+        Button exitButton;
     public:
         PageName() = default;
 
