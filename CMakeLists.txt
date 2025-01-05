@@ -26,7 +26,7 @@ include_directories(
     "${SFMLUI_INCLUDE}/test" 
     "${SFML_DIR}/include"
     
-    "game/include/"
+    "game/include/pages"
 )
 
 # 添加 SFML 的库文件路径

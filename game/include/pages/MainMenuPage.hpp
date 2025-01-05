@@ -24,12 +24,13 @@ namespace game {
         // 执行界面逻辑
         void update() override {
             setViewCenter((float)getWindowSize().x / 2, (float)getWindowSize().y / 2);
+            
         }
 
         // 渲染页面内容到窗口
         void render() override {
             sfui::InteractivePage::draw(beginGameButton);
-            std::println("{}  {}", getX(), getY());
+            
         }
     };
 }
