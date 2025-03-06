@@ -1,26 +1,26 @@
-#pragma once
+ï»¿#pragma once
 #include <SFML/Graphics.hpp>
 #include <functional>
 #include <unordered_map>
 #include <button.hpp>
 
 namespace sfui {
-    // ĞĞÎª
+    // è¡Œä¸º
     using Action = std::function<void()>;
 
-    // ¼üÅÌ°´¼ü
+    // é”®ç›˜æŒ‰é”®
     using Key = sf::Keyboard::Key;
 
-    // Êó±ê°´¼ü
+    // é¼ æ ‡æŒ‰é”®
     using MouseButton = sf::Mouse::Button;
 
-    // °´¼üÊÂ¼şÓëĞĞÎªÓ³Éä
+    // æŒ‰é”®äº‹ä»¶ä¸è¡Œä¸ºæ˜ å°„
     class EvectBingding {
     public:
-        // ¹¹Ôìº¯Êı
+        // æ„é€ å‡½æ•°
         EvectBingding();
 
-        // ½¨Á¢Ó³Éä£º¼üÅÌ£ºĞĞÎª
+        // å»ºç«‹æ˜ å°„ï¼šé”®ç›˜ï¼šè¡Œä¸º
         void bindEvent(Key key, Action action);
 
         // 
@@ -28,19 +28,19 @@ namespace sfui {
             m_mouseButtonBindings[mouseButton] = action;
         }
 
-        //½¨Á¢Ó³Éä£ºÊó±ê&½»»¥ÇøÓò£ºĞĞÎª
+        //å»ºç«‹æ˜ å°„ï¼šé¼ æ ‡&äº¤äº’åŒºåŸŸï¼šè¡Œä¸º
         void bindEvent(MouseButton mouseButton, Area *const area, Action action);
 
-        // ¼ì²éÏûÏ¢²¢Ö´ĞĞÏûÏ¢¶ÔÓ¦µÄĞĞÎª
+        // æ£€æŸ¥æ¶ˆæ¯å¹¶æ‰§è¡Œæ¶ˆæ¯å¯¹åº”çš„è¡Œä¸º
         void update(sf::Event event);
 
     private:
-        // ´æ´¢¼üÅÌ°´¼üÓëĞĞ¶¯µÄÓ³Éä
+        // å­˜å‚¨é”®ç›˜æŒ‰é”®ä¸è¡ŒåŠ¨çš„æ˜ å°„
         std::unordered_map<Key, Action> m_keyBindings;  
 
         std::unordered_map<MouseButton, Action> m_mouseButtonBindings;
 
-        // ´æ´¢Êó±ê%½»»¥ÇøÓòÓëĞĞÎªµÄÓ³Éä
+        // å­˜å‚¨é¼ æ ‡%äº¤äº’åŒºåŸŸä¸è¡Œä¸ºçš„æ˜ å°„
         std::unordered_map<MouseButton, std::vector<std::pair<Area*, Action>>> m_mouseBindings;
 
     };

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <ComplexPage.hpp>
 #include <elemental.hpp>
 #include <biology.hpp>
@@ -16,23 +16,23 @@ namespace game {
         {
         }
 
-        // ³õÊ¼»¯½çÃæÔªËØ
+        // åˆå§‹åŒ–ç•Œé¢å…ƒç´ 
         void initializePageElements() override {
 
         }
-        // ³õÊ¼»¯ÏûÏ¢-ÊÂ¼şÓ³Éä
+        // åˆå§‹åŒ–æ¶ˆæ¯-äº‹ä»¶æ˜ å°„
         void initMessageBinding() override {
             eventMap(sfui::Key::Escape, [&]() {
                 requestPageSwitch(sfui::TitleName("gamePage"));
                 });
         }
 
-        // Ö´ĞĞ½çÃæÂß¼­
+        // æ‰§è¡Œç•Œé¢é€»è¾‘
         void update() override {
 
         }
 
-        // äÖÈ¾Ò³ÃæÄÚÈİµ½´°¿Ú
+        // æ¸²æŸ“é¡µé¢å†…å®¹åˆ°çª—å£
         void render() override {
 
         }

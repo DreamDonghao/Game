@@ -1,12 +1,12 @@
-#pragma once
+ï»¿#pragma once
 #include <InteractivePage.hpp>
 #include <ControlPage.hpp>
 
 namespace sfui {
-    // »ìºÏ½çÃæ(Î»ÖÃ¶¯Ì¬¸üĞÂ½çÃæ£¬UI¿Ø¼ş½çÃæ)
+    // æ··åˆç•Œé¢(ä½ç½®åŠ¨æ€æ›´æ–°ç•Œé¢ï¼ŒUIæ§ä»¶ç•Œé¢)
     class ComplexPage :public InteractivePage, public ControlPage {
     public:
-        // ¸üĞÂÊÓÍ¼
+        // æ›´æ–°è§†å›¾
         void updateView() override{
             ControlPage::updateView();
             InteractivePage::updateView();
@@ -20,13 +20,13 @@ namespace sfui {
             return ControlPage::m_view;
         }
 
-        // ÒÔ´°¿ÚÎªÒÀ¾İ»æÖÆ
+        // ä»¥çª—å£ä¸ºä¾æ®ç»˜åˆ¶
         template<typename DrawObject>
         void drawForWindow(const DrawObject &drawObject ) {
             ControlPage::draw(drawObject);
         }
 
-        // ÒÔÊÓÍ¼ÎªÒÀ¾İ»æÍ¼
+        // ä»¥è§†å›¾ä¸ºä¾æ®ç»˜å›¾
         template<typename DrawObject>
         void drawForView(const DrawObject &drawObject) {
             InteractivePage::draw(drawObject);

@@ -1,18 +1,18 @@
-#pragma once
+ï»¿#pragma once
 #include <Page.hpp>
 #include <Interactive.hpp>
 #include <Window.hpp>
 namespace sfui {
-    // ¶¯Ì¬»òÊµÊ±¸üĞÂµÄ½»»¥Ò³Ãæ
-    // ½çÃæÊÓÍ¼´óĞ¡Îª´°¿Ú´óĞ¡
-    // (0,0)ÎªÆÁÄ»ÖĞĞÄ,¿ÉÒÔÉèÖÃ´°¿ÚÖĞĞÄµÄ×ø±ê
+    // åŠ¨æ€æˆ–å®æ—¶æ›´æ–°çš„äº¤äº’é¡µé¢
+    // ç•Œé¢è§†å›¾å¤§å°ä¸ºçª—å£å¤§å°
+    // (0,0)ä¸ºå±å¹•ä¸­å¿ƒ,å¯ä»¥è®¾ç½®çª—å£ä¸­å¿ƒçš„åæ ‡
     class InteractivePage :virtual public Page {
     public:
 
     protected:
         sf::View m_view;
 
-        // ¸ù¾İ°ó¶¨´°¿ÚµÄÊµÊ±×´Ì¬À´¸üĞÂ½çÃæÊÓÍ¼
+        // æ ¹æ®ç»‘å®šçª—å£çš„å®æ—¶çŠ¶æ€æ¥æ›´æ–°ç•Œé¢è§†å›¾
         void updateView() override {
             m_windowSize = mp_window->getWindowSize();
             m_view.setSize(
@@ -22,25 +22,25 @@ namespace sfui {
             m_view.setCenter(m_x, m_y);
         }
 
-        // ÉèÖÃÊÓÍ¼ÖĞĞÄ¶ÔÓÃÓÚÊÀ½ç×ø±êÏµÖĞµÄ×ø±ê
+        // è®¾ç½®è§†å›¾ä¸­å¿ƒå¯¹ç”¨äºä¸–ç•Œåæ ‡ç³»ä¸­çš„åæ ‡
         void setViewCenter(const float &x, const float &y) {
             m_x = x;
             m_y = y;
         }
 
-        // »æÖÆ°´Å¥
+        // ç»˜åˆ¶æŒ‰é’®
         void draw(const Button &button) {
             mp_window->getSfRenderWindow().setView(m_view);
             mp_window->getSfRenderWindow().draw(button.getSprite());
         }
 
-        //»æÖÆ½»»¥ÇøÓò
+        //ç»˜åˆ¶äº¤äº’åŒºåŸŸ
         void draw(const Interactive &interActive) {
             mp_window->getSfRenderWindow().setView(m_view);
             mp_window->getSfRenderWindow().draw(interActive.getSprite());
         }
 
-        //»æÖÆÎÆÀí
+        //ç»˜åˆ¶çº¹ç†
         void draw(const TextureItem &textureItem) {
             mp_window->getSfRenderWindow().setView(m_view);
             mp_window->getSfRenderWindow().draw(textureItem.getSprite());
@@ -51,17 +51,17 @@ namespace sfui {
             mp_window->getSfRenderWindow().draw(vertexArray);
         }
 
-        // »ñÈ¡½çÃæÖĞĞÄ¶ÔÓ¦ÊÀ½ç×ø±êÏµµÄ×ø±ê X
+        // è·å–ç•Œé¢ä¸­å¿ƒå¯¹åº”ä¸–ç•Œåæ ‡ç³»çš„åæ ‡ X
         float getX() const {
             return m_x;
         }
 
-        // »ñÈ¡½çÃæÖĞĞÄ¶ÔÓ¦ÊÀ½ç×ø±êÏµµÄ×ø±ê Y
+        // è·å–ç•Œé¢ä¸­å¿ƒå¯¹åº”ä¸–ç•Œåæ ‡ç³»çš„åæ ‡ Y
         float getY() const {
             return m_y;
         }
 
-        // »ñÈ¡Óë½çÃæ°ó¶¨´°¿ÚµÄ´óĞ¡
+        // è·å–ä¸ç•Œé¢ç»‘å®šçª—å£çš„å¤§å°
         WindowSize getWindowSize() const {
             return m_windowSize;
         }

@@ -1,14 +1,14 @@
-#pragma once
+ï»¿#pragma once
 #include <TextureItem.hpp>
 
 namespace sfui {
 
-    // ´°¿ÚÖ¡ÂÊÑ­»·¶¯Í¼
+    // çª—å£å¸§ç‡å¾ªç¯åŠ¨å›¾
     class FrameAnimatedSprite {
     public:
         FrameAnimatedSprite(){}
 
-        // ³õÊ¼»¯Ñ­»·¶¯Í¼µÄ³ÖĞøÖ¡£¬´óĞ¡£¬×ø±ê
+        // åˆå§‹åŒ–å¾ªç¯åŠ¨å›¾çš„æŒç»­å¸§ï¼Œå¤§å°ï¼Œåæ ‡
         bool init(const size_t &continuationFrame,
             const int &width, const int &height,const float &x,const float &y) {
             m_continuationFrame = continuationFrame;
@@ -19,12 +19,12 @@ namespace sfui {
             return true;
         }
         
-        // Ìí¼ÓÑ­»·²¥·ÅµÄÍ¼Æ¬
+        // æ·»åŠ å¾ªç¯æ’­æ”¾çš„å›¾ç‰‡
         void addTextureItems(const FilePath &filepath ){
             m_textureItems.emplace_back().init(filepath, m_width, m_height, m_x, m_y);
         }
 
-        //ÉèÖÃ´óĞ¡ºÍ×ø±ê
+        //è®¾ç½®å¤§å°å’Œåæ ‡
         void set(const size_t &continuationFrame,
             const int &width, const int &height, const float &x, const float &y) {
             m_continuationFrame = continuationFrame;
@@ -38,7 +38,7 @@ namespace sfui {
             }
         }
 
-        // »ñÈ¡¼ÓÔØÄÚÈİ
+        // è·å–åŠ è½½å†…å®¹
         const sf::Sprite &getSprite() {
             if (m_frame == m_continuationFrame) {
                 m_frame = 0;

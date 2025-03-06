@@ -1,33 +1,33 @@
-#pragma once
+ï»¿#pragma once
 #include <SFML/Window/Event.hpp>
 #include <SFML/Window/Keyboard.hpp>
 #include <Page.hpp>
 
 namespace sfui {
 
-    // ½çÃæÖ¸Õë
+    // ç•Œé¢æŒ‡é’ˆ
     template <typename PageType>
     using PagePtr = std::unique_ptr<PageType>;
 
-    // ´´½¨½çÃæ
+    // åˆ›å»ºç•Œé¢
     template <typename PageType, typename... Args>
     inline PagePtr<PageType> makePage(Args&&... args) {
         return std::make_unique<PageType>(std::forward<Args>(args)...);
     }
 
-    // ±êÌâ½çÃæ¶ÔÓ¦±í
+    // æ ‡é¢˜ç•Œé¢å¯¹åº”è¡¨
     using PageMap = std::unordered_map<Title, PagePtr<Page>>;
 
-    // ´°¿Ú´óĞ¡
+    // çª—å£å¤§å°
     using WindowSize = sf::Vector2u;
 
-    // ±íÊ¾´°¿Ú×´Ì¬
+    // è¡¨ç¤ºçª—å£çŠ¶æ€
     enum class WindowState {
-        Windowed,  // ´°¿ÚÄ£Ê½
-        Fullscreen // È«ÆÁÄ£Ê½
+        Windowed,  // çª—å£æ¨¡å¼
+        Fullscreen // å…¨å±æ¨¡å¼
     };
  
-    //´°¿ÚÀà
+    //çª—å£ç±»
     class Window {
     public:
 
@@ -37,22 +37,22 @@ namespace sfui {
 
         bool init(const int &framerateLimit, const bool &verticalSyncEnabled);
 
-        //Ïò¸Ã´°¿ÚÌí¼ÓÒ³Ãæ
+        //å‘è¯¥çª—å£æ·»åŠ é¡µé¢
         void addPage(const Title &pageTitle, PagePtr<Page> page);
 
-        // ¿ªÊ¼ÏÔÊ¾Ê×Ò³Ãæ
+        // å¼€å§‹æ˜¾ç¤ºé¦–é¡µé¢
         void startShow(const Title &firstPageTitle);
         
-        // ÇĞ»»ÎªÖ¸¶¨±êÌâ½çÃæ
+        // åˆ‡æ¢ä¸ºæŒ‡å®šæ ‡é¢˜ç•Œé¢
         void requestPageSwitch(const Title &pageTitle);
 
-        //»ñÈ¡sfmlµÄ´°¿Ú
+        //è·å–sfmlçš„çª—å£
         sf::RenderWindow &getSfRenderWindow();
 
-        // »ñÈ¡´°¿Ú´óĞ¡
+        // è·å–çª—å£å¤§å°
         const WindowSize getWindowSize();
 
-        // »ñÈ¡ÆÁÄ»·Ö±æÂÊ
+        // è·å–å±å¹•åˆ†è¾¨ç‡
         const WindowSize &getScreenSize() const;
 
     private:
@@ -63,31 +63,31 @@ namespace sfui {
         Title m_nowPageTitle;
         sf::Event m_event;
         WindowState m_winsowState;
-        int m_framerateLimit = 60;// Ë¢ĞÂÂÊ
-        bool m_verticalSyncEnabled = false;// ´¹Ö±Í¬²½ÊÇ·ñ¿ªÆô
+        int m_framerateLimit = 60;// åˆ·æ–°ç‡
+        bool m_verticalSyncEnabled = false;// å‚ç›´åŒæ­¥æ˜¯å¦å¼€å¯
 
-        // ¸üĞÂµ±Ç°½çÃæµÄÊÓÍ¼
+        // æ›´æ–°å½“å‰ç•Œé¢çš„è§†å›¾
         void updateView();
-        // ¸üĞÂÏûÏ¢£¬²¢ÔÚÊÕµ½¹Ø±Õ´°¿ÚÊ±½«´°¿Ú¹Ø±Õ
+        // æ›´æ–°æ¶ˆæ¯ï¼Œå¹¶åœ¨æ”¶åˆ°å…³é—­çª—å£æ—¶å°†çª—å£å…³é—­
 
         void procesMessage();
         
-        // ´¦ÀíÊµÊ±ÊäÈë
+        // å¤„ç†å®æ—¶è¾“å…¥
         void handleRealTimeInput();
 
-        // ´¦ÀíÊÂ¼şÊäÈë
+        // å¤„ç†äº‹ä»¶è¾“å…¥
         void  handleEventInput();
 
-        // ¼ÓÔØ²¢ÏÔÊ¾½çÃæ»­Ãæµ½´°¿Ú
+        // åŠ è½½å¹¶æ˜¾ç¤ºç•Œé¢ç”»é¢åˆ°çª—å£
         void drawFrame();
 
-        //¿ØÖÆ´°¿Ú×ÔÉíµÄ·½·¨
+        //æ§åˆ¶çª—å£è‡ªèº«çš„æ–¹æ³•
         void toggleFullscreen();
 
-        // ÇĞ»»ÎªÈ«ÆÁÄ£Ê½
+        // åˆ‡æ¢ä¸ºå…¨å±æ¨¡å¼
         void toFullscreen();
 
-        //ÇĞ»»Îª´°¿ÚÄ£Ê½
+        //åˆ‡æ¢ä¸ºçª—å£æ¨¡å¼
         void toWindowed();
     };
 

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <ComplexPage.hpp>
 #include <elemental.hpp>
 #include <biology.hpp>
@@ -17,25 +17,25 @@ namespace game {
         {
         }
 
-        // ³õÊ¼»¯½çÃæÔªËØ
+        // åˆå§‹åŒ–ç•Œé¢å…ƒç´ 
         void initializePageElements() override {
 
             mainPage.init("images\\main_page.png", 2560, 1660);
             beginGame.init(700, 600, 800, 200, "");
         }
-        // ³õÊ¼»¯ÏûÏ¢-ÊÂ¼şÓ³Éä
+        // åˆå§‹åŒ–æ¶ˆæ¯-äº‹ä»¶æ˜ å°„
         void initMessageBinding() override {
             eventMap(sfui::MouseButton::Left, beginGame.getArea(), [&]() {
                 requestPageSwitch(sfui::TitleName("gamePage"));
             });
         }
 
-        // Ö´ĞĞ½çÃæÂß¼­
+        // æ‰§è¡Œç•Œé¢é€»è¾‘
         void update() override {
            
         }
 
-        // äÖÈ¾Ò³ÃæÄÚÈİµ½´°¿Ú
+        // æ¸²æŸ“é¡µé¢å†…å®¹åˆ°çª—å£
         void render() override {
             drawForWindow(mainPage);
            

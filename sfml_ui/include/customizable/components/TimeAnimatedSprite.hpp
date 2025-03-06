@@ -1,24 +1,24 @@
-#pragma once
+ï»¿#pragma once
 #include <TextureItem.hpp>
 namespace sfui {
 
-    // ÒÔÊ±¼äÎªÒÀ¾İÑ­»·²¥·ÅµÄ¶¯Í¼
+    // ä»¥æ—¶é—´ä¸ºä¾æ®å¾ªç¯æ’­æ”¾çš„åŠ¨å›¾
 	class TimeAnimatedSprite {
 	public:
         TimeAnimatedSprite();
 
-        // ³õÊ¼»¯Ñ­»·¶¯Í¼µÄ³ÖĞøÖ¡£¬´óĞ¡£¬×ø±ê
+        // åˆå§‹åŒ–å¾ªç¯åŠ¨å›¾çš„æŒç»­å¸§ï¼Œå¤§å°ï¼Œåæ ‡
         bool init(const float &continuationtTime,
             const int &width, const int &height, const float &x, const float &y);
 
-        // Ìí¼ÓÑ­»·²¥·ÅµÄÍ¼Æ¬
+        // æ·»åŠ å¾ªç¯æ’­æ”¾çš„å›¾ç‰‡
         void addTextureItems(const FilePath &filepath);
 
-        //ÖØĞÂÉèÖÃ´óĞ¡ºÍ×ø±ê
+        //é‡æ–°è®¾ç½®å¤§å°å’Œåæ ‡
         void set(const float &continuationtTime,
             const int &width, const int &height, const float &x, const float &y);
 
-        // »ñÈ¡¼ÓÔØÄÚÈİ,Ã¿´Î»ñÈ¡ÇĞ»»ÎªÏÂÒ»¸öÍ¼Æ¬,×îºóÒ»¸öÍ¼Æ¬µÄÏÂÒ»¸öÎªµÚÒ»¸öÍ¼Æ¬
+        // è·å–åŠ è½½å†…å®¹,æ¯æ¬¡è·å–åˆ‡æ¢ä¸ºä¸‹ä¸€ä¸ªå›¾ç‰‡,æœ€åä¸€ä¸ªå›¾ç‰‡çš„ä¸‹ä¸€ä¸ªä¸ºç¬¬ä¸€ä¸ªå›¾ç‰‡
         const sf::Sprite &getSprite();
 
     private:

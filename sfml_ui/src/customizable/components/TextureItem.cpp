@@ -1,4 +1,4 @@
-#include <TextureItem.hpp>
+ï»¿#include <TextureItem.hpp>
 
 namespace sfui {
 
@@ -42,61 +42,61 @@ namespace sfui {
         return true;
     }
 
-    //ÉèÖÃÏÔÊ¾¿í¶È
+    //è®¾ç½®æ˜¾ç¤ºå®½åº¦
     void TextureItem::setShowWidth(const int &width) {
         m_sf_sprite.setScale(float(width) / m_sf_texture.getSize().x,
             m_sf_sprite.getScale().y);
     }
-    //ÉèÖÃÏÔÊ¾¸ß¶È
+    //è®¾ç½®æ˜¾ç¤ºé«˜åº¦
     void TextureItem::setShowHeight(const int &height) {
         m_sf_sprite.setScale(m_sf_sprite.getScale().x,
             float(height) / m_sf_texture.getSize().y);
     }
-    // ÉèÖÃÏÔÊ¾´óĞ¡
+    // è®¾ç½®æ˜¾ç¤ºå¤§å°
     void TextureItem::setShowSize(const int width, const int &height) {
         m_sf_sprite.setScale(float(width) / m_sf_texture.getSize().x,
             float(height) / m_sf_texture.getSize().y);
     }
 
-    // ÉèÖÃ X ×ø±ê
+    // è®¾ç½® X åæ ‡
     void TextureItem::setX(const float &x) {
         m_sf_sprite.setPosition(x, m_sf_sprite.getPosition().y);
     }
 
-    // ÉèÖÃ Y ×ø±ê
+    // è®¾ç½® Y åæ ‡
     void TextureItem::setY(const float &y) {
         m_sf_sprite.setPosition(m_sf_sprite.getPosition().x, y);
     }
 
-    //ÉèÖÃÎ»ÖÃ
+    //è®¾ç½®ä½ç½®
     void TextureItem::setPosition(const float &x, const float &y) {
         m_sf_sprite.setPosition(x, y);
     }
-    //»ñÈ¡ÏÔÊ¾¿í¶È
+    //è·å–æ˜¾ç¤ºå®½åº¦
     const float TextureItem::getShowWidth() const {
         return m_sf_sprite.getGlobalBounds().width;
     }
-    //»ñÈ¡ÏÔÊ¾¸ß¶È
+    //è·å–æ˜¾ç¤ºé«˜åº¦
     const float TextureItem::getShowHidth() const {
         return m_sf_sprite.getGlobalBounds().height;
     }
-    //»ñÈ¡ÎÆÀí¿í¶È
+    //è·å–çº¹ç†å®½åº¦
     const int TextureItem::getTextureWidth() const {
         return m_sf_texture.getSize().x;
     }
-    //»ñÈ¡ÎÆÀí¸ß¶È
+    //è·å–çº¹ç†é«˜åº¦
     const int TextureItem::getTextureHeight() const {
         return m_sf_texture.getSize().y;
     }
-    //»ñÈ¡X×ø±ê
+    //è·å–Xåæ ‡
     const float TextureItem::getX() const {
         return m_sf_sprite.getPosition().x;
     }
-    //»ñÈ¡Y×ø±ê
+    //è·å–Yåæ ‡
     const float TextureItem::getY() const {
         return m_sf_sprite.getPosition().y;
     }
-    //»ñÈ¡¼ÓÔØÄÚÈİ
+    //è·å–åŠ è½½å†…å®¹
     const sf::Sprite &TextureItem::getSprite() const {
         return m_sf_sprite;
     }

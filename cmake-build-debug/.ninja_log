@@ -1,0 +1,11 @@
+# ninja log v6
+87	567	7629732135146366	CMakeFiles/GAME.dir/elemental/src/elemental.cpp.obj	42d84656306b079c
+27	1449	7629732134541185	CMakeFiles/GAME.dir/sfml_ui/src/core/message/Mouse.cpp.obj	2a409a251c16e548
+55	1479	7629732134821232	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TimeAnimatedSprite.cpp.obj	7c2adef323366be2
+61	1479	7629732134891238	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TextureItem.cpp.obj	f164064420746f57
+21	1555	7629732134486015	CMakeFiles/GAME.dir/sfml_ui/src/core/message/ActiveKeyBinding_.cpp.obj	4566abe5fc0e92ce
+68	1685	7629732134951182	CMakeFiles/GAME.dir/sfml_ui/src/core/message/EventBinding.cpp.obj	9bba387932c7a5d7
+33	1872	7629732134601205	CMakeFiles/GAME.dir/sfml_ui/src/core/pages/Page.cpp.obj	25d0190f6fd600ee
+13	2011	7629732134406053	CMakeFiles/GAME.dir/sfml_ui/src/core/window/Window.cpp.obj	bf66f391660d54fe
+81	2409	7629732135091217	CMakeFiles/GAME.dir/game/src/main.cpp.obj	a0c36ee7e968619e
+2409	2680	7629732158365906	GAME.exe	488355141bec0977

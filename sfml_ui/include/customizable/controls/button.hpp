@@ -1,18 +1,18 @@
-#pragma once
+ï»¿#pragma once
 #include <TextureItem.hpp>
 #include <Area.hpp>
 namespace sfui {
-    // °´Å¥
+    // æŒ‰é’®
     class Button {
     public:
-        // °´Å¥µÄÇøÓò
+        // æŒ‰é’®çš„åŒºåŸŸ
 
 
         Button():m_area() {}
 
         ~Button() {}
 
-        // ³õÊ¼»¯
+        // åˆå§‹åŒ–
         bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath) {
             m_x = x;
             m_y = y;
@@ -24,7 +24,7 @@ namespace sfui {
             return true;
         }
 
-        //»ñÈ¡°´Å¥ÇøÓò
+        //è·å–æŒ‰é’®åŒºåŸŸ
         Area *const getArea() {
             return &m_area;
         }

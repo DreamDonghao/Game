@@ -1,4 +1,4 @@
-#include <Window.hpp>
+ï»¿#include <Window.hpp>
 #include <print>
 #include <iostream>
 #include <stdexcept>
@@ -36,32 +36,32 @@ namespace sfui {
     }
 
     void Window::startShow(const Title &firstPageTitle) {
-        //ÇĞ»»µ½Ê×½çÃæ
+        //åˆ‡æ¢åˆ°é¦–ç•Œé¢
         requestPageSwitch(firstPageTitle);
         m_sf_renderWindow.setTitle(m_nowPageTitle);
-        //³ÖĞø¸üĞÂ¸Ã´°¿Ú£¬Ö±µ½µã»÷¹Ø±Õ
+        //æŒç»­æ›´æ–°è¯¥çª—å£ï¼Œç›´åˆ°ç‚¹å‡»å…³é—­
         while (m_sf_renderWindow.isOpen()) {
 
-            // »ñÈ¡´°¿ÚÏûÏ¢
+            // è·å–çª—å£æ¶ˆæ¯
             procesMessage();
 
-            // ¸üĞÂ½çÃæÄÚÈİ
+            // æ›´æ–°ç•Œé¢å†…å®¹
             m_pages[m_nowPageTitle]->update();
 
-            // ÏÔÊ¾Ò»Ö¡µÄ»­Ãæ
+            // æ˜¾ç¤ºä¸€å¸§çš„ç”»é¢
             drawFrame();
         }
     }
-    //´¦Àí´°¿ÚºÍ´°¿Úµ±Ç°½çÃæµÄÏûÏ¢
+    //å¤„ç†çª—å£å’Œçª—å£å½“å‰ç•Œé¢çš„æ¶ˆæ¯
     void Window::procesMessage() {
-        // ´¦Àí´°¿ÚÊµÊ±ÏûÏ¢
+        // å¤„ç†çª—å£å®æ—¶æ¶ˆæ¯
         handleRealTimeInput();
-        // ´¦ÀíÒ³ÃæÊµÊ±ÏûÏ¢
+        // å¤„ç†é¡µé¢å®æ—¶æ¶ˆæ¯
         m_pages[m_nowPageTitle]->executeKeyPressOnce();
         while (m_sf_renderWindow.pollEvent(m_event)) {
-            // ´¦Àí´°¿ÚÊÂ¼şÏûÏ¢
+            // å¤„ç†çª—å£äº‹ä»¶æ¶ˆæ¯
             handleEventInput();
-            // ´¦ÀíÒ³ÃæÊÂ¼şÏûÏ¢
+            // å¤„ç†é¡µé¢äº‹ä»¶æ¶ˆæ¯
             m_pages[m_nowPageTitle]->executeEventBinding(m_event);
         }
     }
@@ -80,16 +80,16 @@ namespace sfui {
 
     void Window::drawFrame() {
         updateView();
-        // ¸üĞÂÒ³Ãæ£¬²¢°ÑÒ³ÃæµÄÍ¼ĞÎ¼ÓÔØµ½´°¿Ú
+        // æ›´æ–°é¡µé¢ï¼Œå¹¶æŠŠé¡µé¢çš„å›¾å½¢åŠ è½½åˆ°çª—å£
         m_pages[m_nowPageTitle]->updateFrame();
-        // ÏÔÊ¾µ±Ç°´°¿ÚµÄ»­Ãæ
+        // æ˜¾ç¤ºå½“å‰çª—å£çš„ç”»é¢
         m_sf_renderWindow.display();
         m_sf_renderWindow.clear(m_pages[m_nowPageTitle]->getBackgroundColor());
 
     }
 
     void Window::requestPageSwitch(const Title &pageTitle) {
-        // ¼ì²âÒªÇĞ»»Ò³ÃæÊÇ·ñ´æÔÚ£¬Èô²»´æÔÚ£¬Å×³öÒ»¸öÒì³£
+        // æ£€æµ‹è¦åˆ‡æ¢é¡µé¢æ˜¯å¦å­˜åœ¨ï¼Œè‹¥ä¸å­˜åœ¨ï¼ŒæŠ›å‡ºä¸€ä¸ªå¼‚å¸¸
         try {
             if (m_pages.find(pageTitle) == m_pages.end()) {
                 throw std::runtime_error("Page don't exist!!!");
@@ -100,7 +100,7 @@ namespace sfui {
 
         m_nowPageTitle = pageTitle;
         m_sf_renderWindow.setTitle(m_nowPageTitle);
-        // ³õÊ¼»¯½çÃæ
+        // åˆå§‹åŒ–ç•Œé¢
         m_pages[m_nowPageTitle]->init();
     }
 
@@ -121,19 +121,19 @@ namespace sfui {
         //m_sf_renderWindow.setView(m_pages[m_nowPageTitle]->getView());
     }
 
-    // ÇĞ»»´°¿ÚÄ£Ê½
+    // åˆ‡æ¢çª—å£æ¨¡å¼
     void Window::toggleFullscreen() {
         if (m_winsowState == WindowState::Windowed) {
             toFullscreen();
         } else {
             toWindowed();
         }
-        // ÔÚ´°¿ÚÇĞ»»Ê±£¬»á½«´°¿Ú±êÌâÇå³ı£¬¼´Ê¹È«ÆÁÄ£Ê½²¢¿´²»µ½´°¿Ú±êÌâ£¬µ«ÊÇ·µ»Ø×ÀÃæÔÚÈÎ
-        // ÎñÀ¸ÈÔ¿ÉÒÔ¿´µ½´°¿Ú±êÌâ£¬Òò´ËÔÚÇĞ»»´°¿ÚºóÓ¦½«´°¿Ú±êÌâÖØĞÂÉèÖÃ
+        // åœ¨çª—å£åˆ‡æ¢æ—¶ï¼Œä¼šå°†çª—å£æ ‡é¢˜æ¸…é™¤ï¼Œå³ä½¿å…¨å±æ¨¡å¼å¹¶çœ‹ä¸åˆ°çª—å£æ ‡é¢˜ï¼Œä½†æ˜¯è¿”å›æ¡Œé¢åœ¨ä»»
+        // åŠ¡æ ä»å¯ä»¥çœ‹åˆ°çª—å£æ ‡é¢˜ï¼Œå› æ­¤åœ¨åˆ‡æ¢çª—å£ååº”å°†çª—å£æ ‡é¢˜é‡æ–°è®¾ç½®
         m_sf_renderWindow.setTitle(m_nowPageTitle);
     }
 
-    // ÇĞ»»ÎªÈ«ÆÁÄ£Ê½
+    // åˆ‡æ¢ä¸ºå…¨å±æ¨¡å¼
     void Window::toFullscreen() {
         m_winsowState = WindowState::Fullscreen;
         m_windowSize = m_sf_renderWindow.getSize();
@@ -143,7 +143,7 @@ namespace sfui {
         m_sf_renderWindow.setFramerateLimit(m_framerateLimit);
     }
 
-    //ÇĞ»»Îª´°¿ÚÄ£Ê½
+    //åˆ‡æ¢ä¸ºçª—å£æ¨¡å¼
     void Window::toWindowed() {
         m_winsowState = WindowState::Windowed;
         m_sf_renderWindow.create(sf::VideoMode(m_windowSize.x, m_windowSize.y), "");

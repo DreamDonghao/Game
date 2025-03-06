@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <ComplexPage.hpp>
 #include <FrameAnimatedSprite.hpp>
 #include <TimeAnimatedSprite.hpp>
@@ -6,7 +6,7 @@
 #include <Interactive.hpp>
 
 namespace sfui {
-    // ²âÊÔ½çÃæ
+    // æµ‹è¯•ç•Œé¢
     class TestPage :public ComplexPage {
         TextureItem image;
         TextureItem image2;
@@ -18,7 +18,7 @@ namespace sfui {
     public:
         TestPage() = default;
 
-        // ³õÊ¼»¯½çÃæÔªËØ
+        // åˆå§‹åŒ–ç•Œé¢å…ƒç´ 
         void initializePageElements() override {
             image.init("images/unspecified.png", 10000, 10000, -5000, -5000);
             image2.init("images/unspecified.png", 100, 100, x, y);
@@ -28,7 +28,7 @@ namespace sfui {
             ib.init(0, 0, 500, 500, "images/unspecified.png");
         }
 
-        // ³õÊ¼»¯ÏûÏ¢-ÊÂ¼şÓ³Éä
+        // åˆå§‹åŒ–æ¶ˆæ¯-äº‹ä»¶æ˜ å°„
         void initMessageBinding() override {
             
             eventMap(sf::Mouse::Button::Left, WindowButton.getArea(), []() {std::println("button"); });
@@ -42,7 +42,7 @@ namespace sfui {
             eventMap(Key::O, [&]() {requestPageSwitch(TitleName("1")); });
         }
 
-        // Ö´ĞĞ½çÃæÂß¼­
+        // æ‰§è¡Œç•Œé¢é€»è¾‘
         void update() override {
             //std::println("{} {}", x, y);
             image2.setPosition(x, y);
@@ -50,7 +50,7 @@ namespace sfui {
             ib.updateArea(x, y,getWindowSize().x,getWindowSize().y);
         }
 
-        // äÖÈ¾Ò³ÃæÄÚÈİµ½´°¿Ú
+        // æ¸²æŸ“é¡µé¢å†…å®¹åˆ°çª—å£
         void render() override {
            drawForView(image);
            drawForView(image2);

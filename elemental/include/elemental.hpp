@@ -1,29 +1,29 @@
-#pragma once
+ï»¿#pragma once
 
 namespace game {
 
-    // ÔªËØ£¬ÊÇÓÎÏ·ÊÀ½çÄÚËùÓĞÄÚÈİ
+    // å…ƒç´ ï¼Œæ˜¯æ¸¸æˆä¸–ç•Œå†…æ‰€æœ‰å†…å®¹
     class Elemental {
     public:
-        // ĞéÄâÎö¹¹º¯Êı
+        // è™šæ‹Ÿææ„å‡½æ•°
         virtual ~Elemental() {} 
 
-        // »ñÈ¡ID
+        // è·å–ID
         int getId() const;
 
-        // ¼¤»î/½ûÓÃÔªËØ
+        // æ¿€æ´»/ç¦ç”¨å…ƒç´ 
         void setActive(bool activeState);
 
-        // ·µ»ØÊÇ·ñ»îÔ¾
+        // è¿”å›æ˜¯å¦æ´»è·ƒ
         bool isActive() const;
 
     protected:
-        // ±£»¤¹¹Ôìº¯Êı£¬·ÀÖ¹Ö±½Ó´´½¨Elemental¶ÔÏó
+        // ä¿æŠ¤æ„é€ å‡½æ•°ï¼Œé˜²æ­¢ç›´æ¥åˆ›å»ºElementalå¯¹è±¡
         Elemental(int id,bool active);
 
     private:
-        int m_id;           // ÔªËØµÄÎ¨Ò»±êÊ¶·û
-        bool m_active;      // ÔªËØÊÇ·ñ»îÔ¾
+        int m_id;           // å…ƒç´ çš„å”¯ä¸€æ ‡è¯†ç¬¦
+        bool m_active;      // å…ƒç´ æ˜¯å¦æ´»è·ƒ
     };
 
 }
