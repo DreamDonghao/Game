@@ -28,6 +28,7 @@ namespace sfui {
         Area *const getArea() {
             return &m_area;
         }
+
         const sf::Sprite &getSprite()const {
             return m_textureItem.getSprite();
         }

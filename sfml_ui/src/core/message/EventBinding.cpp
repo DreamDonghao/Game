@@ -22,6 +22,14 @@ namespace sfui {
 
         }
 
+        if (event.type == sf::Event::MouseButtonPressed) {
+            
+            if (m_mouseButtonBindings.find(event.mouseButton.button) != m_mouseButtonBindings.end()) {
+                
+                m_mouseButtonBindings[event.mouseButton.button]();
+            }
+        }
+
         // 处理按钮点击事件
         if (event.type == sf::Event::MouseButtonPressed) {
             for (const auto &[buttonArea, action] : m_mouseBindings[event.mouseButton.button]) {

@@ -6,6 +6,7 @@
 #include <Mouse.hpp>
 #include <windows.h>
 #include <EventBinding.hpp>
+#include <line.hpp>
 #include <iostream>
 namespace sfui {
     // 标题
@@ -48,6 +49,7 @@ namespace sfui {
 
         // 消息映射
         void eventMap(Key key, Action action);
+        void eventMap(MouseButton mousebutton, Action action);
         void eventMap(sf::Mouse::Button mouseButton, Area* area, Action action);
 
         // 根据绑定窗口的大小来更新界面视图 

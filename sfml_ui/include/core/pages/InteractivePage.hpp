@@ -46,6 +46,11 @@ namespace sfui {
             mp_window->getSfRenderWindow().draw(textureItem.getSprite());
         }
 
+        void draw(const sf::VertexArray &vertexArray) {
+            mp_window->getSfRenderWindow().setView(m_view);
+            mp_window->getSfRenderWindow().draw(vertexArray);
+        }
+
         // 获取界面中心对应世界坐标系的坐标 X
         float getX() const {
             return m_x;

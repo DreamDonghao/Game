@@ -1,16 +1,17 @@
 import os
-
+import chardet
+import re
 # 获取当前脚本所在路径
 def get_current_directory() -> str:
     return os.path.dirname(__file__)
 
 # 获取指定路径下的所有指定类型文件
-def get_files(path: str,file_types:tuple) -> list:
-    return [f for f in os.listdir(path) 
+def get_files(path: str, file_types: tuple) -> list:
+    return [f for f in os.listdir(path)
             if os.path.isfile(os.path.join(path, f)) and f.endswith(file_types)]
 
 # 获取指定路径下的所有文件夹
-def get_folders(path:str) -> list:
+def get_folders(path: str) -> list:
     return [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
 
 # 获取当前脚本所在路径
@@ -21,6 +22,57 @@ neglect_files = {
     '.vs', '.git', 'tool.py', '.gitattributes', '.gitignore', 'out',
     'CMakeLists.txt', 'CMakeSettings.json', 'README.md'
 }
+
+# 自动检测文件编码
+def get_file_encoding(file_path: str) -> str:
+    with open(file_path, 'rb') as f:  # 以二进制模式打开文件
+        raw_data = f.read()
+        result = chardet.detect(raw_data)
+        return result['encoding']
+
+# 尝试用自动检测的编码读取文件
+def read_file_with_auto_encoding(file_path: str) -> str:
+    encoding = get_file_encoding(file_path)
+    with open(file_path, 'r', encoding=encoding) as f:
+        return f.read()
+
+# 尝试常见编码读取文件
+def read_file_with_fallback(file_path: str) -> str:
+    encodings = ['utf-8', 'gbk', 'latin-1']
+    for encoding in encodings:
+        try:
+            with open(file_path, 'r', encoding=encoding) as f:
+                return f.read()
+        except UnicodeDecodeError:
+            continue  # 如果当前编码失败，则继续尝试下一个编码
+    raise Exception(f"无法识别文件编码：{file_path}")
+
+# 读取文件内容
+def read_file(file_path: str) -> str:
+    try:
+        # 尝试使用自动检测编码
+        return read_file_with_auto_encoding(file_path)
+    except Exception:
+        # 如果自动检测失败，尝试常见编码
+        return read_file_with_fallback(file_path)
+
+# 生成C++类文档
+def generate_class_documentation(class_code: str) -> str:
+    class_code =  class_code.split('\n')
+    for i in range(len(class_code)):
+        if 'class' in class_code[i]:
+            # 获取类名
+            class_name = re.search(r'(?<=class\s)\w+', class_code[i])
+            # 获取类注释
+            class_comment = ''
+            j = 1
+            while '//' in class_code[i-j]:
+                class_comment = re.search(r'(?<=//)\s*\w+', class_code[i-j]).group(0) + '\n' + class_comment
+                j += 1
+            
+
+                
+            print(class_name.group(0)+'\n',class_comment,'\n')
 
 
 file_tree = ''
@@ -51,6 +103,8 @@ def get_file_tree(path: str, depth: int):
         # 获取指定类型的文件并列出
         for file in get_files(path, ('.cpp', '.h', '.hpp', '.c', '.txt', '.md')):
             file_tree += (depth * '    ') + file + '\n'
+            file_content = read_file(path + '/' + file)  # 使用新加的读取方法
+            generate_class_documentation(file_content)
 
 get_file_tree(folder_path, 0)
 

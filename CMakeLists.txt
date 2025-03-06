@@ -27,6 +27,7 @@ include_directories(
     "${SFML_DIR}/include"
     
     "game/include/pages"
+    "elemental/include"
 )
 
 # 添加 SFML 的库文件路径
@@ -47,6 +48,7 @@ add_executable(GAME
 
     "game/src/main.cpp"
 
+    "elemental/src/elemental.cpp"
 )
 
 # 链接 SFML 的库

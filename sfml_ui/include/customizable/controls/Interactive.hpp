@@ -5,8 +5,7 @@ namespace sfui {
     class Interactive {
     public:
         Interactive() :m_area(), m_textureItem() {}
-        bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath)
-        {
+        bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath) {
             m_x = x;
             m_y = y;
             m_width = width;
@@ -17,14 +16,14 @@ namespace sfui {
         //获取按钮区域
         Area *const getArea() {
             return &m_area;
-            
+
         }
-        void updateArea(const float x, const float y,const unsigned width,const unsigned height) {
+        void updateArea(const float x, const float y, const unsigned width, const unsigned height) {
             m_area.init(
-                m_x - x+width/2, 
-                m_y - y+height/2,
-                m_x - x + m_width+ width / 2,
-                m_y - y + m_height+height / 2
+                m_x - x + width / 2,
+                m_y - y + height / 2,
+                m_x - x + m_width + width / 2,
+                m_y - y + m_height + height / 2
             );
         }
         const sf::Sprite &getSprite()const {

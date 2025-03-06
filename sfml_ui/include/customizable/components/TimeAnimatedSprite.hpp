@@ -2,6 +2,7 @@
 #include <TextureItem.hpp>
 namespace sfui {
 
+    // 以时间为依据循环播放的动图
 	class TimeAnimatedSprite {
 	public:
         TimeAnimatedSprite();
