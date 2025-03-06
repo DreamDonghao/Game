@@ -1,0 +1,16 @@
+# ninja log v6
+41	370	7630186005641246	CMakeFiles/GAME.dir/elemental/src/elemental.cpp.obj	42d84656306b079c
+11	1209	7630186005339136	CMakeFiles/GAME.dir/sfml_ui/src/core/message/Mouse.cpp.obj	2a409a251c16e548
+21	1229	7630186005429982	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TimeAnimatedSprite.cpp.obj	7c2adef323366be2
+16	1533	7630186005389968	CMakeFiles/GAME.dir/sfml_ui/src/core/pages/Page.cpp.obj	25d0190f6fd600ee
+26	1193	7630186005480727	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TextureItem.cpp.obj	f164064420746f57
+29	1351	7630186005520689	CMakeFiles/GAME.dir/sfml_ui/src/core/message/EventBinding.cpp.obj	9bba387932c7a5d7
+8	1306	7630186005304105	CMakeFiles/GAME.dir/sfml_ui/src/core/message/ActiveKeyBinding_.cpp.obj	4566abe5fc0e92ce
+3	1647	7630186005253151	CMakeFiles/GAME.dir/sfml_ui/src/core/window/Window.cpp.obj	bf66f391660d54fe
+35	2020	7630186005581245	CMakeFiles/GAME.dir/game/src/main.cpp.obj	a0c36ee7e968619e
+2020	2195	7630186025430562	GAME.exe	488355141bec0977
+1	8	7630186003584975	clean	a912d6e803ee3202
+2	2099	7630206550535500	CMakeFiles/GAME.dir/game/src/main.cpp.obj	a0c36ee7e968619e
+2099	2278	7630206571503650	GAME.exe	488355141bec0977
+2	990	7630210063698597	CMakeFiles/GAME.dir/sfml_ui/src/core/message/EventBinding.cpp.obj	9bba387932c7a5d7
+990	1172	7630210073589631	GAME.exe	488355141bec0977

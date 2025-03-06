@@ -1,44 +1,59 @@
-#pragma once
+ï»¿#pragma once
+
 #include <ComplexPage.hpp>
 #include <elemental.hpp>
 #include <biology.hpp>
 #include <world_elemental.hpp>
 #include <player.hpp>
+
 const double PI = 3.14159265358979323846;
 namespace game {
 
-    class MainMenuPage :public sfui::ComplexPage {
+    class MainMenuPage : public sfui::ComplexPage {
     private:
         sfui::TextureItem mainPage;
-        sfui::Button beginGame;
+        sfui::Button beginButton;
+        sfui::Button setButton;
+        sfui::Button quitButton;
     public:
-        MainMenuPage()
-
-        {
+        MainMenuPage() {
         }
 
-        // ³õÊ¼»¯½çÃæÔªËØ
+        // åˆå§‹åŒ–ç•Œé¢å…ƒç´ 
         void initializePageElements() override {
 
             mainPage.init("images\\main_page.png", 2560, 1660);
-            beginGame.init(700, 600, 800, 200, "");
+            beginButton.init(700, 600, 800, 200, "images\\button_begin_game.png");
+            setButton.init(700, 900, 800, 200, "images\\button_set.png");
+            quitButton.init(700, 1200, 800, 200, "images\\button_quit.png");
         }
-        // ³õÊ¼»¯ÏûÏ¢-ÊÂ¼şÓ³Éä
+
+        // åˆå§‹åŒ–æ¶ˆæ¯-äº‹ä»¶æ˜ å°„
         void initMessageBinding() override {
-            eventMap(sfui::MouseButton::Left, beginGame.getArea(), [&]() {
+
+            eventMap(sfui::MouseButton::Left, beginButton.getArea(), [&]() {
                 requestPageSwitch(sfui::TitleName("gamePage"));
+            });
+
+            eventMap(sfui::MouseButton::Left, quitButton.getArea(), [&]() -> void {
+                std::print("quit");
+
+                mp_window->getSfRenderWindow().close();
             });
         }
 
-        // Ö´ĞĞ½çÃæÂß¼­
+        // æ‰§è¡Œç•Œé¢é€»è¾‘
         void update() override {
-           
+
         }
 
-        // äÖÈ¾Ò³ÃæÄÚÈİµ½´°¿Ú
+        // æ¸²æŸ“é¡µé¢å†…å®¹åˆ°çª—å£
         void render() override {
             drawForWindow(mainPage);
-           
+            drawForWindow(beginButton);
+            drawForWindow(setButton);
+            drawForWindow(quitButton);
+
         }
     };
 }

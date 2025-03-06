@@ -1,16 +1,16 @@
-#include <elemental.hpp>
+ï»¿#include <elemental.hpp>
 
 namespace game {
 
-    // »ñÈ¡ID
+    // è·å–ID
     int Elemental::getId() const { return m_id; }
 
-    // ¼¤»î/½ûÓÃÔªËØ
+    // æ¿€æ´»/ç¦ç”¨å…ƒç´ 
     void Elemental::setActive(bool activeState) { m_active = activeState; }
     bool Elemental::isActive() const { return m_active; }
 
 
-    // ±£»¤¹¹Ôìº¯Êı£¬·ÀÖ¹Ö±½Ó´´½¨Elemental¶ÔÏó
+    // ä¿æŠ¤æ„é€ å‡½æ•°ï¼Œé˜²æ­¢ç›´æ¥åˆ›å»ºElementalå¯¹è±¡
     Elemental::Elemental(int id, bool active): m_id(id), m_active(active){}
 
 }

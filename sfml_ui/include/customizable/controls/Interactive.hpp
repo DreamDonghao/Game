@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <print>
 namespace sfui {
 
@@ -13,7 +13,7 @@ namespace sfui {
             m_textureItem.init(filepath, m_width, m_height, m_x, m_y);
             return true;
         }
-        //»ñÈ¡°´Å¥ÇøÓò
+        //è·å–æŒ‰é’®åŒºåŸŸ
         Area *const getArea() {
             return &m_area;
 

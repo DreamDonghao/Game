@@ -1,4 +1,4 @@
-#include <Mouse.hpp>
+﻿#include <Mouse.hpp>
 
 namespace sfui {
     Mouse::Mouse() {

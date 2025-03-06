@@ -1,28 +1,28 @@
-#pragma once
+ï»¿#pragma once
 #include <SFML/Graphics.hpp>
 #include <functional>
 #include <unordered_map>
 
 namespace sfui {
-    // °´¼ü×´Ì¬
+    // æŒ‰é”®çŠ¶æ€
     using Key = sf::Keyboard::Key;
-    // ĞĞÎª
+    // è¡Œä¸º
     using Action = std::function<void()>;
 
-    // °´¼ü×´Ì¬ÓëĞĞÎªµÄÓ³Éä
+    // æŒ‰é”®çŠ¶æ€ä¸è¡Œä¸ºçš„æ˜ å°„
     class ActiveKeyBinding {
     public:
-        // ¹¹Ôìº¯Êı
+        // æ„é€ å‡½æ•°
         ActiveKeyBinding();
 
-        // ½¨Á¢Ó³Éä
+        // å»ºç«‹æ˜ å°„
         void bindKey(Key key, Action action);
 
-        // ¼ì²é°´¼ü×´Ì¬²¢Ö´ĞĞ¶ÔÓ¦µÄĞĞÎª
+        // æ£€æŸ¥æŒ‰é”®çŠ¶æ€å¹¶æ‰§è¡Œå¯¹åº”çš„è¡Œä¸º
         void update();
 
     private:
-        //´æ´¢Ó³Éä
+        //å­˜å‚¨æ˜ å°„
         std::unordered_map<Key, Action> keyBindings;
     };
 }

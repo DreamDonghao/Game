@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
@@ -239,7 +239,7 @@ public:
             RBracket,           //!< Keyboard ] and } key
             // For US keyboards mapped to key 29 (Microsoft Keyboard Scan Code Specification)
             // For Non-US keyboards mapped to key 42 (Microsoft Keyboard Scan Code Specification)
-            // Typical language mappings: Belg:£µ` FrCa:<>} Dan:*' Dutch:`´ Fren:µ* Ger:'# Ital:§ù LatAm:[}` Nor:*@ Span:ç} Swed:*' Swiss:$£} UK:~# Brazil:}]
+            // Typical language mappings: Belg:拢碌` FrCa:<>} Dan:*' Dutch:`麓 Fren:碌* Ger:'# Ital:搂霉 LatAm:[}` Nor:*@ Span:莽} Swed:*' Swiss:$拢} UK:~# Brazil:}]
             Backslash,          //!< Keyboard \ and | key OR various keys for Non-US keyboards
             Semicolon,          //!< Keyboard ; and : key
             Apostrophe,         //!< Keyboard ' and " key
@@ -305,7 +305,7 @@ public:
             Numpad0,            //!< Keypad 0 and Insert key
             // For US keyboards doesn't exist
             // For Non-US keyboards mapped to key 45 (Microsoft Keyboard Scan Code Specification)
-            // Typical language mappings: Belg:<\> FrCa:«°» Dan:<\> Dutch:]|[ Fren:<> Ger:<|> Ital:<> LatAm:<> Nor:<> Span:<> Swed:<|> Swiss:<\> UK:\| Brazil: \|.
+            // Typical language mappings: Belg:<\> FrCa:芦掳禄 Dan:<\> Dutch:]|[ Fren:<> Ger:<|> Ital:<> LatAm:<> Nor:<> Span:<> Swed:<|> Swiss:<\> UK:\| Brazil: \|.
             NonUsBackslash,     //!< Keyboard Non-US \ and | key
             Application,        //!< Keyboard Application key
             Execute,            //!< Keyboard Execute key
@@ -419,7 +419,7 @@ public:
     ///
     /// The current keyboard layout set by the operating system is used to
     /// interpret the scancode: for example, sf::Keyboard::Semicolon is
-    /// mapped to ";" for layout and to "é" for others.
+    /// mapped to ";" for layout and to "茅" for others.
     ///
     /// \return The localized description of the code
     ///

@@ -1,4 +1,4 @@
-#pragma once 
+ï»¿#pragma once 
 #include <SFML/Graphics.hpp>
 namespace sfui {
     using FilePath = std::string;
@@ -12,49 +12,49 @@ namespace sfui {
 
         TextureItem(const TextureItem &other);
 
-        // ³õÊ¼»¯
+        // åˆå§‹åŒ–
         bool init(const FilePath &filepath = "images/unspecified.png",
             const int &width = 0, const int &height = 0,
             const float &x = 0, const float &y = 0
         );
 
-        //ÉèÖÃÏÔÊ¾¿í¶È
+        //è®¾ç½®æ˜¾ç¤ºå®½åº¦
         void setShowWidth(const int &width);
 
-        //ÉèÖÃÏÔÊ¾¸ß¶È
+        //è®¾ç½®æ˜¾ç¤ºé«˜åº¦
         void setShowHeight(const int &height);
 
-        // ÉèÖÃÏÔÊ¾´óĞ¡
+        // è®¾ç½®æ˜¾ç¤ºå¤§å°
         void setShowSize(const int width, const int &height);
 
-        // ÉèÖÃ X ×ø±ê
+        // è®¾ç½® X åæ ‡
         void setX(const float &x);
 
-        // ÉèÖÃ Y ×ø±ê
+        // è®¾ç½® Y åæ ‡
         void setY(const float &y);
 
-        //ÉèÖÃÎ»ÖÃ
+        //è®¾ç½®ä½ç½®
         void setPosition(const float &x, const float &y);
 
-        //»ñÈ¡ÏÔÊ¾¿í¶È
+        //è·å–æ˜¾ç¤ºå®½åº¦
         const float getShowWidth() const;
 
-        //»ñÈ¡ÏÔÊ¾¸ß¶È
+        //è·å–æ˜¾ç¤ºé«˜åº¦
         const float getShowHidth() const;
 
-        //»ñÈ¡ÎÆÀí¿í¶È
+        //è·å–çº¹ç†å®½åº¦
         const int getTextureWidth() const;
 
-        //»ñÈ¡ÎÆÀí¸ß¶È
+        //è·å–çº¹ç†é«˜åº¦
         const int getTextureHeight() const;
 
-        //»ñÈ¡X×ø±ê
+        //è·å–Xåæ ‡
         const float getX() const;
 
-        //»ñÈ¡Y×ø±ê
+        //è·å–Yåæ ‡
         const float getY() const;
 
-        //»ñÈ¡¼ÓÔØÄÚÈİ
+        //è·å–åŠ è½½å†…å®¹
         const sf::Sprite &getSprite() const;
 
     private:

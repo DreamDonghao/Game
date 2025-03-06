@@ -1,4 +1,4 @@
-#include <Page.hpp>
+ï»¿#include <Page.hpp>
 #include <Window.hpp>
 namespace sfui {
     Title TitleName(const std::string &str) {
@@ -10,9 +10,9 @@ namespace sfui {
 
 
     void Page::updateFrame() {
-        // ¸ù¾İ°ó¶¨´°¿ÚµÄ´óĞ¡À´¸üĞÂ½çÃæÊÓÍ¼
+        // æ ¹æ®ç»‘å®šçª—å£çš„å¤§å°æ¥æ›´æ–°ç•Œé¢è§†å›¾
         updateView();
-        // äÖÈ¾Ò³ÃæÄÚÈİµ½´°¿Ú
+        // æ¸²æŸ“é¡µé¢å†…å®¹åˆ°çª—å£
         render();
     }
 
@@ -26,7 +26,7 @@ namespace sfui {
 
 
     void Page::init() {
-        // ³õÊ¼»¯½çÃæÔªËØ
+        // åˆå§‹åŒ–ç•Œé¢å…ƒç´ 
         initializePageElements();
        
         initMessageBinding();

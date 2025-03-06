@@ -1,37 +1,37 @@
-#pragma once
+ï»¿#pragma once
 #include <SFML/Graphics.hpp>
 
 namespace sfui {
     using Position = sf::Vector2i;
-    // ÊµÊ±Êó±ê
+    // å®æ—¶é¼ æ ‡
     class Mouse {
     public:
         Mouse();
 
         void setWindow(sf::RenderWindow *const p_sfml_RenderWindow);
 
-        // »ñÈ¡ÊµÊ±Êó±êÖ¸ÕëÏà¶ÔÓÚÆÁÄ»µÄÎ»ÖÃ
+        // è·å–å®æ—¶é¼ æ ‡æŒ‡é’ˆç›¸å¯¹äºå±å¹•çš„ä½ç½®
         Position getScreenPosition();
 
-        // »ñÈ¡ÊµÊ±Êó±êÖ¸ÕëÏà¶ÔÓÚ´°¿ÚµÄÎ»ÖÃ
+        // è·å–å®æ—¶é¼ æ ‡æŒ‡é’ˆç›¸å¯¹äºçª—å£çš„ä½ç½®
         Position getWindowPosition();
 
-        // »ñÈ¡ÊµÊ±Êó±êÖ¸ÕëÏà¶ÔÓÚÊÓÍ¼µÄÎ»ÖÃ
+        // è·å–å®æ—¶é¼ æ ‡æŒ‡é’ˆç›¸å¯¹äºè§†å›¾çš„ä½ç½®
         Position getViewPosition();
 
-        // »ñÈ¡ÊµÊ±Êó±ê×ó¼üÊÇ·ñµã»÷
+        // è·å–å®æ—¶é¼ æ ‡å·¦é”®æ˜¯å¦ç‚¹å‡»
         bool isLeftPressed();
 
-        // »ñÈ¡ÊµÊ±Êó±êÓÒ¼üÊÇ·ñµã»÷
+        // è·å–å®æ—¶é¼ æ ‡å³é”®æ˜¯å¦ç‚¹å‡»
         bool isRightPressed();
 
-        // »ñÈ¡ÊµÊ±Êó±êÖĞ½¨ÊÇ·ñµã»÷
+        // è·å–å®æ—¶é¼ æ ‡ä¸­å»ºæ˜¯å¦ç‚¹å‡»
         bool isMiddlePressed();
 
-        // »ñÈ¡ÊµÊ±Êó±ê1¼üÊÇ·ñµã»÷
+        // è·å–å®æ—¶é¼ æ ‡1é”®æ˜¯å¦ç‚¹å‡»
         bool isXButton1Pressed();
 
-        // »ñÈ¡ÊµÊ±Êó±ê2¼üÊÇ·ñµã»÷
+        // è·å–å®æ—¶é¼ æ ‡2é”®æ˜¯å¦ç‚¹å‡»
         bool isXButton2Pressed();
     private:
         sf::RenderWindow *m_sf_RenderWindow_p = nullptr;

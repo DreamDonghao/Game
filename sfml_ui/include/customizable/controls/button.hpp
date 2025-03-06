@@ -1,35 +1,41 @@
-#pragma once
+ï»¿#pragma once
+
 #include <TextureItem.hpp>
 #include <Area.hpp>
+
 namespace sfui {
-    // °´Å¥
+    // æŒ‰é’®
     class Button {
     public:
-        // °´Å¥µÄÇøÓò
+        // æŒ‰é’®çš„åŒºåŸŸ
 
 
-        Button():m_area() {}
+        Button() : m_area() {}
 
         ~Button() {}
 
-        // ³õÊ¼»¯
-        bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath) {
+        // åˆå§‹åŒ–
+        bool init(const float &x, const float &y, const int &width, const int &heigth,
+                  const FilePath &filepath) {
             m_x = x;
             m_y = y;
             m_width = width;
             m_height = heigth;
             m_textureItem.init(filepath, m_width, m_height, m_x, m_y);
-            m_area.init(m_x,m_y,
-                m_x + m_width,m_x + m_height);
+            m_area.init(
+                    m_x, m_y,
+                    m_x + m_width, m_y + m_height
+            );
+
             return true;
         }
 
-        //»ñÈ¡°´Å¥ÇøÓò
+        //è·å–æŒ‰é’®åŒºåŸŸ
         Area *const getArea() {
             return &m_area;
         }
 
-        const sf::Sprite &getSprite()const {
+        const sf::Sprite &getSprite() const {
             return m_textureItem.getSprite();
         }
 
@@ -39,7 +45,7 @@ namespace sfui {
         int m_width = 0;
         int m_height = 0;
         Area m_area;
-        
+
 
         TextureItem m_textureItem;
     };

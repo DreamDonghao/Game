@@ -1,4 +1,4 @@
-#include <MainMenuPage.hpp>
+ï»¿#include <MainMenuPage.hpp>
 #include <pausegamepage.hpp>
 #include <Window.hpp>
 #include <gamepage.hpp>
@@ -11,7 +11,7 @@ constexpr int heigth = 5;
 constexpr int ratio = 200;
 
 auto main() -> int {
-    //FreeConsole();  // ÏÖ´úC++ÒÀÈ»Ö§³ÖÒş²Ø¿ØÖÆÌ¨´°¿Ú
+    //FreeConsole();  // ç°ä»£C++ä¾ç„¶æ”¯æŒéšè—æ§åˆ¶å°çª—å£
     sfui::Window window(width*ratio, heigth*ratio, sfui::WindowState::Windowed);
     window.init(165, false);
     window.addPage(sfui::TitleName("mainPage"), sfui::makePage<game::MainMenuPage>());

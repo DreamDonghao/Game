@@ -1,17 +1,17 @@
-#pragma once
+ï»¿#pragma once
 #include <Page.hpp>
 #include <Window.hpp>
 namespace sfui {
-    // UI ¿Ø¼þÒ³Ãæ
-    // ½çÃæÊÓÍ¼´óÐ¡Îª´°¿Ú´óÐ¡
-    // (0,0)Îª×óÉÏ½Ç
+    // UI æŽ§ä»¶é¡µé¢
+    // ç•Œé¢è§†å›¾å¤§å°ä¸ºçª—å£å¤§å°
+    // (0,0)ä¸ºå·¦ä¸Šè§’
     class ControlPage :virtual public Page {
     public:
         
     protected:
         sf::View m_view;
        
-        // ¸ù¾Ý°ó¶¨´°¿ÚµÄ´óÐ¡À´¸üÐÂ½çÃæÊÓÍ¼
+        // æ ¹æ®ç»‘å®šçª—å£çš„å¤§å°æ¥æ›´æ–°ç•Œé¢è§†å›¾
         void updateView() override {
             m_view.setSize(
                 float(mp_window->getWindowSize().x),

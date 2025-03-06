@@ -1,19 +1,22 @@
-#include <EventBinding.hpp>
-
+ï»¿#include <EventBinding.hpp>
+#include <utility>
+#include <print>
 namespace sfui {
 
     EvectBingding::EvectBingding() = default;
 
-    // °ó¶¨Ë²¼äÏûÏ¢ÓëÊÂ¼þ
+    // ç»‘å®šçž¬é—´æ¶ˆæ¯ä¸Žäº‹ä»¶
     void EvectBingding::bindEvent(Key key, Action action) {
-        m_keyBindings[key] = action;
+        m_keyBindings[key] = std::move(action);
     }
-    void EvectBingding::bindEvent(MouseButton mouseButton, Area *const area, Action action) {
-        m_mouseBindings[mouseButton].push_back(std::make_pair(area, action));
+
+    void EvectBingding::bindEvent(MouseButton mouseButton, const Area *const area, const Action& action) {
+        m_mouseButtonBindings[mouseButton].emplace_back(area, action);
     }
-    // ¼ì²éÏûÏ¢²¢Ö´ÐÐÏûÏ¢¶ÔÓ¦µÄÊÂ¼þ
+
+    // æ£€æŸ¥æ¶ˆæ¯å¹¶æ‰§è¡Œæ¶ˆæ¯å¯¹åº”çš„äº‹ä»¶
     void EvectBingding::update(sf::Event event) {
-        // ´¦Àí¼üÅÌÊÂ¼þ
+        // å¤„ç†é”®ç›˜äº‹ä»¶
         if (event.type == sf::Event::KeyPressed) {
 
             if (m_keyBindings.find(event.key.code) != m_keyBindings.end()) {
@@ -24,15 +27,17 @@ namespace sfui {
 
         if (event.type == sf::Event::MouseButtonPressed) {
             
-            if (m_mouseButtonBindings.find(event.mouseButton.button) != m_mouseButtonBindings.end()) {
+            if (m_mouseBinding.find(event.mouseButton.button) != m_mouseBinding.end()) {
                 
-                m_mouseButtonBindings[event.mouseButton.button]();
+                m_mouseBinding[event.mouseButton.button]();
             }
         }
 
-        // ´¦Àí°´Å¥µã»÷ÊÂ¼þ
+        // å¤„ç†æŒ‰é’®ç‚¹å‡»äº‹ä»¶
         if (event.type == sf::Event::MouseButtonPressed) {
-            for (const auto &[buttonArea, action] : m_mouseBindings[event.mouseButton.button]) {
+            for (const auto &[buttonArea, action]
+                : m_mouseButtonBindings[event.mouseButton.button]) {
+                std::println("x:{} y:{}  {}",event.mouseButton.x,event.mouseButton.y,m_mouseButtonBindings[event.mouseButton.button].size());
                 if (buttonArea->isInArea(event.mouseButton.x, event.mouseButton.y)) {
                     action();
                 }

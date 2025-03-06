@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 #include <elemental.hpp>
 #include <FrameAnimatedSprite.hpp>
 namespace game {
-    // ÔÚÊÀ½çÖĞ´æÔÚµÄÔªËØ
+    // åœ¨ä¸–ç•Œä¸­å­˜åœ¨çš„å…ƒç´ 
     class WorldElemental :public Elemental{
     public:
         double getX()const { return m_x; }

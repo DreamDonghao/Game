@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <locale>
@@ -9,88 +9,88 @@
 #include <line.hpp>
 #include <iostream>
 namespace sfui {
-    // ±êÌâ
+    // æ ‡é¢˜
     using Title = std::wstring;
 
-    // Ê¹ÓÃ Windows API
-    // ½« std::string ×ª»»Îª Title (std::wstring)
+    // ä½¿ç”¨ Windows API
+    // å°† std::string è½¬æ¢ä¸º Title (std::wstring)
     Title TitleName(const std::string &str);
-    // ÊÓÍ¼´óĞ¡
+    // è§†å›¾å¤§å°
     using viewSize = sf::Vector2f;
-    // Ê¹´°¿ÚÀà¶Ô½çÃæÀà¿É¼û
+    // ä½¿çª—å£ç±»å¯¹ç•Œé¢ç±»å¯è§
     class Window;
 
-    // ½çÃæ³éÏó»ùÀà
+    // ç•Œé¢æŠ½è±¡åŸºç±»
     class Page {
     public:
-        // ĞéÎö¹¹º¯Êı
+        // è™šææ„å‡½æ•°
         virtual ~Page() = default;
 
-        //¸üĞÂ½çÃæÒ»Ö¡»­Ãæ
+        //æ›´æ–°ç•Œé¢ä¸€å¸§ç”»é¢
         void updateFrame();
 
-        // °ó¶¨½çÃæÓë°üº¬ËüµÄ´°¿Ú
+        // ç»‘å®šç•Œé¢ä¸åŒ…å«å®ƒçš„çª—å£
         void setWindow(Window *const p_window);
 
-        // Îª½çÃæÊó±ê°ó¶¨´°¿Ú
+        // ä¸ºç•Œé¢é¼ æ ‡ç»‘å®šçª—å£
         void setMouseWindow(sf::RenderWindow *const p_sfml_RenderWindow);
 
-        // ³õÊ¼»¯½çÃæ
+        // åˆå§‹åŒ–ç•Œé¢
         void init();
 
-        // ³õÊ¼»¯½çÃæÔªËØ
+        // åˆå§‹åŒ–ç•Œé¢å…ƒç´ 
         virtual void initializePageElements() = 0;
 
-       // ³õÊ¼»¯ÏûÏ¢ÓëÊÂ¼ş°ó¶¨
+       // åˆå§‹åŒ–æ¶ˆæ¯ä¸äº‹ä»¶ç»‘å®š
         virtual void initMessageBinding() = 0;
 
-        // ÊÂ¼şÓ³Éä
+        // äº‹ä»¶æ˜ å°„
         void activeMap(Key key, Action action);
 
-        // ÏûÏ¢Ó³Éä
+        // æ¶ˆæ¯æ˜ å°„
         void eventMap(Key key, Action action);
         void eventMap(MouseButton mousebutton, Action action);
         void eventMap(sf::Mouse::Button mouseButton, Area* area, Action action);
 
-        // ¸ù¾İ°ó¶¨´°¿ÚµÄ´óĞ¡À´¸üĞÂ½çÃæÊÓÍ¼ 
+        // æ ¹æ®ç»‘å®šçª—å£çš„å¤§å°æ¥æ›´æ–°ç•Œé¢è§†å›¾ 
         virtual void updateView() = 0;
 
-        // ÊµÊ±ÊäÈë´¦Àí
+        // å®æ—¶è¾“å…¥å¤„ç†
         void executeKeyPressOnce();
 
-        // ÊÂ¼şÊäÈë´¦Àí
+        // äº‹ä»¶è¾“å…¥å¤„ç†
         void executeEventBinding(const sf::Event event);
 
-        // ¸üĞÂ½çÃæÄÚÈİ
+        // æ›´æ–°ç•Œé¢å†…å®¹
         virtual void update() = 0;
 
-        // ÊÂ¼şÊäÈë´¦Àí
+        // äº‹ä»¶è¾“å…¥å¤„ç†
         //virtual void handleEventInput(const sf::Event &windowEvent) = 0;
 
-        //»ñÈ¡½çÃæ±³¾°ÑÕÉ«
+        //è·å–ç•Œé¢èƒŒæ™¯é¢œè‰²
         sf::Color getBackgroundColor() const;
 
     protected:
-        // ½çÃæ°ó¶¨µÄ´°¿Ú
+        // ç•Œé¢ç»‘å®šçš„çª—å£
         Window *mp_window = nullptr;
-        // ½çÃæ±³¾°ÑÕÉ«
+        // ç•Œé¢èƒŒæ™¯é¢œè‰²
         sf::Color m_backgroundColor;
        
-        // Êó±ê
+        // é¼ æ ‡
         Mouse m_mouse;
-        // °´¼üÊÂ¼ş°ó¶¨
+        // æŒ‰é”®äº‹ä»¶ç»‘å®š
         ActiveKeyBinding m_activeKeyBinding;
 
-        // ÏûÏ¢ÊÂ¼ş°ó¶¨
+        // æ¶ˆæ¯äº‹ä»¶ç»‘å®š
         EvectBingding m_eventBinding;
 
-        //ÉèÖÃ½çÃæ±³¾°ÑÕÉ«
+        //è®¾ç½®ç•Œé¢èƒŒæ™¯é¢œè‰²
         void setBackgroundColor(const sf::Color &backgroundColor);
 
-        // äÖÈ¾½çÃæÄÚÈİ
+        // æ¸²æŸ“ç•Œé¢å†…å®¹
         virtual void render() = 0;
 
-        // ½çÃæÌø×ªÇëÇó£¨ÓÉ×ÓÀàµ÷ÓÃ£©
+        // ç•Œé¢è·³è½¬è¯·æ±‚ï¼ˆç”±å­ç±»è°ƒç”¨ï¼‰
         void requestPageSwitch(const Title &targetPageTitle);
     };
 
