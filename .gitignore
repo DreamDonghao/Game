@@ -8,3 +8,5 @@ SFMLUI/Doxyfile
 /sfml_ui/latex
 sfml_ui/custom.css
 sfml_ui/Doxyfile
+*.obj
+*.obj
