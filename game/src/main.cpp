@@ -1,5 +1,5 @@
 ﻿#include <MainMenuPage.hpp>
-#include <pausegamepage.hpp>
+
 #include <Window.hpp>
 #include <gamepage.hpp>
 #include <windows.h>
@@ -16,7 +16,7 @@ auto main() -> int {
     window.init(165, false);
     window.addPage(sfui::TitleName("mainPage"), sfui::makePage<game::MainMenuPage>());
     window.addPage(sfui::TitleName("gamePage"), sfui::makePage<game::GamePage>());
-    window.addPage(sfui::TitleName("pauseGamePage"), sfui::makePage<game::PauseGamePage>());
+    //window.addPage(sfui::TitleName("pauseGamePage"), sfui::makePage<game::PauseGamePage>());
     window.startShow(sfui::TitleName("mainPage"));
    
 

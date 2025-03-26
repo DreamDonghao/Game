@@ -18,6 +18,8 @@ namespace sfui {
         void set(const float &continuationtTime,
             const int &width, const int &height, const float &x, const float &y);
 
+        void setXY(const float &x,const float &y);
+
         // 获取加载内容,每次获取切换为下一个图片,最后一个图片的下一个为第一个图片
         const sf::Sprite &getSprite();
 

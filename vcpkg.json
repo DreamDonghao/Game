@@ -1,0 +1,9 @@
+{
+  "name" : "game",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "418da99d5a6baef99fe3f2fd69ba561f8bb1fd54",
+  "dependencies" : [ {
+    "name" : "sfml",
+    "version>=" : "3.0.0"
+  } ]
+}

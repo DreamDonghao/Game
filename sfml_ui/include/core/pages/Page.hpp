@@ -59,7 +59,7 @@ namespace sfui {
         void executeKeyPressOnce();
 
         // 事件输入处理
-        void executeEventBinding(const sf::Event event);
+        void executeEventBinding(const sf::Event& event);
 
         // 更新界面内容
         virtual void update() = 0;
@@ -68,7 +68,7 @@ namespace sfui {
         //virtual void handleEventInput(const sf::Event &windowEvent) = 0;
 
         //获取界面背景颜色
-        sf::Color getBackgroundColor() const;
+        [[nodiscard]] sf::Color getBackgroundColor() const;
 
     protected:
         // 界面绑定的窗口

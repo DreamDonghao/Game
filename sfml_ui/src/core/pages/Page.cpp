@@ -51,7 +51,7 @@ namespace sfui {
         m_activeKeyBinding.update();
         
     }
-    void Page::executeEventBinding(const sf::Event event) {
+    void Page::executeEventBinding(const sf::Event& event) {
         m_eventBinding.update(event);
     }
 

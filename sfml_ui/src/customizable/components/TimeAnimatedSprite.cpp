@@ -38,4 +38,12 @@ namespace sfui {
         }
         return m_textureItems[m_nowTextureItemsIndex].getSprite();
     }
+
+    void TimeAnimatedSprite::setXY(const float &x, const float &y) {
+        m_x = x;
+        m_y = y;
+        for (auto &textureItem : m_textureItems) {
+            textureItem.setPosition(m_x, m_y);
+        }
+    }
 }

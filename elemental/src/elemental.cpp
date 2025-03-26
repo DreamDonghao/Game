@@ -9,8 +9,4 @@ namespace game {
     void Elemental::setActive(bool activeState) { m_active = activeState; }
     bool Elemental::isActive() const { return m_active; }
 
-
-    // 保护构造函数，防止直接创建Elemental对象
-    Elemental::Elemental(int id, bool active): m_id(id), m_active(active){}
-
 }

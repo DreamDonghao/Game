@@ -1,16 +1,12 @@
 # ninja log v6
-41	370	7630186005641246	CMakeFiles/GAME.dir/elemental/src/elemental.cpp.obj	42d84656306b079c
-11	1209	7630186005339136	CMakeFiles/GAME.dir/sfml_ui/src/core/message/Mouse.cpp.obj	2a409a251c16e548
-21	1229	7630186005429982	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TimeAnimatedSprite.cpp.obj	7c2adef323366be2
-16	1533	7630186005389968	CMakeFiles/GAME.dir/sfml_ui/src/core/pages/Page.cpp.obj	25d0190f6fd600ee
-26	1193	7630186005480727	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TextureItem.cpp.obj	f164064420746f57
-29	1351	7630186005520689	CMakeFiles/GAME.dir/sfml_ui/src/core/message/EventBinding.cpp.obj	9bba387932c7a5d7
-8	1306	7630186005304105	CMakeFiles/GAME.dir/sfml_ui/src/core/message/ActiveKeyBinding_.cpp.obj	4566abe5fc0e92ce
-3	1647	7630186005253151	CMakeFiles/GAME.dir/sfml_ui/src/core/window/Window.cpp.obj	bf66f391660d54fe
-35	2020	7630186005581245	CMakeFiles/GAME.dir/game/src/main.cpp.obj	a0c36ee7e968619e
-2020	2195	7630186025430562	GAME.exe	488355141bec0977
-1	8	7630186003584975	clean	a912d6e803ee3202
-2	2099	7630206550535500	CMakeFiles/GAME.dir/game/src/main.cpp.obj	a0c36ee7e968619e
-2099	2278	7630206571503650	GAME.exe	488355141bec0977
-2	990	7630210063698597	CMakeFiles/GAME.dir/sfml_ui/src/core/message/EventBinding.cpp.obj	9bba387932c7a5d7
+34	77	7646893468213130	CMakeFiles/GAME.dir/elemental/src/elemental.cpp.obj	628ba1b9be82a7c5
+9	800	7646891862451894	CMakeFiles/GAME.dir/sfml_ui/src/core/message/Mouse.cpp.obj	512603af00d3f72d
+17	1443	7646893468056300	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TimeAnimatedSprite.cpp.obj	dd84c5dbdfdc8b1f
+13	1799	7646893468016291	CMakeFiles/GAME.dir/sfml_ui/src/core/pages/Page.cpp.obj	a65f50c6f2de5db0
+18	806	7646891862542926	CMakeFiles/GAME.dir/sfml_ui/src/customizable/components/TextureItem.cpp.obj	f4698cbdd24d0d50
+21	1070	7646891862572930	CMakeFiles/GAME.dir/sfml_ui/src/core/message/EventBinding.cpp.obj	87e61435d3a1b7fc
+6	1492	7646893467945852	CMakeFiles/GAME.dir/sfml_ui/src/core/message/ActiveKeyBinding_.cpp.obj	83506988c76b5ade
+3	1266	7646891862391271	CMakeFiles/GAME.dir/sfml_ui/src/core/window/Window.cpp.obj	7ac22d5b1959b833
+25	1645	7646891862612933	CMakeFiles/GAME.dir/game/src/main.cpp.obj	1e7cfbb44311427f
 990	1172	7630210073589631	GAME.exe	488355141bec0977
+1	8	7630186003584975	clean	a912d6e803ee3202

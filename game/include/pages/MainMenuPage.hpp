@@ -6,7 +6,7 @@
 #include <world_elemental.hpp>
 #include <player.hpp>
 
-const double PI = 3.14159265358979323846;
+
 namespace game {
 
     class MainMenuPage : public sfui::ComplexPage {

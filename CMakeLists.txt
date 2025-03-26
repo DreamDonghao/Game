@@ -6,12 +6,12 @@ if(POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
 endif() 
 
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 23)
 
 project (GAME)
 
 # 设置 SFML动态库 路径
-set(SFML_DIR _library/sfml)
+#set(SFML_DIR _library/sfml)
 
 set(SFMLUI_INCLUDE sfml_ui/include)
 
@@ -24,14 +24,14 @@ include_directories(
     "${SFMLUI_INCLUDE}/core/message"   
     "${SFMLUI_INCLUDE}/core/window" 
     "${SFMLUI_INCLUDE}/test" 
-    "${SFML_DIR}/include"
+    #"${SFML_DIR}/include"
     
     "game/include/pages"
     "elemental/include"
 )
 
 # 添加 SFML 的库文件路径
-link_directories(${SFML_DIR}/lib)
+#link_directories(${SFML_DIR}/lib)
 # 设置库文件目录
 #link_directories("_library/box2d/lib")
 # 添加源文件
@@ -51,17 +51,10 @@ add_executable(GAME
     "elemental/src/elemental.cpp"
 )
 
-# 链接 SFML 的库
-target_link_libraries(GAME
-    sfml-audio
-    sfml-graphics
-    sfml-network
-    sfml-system
-    sfml-window
-)
+find_package(SFML  COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
+target_link_libraries(GAME PRIVATE SFML::Network SFML::Graphics SFML::Window SFML::Audio SFML::System)
 
-file(COPY ${SFML_DIR}/bin/ DESTINATION ${CMAKE_BINARY_DIR}/)
-
+#file(COPY ${SFML_DIR}/bin/ DESTINATION ${CMAKE_BINARY_DIR}/)
 
 
 

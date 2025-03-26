@@ -12,7 +12,9 @@ namespace game {
     private:
 
     public:
-        PauseGamePage() {
+
+        PauseGamePage(){
+
         }
 
         // 初始化界面元素
@@ -26,6 +28,7 @@ namespace game {
             eventMap(sfui::Key::Escape, [&]() {
                 requestPageSwitch(sfui::TitleName("gamePage"));
             });
+
         }
 
         // 执行界面逻辑
@@ -35,7 +38,7 @@ namespace game {
 
         // 渲染页面内容到窗口
         void render() override {
-
+            drawForWindow(returnMainPageButton);
         }
     };
 }
