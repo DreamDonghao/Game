@@ -11,5 +11,5 @@ sfml_ui/custom.css
 sfml_ui/Doxyfile
 *.obj
 /cmake-build-debug
-/cmake-build-release
 /.vs
+cmake-build-release

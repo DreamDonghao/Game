@@ -1,3 +1,0 @@
-C:/Users/donghao/Documents/GitHub/game_for_windows/cmake-build-debug/CMakeFiles/GAME.dir
-C:/Users/donghao/Documents/GitHub/game_for_windows/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/donghao/Documents/GitHub/game_for_windows/cmake-build-debug/CMakeFiles/rebuild_cache.dir
