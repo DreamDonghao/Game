@@ -1,9 +1,6 @@
 # 忽略VS的输出文件
 /out
 # 忽略VS打开的配置文件
-/.vs
-/cmake-build-debug
-/cmake-build-release
 /SFMLUI/html
 /SFMLUI/latex
 SFMLUI/custom.css
@@ -13,3 +10,6 @@ SFMLUI/Doxyfile
 sfml_ui/custom.css
 sfml_ui/Doxyfile
 *.obj
+/cmake-build-debug
+/cmake-build-release
+/.vs
