@@ -1,4 +1,8 @@
-﻿#include <Page.hpp>
+﻿/**
+ * @file Page.cpp
+ * @brief 实现Page类及相关函数，负责界面生命周期、事件绑定、渲染等。
+ */
+#include <Page.hpp>
 #include <Window.hpp>
 #include <windows.h>
 #include <SFML/System.hpp>
@@ -43,8 +47,8 @@ namespace sfui {
         m_eventBinding.bindEvent(key, action);
     }
 
-    void Page::eventMap(const MouseButton mousebutton, const Action &action) {
-        m_eventBinding.bindEvent(mousebutton,action);
+    void Page::eventMap(const MouseButton mouseButton, const Action &action) {
+        m_eventBinding.bindEvent(mouseButton,action);
     }
     void Page::eventMap(const sf::Mouse::Button mouseButton, const Area *const area, const Action &action) {
         m_eventBinding.bindEvent(mouseButton, area, action);

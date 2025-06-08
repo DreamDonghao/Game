@@ -4,17 +4,30 @@
 #include <Area.hpp>
 
 namespace sfui {
-    // 按钮
+    /**
+     * @brief 按钮类，封装贴图和区域
+     */
     class Button {
     public:
-        // 按钮的区域
-
-
+        /**
+         * @brief 默认构造函数
+         */
         Button() : m_area() {}
 
+        /**
+         * @brief 析构函数
+         */
         ~Button() {}
 
-        // 初始化
+        /**
+         * @brief 初始化按钮
+         * @param x 按钮左上角x坐标
+         * @param y 按钮左上角y坐标
+         * @param width 按钮宽度
+         * @param heigth 按钮高度
+         * @param filepath 按钮图片路径
+         * @return 是否初始化成功
+         */
         bool init(const float &x, const float &y, const int &width, const int &heigth,
                   const FilePath &filepath) {
             m_x = x;
@@ -30,24 +43,29 @@ namespace sfui {
             return true;
         }
 
-        //获取按钮区域
+        /**
+         * @brief 获取按钮区域
+         * @return 区域指针
+         */
         Area *getArea() {
             return &m_area;
         }
 
+        /**
+         * @brief 获取按钮的Sprite
+         * @return SFML Sprite对象引用
+         */
         const sf::Sprite &getSprite() const {
             return m_textureItem.getSprite();
         }
 
     protected:
-        float m_x = 0.0;
-        float m_y = 0.0;
-        int m_width = 0;
-        int m_height = 0;
-        Area m_area;
-
-
-        TextureItem m_textureItem;
+        float m_x = 0.0; ///< 按钮左上角x坐标
+        float m_y = 0.0; ///< 按钮左上角y坐标
+        int m_width = 0; ///< 按钮宽度
+        int m_height = 0; ///< 按钮高度
+        Area m_area; ///< 按钮区域
+        TextureItem m_textureItem; ///< 按钮贴图
     };
 
 }

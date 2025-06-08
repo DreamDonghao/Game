@@ -37,7 +37,7 @@ link_directories(${SFML_DIR}/lib)
 add_executable(GAME
         "sfml_ui/src/core/window/Window.cpp"
         #"sfml_ui/src/test/main.cpp"
-        "sfml_ui/src/core/message/ActiveKeyBinding .cpp"
+        "sfml_ui/src/core/message/ActiveKeyBinding.cpp"
 
         "sfml_ui/src/core/message/Mouse.cpp"
         "sfml_ui/src/core/pages/Page.cpp"
