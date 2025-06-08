@@ -1,37 +1,36 @@
 ﻿#pragma once
 #include <SFML/Window/Event.hpp>
-#include <SFML/Window/Keyboard.hpp>
+
 #include <Page.hpp>
 
 namespace sfui {
-
     // 界面指针
-    template <typename PageType>
+    template<typename PageType>
     using PagePtr = std::unique_ptr<PageType>;
 
     // 创建界面
-    template <typename PageType, typename... Args>
-    inline PagePtr<PageType> makePage(Args&&... args) {
+    template<typename PageType, typename... Args>
+    inline PagePtr<PageType> makePage(Args &&... args) {
         return std::make_unique<PageType>(std::forward<Args>(args)...);
     }
 
     // 标题界面对应表
-    using PageMap = std::unordered_map<Title, PagePtr<Page>>;
+    using PageMap = std::unordered_map<Title, PagePtr<Page> >;
 
     // 窗口大小
     using WindowSize = sf::Vector2u;
 
     // 表示窗口状态
     enum class WindowState {
-        Windowed,  // 窗口模式
+        Windowed, // 窗口模式
         Fullscreen // 全屏模式
     };
- 
+
     //窗口类
     class Window {
     public:
-
         Window(const int &width, const int &heigth, const WindowState &winsowState);
+
         ~Window() = default;
 
 
@@ -42,7 +41,7 @@ namespace sfui {
 
         // 开始显示首页面
         void startShow(const Title &firstPageTitle);
-        
+
         // 切换为指定标题界面
         void requestPageSwitch(const Title &pageTitle);
 
@@ -50,7 +49,7 @@ namespace sfui {
         sf::RenderWindow &getSfRenderWindow();
 
         // 获取窗口大小
-        const WindowSize getWindowSize();
+        const WindowSize getWindowSize() const;
 
         // 获取屏幕分辨率
         const WindowSize &getScreenSize() const;
@@ -63,20 +62,20 @@ namespace sfui {
         Title m_nowPageTitle;
         sf::Event m_event;
         WindowState m_winsowState;
-        int m_framerateLimit = 60;// 刷新率
-        bool m_verticalSyncEnabled = false;// 垂直同步是否开启
+        int m_framerateLimit = 60; // 刷新率
+        bool m_verticalSyncEnabled = false; // 垂直同步是否开启
 
         // 更新当前界面的视图
         void updateView();
-        // 更新消息，并在收到关闭窗口时将窗口关闭
 
+        // 更新消息，并在收到关闭窗口时将窗口关闭
         void procesMessage();
-        
+
         // 处理实时输入
         void handleRealTimeInput();
 
         // 处理事件输入
-        void  handleEventInput();
+        void handleEventInput();
 
         // 加载并显示界面画面到窗口
         void drawFrame();
@@ -90,5 +89,4 @@ namespace sfui {
         //切换为窗口模式
         void toWindowed();
     };
-
 }

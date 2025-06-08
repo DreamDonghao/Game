@@ -1,10 +1,13 @@
 ﻿#include <Page.hpp>
 #include <Window.hpp>
+#include <windows.h>
+#include <SFML/System.hpp>
+#include <locale>
 namespace sfui {
     Title TitleName(const std::string &str) {
-        int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), nullptr, 0);
+        const int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), static_cast<int>(str.size()), nullptr, 0);
         std::wstring wstr(size_needed, 0);
-        MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), &wstr[0], size_needed);
+        MultiByteToWideChar(CP_UTF8, 0, str.c_str(), static_cast<int>(str.size()), &wstr[0], size_needed);
         return wstr;
     }
 
@@ -32,18 +35,18 @@ namespace sfui {
         initMessageBinding();
     }
 
-    void Page::activeMap(Key key, Action action) {
+    void Page::activeMap(const Key key, const Action &action) {
         m_activeKeyBinding.bindKey(key, action);
     }
 
-    void Page::eventMap(Key key, Action action) {
+    void Page::eventMap(Key key, const Action &action) {
         m_eventBinding.bindEvent(key, action);
     }
 
-    void Page::eventMap(MouseButton mousebutton, Action action) {
+    void Page::eventMap(const MouseButton mousebutton, const Action &action) {
         m_eventBinding.bindEvent(mousebutton,action);
     }
-    void Page::eventMap(sf::Mouse::Button mouseButton,Area *const area, Action action) {
+    void Page::eventMap(const sf::Mouse::Button mouseButton, const Area *const area, const Action &action) {
         m_eventBinding.bindEvent(mouseButton, area, action);
     }
 

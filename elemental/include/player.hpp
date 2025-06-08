@@ -4,7 +4,8 @@ namespace game {
 
     class Player: private Biology{
     public:
-        Player(const double &x,const double &y){
+        Player(const do                                                                                                                                                                                                                           2*94662800
+            uble &x,const double &y){
             m_x = x;
             m_y = y;
         }

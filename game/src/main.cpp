@@ -6,9 +6,9 @@
 #include <filesystem>
 
 //#include <box2d.h>
-constexpr int width = 8;
-constexpr int heigth = 5;
-constexpr int ratio = 200;
+constexpr int width = 16;
+constexpr int heigth = 10;
+constexpr int ratio = 80;
 
 auto main() -> int {
     //FreeConsole();  // 现代C++依然支持隐藏控制台窗口
@@ -18,7 +18,7 @@ auto main() -> int {
     window.addPage(sfui::TitleName("gamePage"), sfui::makePage<game::GamePage>());
     //window.addPage(sfui::TitleName("pauseGamePage"), sfui::makePage<game::PauseGamePage>());
     window.startShow(sfui::TitleName("mainPage"));
-   
+
 
     return 0;
 }

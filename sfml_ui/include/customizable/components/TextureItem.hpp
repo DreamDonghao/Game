@@ -43,16 +43,16 @@ namespace sfui {
         const float getShowHidth() const;
 
         //获取纹理宽度
-        const int getTextureWidth() const;
+        int getTextureWidth() const;
 
         //获取纹理高度
-        const int getTextureHeight() const;
+        int getTextureHeight() const;
 
         //获取X坐标
-        const float getX() const;
+        float getX() const;
 
         //获取Y坐标
-        const float getY() const;
+        float getY() const;
 
         //获取加载内容
         const sf::Sprite &getSprite() const;

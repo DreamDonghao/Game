@@ -8,8 +8,8 @@
 namespace sfui {
 
     Window::Window(const int &width, const int &heigth, const WindowState &winsowState)
-        :m_winsowState(winsowState), m_event() {
-        sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
+        :m_event(), m_winsowState(winsowState) {
+        const sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
         m_screenSize.x = desktopMode.width;
         m_screenSize.y = desktopMode.height;
         m_windowSize = WindowSize(width, heigth);
@@ -91,7 +91,7 @@ namespace sfui {
     void Window::requestPageSwitch(const Title &pageTitle) {
         // 检测要切换页面是否存在，若不存在，抛出一个异常
         try {
-            if (m_pages.find(pageTitle) == m_pages.end()) {
+            if (!m_pages.contains(pageTitle)) {
                 throw std::runtime_error("Page don't exist!!!");
             }
         } catch (const std::runtime_error &err) {
@@ -109,7 +109,7 @@ namespace sfui {
         return m_sf_renderWindow;
     }
 
-    const WindowSize Window::getWindowSize() {
+    const WindowSize Window::getWindowSize() const {
         //return m_windowSize;
         return m_sf_renderWindow.getSize();
     }

@@ -5,7 +5,7 @@ namespace sfui {
     class Interactive {
     public:
         Interactive() :m_area(), m_textureItem() {}
-        bool init(const float &x, const float &y, const int &width, const int &heigth, FilePath filepath) {
+        bool init(const float &x, const float &y, const int &width, const int &heigth, const FilePath &filepath) {
             m_x = x;
             m_y = y;
             m_width = width;

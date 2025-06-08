@@ -31,7 +31,7 @@ namespace sfui {
         }
 
         //获取按钮区域
-        Area *const getArea() {
+        Area *getArea() {
             return &m_area;
         }
 

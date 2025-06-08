@@ -81,19 +81,19 @@ namespace sfui {
         return m_sf_sprite.getGlobalBounds().height;
     }
     //获取纹理宽度
-    const int TextureItem::getTextureWidth() const {
+    int TextureItem::getTextureWidth() const {
         return m_sf_texture.getSize().x;
     }
     //获取纹理高度
-    const int TextureItem::getTextureHeight() const {
+    int TextureItem::getTextureHeight() const {
         return m_sf_texture.getSize().y;
     }
     //获取X坐标
-    const float TextureItem::getX() const {
+    float TextureItem::getX() const {
         return m_sf_sprite.getPosition().x;
     }
     //获取Y坐标
-    const float TextureItem::getY() const {
+    float TextureItem::getY() const {
         return m_sf_sprite.getPosition().y;
     }
     //获取加载内容

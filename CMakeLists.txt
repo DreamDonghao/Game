@@ -46,6 +46,8 @@ add_executable(GAME
         "sfml_ui/src/core/message/EventBinding.cpp"
 
         "game/src/main.cpp"
+        sfml_ui/src/customizable/components/textbox.cpp
+        sfml_ui/include/customizable/components/textbox.hpp
 
 )
 
