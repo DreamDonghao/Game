@@ -1,0 +1,38 @@
+var namespacesfui =
+[
+    [ "ActiveKeyBinding", "classsfui_1_1_active_key_binding.html", "classsfui_1_1_active_key_binding" ],
+    [ "Area", "classsfui_1_1_area.html", "classsfui_1_1_area" ],
+    [ "Button", "classsfui_1_1_button.html", "classsfui_1_1_button" ],
+    [ "ComplexPage", "classsfui_1_1_complex_page.html", "classsfui_1_1_complex_page" ],
+    [ "ControlPage", "classsfui_1_1_control_page.html", "classsfui_1_1_control_page" ],
+    [ "EvectBingding", "classsfui_1_1_evect_bingding.html", "classsfui_1_1_evect_bingding" ],
+    [ "FrameAnimatedSprite", "classsfui_1_1_frame_animated_sprite.html", "classsfui_1_1_frame_animated_sprite" ],
+    [ "InputBox", "classsfui_1_1_input_box.html", "classsfui_1_1_input_box" ],
+    [ "Interactive", "classsfui_1_1_interactive.html", "classsfui_1_1_interactive" ],
+    [ "InteractivePage", "classsfui_1_1_interactive_page.html", "classsfui_1_1_interactive_page" ],
+    [ "Line", "classsfui_1_1_line.html", "classsfui_1_1_line" ],
+    [ "Mouse", "classsfui_1_1_mouse.html", "classsfui_1_1_mouse" ],
+    [ "Page", "classsfui_1_1_page.html", "classsfui_1_1_page" ],
+    [ "PageName", "classsfui_1_1_page_name.html", "classsfui_1_1_page_name" ],
+    [ "Text", "classsfui_1_1_text.html", "classsfui_1_1_text" ],
+    [ "TextBox", "classsfui_1_1_text_box.html", "classsfui_1_1_text_box" ],
+    [ "TextureItem", "classsfui_1_1_texture_item.html", "classsfui_1_1_texture_item" ],
+    [ "TimeAnimatedSprite", "classsfui_1_1_time_animated_sprite.html", "classsfui_1_1_time_animated_sprite" ],
+    [ "Window", "classsfui_1_1_window.html", "classsfui_1_1_window" ],
+    [ "Action", "namespacesfui.html#a2b73109f30fb81ecd18900d765742a34", null ],
+    [ "FilePath", "namespacesfui.html#a3914e89931c8852cbe1322d380701e62", null ],
+    [ "Key", "namespacesfui.html#ae675da92866ddc52851d8fce49943fde", null ],
+    [ "MouseButton", "namespacesfui.html#a0110ad9214b6430c7b841e0b88f73fa1", null ],
+    [ "PageMap", "namespacesfui.html#a5f77e4dd693a9e71ebb3d3d882a22628", null ],
+    [ "PagePtr", "namespacesfui.html#afcea08736be0f52e8604563ca8677c70", null ],
+    [ "Position", "namespacesfui.html#ab5eb83c506683e6ae2e2c1a19181d9e8", null ],
+    [ "Title", "namespacesfui.html#ac49a7e91cc81d7ac921e6b93abd9851d", null ],
+    [ "viewSize", "namespacesfui.html#ae34f6d4fda54f1f950fc14956101295d", null ],
+    [ "WindowSize", "namespacesfui.html#add19d31228ec52899ab7ae72ea3c11a2", null ],
+    [ "WindowState", "namespacesfui.html#a98343da21a28c0d445591ea12c4bc6fa", [
+      [ "Windowed", "namespacesfui.html#a98343da21a28c0d445591ea12c4bc6faab13311ab51c4c34757f67f26580018dd", null ],
+      [ "Fullscreen", "namespacesfui.html#a98343da21a28c0d445591ea12c4bc6faa0829ea6734059d66e6bf87096b215dc1", null ]
+    ] ],
+    [ "makePage", "namespacesfui.html#a90be12c04a2fc9de082dba031c599f2c", null ],
+    [ "TitleName", "namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b", null ]
+];

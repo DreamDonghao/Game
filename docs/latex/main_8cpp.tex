@@ -1,0 +1,113 @@
+\doxysection{game/src/main.cpp 文件参考}
+\label{main_8cpp}\index{game/src/main.cpp@{game/src/main.cpp}}
+{\ttfamily \#include $<$Main\+Menu\+Page.\+hpp$>$}\newline
+main.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{main_8cpp_a8216c1645620cdb2f629cde3ac02ffef}{main}} () -\/$>$ int
+\end{DoxyCompactItemize}
+\doxysubsubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \mbox{\hyperlink{main_8cpp_a229d697f97d697703cd11ce11d76f53b}{width}} = 16
+\item 
+constexpr int \mbox{\hyperlink{main_8cpp_a53e2906a6247d5b6e12cca1737a5fdc2}{heigth}} = 10
+\item 
+constexpr int \mbox{\hyperlink{main_8cpp_a7182db3232d4c830032a7c6081f7e8a2}{ratio}} = 80
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\doxysubsection{函数说明}
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a8216c1645620cdb2f629cde3ac02ffef} 
+auto main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) -\/$>$ int }
+
+
+
+在文件 \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}} 第 \mbox{\hyperlink{main_8cpp_source_l00013}{13}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//FreeConsole();\ \ //\ 现代C++依然支持隐藏控制台窗口}}
+\DoxyCodeLine{00015\ \ \ \ \ sfui::Window\ window(width*ratio,\ heigth*ratio,\ sfui::WindowState::Windowed);}
+\DoxyCodeLine{00016\ \ \ \ \ window.init(165,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00017\ \ \ \ \ window.addPage(sfui::TitleName(\textcolor{stringliteral}{"{}mainPage"{}}),\ sfui::makePage<game::MainMenuPage>(\&window.getSfRenderWindow()));}
+\DoxyCodeLine{00018\ \ \ \ \ window.addPage(sfui::TitleName(\textcolor{stringliteral}{"{}gamePage"{}}),\ sfui::makePage<game::GamePage>(\&window.getSfRenderWindow()));}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//window.addPage(sfui::TitleName("{}pauseGamePage"{}),\ sfui::makePage<game::PauseGamePage>());}}
+\DoxyCodeLine{00020\ \ \ \ \ window.startShow(sfui::TitleName(\textcolor{stringliteral}{"{}mainPage"{}}));}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_window_8cpp_source_l00048}{sfui\+::\+Window\+::add\+Page()}}, \mbox{\hyperlink{_window_8cpp_source_l00149}{sfui\+::\+Window\+::get\+Sf\+Render\+Window()}}, \mbox{\hyperlink{main_8cpp_source_l00010}{heigth}}, \mbox{\hyperlink{_window_8cpp_source_l00035}{sfui\+::\+Window\+::init()}}, \mbox{\hyperlink{_window_8hpp_source_l00022}{sfui\+::make\+Page()}}, \mbox{\hyperlink{main_8cpp_source_l00011}{ratio}}, \mbox{\hyperlink{_window_8cpp_source_l00058}{sfui\+::\+Window\+::start\+Show()}}, \mbox{\hyperlink{_page_8cpp_source_l00011}{sfui\+::\+Title\+Name()}}, \mbox{\hyperlink{main_8cpp_source_l00009}{width}} , 以及 \mbox{\hyperlink{_window_8hpp_source_l00040}{sfui\+::\+Windowed}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a8216c1645620cdb2f629cde3ac02ffef_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\doxysubsection{变量说明}
+\index{main.cpp@{main.cpp}!heigth@{heigth}}
+\index{heigth@{heigth}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{heigth}{heigth}}
+{\footnotesize\ttfamily \label{main_8cpp_a53e2906a6247d5b6e12cca1737a5fdc2} 
+int heigth = 10\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+在文件 \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}} 第 \mbox{\hyperlink{main_8cpp_source_l00010}{10}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{button_8hpp_source_l00031}{sfui\+::\+Button\+::init()}} , 以及 \mbox{\hyperlink{main_8cpp_source_l00013}{main()}}.
+
+\index{main.cpp@{main.cpp}!ratio@{ratio}}
+\index{ratio@{ratio}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ratio}{ratio}}
+{\footnotesize\ttfamily \label{main_8cpp_a7182db3232d4c830032a7c6081f7e8a2} 
+int ratio = 80\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+在文件 \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}} 第 \mbox{\hyperlink{main_8cpp_source_l00011}{11}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{main_8cpp_source_l00013}{main()}}, \mbox{\hyperlink{_control_page_8hpp_source_l00020}{sfui\+::\+Control\+Page\+::zoom()}}, \mbox{\hyperlink{_interactive_page_8hpp_source_l00021}{sfui\+::\+Interactive\+Page\+::zoom()}} , 以及 \mbox{\hyperlink{_complex_page_8hpp_source_l00023}{sfui\+::\+Complex\+Page\+::zooms()}}.
+
+\index{main.cpp@{main.cpp}!width@{width}}
+\index{width@{width}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \label{main_8cpp_a229d697f97d697703cd11ce11d76f53b} 
+int width = 16\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+在文件 \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}} 第 \mbox{\hyperlink{main_8cpp_source_l00009}{9}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{player_8hpp_source_l00012}{game\+::\+Player\+::init()}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00018}{game\+::\+World\+Elemental\+::init()}}, \mbox{\hyperlink{button_8hpp_source_l00031}{sfui\+::\+Button\+::init()}}, \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_ab14c6b04945e6b8ec8e064417a81ee17}{sfui\+::\+Frame\+Animated\+Sprite\+::init()}}, \mbox{\hyperlink{classsfui_1_1_interactive_a2844b4a6f1ab50f208863a6756aeed6c}{sfui\+::\+Interactive\+::init()}}, \mbox{\hyperlink{_texture_item_8cpp_source_l00032}{sfui\+::\+Texture\+Item\+::init()}}, \mbox{\hyperlink{_time_animated_sprite_8cpp_source_l00007}{sfui\+::\+Time\+Animated\+Sprite\+::init()}}, \mbox{\hyperlink{inputbox_8hpp_source_l00015}{sfui\+::\+Input\+Box\+::\+Input\+Box()}}, \mbox{\hyperlink{main_8cpp_source_l00013}{main()}}, \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a9958c533c0c06e8e04bde0819a0532a1}{sfui\+::\+Frame\+Animated\+Sprite\+::set()}}, \mbox{\hyperlink{_time_animated_sprite_8cpp_source_l00019}{sfui\+::\+Time\+Animated\+Sprite\+::set()}}, \mbox{\hyperlink{_texture_item_8cpp_source_l00056}{sfui\+::\+Texture\+Item\+::set\+Show\+Size()}}, \mbox{\hyperlink{_texture_item_8cpp_source_l00046}{sfui\+::\+Texture\+Item\+::set\+Show\+Width()}}, \mbox{\hyperlink{classsfui_1_1_interactive_a84b20cc4901ac7972e2273f140457ed8}{sfui\+::\+Interactive\+::update\+Area()}} , 以及 \mbox{\hyperlink{_window_8cpp_source_l00015}{sfui\+::\+Window\+::\+Window()}}.
+

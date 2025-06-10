@@ -1,0 +1,75 @@
+\doxysection{gamepage.\+hpp}
+\label{gamepage_8hpp_source}\index{game/include/pages/gamepage.hpp@{game/include/pages/gamepage.hpp}}
+\mbox{\hyperlink{gamepage_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <ComplexPage.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \#include\ <elemental.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \#include\ <biology.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \#include\ <world\_elemental.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \#include\ <player.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }game\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }GamePage\ :\ \textcolor{keyword}{public}\ sfui::ComplexPage\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isPause;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ sfui::Button\ returnMainPageButton;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ sfui::Button\ returnGameButton;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ GamePage(sf::RenderWindow\ *p\_sfml\_RenderWindow):Page(p\_sfml\_RenderWindow),ComplexPage(p\_sfml\_RenderWindow),isPause(false)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 初始化界面元素}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initializePageElements()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ m\_ratio\ =\ 0.5;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ isPause\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ returnGameButton.init(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 700\ *\ m\_ratio,\ 500\ *\ m\_ratio,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 800\ *\ m\_ratio,\ 200\ *\ m\_ratio,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}images\(\backslash\)\(\backslash\)button\_return\_game.png"{}}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ returnMainPageButton.init(}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 700\ *\ m\_ratio,\ 800\ *\ m\_ratio,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 800\ *\ m\_ratio,\ 200*m\_ratio,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}images\(\backslash\)\(\backslash\)button\_return\_main\_page.png"{}}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 初始化消息-\/事件映射}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initMessageBinding()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 点击ESC时切换游戏暂停状态}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ eventMap(sfui::Key::Escape,\ [\&]()\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isPause\ =\ !isPause;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 当暂停时,点击继续游戏按钮回到游戏}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ eventMap(sfui::MouseButton::Left,\ returnGameButton.getArea(),\ [\&]()\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (isPause)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isPause\ =\ !isPause;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 暂停时,点击回到主界面按钮回到主界面}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ eventMap(sfui::MouseButton::Left,\ returnMainPageButton.getArea(),\ [\&]()\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (isPause)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ requestPageSwitch(sfui::TitleName(\textcolor{stringliteral}{"{}mainPage"{}}));}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 执行界面逻辑}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ update()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 渲染页面内容到窗口}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ render()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//zooms(2);}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isPause)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(returnMainPageButton);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(returnGameButton);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \};}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}

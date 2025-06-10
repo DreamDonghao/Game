@@ -1,0 +1,57 @@
+\doxysection{Texture\+Item.\+hpp}
+\label{_texture_item_8hpp_source}\index{sfml\_ui/include/customizable/components/TextureItem.hpp@{sfml\_ui/include/customizable/components/TextureItem.hpp}}
+\mbox{\hyperlink{_texture_item_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }sfui\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{using\ }FilePath\ =\ std::string;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }TextureItem\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ TextureItem();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ TextureItem(TextureItem\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ TextureItem\ \&operator=(TextureItem\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ TextureItem(\textcolor{keyword}{const}\ TextureItem\ \&other);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ init(\textcolor{keyword}{const}\ FilePath\ \&filepath\ =\ \textcolor{stringliteral}{"{}images/unspecified.png"{}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&width\ =\ 0,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&height\ =\ 0,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&x\ =\ 0,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&y\ =\ 0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setShowWidth(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&width);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setShowHeight(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&height);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setShowSize(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&height);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setX(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&x);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setY(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&y);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setPosition(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&y);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ getShowWidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ getShowHidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getTextureWidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getTextureHeight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ getX()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ getY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::Sprite\ \&getSprite()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ sf::Texture\ m\_sf\_texture;\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ sf::Sprite\ m\_sf\_sprite;\ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \};}
+\DoxyCodeLine{00133\ \}}
+
+\end{DoxyCode}

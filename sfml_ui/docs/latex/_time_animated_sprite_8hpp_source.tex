@@ -1,0 +1,38 @@
+\doxysection{Time\+Animated\+Sprite.\+hpp}
+\label{_time_animated_sprite_8hpp_source}\index{include/customizable/components/TimeAnimatedSprite.hpp@{include/customizable/components/TimeAnimatedSprite.hpp}}
+\mbox{\hyperlink{_time_animated_sprite_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <TextureItem.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }sfui\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }TimeAnimatedSprite\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ TimeAnimatedSprite();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ init(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&continuationtTime,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&y);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addTextureItems(\textcolor{keyword}{const}\ FilePath\ \&filepath);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&continuationtTime,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&y);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setXY(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&x,\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&y);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::Sprite\ \&getSprite();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<\ TextureItem>\ m\_textureItems;\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_x\ =\ 0.0;\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_y\ =\ 0.0;\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_width\ =\ 0;\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_height\ =\ 0;\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::size\_t\ m\_nowTextureItemsIndex\ =\ 0;\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ sf::Clock\ m\_clock;\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ sf::Time\ m\_continuationTime;\ }
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}

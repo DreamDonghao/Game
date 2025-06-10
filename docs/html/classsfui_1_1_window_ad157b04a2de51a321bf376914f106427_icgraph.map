@@ -1,0 +1,5 @@
+<map id="sfui::Window::getSfRenderWindow" name="sfui::Window::getSfRenderWindow">
+<area shape="rect" id="Node000001" title="获取底层SFML窗口对象。" alt="" coords="103,5,281,48"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a8216c1645620cdb2f629cde3ac02ffef" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,29,55,29,55,24,87,24"/>
+</map>

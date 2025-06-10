@@ -1,0 +1,773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: sfui::TextBox类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classsfui_1_1_text_box.html','','classsfui_1_1_text_box-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sfui::TextBox类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>文本框控件，支持自定义字体、颜色、内容、位置等  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="textbox_8hpp_source.html">textbox.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8df1f30d194a2db1d3d5fb2499c49391" id="r_a8df1f30d194a2db1d3d5fb2499c49391"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8df1f30d194a2db1d3d5fb2499c49391">TextBox</a> (const float x, const float y, unsigned int testSize, const sf::Color testColor, const std::filesystem::path &amp;fontPath, std::string textString)</td></tr>
+<tr class="memdesc:a8df1f30d194a2db1d3d5fb2499c49391"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化文本框的内容、字体、颜色、大小和位置  <br /></td></tr>
+<tr class="memitem:af84799875408bc275cc1fb37c97d1b24" id="r_af84799875408bc275cc1fb37c97d1b24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af84799875408bc275cc1fb37c97d1b24">init</a> (const std::filesystem::path &amp;fontPath)</td></tr>
+<tr class="memdesc:af84799875408bc275cc1fb37c97d1b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化字体和文本属性（可用于重新加载字体）  <br /></td></tr>
+<tr class="memitem:a5b76006daa0b1db49818bb9bff55f804" id="r_a5b76006daa0b1db49818bb9bff55f804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b76006daa0b1db49818bb9bff55f804">setFont</a> (const std::filesystem::path &amp;fontPath)</td></tr>
+<tr class="memdesc:a5b76006daa0b1db49818bb9bff55f804"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置字体  <br /></td></tr>
+<tr class="memitem:afa52fa493fddfa2ee3fd24d36717c1f8" id="r_afa52fa493fddfa2ee3fd24d36717c1f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa52fa493fddfa2ee3fd24d36717c1f8">setTestSize</a> (unsigned int testSize)</td></tr>
+<tr class="memdesc:afa52fa493fddfa2ee3fd24d36717c1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置字体大小  <br /></td></tr>
+<tr class="memitem:a09fa232e68e6df0ddb4466dff36f8149" id="r_a09fa232e68e6df0ddb4466dff36f8149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09fa232e68e6df0ddb4466dff36f8149">setTestString</a> (std::string testString)</td></tr>
+<tr class="memdesc:a09fa232e68e6df0ddb4466dff36f8149"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置文本内容  <br /></td></tr>
+<tr class="memitem:add8d156cf8b44c47936efd269bf6acfa" id="r_add8d156cf8b44c47936efd269bf6acfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add8d156cf8b44c47936efd269bf6acfa">setTestColor</a> (sf::Color testColor)</td></tr>
+<tr class="memdesc:add8d156cf8b44c47936efd269bf6acfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置文本颜色  <br /></td></tr>
+<tr class="memitem:a874108fa121f037777400028da9c2d86" id="r_a874108fa121f037777400028da9c2d86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a874108fa121f037777400028da9c2d86">setPosition</a> (const float x, const float y)</td></tr>
+<tr class="memdesc:a874108fa121f037777400028da9c2d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置文本框位置  <br /></td></tr>
+<tr class="memitem:a0b3073d86e94b8226f4c8fff7dec891f" id="r_a0b3073d86e94b8226f4c8fff7dec891f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b3073d86e94b8226f4c8fff7dec891f">getText</a> () const</td></tr>
+<tr class="memitem:abd97748c59cdb1169d02bb18f8543747" id="r_abd97748c59cdb1169d02bb18f8543747"><td class="memItemLeft" align="right" valign="top">const sf::Text &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd97748c59cdb1169d02bb18f8543747">getSprite</a> () const</td></tr>
+<tr class="memdesc:abd97748c59cdb1169d02bb18f8543747"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取SFML文本对象（用于绘制）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7f795102ab9160dd39de493781e4d0be" id="r_a7f795102ab9160dd39de493781e4d0be"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a></td></tr>
+<tr class="memdesc:a7f795102ab9160dd39de493781e4d0be"><td class="mdescLeft">&#160;</td><td class="mdescRight">SFML文本对象  <br /></td></tr>
+<tr class="memitem:aaa27b99185727a959f5dc69666fea1af" id="r_aaa27b99185727a959f5dc69666fea1af"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa27b99185727a959f5dc69666fea1af">m_font</a></td></tr>
+<tr class="memdesc:aaa27b99185727a959f5dc69666fea1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">字体对象  <br /></td></tr>
+<tr class="memitem:a5688d5031c90b2d330b9f67522894b35" id="r_a5688d5031c90b2d330b9f67522894b35"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5688d5031c90b2d330b9f67522894b35">m_x</a> = 0</td></tr>
+<tr class="memdesc:a5688d5031c90b2d330b9f67522894b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本框x坐标  <br /></td></tr>
+<tr class="memitem:ad8a4bd46795560b124b01d382f52dd85" id="r_ad8a4bd46795560b124b01d382f52dd85"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8a4bd46795560b124b01d382f52dd85">m_y</a> = 0</td></tr>
+<tr class="memdesc:ad8a4bd46795560b124b01d382f52dd85"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本框y坐标  <br /></td></tr>
+<tr class="memitem:aafc17ee4e1e539603dcc2f264c29559e" id="r_aafc17ee4e1e539603dcc2f264c29559e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc17ee4e1e539603dcc2f264c29559e">m_textString</a></td></tr>
+<tr class="memdesc:aafc17ee4e1e539603dcc2f264c29559e"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本内容  <br /></td></tr>
+<tr class="memitem:abe3282ce9375779efd69f27ebc426d20" id="r_abe3282ce9375779efd69f27ebc426d20"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe3282ce9375779efd69f27ebc426d20">m_textColor</a></td></tr>
+<tr class="memdesc:abe3282ce9375779efd69f27ebc426d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">文本颜色  <br /></td></tr>
+<tr class="memitem:aa5c6090737e7050aecaeea0958085223" id="r_aa5c6090737e7050aecaeea0958085223"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5c6090737e7050aecaeea0958085223">m_textSize</a> = 0</td></tr>
+<tr class="memdesc:aa5c6090737e7050aecaeea0958085223"><td class="mdescLeft">&#160;</td><td class="mdescRight">字体大小  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>文本框控件，支持自定义字体、颜色、内容、位置等 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00014">14</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a8df1f30d194a2db1d3d5fb2499c49391" name="a8df1f30d194a2db1d3d5fb2499c49391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df1f30d194a2db1d3d5fb2499c49391">&#9670;&#160;</a></span>TextBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sfui::TextBox::TextBox </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>testSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Color</td>          <td class="paramname"><span class="paramname"><em>testColor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>fontPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>textString</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，初始化文本框的内容、字体、颜色、大小和位置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>文本框左上角x坐标 </td></tr>
+    <tr><td class="paramname">y</td><td>文本框左上角y坐标 </td></tr>
+    <tr><td class="paramname">testSize</td><td>字体大小 </td></tr>
+    <tr><td class="paramname">testColor</td><td>字体颜色 </td></tr>
+    <tr><td class="paramname">fontPath</td><td>字体文件路径 </td></tr>
+    <tr><td class="paramname">textString</td><td>文本内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00025">25</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>            : <a class="code hl_variable" href="#a5688d5031c90b2d330b9f67522894b35">m_x</a>(x), <a class="code hl_variable" href="#ad8a4bd46795560b124b01d382f52dd85">m_y</a>(y), <a class="code hl_variable" href="#aafc17ee4e1e539603dcc2f264c29559e">m_textString</a>(std::move(textString)),</div>
+<div class="line"><span class="lineno">   29</span>              <a class="code hl_variable" href="#abe3282ce9375779efd69f27ebc426d20">m_textColor</a>(testColor), <a class="code hl_variable" href="#aa5c6090737e7050aecaeea0958085223">m_textSize</a>(std::move(testSize)) {</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="#aaa27b99185727a959f5dc69666fea1af">m_font</a>.loadFromFile(fontPath.string());</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setFont(<a class="code hl_variable" href="#aaa27b99185727a959f5dc69666fea1af">m_font</a>);</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setString(<a class="code hl_variable" href="#aafc17ee4e1e539603dcc2f264c29559e">m_textString</a>);</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setCharacterSize(<a class="code hl_variable" href="#aa5c6090737e7050aecaeea0958085223">m_textSize</a>);</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setFillColor(<a class="code hl_variable" href="#abe3282ce9375779efd69f27ebc426d20">m_textColor</a>);</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setPosition(<a class="code hl_variable" href="#a5688d5031c90b2d330b9f67522894b35">m_x</a>, <a class="code hl_variable" href="#ad8a4bd46795560b124b01d382f52dd85">m_y</a>);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html_a5688d5031c90b2d330b9f67522894b35"><div class="ttname"><a href="#a5688d5031c90b2d330b9f67522894b35">sfui::TextBox::m_x</a></div><div class="ttdeci">float m_x</div><div class="ttdoc">文本框x坐标</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00111">textbox.hpp:111</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html_a7f795102ab9160dd39de493781e4d0be"><div class="ttname"><a href="#a7f795102ab9160dd39de493781e4d0be">sfui::TextBox::m_text</a></div><div class="ttdeci">sf::Text m_text</div><div class="ttdoc">SFML文本对象</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00109">textbox.hpp:109</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html_aa5c6090737e7050aecaeea0958085223"><div class="ttname"><a href="#aa5c6090737e7050aecaeea0958085223">sfui::TextBox::m_textSize</a></div><div class="ttdeci">unsigned int m_textSize</div><div class="ttdoc">字体大小</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00115">textbox.hpp:115</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html_aaa27b99185727a959f5dc69666fea1af"><div class="ttname"><a href="#aaa27b99185727a959f5dc69666fea1af">sfui::TextBox::m_font</a></div><div class="ttdeci">sf::Font m_font</div><div class="ttdoc">字体对象</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00110">textbox.hpp:110</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html_aafc17ee4e1e539603dcc2f264c29559e"><div class="ttname"><a href="#aafc17ee4e1e539603dcc2f264c29559e">sfui::TextBox::m_textString</a></div><div class="ttdeci">std::string m_textString</div><div class="ttdoc">文本内容</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00113">textbox.hpp:113</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html_abe3282ce9375779efd69f27ebc426d20"><div class="ttname"><a href="#abe3282ce9375779efd69f27ebc426d20">sfui::TextBox::m_textColor</a></div><div class="ttdeci">sf::Color m_textColor</div><div class="ttdoc">文本颜色</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00114">textbox.hpp:114</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html_ad8a4bd46795560b124b01d382f52dd85"><div class="ttname"><a href="#ad8a4bd46795560b124b01d382f52dd85">sfui::TextBox::m_y</a></div><div class="ttdeci">float m_y</div><div class="ttdoc">文本框y坐标</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00112">textbox.hpp:112</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00110">m_font</a>, <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a>, <a class="el" href="textbox_8hpp_source.html#l00114">m_textColor</a>, <a class="el" href="textbox_8hpp_source.html#l00115">m_textSize</a>, <a class="el" href="textbox_8hpp_source.html#l00113">m_textString</a>, <a class="el" href="textbox_8hpp_source.html#l00111">m_x</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00112">m_y</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="abd97748c59cdb1169d02bb18f8543747" name="abd97748c59cdb1169d02bb18f8543747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd97748c59cdb1169d02bb18f8543747">&#9670;&#160;</a></span>getSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sf::Text &amp; sfui::TextBox::getSprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取SFML文本对象（用于绘制） </p>
+<dl class="section return"><dt>返回</dt><dd>SFML的Text对象引用 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00104">104</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                        {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_control_page_8hpp_source.html#l00060">sfui::ControlPage::draw()</a>.</p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>这是这个函数的调用关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_text_box_abd97748c59cdb1169d02bb18f8543747_icgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0b3073d86e94b8226f4c8fff7dec891f" name="a0b3073d86e94b8226f4c8fff7dec891f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3073d86e94b8226f4c8fff7dec891f">&#9670;&#160;</a></span>getText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string sfui::TextBox::getText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00098">98</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.getString(); }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a>.</p>
+
+</div>
+</div>
+<a id="af84799875408bc275cc1fb37c97d1b24" name="af84799875408bc275cc1fb37c97d1b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84799875408bc275cc1fb37c97d1b24">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TextBox::init </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>fontPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化字体和文本属性（可用于重新加载字体） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontPath</td><td>字体文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00042">42</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                     {</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="#aaa27b99185727a959f5dc69666fea1af">m_font</a>.loadFromFile(fontPath.string());</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setFont(<a class="code hl_variable" href="#aaa27b99185727a959f5dc69666fea1af">m_font</a>);</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setString(<a class="code hl_variable" href="#aafc17ee4e1e539603dcc2f264c29559e">m_textString</a>);</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setCharacterSize(<a class="code hl_variable" href="#aa5c6090737e7050aecaeea0958085223">m_textSize</a>);</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setFillColor(<a class="code hl_variable" href="#abe3282ce9375779efd69f27ebc426d20">m_textColor</a>);</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setPosition(<a class="code hl_variable" href="#a5688d5031c90b2d330b9f67522894b35">m_x</a>, <a class="code hl_variable" href="#ad8a4bd46795560b124b01d382f52dd85">m_y</a>);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00110">m_font</a>, <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a>, <a class="el" href="textbox_8hpp_source.html#l00114">m_textColor</a>, <a class="el" href="textbox_8hpp_source.html#l00115">m_textSize</a>, <a class="el" href="textbox_8hpp_source.html#l00113">m_textString</a>, <a class="el" href="textbox_8hpp_source.html#l00111">m_x</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00112">m_y</a>.</p>
+
+</div>
+</div>
+<a id="a5b76006daa0b1db49818bb9bff55f804" name="a5b76006daa0b1db49818bb9bff55f804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b76006daa0b1db49818bb9bff55f804">&#9670;&#160;</a></span>setFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TextBox::setFont </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>fontPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置字体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontPath</td><td>字体文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00055">55</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                        {</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="#aaa27b99185727a959f5dc69666fea1af">m_font</a>.loadFromFile(fontPath.string());</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setFont(<a class="code hl_variable" href="#aaa27b99185727a959f5dc69666fea1af">m_font</a>);</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00110">m_font</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a>.</p>
+
+</div>
+</div>
+<a id="a874108fa121f037777400028da9c2d86" name="a874108fa121f037777400028da9c2d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874108fa121f037777400028da9c2d86">&#9670;&#160;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TextBox::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置文本框位置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>新的x坐标 </td></tr>
+    <tr><td class="paramname">y</td><td>新的y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00092">92</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                       {</div>
+<div class="line"><span class="lineno">   93</span>            <a class="code hl_variable" href="#a5688d5031c90b2d330b9f67522894b35">m_x</a> = x;</div>
+<div class="line"><span class="lineno">   94</span>            <a class="code hl_variable" href="#ad8a4bd46795560b124b01d382f52dd85">m_y</a> = y;</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setPosition(<a class="code hl_variable" href="#ad8a4bd46795560b124b01d382f52dd85">m_y</a>, <a class="code hl_variable" href="#ad8a4bd46795560b124b01d382f52dd85">m_y</a>);</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a>, <a class="el" href="textbox_8hpp_source.html#l00111">m_x</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00112">m_y</a>.</p>
+
+</div>
+</div>
+<a id="add8d156cf8b44c47936efd269bf6acfa" name="add8d156cf8b44c47936efd269bf6acfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8d156cf8b44c47936efd269bf6acfa">&#9670;&#160;</a></span>setTestColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TextBox::setTestColor </td>
+          <td>(</td>
+          <td class="paramtype">sf::Color</td>          <td class="paramname"><span class="paramname"><em>testColor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置文本颜色 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">testColor</td><td>新的颜色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00082">82</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                             {</div>
+<div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="#abe3282ce9375779efd69f27ebc426d20">m_textColor</a> = std::move(testColor);</div>
+<div class="line"><span class="lineno">   84</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setFillColor(<a class="code hl_variable" href="#abe3282ce9375779efd69f27ebc426d20">m_textColor</a>);</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00114">m_textColor</a>.</p>
+
+</div>
+</div>
+<a id="afa52fa493fddfa2ee3fd24d36717c1f8" name="afa52fa493fddfa2ee3fd24d36717c1f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa52fa493fddfa2ee3fd24d36717c1f8">&#9670;&#160;</a></span>setTestSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TextBox::setTestSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>testSize</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置字体大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">testSize</td><td>字体大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00064">64</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                {</div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="#aa5c6090737e7050aecaeea0958085223">m_textSize</a> = std::move(testSize);</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setCharacterSize(<a class="code hl_variable" href="#aa5c6090737e7050aecaeea0958085223">m_textSize</a>);</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00115">m_textSize</a>.</p>
+
+</div>
+</div>
+<a id="a09fa232e68e6df0ddb4466dff36f8149" name="a09fa232e68e6df0ddb4466dff36f8149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fa232e68e6df0ddb4466dff36f8149">&#9670;&#160;</a></span>setTestString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TextBox::setTestString </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>testString</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置文本内容 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">testString</td><td>新的文本内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00073">73</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                 {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="#aafc17ee4e1e539603dcc2f264c29559e">m_textString</a> = std::move(testString);</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="#a7f795102ab9160dd39de493781e4d0be">m_text</a>.setString(<a class="code hl_variable" href="#aafc17ee4e1e539603dcc2f264c29559e">m_textString</a>);</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="textbox_8hpp_source.html#l00109">m_text</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00113">m_textString</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aaa27b99185727a959f5dc69666fea1af" name="aaa27b99185727a959f5dc69666fea1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa27b99185727a959f5dc69666fea1af">&#9670;&#160;</a></span>m_font</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Font sfui::TextBox::m_font</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>字体对象 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00110">110</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="textbox_8hpp_source.html#l00042">init()</a>, <a class="el" href="textbox_8hpp_source.html#l00055">setFont()</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00025">TextBox()</a>.</p>
+
+</div>
+</div>
+<a id="a7f795102ab9160dd39de493781e4d0be" name="a7f795102ab9160dd39de493781e4d0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f795102ab9160dd39de493781e4d0be">&#9670;&#160;</a></span>m_text</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text sfui::TextBox::m_text</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SFML文本对象 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00109">109</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="textbox_8hpp_source.html#l00104">getSprite()</a>, <a class="el" href="textbox_8hpp_source.html#l00098">getText()</a>, <a class="el" href="textbox_8hpp_source.html#l00042">init()</a>, <a class="el" href="textbox_8hpp_source.html#l00055">setFont()</a>, <a class="el" href="textbox_8hpp_source.html#l00092">setPosition()</a>, <a class="el" href="textbox_8hpp_source.html#l00082">setTestColor()</a>, <a class="el" href="textbox_8hpp_source.html#l00064">setTestSize()</a>, <a class="el" href="textbox_8hpp_source.html#l00073">setTestString()</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00025">TextBox()</a>.</p>
+
+</div>
+</div>
+<a id="abe3282ce9375779efd69f27ebc426d20" name="abe3282ce9375779efd69f27ebc426d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3282ce9375779efd69f27ebc426d20">&#9670;&#160;</a></span>m_textColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Color sfui::TextBox::m_textColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文本颜色 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00114">114</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="textbox_8hpp_source.html#l00042">init()</a>, <a class="el" href="textbox_8hpp_source.html#l00082">setTestColor()</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00025">TextBox()</a>.</p>
+
+</div>
+</div>
+<a id="aa5c6090737e7050aecaeea0958085223" name="aa5c6090737e7050aecaeea0958085223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c6090737e7050aecaeea0958085223">&#9670;&#160;</a></span>m_textSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int sfui::TextBox::m_textSize = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>字体大小 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00115">115</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="textbox_8hpp_source.html#l00042">init()</a>, <a class="el" href="textbox_8hpp_source.html#l00064">setTestSize()</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00025">TextBox()</a>.</p>
+
+</div>
+</div>
+<a id="aafc17ee4e1e539603dcc2f264c29559e" name="aafc17ee4e1e539603dcc2f264c29559e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc17ee4e1e539603dcc2f264c29559e">&#9670;&#160;</a></span>m_textString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string sfui::TextBox::m_textString</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文本内容 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00113">113</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="textbox_8hpp_source.html#l00042">init()</a>, <a class="el" href="textbox_8hpp_source.html#l00073">setTestString()</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00025">TextBox()</a>.</p>
+
+</div>
+</div>
+<a id="a5688d5031c90b2d330b9f67522894b35" name="a5688d5031c90b2d330b9f67522894b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5688d5031c90b2d330b9f67522894b35">&#9670;&#160;</a></span>m_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sfui::TextBox::m_x = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文本框x坐标 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00111">111</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="textbox_8hpp_source.html#l00042">init()</a>, <a class="el" href="textbox_8hpp_source.html#l00092">setPosition()</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00025">TextBox()</a>.</p>
+
+</div>
+</div>
+<a id="ad8a4bd46795560b124b01d382f52dd85" name="ad8a4bd46795560b124b01d382f52dd85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a4bd46795560b124b01d382f52dd85">&#9670;&#160;</a></span>m_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sfui::TextBox::m_y = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文本框y坐标 </p>
+
+<p class="definition">在文件 <a class="el" href="textbox_8hpp_source.html">textbox.hpp</a> 第 <a class="el" href="textbox_8hpp_source.html#l00112">112</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="textbox_8hpp_source.html#l00042">init()</a>, <a class="el" href="textbox_8hpp_source.html#l00092">setPosition()</a> , 以及 <a class="el" href="textbox_8hpp_source.html#l00025">TextBox()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sfml_ui/include/customizable/components/<a class="el" href="textbox_8hpp_source.html">textbox.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacesfui.html">sfui</a></li><li class="navelem"><a href="classsfui_1_1_text_box.html">TextBox</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

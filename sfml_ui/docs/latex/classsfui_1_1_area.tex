@@ -1,0 +1,232 @@
+\doxysection{sfui\+::Area类 参考}
+\label{classsfui_1_1_area}\index{sfui::Area@{sfui::Area}}
+
+
+区域类，表示一个矩形区域，支持判定点是否在区域内  
+
+
+
+
+{\ttfamily \#include $<$Area.\+hpp$>$}
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_area_a1bd9878a9b94acdfe93da43772ac07c4}{Area}} (const float left, float up, float right, float lower)
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_area_ab86f2b25e12741274f29582e03aa06db}{init}} (const float left, const float up, const float right, const float lower)
+\begin{DoxyCompactList}\small\item\em 初始化区域 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_area_a3a82e7cd2da1235b5920340131889b6f}{is\+In\+Area}} (const int \&x, const int \&y) const
+\begin{DoxyCompactList}\small\item\em 判断一个坐标是否在区域内 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classsfui_1_1_area_abd9d3d3c748b036778ed14c73e0aca61}{m\+\_\+left}} = 0
+\begin{DoxyCompactList}\small\item\em 左边界 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_area_ac23e16fc4109bd6117a4e52b8f920a88}{m\+\_\+up}} = 0
+\begin{DoxyCompactList}\small\item\em 上边界 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_area_aef30bfc0c9deed7dfe74ba03bbfb486a}{m\+\_\+right}} = 0
+\begin{DoxyCompactList}\small\item\em 右边界 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_area_a253bb9627e5ddb3d16884b049d04771e}{m\+\_\+lower}} = 0
+\begin{DoxyCompactList}\small\item\em 下边界 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+区域类，表示一个矩形区域，支持判定点是否在区域内 
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00007}{7}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::Area@{sfui::Area}!Area@{Area}}
+\index{Area@{Area}!sfui::Area@{sfui::Area}}
+\doxysubsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_area_a1bd9878a9b94acdfe93da43772ac07c4} 
+sfui\+::\+Area\+::\+Area (\begin{DoxyParamCaption}\item[{const float}]{left}{, }\item[{float}]{up}{, }\item[{float}]{right}{, }\item[{float}]{lower}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+默认构造函数 
+
+
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00012}{12}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ :m\_left(left),m\_up(up),m\_right(right),m\_lower(lower)\{\}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_area_8hpp_source_l00045}{m\+\_\+left}}, \mbox{\hyperlink{_area_8hpp_source_l00048}{m\+\_\+lower}}, \mbox{\hyperlink{_area_8hpp_source_l00047}{m\+\_\+right}} , 以及 \mbox{\hyperlink{_area_8hpp_source_l00046}{m\+\_\+up}}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::Area@{sfui::Area}!init@{init}}
+\index{init@{init}!sfui::Area@{sfui::Area}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_area_ab86f2b25e12741274f29582e03aa06db} 
+bool sfui\+::\+Area\+::init (\begin{DoxyParamCaption}\item[{const float}]{left}{, }\item[{const float}]{up}{, }\item[{const float}]{right}{, }\item[{const float}]{lower}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+初始化区域 
+
+
+\begin{DoxyParams}{参数}
+{\em left} & 左边界 \\
+\hline
+{\em up} & 上边界 \\
+\hline
+{\em right} & 右边界 \\
+\hline
+{\em lower} & 下边界 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否初始化成功 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00022}{22}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ m\_left\ =\ left;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ m\_up\ =\ up;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ m\_right\ =\ right;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ m\_lower\ =\ lower;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_area_8hpp_source_l00045}{m\+\_\+left}}, \mbox{\hyperlink{_area_8hpp_source_l00048}{m\+\_\+lower}}, \mbox{\hyperlink{_area_8hpp_source_l00047}{m\+\_\+right}} , 以及 \mbox{\hyperlink{_area_8hpp_source_l00046}{m\+\_\+up}}.
+
+\index{sfui::Area@{sfui::Area}!isInArea@{isInArea}}
+\index{isInArea@{isInArea}!sfui::Area@{sfui::Area}}
+\doxysubsubsection{\texorpdfstring{isInArea()}{isInArea()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_area_a3a82e7cd2da1235b5920340131889b6f} 
+bool sfui\+::\+Area\+::is\+In\+Area (\begin{DoxyParamCaption}\item[{const int \&}]{x}{, }\item[{const int \&}]{y}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+判断一个坐标是否在区域内 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & X坐标 \\
+\hline
+{\em y} & Y坐标 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否在区域内 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00036}{36}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_left\ <=\ x\ \&\&\ x\ <=\ m\_right\ \&\&\ m\_up\ <=\ y\ \&\&\ y\ <=\ m\_lower)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_area_8hpp_source_l00045}{m\+\_\+left}}, \mbox{\hyperlink{_area_8hpp_source_l00048}{m\+\_\+lower}}, \mbox{\hyperlink{_area_8hpp_source_l00047}{m\+\_\+right}} , 以及 \mbox{\hyperlink{_area_8hpp_source_l00046}{m\+\_\+up}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::Area@{sfui::Area}!m\_left@{m\_left}}
+\index{m\_left@{m\_left}!sfui::Area@{sfui::Area}}
+\doxysubsubsection{\texorpdfstring{m\_left}{m\_left}}
+{\footnotesize\ttfamily \label{classsfui_1_1_area_abd9d3d3c748b036778ed14c73e0aca61} 
+float sfui\+::\+Area\+::m\+\_\+left = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+左边界 
+
+
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00045}{45}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_area_8hpp_source_l00012}{Area()}}, \mbox{\hyperlink{_area_8hpp_source_l00022}{init()}} , 以及 \mbox{\hyperlink{_area_8hpp_source_l00036}{is\+In\+Area()}}.
+
+\index{sfui::Area@{sfui::Area}!m\_lower@{m\_lower}}
+\index{m\_lower@{m\_lower}!sfui::Area@{sfui::Area}}
+\doxysubsubsection{\texorpdfstring{m\_lower}{m\_lower}}
+{\footnotesize\ttfamily \label{classsfui_1_1_area_a253bb9627e5ddb3d16884b049d04771e} 
+float sfui\+::\+Area\+::m\+\_\+lower = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+下边界 
+
+
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00048}{48}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_area_8hpp_source_l00012}{Area()}}, \mbox{\hyperlink{_area_8hpp_source_l00022}{init()}} , 以及 \mbox{\hyperlink{_area_8hpp_source_l00036}{is\+In\+Area()}}.
+
+\index{sfui::Area@{sfui::Area}!m\_right@{m\_right}}
+\index{m\_right@{m\_right}!sfui::Area@{sfui::Area}}
+\doxysubsubsection{\texorpdfstring{m\_right}{m\_right}}
+{\footnotesize\ttfamily \label{classsfui_1_1_area_aef30bfc0c9deed7dfe74ba03bbfb486a} 
+float sfui\+::\+Area\+::m\+\_\+right = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+右边界 
+
+
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00047}{47}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_area_8hpp_source_l00012}{Area()}}, \mbox{\hyperlink{_area_8hpp_source_l00022}{init()}} , 以及 \mbox{\hyperlink{_area_8hpp_source_l00036}{is\+In\+Area()}}.
+
+\index{sfui::Area@{sfui::Area}!m\_up@{m\_up}}
+\index{m\_up@{m\_up}!sfui::Area@{sfui::Area}}
+\doxysubsubsection{\texorpdfstring{m\_up}{m\_up}}
+{\footnotesize\ttfamily \label{classsfui_1_1_area_ac23e16fc4109bd6117a4e52b8f920a88} 
+float sfui\+::\+Area\+::m\+\_\+up = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+上边界 
+
+
+
+在文件 \mbox{\hyperlink{_area_8hpp_source}{Area.\+hpp}} 第 \mbox{\hyperlink{_area_8hpp_source_l00046}{46}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_area_8hpp_source_l00012}{Area()}}, \mbox{\hyperlink{_area_8hpp_source_l00022}{init()}} , 以及 \mbox{\hyperlink{_area_8hpp_source_l00036}{is\+In\+Area()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/customizable/controls/\mbox{\hyperlink{_area_8hpp}{Area.\+hpp}}\end{DoxyCompactItemize}

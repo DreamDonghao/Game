@@ -6,7 +6,7 @@ if(POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
 endif()
 
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 23)
 
 project (GAME)
 
@@ -48,6 +48,7 @@ add_executable(GAME
         "game/src/main.cpp"
         sfml_ui/src/customizable/components/textbox.cpp
         sfml_ui/include/customizable/components/textbox.hpp
+        sfml_ui/include/customizable/components/inputbox.hpp
 
 )
 

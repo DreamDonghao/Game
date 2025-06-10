@@ -1,0 +1,9 @@
+<map id="sfui::Window::handleEventInput" name="sfui::Window::handleEventInput">
+<area shape="rect" id="Node000001" title="处理SFML事件输入。" alt="" coords="5,23,183,65"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_window.html#ae92de433502a60e90de1494307e91291" title="切换窗口/全屏模式。" alt="" coords="231,31,431,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,41,215,41,215,47,183,47"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_window.html#a2643f2d69c4b1e042e27cb4c0eccb30e" title="切换到全屏模式。" alt="" coords="480,5,656,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,31,464,27,464,32,432,36"/>
+<area shape="rect" id="Node000004" href="$classsfui_1_1_window.html#a981375b53a47466a633fe41b3ce66361" title="切换到窗口模式。" alt="" coords="479,56,656,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="432,52,463,56,463,61,431,57"/>
+</map>

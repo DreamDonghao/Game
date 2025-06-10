@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <Page.hpp>
 #include <Interactive.hpp>
 #include <Window.hpp>
@@ -10,7 +10,7 @@ namespace sfui {
      */
     class InteractivePage :virtual public Page {
     public:
-
+        InteractivePage(sf::RenderWindow *p_sfml_RenderWindow):Page(p_sfml_RenderWindow){}
     protected:
         sf::View m_view; ///< 交互页面的视图
 
@@ -47,6 +47,7 @@ namespace sfui {
         /**
          * @brief 绘制按钮
          * @param button 按钮对象
+         * @overload
          */
         void draw(const Button &button) const {
             mp_window->getSfRenderWindow().setView(m_view);
@@ -56,6 +57,7 @@ namespace sfui {
         /**
          * @brief 绘制交互区域
          * @param interActive 交互对象
+         * @overload
          */
         void draw(const Interactive &interActive) const {
             mp_window->getSfRenderWindow().setView(m_view);
@@ -65,6 +67,7 @@ namespace sfui {
         /**
          * @brief 绘制纹理项
          * @param textureItem 纹理项对象
+         * @overload
          */
         void draw(const TextureItem &textureItem) const {
             mp_window->getSfRenderWindow().setView(m_view);
@@ -74,6 +77,7 @@ namespace sfui {
         /**
          * @brief 绘制顶点数组
          * @param vertexArray SFML顶点数组
+         * @overload
          */
         void draw(const sf::VertexArray &vertexArray) const {
             mp_window->getSfRenderWindow().setView(m_view);
@@ -83,6 +87,7 @@ namespace sfui {
         /**
          * @brief 绘制文本
          * @param text SFML文本对象
+         * @overload
          */
         void draw(const sf::Text &text) const {
             mp_window->getSfRenderWindow().setView(m_view);

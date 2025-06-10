@@ -1,0 +1,7 @@
+<map id="sfui::ComplexPage::drawForWindow" name="sfui::ComplexPage::drawForWindow">
+<area shape="rect" id="Node000001" title="以窗口为依据绘制对象" alt="" coords="224,27,364,69"/>
+<area shape="rect" id="Node000002" href="$classgame_1_1_game_page.html#a2e31f8daab5616ded15be1e119be1ef9" title="渲染界面内容（纯虚函数，需子类实现）" alt="" coords="5,5,176,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,38,176,34,177,28,209,33"/>
+<area shape="rect" id="Node000003" href="$classgame_1_1_pause_game_page.html#a01faef65e895e021fc756aac70e3d38a" title="渲染界面内容（纯虚函数，需子类实现）" alt="" coords="9,56,172,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,63,173,68,172,63,208,58"/>
+</map>

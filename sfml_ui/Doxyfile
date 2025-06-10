@@ -1,0 +1,83 @@
+INCLUDE_PATH = include include/core include/customizable
+# =================== 项目信息 ===================
+PROJECT_NAME           = sfml_ui
+PROJECT_BRIEF          = 用于 Windows 的 SFML UI 框架
+PROJECT_NUMBER         = v1.0
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+OUTPUT_LANGUAGE        = Chinese
+USE_MDFILE_AS_MAINPAGE = description.md
+
+# =================== 输入设置 ===================
+INPUT                  = include src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.cpp *.c *.h *.hpp
+EXCLUDE_PATTERNS       = */test/*
+
+# =================== 提取设置 ===================
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_ANON_NSPACES   = YES
+
+# =================== 显示控制 ===================
+SHOW_FILES             = YES
+SHOW_DIRECTORIES       = YES
+SHOW_USED_FILES        = YES
+SHOW_INCLUDE_FILES     = YES
+INLINE_SOURCES         = YES
+SOURCE_BROWSER         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+VERBATIM_HEADERS       = YES
+
+# =================== HTML 设置 ===================
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+HTML_COLORSTYLE_HUE    = 220
+HTML_DYNAMIC_SECTIONS  = YES
+DISABLE_INDEX          = NO
+
+# =================== 图形支持 ===================
+HAVE_DOT               = YES
+DOT_NUM_THREADS        = 4
+DOT_MULTI_TARGETS      = YES
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+GRAPHICAL_HIERARCHY    = YES
+DOT_IMAGE_FORMAT       = svg
+DOT_PATH               = "C:/Program Files/Graphviz/bin"
+INTERACTIVE_SVG        = YES
+
+# =================== Markdown 设置 ===================
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+USE_MDFILE_AS_MAINPAGE = description.md
+
+# =================== 编码设置 ===================
+INPUT_ENCODING         = UTF-8
+# 如果你的文件有 BOM，可以用下面这个设置，但最好别带 BOM
+# MSCGEN_PATH         =
+
+# =================== 其他 ===================
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+GENERATE_MAN           = NO
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+
+GENERATE_LATEX       = YES
+LATEX_OUTPUT         = latex
+OUTPUT_DIRECTORY     = docs
+PDF_HYPERLINKS       = YES
+USE_PDFLATEX         = NO      # ❗一定设为 NO
+LATEX_BATCHMODE      = NO
+LATEX_SOURCE_CODE    = YES
+

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: include/core/pages/Page.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_page_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Page.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_page_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="_active_key_binding_8hpp.html">ActiveKeyBinding.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="_mouse_8hpp.html">Mouse.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="textbox_8hpp.html">textbox.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="_event_binding_8hpp.html">EventBinding.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="inputbox_8hpp.html">inputbox.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesfui.html">sfui</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacesfui.html#ac49a7e91cc81d7ac921e6b93abd9851d">   12</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacesfui.html#ac49a7e91cc81d7ac921e6b93abd9851d">Title</a> = std::wstring;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_typedef" href="namespacesfui.html#ac49a7e91cc81d7ac921e6b93abd9851d">Title</a> <a class="code hl_function" href="namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b">TitleName</a>(<span class="keyword">const</span> std::string &amp;str);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacesfui.html#ae34f6d4fda54f1f950fc14956101295d">   21</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacesfui.html#ae34f6d4fda54f1f950fc14956101295d">viewSize</a> = sf::Vector2f; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">class </span><a class="code hl_class" href="classsfui_1_1_window.html">Window</a>; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html">   27</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">Page</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">   29</a></span>        <a class="code hl_function" href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">Page</a>(sf::RenderWindow *p_sfml_RenderWindow):<a class="code hl_variable" href="classsfui_1_1_page.html#a0dd4f35e186e6190a09ffad9a2cde4b8">m_mouse</a>(p_sfml_RenderWindow){}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a0a86ae7bab83d62fabfd7633fafc6b0a">   33</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classsfui_1_1_page.html#a0a86ae7bab83d62fabfd7633fafc6b0a">~Page</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a04c4789b16160b0de9d715d6392652b7">updateFrame</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#ad4d457e53e9276bc1590a2559b99ee5a">setWindow</a>(<a class="code hl_class" href="classsfui_1_1_window.html">Window</a> *p_window);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a61c79689dc38087a5278356c759d4f02">setMouseWindow</a>(sf::RenderWindow *p_sfml_RenderWindow);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a850940bfc83518726469a60c52a0fd76">init</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a05d3f9b98811d52cd74e49c35326aff9">   60</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a05d3f9b98811d52cd74e49c35326aff9">initializePageElements</a>() = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#ac6a71503d7fd6990f50c123a065a5235">   65</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#ac6a71503d7fd6990f50c123a065a5235">initMessageBinding</a>() = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a81196cc0d825eb3ca0b4ca187c674982">activeMap</a>(<a class="code hl_typedef" href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">Key</a> key, <span class="keyword">const</span> <a class="code hl_typedef" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">eventMap</a>(<a class="code hl_typedef" href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">Key</a> key, <span class="keyword">const</span> <a class="code hl_typedef" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">eventMap</a>(<a class="code hl_typedef" href="namespacesfui.html#a0110ad9214b6430c7b841e0b88f73fa1">MouseButton</a> mouseButton, <span class="keyword">const</span> <a class="code hl_typedef" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">eventMap</a>(sf::Mouse::Button mouseButton, <span class="keyword">const</span> <a class="code hl_class" href="classsfui_1_1_area.html">Area</a> *area, <span class="keyword">const</span> <a class="code hl_typedef" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a02f88b02f151711a36a5c96d2ef441c3">   99</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a02f88b02f151711a36a5c96d2ef441c3">updateView</a>() = 0;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#af9102384ae5beaeb91df393d2e53af26">executeKeyPressOnce</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#aee0045290a9beddf393c783d8e44fed7">executeEventBinding</a>(<span class="keyword">const</span> sf::Event &amp;event);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#ac8067ba09633443eeb11d13c49d08b8f">  115</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#ac8067ba09633443eeb11d13c49d08b8f">update</a>() = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        [[nodiscard]] sf::Color <a class="code hl_function" href="classsfui_1_1_page.html#a9def0265662c557aab9846fa36114521">getBackgroundColor</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a3617d9b7521c79a7e2280701febc8b22">  124</a></span>        <a class="code hl_class" href="classsfui_1_1_window.html">Window</a> *<a class="code hl_variable" href="classsfui_1_1_page.html#a3617d9b7521c79a7e2280701febc8b22">mp_window</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a785a36d852033b39a5ffcc67ad062ffa">  125</a></span>        sf::Color <a class="code hl_variable" href="classsfui_1_1_page.html#a785a36d852033b39a5ffcc67ad062ffa">m_backgroundColor</a>; </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a0dd4f35e186e6190a09ffad9a2cde4b8">  126</a></span>        <a class="code hl_class" href="classsfui_1_1_mouse.html">Mouse</a> <a class="code hl_variable" href="classsfui_1_1_page.html#a0dd4f35e186e6190a09ffad9a2cde4b8">m_mouse</a>; </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a784e9994c234340af5ef4a481f3ed584">  127</a></span>        <a class="code hl_class" href="classsfui_1_1_active_key_binding.html">ActiveKeyBinding</a> <a class="code hl_variable" href="classsfui_1_1_page.html#a784e9994c234340af5ef4a481f3ed584">m_activeKeyBinding</a>; </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#a255a52e49f6fcd9579fda64b3d982b3a">  128</a></span>        <a class="code hl_class" href="classsfui_1_1_evect_bingding.html">EvectBingding</a> <a class="code hl_variable" href="classsfui_1_1_page.html#a255a52e49f6fcd9579fda64b3d982b3a">m_eventBinding</a>; </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#a9c39b5c590d92b5c86380fb6e94a2603">setBackgroundColor</a>(<span class="keyword">const</span> sf::Color &amp;backgroundColor);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classsfui_1_1_page.html#aae3845d200cc47f224a1e0b1be755568">  139</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#aae3845d200cc47f224a1e0b1be755568">render</a>() = 0;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_page.html#af7802cf36ee67e4944b825c034d4aff8">requestPageSwitch</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacesfui.html#ac49a7e91cc81d7ac921e6b93abd9851d">Title</a> &amp;targetPageTitle);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    };</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+<div class="ttc" id="a_active_key_binding_8hpp_html"><div class="ttname"><a href="_active_key_binding_8hpp.html">ActiveKeyBinding.hpp</a></div></div>
+<div class="ttc" id="a_event_binding_8hpp_html"><div class="ttname"><a href="_event_binding_8hpp.html">EventBinding.hpp</a></div></div>
+<div class="ttc" id="a_mouse_8hpp_html"><div class="ttname"><a href="_mouse_8hpp.html">Mouse.hpp</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_active_key_binding_html"><div class="ttname"><a href="classsfui_1_1_active_key_binding.html">sfui::ActiveKeyBinding</a></div><div class="ttdoc">按键状态与行为的映射类</div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8hpp_source.html#l00019">ActiveKeyBinding.hpp:19</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_area_html"><div class="ttname"><a href="classsfui_1_1_area.html">sfui::Area</a></div><div class="ttdoc">区域类，表示一个矩形区域，支持判定点是否在区域内</div><div class="ttdef"><b>定义</b> <a href="_area_8hpp_source.html#l00007">Area.hpp:7</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_evect_bingding_html"><div class="ttname"><a href="classsfui_1_1_evect_bingding.html">sfui::EvectBingding</a></div><div class="ttdoc">按键和鼠标事件与行为的映射类</div><div class="ttdef"><b>定义</b> <a href="_event_binding_8hpp_source.html#l00023">EventBinding.hpp:23</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_mouse_html"><div class="ttname"><a href="classsfui_1_1_mouse.html">sfui::Mouse</a></div><div class="ttdoc">实时鼠标操作类</div><div class="ttdef"><b>定义</b> <a href="_mouse_8hpp_source.html#l00011">Mouse.hpp:11</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a02f88b02f151711a36a5c96d2ef441c3"><div class="ttname"><a href="classsfui_1_1_page.html#a02f88b02f151711a36a5c96d2ef441c3">sfui::Page::updateView</a></div><div class="ttdeci">virtual void updateView()=0</div><div class="ttdoc">根据窗口大小更新界面视图（纯虚函数，需子类实现）</div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a04c4789b16160b0de9d715d6392652b7"><div class="ttname"><a href="classsfui_1_1_page.html#a04c4789b16160b0de9d715d6392652b7">sfui::Page::updateFrame</a></div><div class="ttdeci">void updateFrame()</div><div class="ttdoc">更新界面一帧（更新视图并渲染）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00019">Page.cpp:19</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a05d3f9b98811d52cd74e49c35326aff9"><div class="ttname"><a href="classsfui_1_1_page.html#a05d3f9b98811d52cd74e49c35326aff9">sfui::Page::initializePageElements</a></div><div class="ttdeci">virtual void initializePageElements()=0</div><div class="ttdoc">初始化界面元素（纯虚函数，需子类实现）</div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a08a68da4f1209edaf1cb43004dd5b6d0"><div class="ttname"><a href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">sfui::Page::eventMap</a></div><div class="ttdeci">void eventMap(Key key, const Action &amp;action)</div><div class="ttdoc">绑定按键与行为（事件输入）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00046">Page.cpp:46</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a0a86ae7bab83d62fabfd7633fafc6b0a"><div class="ttname"><a href="classsfui_1_1_page.html#a0a86ae7bab83d62fabfd7633fafc6b0a">sfui::Page::~Page</a></div><div class="ttdeci">virtual ~Page()=default</div><div class="ttdoc">虚析构函数</div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a0dd4f35e186e6190a09ffad9a2cde4b8"><div class="ttname"><a href="classsfui_1_1_page.html#a0dd4f35e186e6190a09ffad9a2cde4b8">sfui::Page::m_mouse</a></div><div class="ttdeci">Mouse m_mouse</div><div class="ttdoc">鼠标对象</div><div class="ttdef"><b>定义</b> <a href="#l00126">Page.hpp:126</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a1d645637dcd8fea7241f485ef4fe1b93"><div class="ttname"><a href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">sfui::Page::Page</a></div><div class="ttdeci">Page(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="#l00029">Page.hpp:29</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a255a52e49f6fcd9579fda64b3d982b3a"><div class="ttname"><a href="classsfui_1_1_page.html#a255a52e49f6fcd9579fda64b3d982b3a">sfui::Page::m_eventBinding</a></div><div class="ttdeci">EvectBingding m_eventBinding</div><div class="ttdoc">消息事件绑定</div><div class="ttdef"><b>定义</b> <a href="#l00128">Page.hpp:128</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a3617d9b7521c79a7e2280701febc8b22"><div class="ttname"><a href="classsfui_1_1_page.html#a3617d9b7521c79a7e2280701febc8b22">sfui::Page::mp_window</a></div><div class="ttdeci">Window * mp_window</div><div class="ttdoc">界面绑定的窗口</div><div class="ttdef"><b>定义</b> <a href="#l00124">Page.hpp:124</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a61c79689dc38087a5278356c759d4f02"><div class="ttname"><a href="classsfui_1_1_page.html#a61c79689dc38087a5278356c759d4f02">sfui::Page::setMouseWindow</a></div><div class="ttdeci">void setMouseWindow(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdoc">为界面鼠标绑定窗口</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00030">Page.cpp:30</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a784e9994c234340af5ef4a481f3ed584"><div class="ttname"><a href="classsfui_1_1_page.html#a784e9994c234340af5ef4a481f3ed584">sfui::Page::m_activeKeyBinding</a></div><div class="ttdeci">ActiveKeyBinding m_activeKeyBinding</div><div class="ttdoc">按键事件绑定</div><div class="ttdef"><b>定义</b> <a href="#l00127">Page.hpp:127</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a785a36d852033b39a5ffcc67ad062ffa"><div class="ttname"><a href="classsfui_1_1_page.html#a785a36d852033b39a5ffcc67ad062ffa">sfui::Page::m_backgroundColor</a></div><div class="ttdeci">sf::Color m_backgroundColor</div><div class="ttdoc">界面背景颜色</div><div class="ttdef"><b>定义</b> <a href="#l00125">Page.hpp:125</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a81196cc0d825eb3ca0b4ca187c674982"><div class="ttname"><a href="classsfui_1_1_page.html#a81196cc0d825eb3ca0b4ca187c674982">sfui::Page::activeMap</a></div><div class="ttdeci">void activeMap(Key key, const Action &amp;action)</div><div class="ttdoc">绑定按键与行为（实时输入）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00042">Page.cpp:42</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a850940bfc83518726469a60c52a0fd76"><div class="ttname"><a href="classsfui_1_1_page.html#a850940bfc83518726469a60c52a0fd76">sfui::Page::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">初始化界面（元素和消息绑定）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00035">Page.cpp:35</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a9c39b5c590d92b5c86380fb6e94a2603"><div class="ttname"><a href="classsfui_1_1_page.html#a9c39b5c590d92b5c86380fb6e94a2603">sfui::Page::setBackgroundColor</a></div><div class="ttdeci">void setBackgroundColor(const sf::Color &amp;backgroundColor)</div><div class="ttdoc">设置界面背景颜色</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00067">Page.cpp:67</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a9def0265662c557aab9846fa36114521"><div class="ttname"><a href="classsfui_1_1_page.html#a9def0265662c557aab9846fa36114521">sfui::Page::getBackgroundColor</a></div><div class="ttdeci">sf::Color getBackgroundColor() const</div><div class="ttdoc">获取界面背景颜色</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00065">Page.cpp:65</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_aae3845d200cc47f224a1e0b1be755568"><div class="ttname"><a href="classsfui_1_1_page.html#aae3845d200cc47f224a1e0b1be755568">sfui::Page::render</a></div><div class="ttdeci">virtual void render()=0</div><div class="ttdoc">渲染界面内容（纯虚函数，需子类实现）</div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_ac6a71503d7fd6990f50c123a065a5235"><div class="ttname"><a href="classsfui_1_1_page.html#ac6a71503d7fd6990f50c123a065a5235">sfui::Page::initMessageBinding</a></div><div class="ttdeci">virtual void initMessageBinding()=0</div><div class="ttdoc">初始化消息与事件绑定（纯虚函数，需子类实现）</div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_ac8067ba09633443eeb11d13c49d08b8f"><div class="ttname"><a href="classsfui_1_1_page.html#ac8067ba09633443eeb11d13c49d08b8f">sfui::Page::update</a></div><div class="ttdeci">virtual void update()=0</div><div class="ttdoc">更新界面内容（纯虚函数，需子类实现）</div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_ad4d457e53e9276bc1590a2559b99ee5a"><div class="ttname"><a href="classsfui_1_1_page.html#ad4d457e53e9276bc1590a2559b99ee5a">sfui::Page::setWindow</a></div><div class="ttdeci">void setWindow(Window *p_window)</div><div class="ttdoc">绑定界面与所属窗口</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00026">Page.cpp:26</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_aee0045290a9beddf393c783d8e44fed7"><div class="ttname"><a href="classsfui_1_1_page.html#aee0045290a9beddf393c783d8e44fed7">sfui::Page::executeEventBinding</a></div><div class="ttdeci">void executeEventBinding(const sf::Event &amp;event)</div><div class="ttdoc">事件输入处理（处理事件行为）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00061">Page.cpp:61</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_af7802cf36ee67e4944b825c034d4aff8"><div class="ttname"><a href="classsfui_1_1_page.html#af7802cf36ee67e4944b825c034d4aff8">sfui::Page::requestPageSwitch</a></div><div class="ttdeci">void requestPageSwitch(const Title &amp;targetPageTitle)</div><div class="ttdoc">发起界面跳转请求（由子类调用）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00071">Page.cpp:71</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_af9102384ae5beaeb91df393d2e53af26"><div class="ttname"><a href="classsfui_1_1_page.html#af9102384ae5beaeb91df393d2e53af26">sfui::Page::executeKeyPressOnce</a></div><div class="ttdeci">void executeKeyPressOnce()</div><div class="ttdoc">实时输入处理（处理按键行为）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00057">Page.cpp:57</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_window_html"><div class="ttname"><a href="classsfui_1_1_window.html">sfui::Window</a></div><div class="ttdoc">窗口类，负责窗口创建、页面管理、事件循环、全屏切换等。</div><div class="ttdef"><b>定义</b> <a href="_window_8hpp_source.html#l00048">Window.hpp:48</a></div></div>
+<div class="ttc" id="ainputbox_8hpp_html"><div class="ttname"><a href="inputbox_8hpp.html">inputbox.hpp</a></div></div>
+<div class="ttc" id="anamespacesfui_html"><div class="ttname"><a href="namespacesfui.html">sfui</a></div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8hpp_source.html#l00006">ActiveKeyBinding.hpp:6</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a0110ad9214b6430c7b841e0b88f73fa1"><div class="ttname"><a href="namespacesfui.html#a0110ad9214b6430c7b841e0b88f73fa1">sfui::MouseButton</a></div><div class="ttdeci">sf::Mouse::Button MouseButton</div><div class="ttdef"><b>定义</b> <a href="_event_binding_8hpp_source.html#l00016">EventBinding.hpp:16</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a2b73109f30fb81ecd18900d765742a34"><div class="ttname"><a href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">sfui::Action</a></div><div class="ttdeci">std::function&lt; void()&gt; Action</div><div class="ttdoc">行为类型，表示一个无参数的可调用对象</div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8hpp_source.html#l00012">ActiveKeyBinding.hpp:12</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a92f7a2203cd1f549830bf28cd2447d4b"><div class="ttname"><a href="namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b">sfui::TitleName</a></div><div class="ttdeci">Title TitleName(const std::string &amp;str)</div><div class="ttdoc">将std::string转换为Title（std::wstring）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00011">Page.cpp:11</a></div></div>
+<div class="ttc" id="anamespacesfui_html_ac49a7e91cc81d7ac921e6b93abd9851d"><div class="ttname"><a href="namespacesfui.html#ac49a7e91cc81d7ac921e6b93abd9851d">sfui::Title</a></div><div class="ttdeci">std::wstring Title</div><div class="ttdoc">标题类型，使用宽字符串</div><div class="ttdef"><b>定义</b> <a href="#l00012">Page.hpp:12</a></div></div>
+<div class="ttc" id="anamespacesfui_html_ae34f6d4fda54f1f950fc14956101295d"><div class="ttname"><a href="namespacesfui.html#ae34f6d4fda54f1f950fc14956101295d">sfui::viewSize</a></div><div class="ttdeci">sf::Vector2f viewSize</div><div class="ttdoc">视图大小类型</div><div class="ttdef"><b>定义</b> <a href="#l00021">Page.hpp:21</a></div></div>
+<div class="ttc" id="anamespacesfui_html_ae675da92866ddc52851d8fce49943fde"><div class="ttname"><a href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">sfui::Key</a></div><div class="ttdeci">sf::Keyboard::Key Key</div><div class="ttdoc">按键类型，等价于SFML的键盘按键</div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8hpp_source.html#l00010">ActiveKeyBinding.hpp:10</a></div></div>
+<div class="ttc" id="atextbox_8hpp_html"><div class="ttname"><a href="textbox_8hpp.html">textbox.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_3d69f64eaf81436fe2b22361382717e5.html">core</a></li><li class="navelem"><a href="dir_2caace96a4cd7965a53a138789af063c.html">pages</a></li><li class="navelem"><a href="_page_8hpp.html">Page.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

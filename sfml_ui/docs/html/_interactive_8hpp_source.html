@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: include/customizable/controls/Interactive.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_interactive_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Interactive.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_interactive_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesfui.html">sfui</a> {</div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html">    6</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classsfui_1_1_interactive.html#ad8961607667f00a4b6434b35ec07597b">Interactive</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#ad8961607667f00a4b6434b35ec07597b">   11</a></span>        <a class="code hl_function" href="classsfui_1_1_interactive.html#ad8961607667f00a4b6434b35ec07597b">Interactive</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a2844b4a6f1ab50f208863a6756aeed6c">   21</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classsfui_1_1_interactive.html#a2844b4a6f1ab50f208863a6756aeed6c">init</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;x, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;y, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;width, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;height, <span class="keyword">const</span> <a class="code hl_typedef" href="namespacesfui.html#a3914e89931c8852cbe1322d380701e62">FilePath</a> &amp;filepath);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a22a22f1f157e13b3a541d82e5b6ae764">   26</a></span>        <a class="code hl_class" href="classsfui_1_1_area.html">Area</a> *<span class="keyword">const</span> <a class="code hl_function" href="classsfui_1_1_interactive.html#a22a22f1f157e13b3a541d82e5b6ae764">getArea</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a84b20cc4901ac7972e2273f140457ed8">   34</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_interactive.html#a84b20cc4901ac7972e2273f140457ed8">updateArea</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> x, <span class="keyword">const</span> <span class="keywordtype">float</span> y, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> width, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> height);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#aec1cf5d39e51312661526483e367e708">   39</a></span>        <span class="keyword">const</span> sf::Sprite &amp;<a class="code hl_function" href="classsfui_1_1_interactive.html#aec1cf5d39e51312661526483e367e708">getSprite</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a1561de543820a0666650e302e3ee291d">   41</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classsfui_1_1_interactive.html#a1561de543820a0666650e302e3ee291d">m_x</a> = 0.0; </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#ae54c0e50dca9ecb045af42c98b7248a9">   42</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classsfui_1_1_interactive.html#ae54c0e50dca9ecb045af42c98b7248a9">m_y</a> = 0.0; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a4f768ee7c68da1de2833b0eff2319009">   43</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classsfui_1_1_interactive.html#a4f768ee7c68da1de2833b0eff2319009">m_width</a> = 0; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#af6f600294f89757ce2977ce2dfce7030">   44</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classsfui_1_1_interactive.html#af6f600294f89757ce2977ce2dfce7030">m_height</a> = 0; </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a6216680183db632560a8c2050191762f">   45</a></span>        <a class="code hl_class" href="classsfui_1_1_area.html">Area</a> <a class="code hl_variable" href="classsfui_1_1_interactive.html#a6216680183db632560a8c2050191762f">m_area</a>; </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a9b6a9643263657f210d7bae28f422455">   46</a></span>        sf::RenderWindow *<a class="code hl_variable" href="classsfui_1_1_interactive.html#a9b6a9643263657f210d7bae28f422455">m_sf_window_p</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classsfui_1_1_interactive.html#a98cf736c452b8684a536a0dec4b656f9">   47</a></span>        <a class="code hl_class" href="classsfui_1_1_texture_item.html">TextureItem</a> <a class="code hl_variable" href="classsfui_1_1_interactive.html#a98cf736c452b8684a536a0dec4b656f9">m_textureItem</a>; </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="ttc" id="aclasssfui_1_1_area_html"><div class="ttname"><a href="classsfui_1_1_area.html">sfui::Area</a></div><div class="ttdoc">区域类，表示一个矩形区域，支持判定点是否在区域内</div><div class="ttdef"><b>定义</b> <a href="_area_8hpp_source.html#l00007">Area.hpp:7</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a1561de543820a0666650e302e3ee291d"><div class="ttname"><a href="classsfui_1_1_interactive.html#a1561de543820a0666650e302e3ee291d">sfui::Interactive::m_x</a></div><div class="ttdeci">float m_x</div><div class="ttdoc">左上角x坐标</div><div class="ttdef"><b>定义</b> <a href="#l00041">Interactive.hpp:41</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a22a22f1f157e13b3a541d82e5b6ae764"><div class="ttname"><a href="classsfui_1_1_interactive.html#a22a22f1f157e13b3a541d82e5b6ae764">sfui::Interactive::getArea</a></div><div class="ttdeci">Area *const getArea()</div><div class="ttdoc">获取交互区域</div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a2844b4a6f1ab50f208863a6756aeed6c"><div class="ttname"><a href="classsfui_1_1_interactive.html#a2844b4a6f1ab50f208863a6756aeed6c">sfui::Interactive::init</a></div><div class="ttdeci">bool init(const float &amp;x, const float &amp;y, const int &amp;width, const int &amp;height, const FilePath &amp;filepath)</div><div class="ttdoc">初始化交互对象</div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a4f768ee7c68da1de2833b0eff2319009"><div class="ttname"><a href="classsfui_1_1_interactive.html#a4f768ee7c68da1de2833b0eff2319009">sfui::Interactive::m_width</a></div><div class="ttdeci">int m_width</div><div class="ttdoc">宽度</div><div class="ttdef"><b>定义</b> <a href="#l00043">Interactive.hpp:43</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a6216680183db632560a8c2050191762f"><div class="ttname"><a href="classsfui_1_1_interactive.html#a6216680183db632560a8c2050191762f">sfui::Interactive::m_area</a></div><div class="ttdeci">Area m_area</div><div class="ttdoc">区域</div><div class="ttdef"><b>定义</b> <a href="#l00045">Interactive.hpp:45</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a84b20cc4901ac7972e2273f140457ed8"><div class="ttname"><a href="classsfui_1_1_interactive.html#a84b20cc4901ac7972e2273f140457ed8">sfui::Interactive::updateArea</a></div><div class="ttdeci">void updateArea(const float x, const float y, const unsigned width, const unsigned height)</div><div class="ttdoc">更新交互区域</div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a98cf736c452b8684a536a0dec4b656f9"><div class="ttname"><a href="classsfui_1_1_interactive.html#a98cf736c452b8684a536a0dec4b656f9">sfui::Interactive::m_textureItem</a></div><div class="ttdeci">TextureItem m_textureItem</div><div class="ttdoc">贴图</div><div class="ttdef"><b>定义</b> <a href="#l00047">Interactive.hpp:47</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_a9b6a9643263657f210d7bae28f422455"><div class="ttname"><a href="classsfui_1_1_interactive.html#a9b6a9643263657f210d7bae28f422455">sfui::Interactive::m_sf_window_p</a></div><div class="ttdeci">sf::RenderWindow * m_sf_window_p</div><div class="ttdoc">绑定窗口指针</div><div class="ttdef"><b>定义</b> <a href="#l00046">Interactive.hpp:46</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_ad8961607667f00a4b6434b35ec07597b"><div class="ttname"><a href="classsfui_1_1_interactive.html#ad8961607667f00a4b6434b35ec07597b">sfui::Interactive::Interactive</a></div><div class="ttdeci">Interactive()</div><div class="ttdoc">默认构造函数</div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_ae54c0e50dca9ecb045af42c98b7248a9"><div class="ttname"><a href="classsfui_1_1_interactive.html#ae54c0e50dca9ecb045af42c98b7248a9">sfui::Interactive::m_y</a></div><div class="ttdeci">float m_y</div><div class="ttdoc">左上角y坐标</div><div class="ttdef"><b>定义</b> <a href="#l00042">Interactive.hpp:42</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_aec1cf5d39e51312661526483e367e708"><div class="ttname"><a href="classsfui_1_1_interactive.html#aec1cf5d39e51312661526483e367e708">sfui::Interactive::getSprite</a></div><div class="ttdeci">const sf::Sprite &amp; getSprite() const</div><div class="ttdoc">获取Sprite</div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_html_af6f600294f89757ce2977ce2dfce7030"><div class="ttname"><a href="classsfui_1_1_interactive.html#af6f600294f89757ce2977ce2dfce7030">sfui::Interactive::m_height</a></div><div class="ttdeci">int m_height</div><div class="ttdoc">高度</div><div class="ttdef"><b>定义</b> <a href="#l00044">Interactive.hpp:44</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_texture_item_html"><div class="ttname"><a href="classsfui_1_1_texture_item.html">sfui::TextureItem</a></div><div class="ttdoc">贴图项，封装SFML贴图，支持加载、缩放、位置设置等</div><div class="ttdef"><b>定义</b> <a href="_texture_item_8hpp_source.html#l00009">TextureItem.hpp:9</a></div></div>
+<div class="ttc" id="anamespacesfui_html"><div class="ttname"><a href="namespacesfui.html">sfui</a></div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8hpp_source.html#l00006">ActiveKeyBinding.hpp:6</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a3914e89931c8852cbe1322d380701e62"><div class="ttname"><a href="namespacesfui.html#a3914e89931c8852cbe1322d380701e62">sfui::FilePath</a></div><div class="ttdeci">std::string FilePath</div><div class="ttdef"><b>定义</b> <a href="_texture_item_8hpp_source.html#l00005">TextureItem.hpp:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_d9c44df9018a52204a75607cf618fa24.html">customizable</a></li><li class="navelem"><a href="dir_31390209104fa4e005d67acb4f2b6003.html">controls</a></li><li class="navelem"><a href="_interactive_8hpp.html">Interactive.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

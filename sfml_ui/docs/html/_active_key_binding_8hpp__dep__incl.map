@@ -1,0 +1,26 @@
+<map id="include/core/message/ActiveKeyBinding.hpp" name="include/core/message/ActiveKeyBinding.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="334,5,487,48"/>
+<area shape="rect" id="Node000002" href="$_page_8hpp.html" title=" " alt="" coords="253,96,384,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="380,61,342,98,338,94,377,57"/>
+<area shape="rect" id="Node000010" href="$_active_key_binding_8cpp.html" title=" " alt="" coords="408,96,597,139"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="444,57,483,94,479,98,441,61"/>
+<area shape="rect" id="Node000003" href="$_control_page_8hpp.html" title=" " alt="" coords="5,277,136,320"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,150,223,189,100,279,97,275,220,185,275,146"/>
+<area shape="rect" id="Node000006" href="$_interactive_page_8hpp.html" title=" " alt="" coords="160,277,301,320"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="272,150,254,167,240,188,232,210,228,234,230,277,224,277,223,234,226,209,235,185,250,164,269,146"/>
+<area shape="rect" id="Node000007" href="$_window_8hpp.html" title=" " alt="" coords="249,187,388,229"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="321,154,321,186,316,186,316,154"/>
+<area shape="rect" id="Node000008" href="$_page_8cpp.html" title="实现Page类及相关函数，负责界面生命周期、事件绑定、渲染等。" alt="" coords="325,285,491,312"/>
+<area shape="poly" id="edge12_Node000002_Node000008" title=" " alt="" coords="368,146,387,164,402,185,411,212,415,240,413,285,407,285,410,240,406,213,397,188,383,167,365,150"/>
+<area shape="rect" id="Node000009" href="$_window_8cpp.html" title=" " alt="" coords="515,285,706,312"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="366,145,591,283,589,287,364,149"/>
+<area shape="rect" id="Node000004" href="$_complex_page_8hpp.html" title=" " alt="" coords="84,368,217,411"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="101,330,134,366,130,369,97,333"/>
+<area shape="rect" id="Node000005" href="$page__emplate_8hpp.html" title=" " alt="" coords="85,459,216,501"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="153,426,153,458,148,458,148,426"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="204,333,171,369,167,366,200,330"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="247,238,130,279,128,274,245,233"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="289,242,253,279,249,275,286,239"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="352,238,397,283,393,287,348,242"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="402,232,569,282,568,287,401,237"/>
+</map>

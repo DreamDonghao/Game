@@ -1,0 +1,97 @@
+\doxysection{Main\+Menu\+Page.\+hpp}
+\label{_main_menu_page_8hpp_source}\index{game/include/pages/MainMenuPage.hpp@{game/include/pages/MainMenuPage.hpp}}
+\mbox{\hyperlink{_main_menu_page_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <ComplexPage.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \#include\ <elemental.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \#include\ <biology.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \#include\ <world\_elemental.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \#include\ <player.hpp>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }game\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }MainMenuPage\ :\ \textcolor{keyword}{public}\ sfui::ComplexPage\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ sfui::TextureItem\ mainPage;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ sfui::Button\ beginButton;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ sfui::Button\ setButton;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ sfui::Button\ quitButton;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ sfui::TextBox\ textBox;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string\ str;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ sfui::InputBox\ inputbox;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ MainMenuPage(sf::RenderWindow\ *p\_sfml\_RenderWindow):Page(p\_sfml\_RenderWindow),ComplexPage(p\_sfml\_RenderWindow),}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ textBox(0,0,100,sf::Color::Black,R\textcolor{stringliteral}{"{}(C:\(\backslash\)Users\(\backslash\)donghao\(\backslash\)AppData\(\backslash\)Local\(\backslash\)Programs\(\backslash\)cursor\(\backslash\)resources\(\backslash\)app\(\backslash\)out\(\backslash\)media\(\backslash\)jetbrains-\/mono-\/regular.ttf)"{},"{}hello"{}),}}
+\DoxyCodeLine{00024\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ inputbox(m\_mouse,0,0,1000,1000)\{}}
+\DoxyCodeLine{00025\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00026\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00027\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ //\ 初始化界面元素}}
+\DoxyCodeLine{00028\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ void\ initializePageElements()\ override\ \{}}
+\DoxyCodeLine{00029\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ m\_ratio\ =\ 0.5;}}
+\DoxyCodeLine{00030\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ std::println("{}\{\}"{},\ m\_ratio);}}
+\DoxyCodeLine{00031\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ mainPage.init("{}images\(\backslash\)\(\backslash\)main\_page.png"{},\ 2560\ *\ m\_ratio,\ 1660\ *\ m\_ratio);}}
+\DoxyCodeLine{00032\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ beginButton.init(}}
+\DoxyCodeLine{00033\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 700\ *\ m\_ratio,\ 600\ *\ m\_ratio,}}
+\DoxyCodeLine{00034\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 800\ *\ m\_ratio,\ 200\ *\ m\_ratio,}}
+\DoxyCodeLine{00035\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}images\(\backslash\)\(\backslash\)button\_begin\_game.png"{}}}
+\DoxyCodeLine{00036\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{00037\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ setButton.init(}}
+\DoxyCodeLine{00038\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 700\ *\ m\_ratio,\ 900\ *\ m\_ratio,}}
+\DoxyCodeLine{00039\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 800\ *\ m\_ratio,\ 200\ *\ m\_ratio,}}
+\DoxyCodeLine{00040\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}images\(\backslash\)\(\backslash\)button\_set.png"{}}}
+\DoxyCodeLine{00041\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{00042\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ quitButton.init(}}
+\DoxyCodeLine{00043\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 700\ *\ m\_ratio,\ 1200\ *\ m\_ratio,}}
+\DoxyCodeLine{00044\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 800\ *\ m\_ratio,\ 200\ *\ m\_ratio,}}
+\DoxyCodeLine{00045\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}images\(\backslash\)\(\backslash\)button\_quit.png"{});}}
+\DoxyCodeLine{00046\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00047\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00048\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ //\ 初始化消息-\/事件映射}}
+\DoxyCodeLine{00049\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ void\ initMessageBinding()\ override\ \{}}
+\DoxyCodeLine{00050\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ eventMap(sfui::MouseButton::Left,\ beginButton.getArea(),\ [\&]()\ \{}}
+\DoxyCodeLine{00051\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ requestPageSwitch(sfui::TitleName("{}gamePage"{}));}}
+\DoxyCodeLine{00052\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \});}}
+\DoxyCodeLine{00053\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00054\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ eventMap(sfui::MouseButton::Left,\ quitButton.getArea(),\ [\&]()\ -\/>\ void\ \{}}
+\DoxyCodeLine{00055\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::print("{}quit"{});}}
+\DoxyCodeLine{00056\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00057\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mp\_window-\/>getSfRenderWindow().close();}}
+\DoxyCodeLine{00058\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \});}}
+\DoxyCodeLine{00059\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00060\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ eventMap(sfui::Key::A,[\&]()\ \{}}
+\DoxyCodeLine{00061\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ str+='A';}}
+\DoxyCodeLine{00062\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ std::println("{}A"{});}}
+\DoxyCodeLine{00063\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \});}}
+\DoxyCodeLine{00064\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ eventMap(sfui::Key::B,[\&]()\ \{}}
+\DoxyCodeLine{00065\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ str+='B';}}
+\DoxyCodeLine{00066\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ std::println("{}B"{});}}
+\DoxyCodeLine{00067\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \});}}
+\DoxyCodeLine{00068\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00069\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ eventMap(sfui::MouseButton::Left,\&inputbox.getArea(),[\&]()\ \{}}
+\DoxyCodeLine{00070\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ inputbox.run(mp\_window-\/>getEvent());}}
+\DoxyCodeLine{00071\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ //\ \});}}
+\DoxyCodeLine{00072\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00073\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00074\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00075\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ //\ 执行界面逻辑}}
+\DoxyCodeLine{00076\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ void\ update()\ override\ \{}}
+\DoxyCodeLine{00077\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ textBox.setTestString(str);}}
+\DoxyCodeLine{00078\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ inputbox.run(mp\_window-\/>getEvent());}}
+\DoxyCodeLine{00079\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00080\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00081\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ //\ 渲染页面内容到窗口}}
+\DoxyCodeLine{00082\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ void\ render()\ override\ \{}}
+\DoxyCodeLine{00083\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(mainPage);}}
+\DoxyCodeLine{00084\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(beginButton);}}
+\DoxyCodeLine{00085\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(setButton);}}
+\DoxyCodeLine{00086\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(quitButton);}}
+\DoxyCodeLine{00087\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(textBox);}}
+\DoxyCodeLine{00088\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ drawForWindow(inputbox);}}
+\DoxyCodeLine{00089\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00090\ \textcolor{stringliteral}{\ \ \ \ \};}}
+\DoxyCodeLine{00091\ \textcolor{stringliteral}{\}}}
+
+\end{DoxyCode}

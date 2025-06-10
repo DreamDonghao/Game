@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <SFML/Graphics.hpp>
 
 namespace sfui {
@@ -128,6 +128,6 @@ namespace sfui {
 
     private:
         sf::Texture m_sf_texture; ///< SFML纹理对象
-        sf::Sprite m_sf_sprite; ///< SFML精灵对象
+        sf::Sprite m_sf_sprite;   ///< SFML精灵对象
     };
 }

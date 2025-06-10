@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <InteractivePage.hpp>
 #include <ControlPage.hpp>
 
@@ -10,6 +10,7 @@ namespace sfui {
      */
     class ComplexPage :public InteractivePage, public ControlPage {
     public:
+        ComplexPage(sf::RenderWindow *p_sfml_RenderWindow):InteractivePage(p_sfml_RenderWindow),ControlPage(p_sfml_RenderWindow){}
         /**
          * @brief 析构函数
          */

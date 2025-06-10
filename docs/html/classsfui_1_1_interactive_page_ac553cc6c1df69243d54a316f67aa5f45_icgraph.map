@@ -1,0 +1,9 @@
+<map id="sfui::InteractivePage::InteractivePage" name="sfui::InteractivePage::InteractivePage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="441,27,582,69"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_complex_page.html#a3c97d3fcf521310edbd6b77ec693e4e9" title=" " alt="" coords="253,27,393,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="425,51,393,51,393,45,425,45"/>
+<area shape="rect" id="Node000003" href="$classgame_1_1_game_page.html#a91af173bceb6cb36da8332f25e8b7183" title=" " alt="" coords="5,5,205,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,39,205,35,206,30,238,34"/>
+<area shape="rect" id="Node000004" href="$classgame_1_1_main_menu_page.html#a597d6a61f1bc9cf80e3a99e466fe678b" title=" " alt="" coords="29,56,181,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="238,62,181,70,181,65,237,57"/>
+</map>

@@ -1,0 +1,285 @@
+\doxysection{sfui\+::Frame\+Animated\+Sprite类 参考}
+\label{classsfui_1_1_frame_animated_sprite}\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+
+
+窗口帧率循环动图类  
+
+
+
+
+{\ttfamily \#include $<$Frame\+Animated\+Sprite.\+hpp$>$}
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a6ce778ffa27d7091639f9e701da02dcc}{Frame\+Animated\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_ab14c6b04945e6b8ec8e064417a81ee17}{init}} (const size\+\_\+t \&continuation\+Frame, const int \&\mbox{\hyperlink{main_8cpp_a229d697f97d697703cd11ce11d76f53b}{width}}, const int \&height, const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em 初始化循环动图的持续帧、大小、坐标 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_aa4a764c0996b8cdb1e435253da36e6ae}{add\+Texture\+Items}} (const \mbox{\hyperlink{namespacesfui_a3914e89931c8852cbe1322d380701e62}{File\+Path}} \&filepath)
+\begin{DoxyCompactList}\small\item\em 添加循环播放的图片 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a9958c533c0c06e8e04bde0819a0532a1}{set}} (const size\+\_\+t \&continuation\+Frame, const int \&\mbox{\hyperlink{main_8cpp_a229d697f97d697703cd11ce11d76f53b}{width}}, const int \&height, const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em 设置大小和坐标 \end{DoxyCompactList}\item 
+const sf\+::\+Sprite \& \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_abd168dfabd13e5c54244d818482f9969}{get\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em 获取当前帧的\+Sprite（每次调用会自动切换帧） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classsfui_1_1_texture_item}{Texture\+Item}} $>$ \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_abc4ce615e88a9ed3818286065168d46d}{m\+\_\+texture\+Items}}
+\begin{DoxyCompactList}\small\item\em 动画帧图片集合 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a993eee31fe28f14a26f303d28e0024f1}{m\+\_\+x}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em X坐标 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a6b3af2e4e4e010d08a500691317853c9}{m\+\_\+y}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Y坐标 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a8ea12da5024aa23b87849ab42997795d}{m\+\_\+width}} = 0
+\begin{DoxyCompactList}\small\item\em 图片宽度 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a6b86ca77c1496aa999bb72c8c2b177bb}{m\+\_\+height}} = 0
+\begin{DoxyCompactList}\small\item\em 图片高度 \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a2a02727ad09fad8cd918acdfab98c605}{m\+\_\+frame}} = 0
+\begin{DoxyCompactList}\small\item\em 当前帧计数 \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_a54c916df484d7a7318d4a70388f20f08}{m\+\_\+now\+Texture\+Items\+Index}} = 0
+\begin{DoxyCompactList}\small\item\em 当前图片索引 \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite_aff229982f08df9410f26702bcf25383c}{m\+\_\+continuation\+Frame}} = 0
+\begin{DoxyCompactList}\small\item\em 持续帧数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+窗口帧率循环动图类 
+
+支持多帧图片的循环播放，基于帧率切换。 
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00010}{10}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!FrameAnimatedSprite@{FrameAnimatedSprite}}
+\index{FrameAnimatedSprite@{FrameAnimatedSprite}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{FrameAnimatedSprite()}{FrameAnimatedSprite()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a6ce778ffa27d7091639f9e701da02dcc} 
+sfui\+::\+Frame\+Animated\+Sprite\+::\+Frame\+Animated\+Sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+默认构造函数 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00015}{15}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!addTextureItems@{addTextureItems}}
+\index{addTextureItems@{addTextureItems}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{addTextureItems()}{addTextureItems()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_aa4a764c0996b8cdb1e435253da36e6ae} 
+void sfui\+::\+Frame\+Animated\+Sprite\+::add\+Texture\+Items (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesfui_a3914e89931c8852cbe1322d380701e62}{File\+Path}} \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+添加循环播放的图片 
+
+
+\begin{DoxyParams}{参数}
+{\em filepath} & 图片文件路径 \\
+\hline
+\end{DoxyParams}
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_abd168dfabd13e5c54244d818482f9969} 
+const sf\+::\+Sprite \& sfui\+::\+Frame\+Animated\+Sprite\+::get\+Sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+获取当前帧的\+Sprite（每次调用会自动切换帧） 
+
+\begin{DoxyReturn}{返回}
+当前帧的\+Sprite引用 
+\end{DoxyReturn}
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!init@{init}}
+\index{init@{init}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_ab14c6b04945e6b8ec8e064417a81ee17} 
+bool sfui\+::\+Frame\+Animated\+Sprite\+::init (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{continuation\+Frame}{, }\item[{const int \&}]{width}{, }\item[{const int \&}]{height}{, }\item[{const float \&}]{x}{, }\item[{const float \&}]{y}{}\end{DoxyParamCaption})}
+
+
+
+初始化循环动图的持续帧、大小、坐标 
+
+
+\begin{DoxyParams}{参数}
+{\em continuation\+Frame} & 持续帧数 \\
+\hline
+{\em width} & 图片宽度 \\
+\hline
+{\em height} & 图片高度 \\
+\hline
+{\em x} & X坐标 \\
+\hline
+{\em y} & Y坐标 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否初始化成功 
+\end{DoxyReturn}
+
+
+引用了 \mbox{\hyperlink{main_8cpp_source_l00009}{width}}.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!set@{set}}
+\index{set@{set}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a9958c533c0c06e8e04bde0819a0532a1} 
+void sfui\+::\+Frame\+Animated\+Sprite\+::set (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{continuation\+Frame}{, }\item[{const int \&}]{width}{, }\item[{const int \&}]{height}{, }\item[{const float \&}]{x}{, }\item[{const float \&}]{y}{}\end{DoxyParamCaption})}
+
+
+
+设置大小和坐标 
+
+
+\begin{DoxyParams}{参数}
+{\em continuation\+Frame} & 持续帧数 \\
+\hline
+{\em width} & 图片宽度 \\
+\hline
+{\em height} & 图片高度 \\
+\hline
+{\em x} & X坐标 \\
+\hline
+{\em y} & Y坐标 \\
+\hline
+\end{DoxyParams}
+
+
+引用了 \mbox{\hyperlink{main_8cpp_source_l00009}{width}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_continuationFrame@{m\_continuationFrame}}
+\index{m\_continuationFrame@{m\_continuationFrame}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_continuationFrame}{m\_continuationFrame}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_aff229982f08df9410f26702bcf25383c} 
+std\+::size\+\_\+t sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+continuation\+Frame = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+持续帧数 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00060}{60}} 行定义.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_frame@{m\_frame}}
+\index{m\_frame@{m\_frame}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_frame}{m\_frame}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a2a02727ad09fad8cd918acdfab98c605} 
+std\+::size\+\_\+t sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+frame = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前帧计数 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00058}{58}} 行定义.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a6b86ca77c1496aa999bb72c8c2b177bb} 
+int sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+图片高度 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00057}{57}} 行定义.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_nowTextureItemsIndex@{m\_nowTextureItemsIndex}}
+\index{m\_nowTextureItemsIndex@{m\_nowTextureItemsIndex}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_nowTextureItemsIndex}{m\_nowTextureItemsIndex}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a54c916df484d7a7318d4a70388f20f08} 
+std\+::size\+\_\+t sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+now\+Texture\+Items\+Index = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前图片索引 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00059}{59}} 行定义.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_textureItems@{m\_textureItems}}
+\index{m\_textureItems@{m\_textureItems}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_textureItems}{m\_textureItems}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_abc4ce615e88a9ed3818286065168d46d} 
+std\+::vector$<$ \mbox{\hyperlink{classsfui_1_1_texture_item}{Texture\+Item}}$>$ sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+texture\+Items\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+动画帧图片集合 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00053}{53}} 行定义.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a8ea12da5024aa23b87849ab42997795d} 
+int sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+width = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+图片宽度 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00056}{56}} 行定义.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_x@{m\_x}}
+\index{m\_x@{m\_x}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_x}{m\_x}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a993eee31fe28f14a26f303d28e0024f1} 
+float sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+x = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+X坐标 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00054}{54}} 行定义.
+
+\index{sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}!m\_y@{m\_y}}
+\index{m\_y@{m\_y}!sfui::FrameAnimatedSprite@{sfui::FrameAnimatedSprite}}
+\doxysubsubsection{\texorpdfstring{m\_y}{m\_y}}
+{\footnotesize\ttfamily \label{classsfui_1_1_frame_animated_sprite_a6b3af2e4e4e010d08a500691317853c9} 
+float sfui\+::\+Frame\+Animated\+Sprite\+::m\+\_\+y = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Y坐标 
+
+
+
+在文件 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source}{Frame\+Animated\+Sprite.\+hpp}} 第 \mbox{\hyperlink{_frame_animated_sprite_8hpp_source_l00055}{55}} 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sfml\+\_\+ui/include/customizable/components/\mbox{\hyperlink{_frame_animated_sprite_8hpp}{Frame\+Animated\+Sprite.\+hpp}}\end{DoxyCompactItemize}

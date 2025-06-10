@@ -1,0 +1,35 @@
+\doxysection{Mouse.\+hpp}
+\label{_mouse_8hpp_source}\index{include/core/message/Mouse.hpp@{include/core/message/Mouse.hpp}}
+\mbox{\hyperlink{_mouse_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }sfui\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{using\ }Position\ =\ sf::Vector2i;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }Mouse\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ Mouse(sf::RenderWindow\ *p\_sfml\_RenderWindow);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setWindow(sf::RenderWindow\ *\textcolor{keyword}{const}\ p\_sfml\_RenderWindow);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Position\ getScreenPosition();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ Position\ getWindowPosition();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Position\ getViewPosition()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isLeftPressed();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isRightPressed();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isMiddlePressed();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isXButton1Pressed();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isXButton2Pressed();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ sf::RenderWindow\ *m\_sf\_RenderWindow\_p\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}

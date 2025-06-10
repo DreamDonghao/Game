@@ -1,0 +1,32 @@
+<map id="sfml_ui/include/customizable/components/inputbox.hpp" name="sfml_ui/include/customizable/components/inputbox.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="418,5,608,48"/>
+<area shape="rect" id="Node000002" href="$_page_8hpp.html" title=" " alt="" coords="444,96,582,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="516,64,516,96,510,96,510,64"/>
+<area shape="rect" id="Node000003" href="$_control_page_8hpp.html" title=" " alt="" coords="143,277,304,320"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="468,149,258,279,255,275,465,145"/>
+<area shape="rect" id="Node000010" href="$_interactive_page_8hpp.html" title=" " alt="" coords="328,277,508,320"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="465,150,446,167,431,188,423,210,418,234,418,277,413,277,413,233,417,209,426,185,442,164,462,146"/>
+<area shape="rect" id="Node000011" href="$_window_8hpp.html" title=" " alt="" coords="441,187,585,229"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="516,154,516,186,510,186,510,154"/>
+<area shape="rect" id="Node000012" href="$_page_8cpp.html" title="实现Page类及相关函数，负责界面生命周期、事件绑定、渲染等。" alt="" coords="532,277,686,320"/>
+<area shape="poly" id="edge16_Node000002_Node000012" title=" " alt="" coords="564,146,583,164,599,185,608,209,613,233,614,277,608,277,608,234,603,210,594,188,579,167,560,150"/>
+<area shape="rect" id="Node000013" href="$_window_8cpp.html" title=" " alt="" coords="709,277,871,320"/>
+<area shape="poly" id="edge17_Node000002_Node000013" title=" " alt="" coords="561,145,624,184,761,274,758,279,621,189,558,149"/>
+<area shape="rect" id="Node000004" href="$_complex_page_8hpp.html" title=" " alt="" coords="235,368,406,411"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="259,329,300,365,296,369,256,333"/>
+<area shape="rect" id="Node000005" href="$_main_menu_page_8hpp.html" title=" " alt="" coords="5,459,146,501"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="250,419,134,461,132,456,248,414"/>
+<area shape="rect" id="Node000007" href="$gamepage_8hpp.html" title=" " alt="" coords="170,459,307,501"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="293,424,259,460,255,457,289,420"/>
+<area shape="rect" id="Node000008" href="$pausegamepage_8hpp.html" title=" " alt="" coords="331,459,476,501"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="352,420,386,457,382,460,348,424"/>
+<area shape="rect" id="Node000009" href="$page__emplate_8hpp.html" title=" " alt="" coords="500,459,670,501"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="398,414,524,455,522,461,396,419"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html" title=" " alt="" coords="9,549,142,576"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="78,517,78,549,73,549,73,517"/>
+<area shape="poly" id="edge10_Node000010_Node000004" title=" " alt="" coords="386,333,345,369,342,365,383,329"/>
+<area shape="poly" id="edge12_Node000011_Node000003" title=" " alt="" coords="431,237,292,279,291,274,430,232"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="482,242,442,279,438,275,478,238"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="548,238,588,275,585,279,545,242"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="593,232,726,274,724,279,592,237"/>
+</map>

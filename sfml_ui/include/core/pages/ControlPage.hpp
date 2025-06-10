@@ -9,7 +9,7 @@ namespace sfui {
      */
     class ControlPage :virtual public Page {
     public:
-        
+        ControlPage(sf::RenderWindow *p_sfml_RenderWindow):Page(p_sfml_RenderWindow){};
     protected:
         sf::View m_view; ///< 控件页面的视图
 
@@ -60,6 +60,11 @@ namespace sfui {
         void draw(const sfui::TextBox &textBox) const {
             mp_window->getSfRenderWindow().setView(m_view);
             mp_window->getSfRenderWindow().draw(textBox.getSprite());
+        }
+
+        void draw(const sfui::InputBox &inputBox)const {
+            mp_window->getSfRenderWindow().setView(m_view);
+            mp_window->getSfRenderWindow().draw(inputBox.getSpring());
         }
 
     };

@@ -1,0 +1,20 @@
+<map id="game::PauseGamePage" name="game::PauseGamePage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="162,332,325,359"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_complex_page.html" title="混合界面类，结合了交互页面和控件页面的功能" alt="" coords="177,256,310,283"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,298,246,332,241,332,241,298"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_interactive_page.html" title="动态或实时更新的交互页面，视图中心可自定义" alt="" coords="95,180,237,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,215,232,254,229,258,188,219"/>
+<area shape="rect" id="Node000004" href="$classsfui_1_1_page.html" title="前置声明窗口类" alt="" coords="203,104,284,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="221,143,181,182,177,178,218,139"/>
+<area shape="rect" id="Node000009" href="$classsfui_1_1_control_page.html" title="UI 控件页面，视图大小等于窗口大小，(0,0)为左上角" alt="" coords="261,180,383,207"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="270,139,311,178,307,182,266,143"/>
+<area shape="rect" id="Node000005" href="$classsfui_1_1_window.html" title="窗口类，负责窗口创建、页面管理、事件循环、全屏切换等。" alt="" coords="5,5,103,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="76,42,95,61,118,78,161,96,203,107,202,112,159,101,116,82,92,65,72,46"/>
+<area shape="rect" id="Node000006" href="$classsfui_1_1_mouse.html" title="实时鼠标操作类" alt="" coords="127,5,216,32"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="192,43,236,102,232,105,188,46"/>
+<area shape="rect" id="Node000007" href="$classsfui_1_1_active_key_binding.html" title="按键状态与行为的映射类" alt="" coords="240,5,393,32"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="308,47,288,82,263,105,260,101,284,78,304,45"/>
+<area shape="rect" id="Node000008" href="$classsfui_1_1_evect_bingding.html" title="按键和鼠标事件与行为的映射类" alt="" coords="418,5,552,32"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="471,47,455,66,434,82,396,99,357,110,284,119,284,113,356,105,395,94,431,78,451,62,467,43"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="299,219,258,258,255,254,296,215"/>
+</map>

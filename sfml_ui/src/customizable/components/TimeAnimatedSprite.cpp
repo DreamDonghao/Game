@@ -1,4 +1,4 @@
-﻿#include <TimeAnimatedSprite.hpp>
+#include <TimeAnimatedSprite.hpp>
 
 namespace sfui {
 

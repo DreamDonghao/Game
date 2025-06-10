@@ -1,0 +1,754 @@
+\doxysection{sfui\+::Page类 参考}
+\label{classsfui_1_1_page}\index{sfui::Page@{sfui::Page}}
+
+
+前置声明窗口类  
+
+
+
+
+{\ttfamily \#include $<$Page.\+hpp$>$}
+
+
+
+类 sfui\+::Page 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classsfui_1_1_page__inherit__graph}
+\end{center}
+\end{figure}
+
+
+sfui\+::Page 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsfui_1_1_page__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_page_a1d645637dcd8fea7241f485ef4fe1b93}{Page}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}p\+\_\+sfml\+\_\+\+Render\+Window)
+\item 
+virtual \mbox{\hyperlink{classsfui_1_1_page_a0a86ae7bab83d62fabfd7633fafc6b0a}{\texorpdfstring{$\sim$}{\string~}\+Page}} ()=default
+\begin{DoxyCompactList}\small\item\em 虚析构函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_a04c4789b16160b0de9d715d6392652b7}{update\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em 更新界面一帧（更新视图并渲染） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_ad4d457e53e9276bc1590a2559b99ee5a}{set\+Window}} (\mbox{\hyperlink{classsfui_1_1_window}{Window}} \texorpdfstring{$\ast$}{*}p\+\_\+window)
+\begin{DoxyCompactList}\small\item\em 绑定界面与所属窗口 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_a61c79689dc38087a5278356c759d4f02}{set\+Mouse\+Window}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}p\+\_\+sfml\+\_\+\+Render\+Window)
+\begin{DoxyCompactList}\small\item\em 为界面鼠标绑定窗口 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_a850940bfc83518726469a60c52a0fd76}{init}} ()
+\begin{DoxyCompactList}\small\item\em 初始化界面（元素和消息绑定） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfui_1_1_page_a05d3f9b98811d52cd74e49c35326aff9}{initialize\+Page\+Elements}} ()=0
+\begin{DoxyCompactList}\small\item\em 初始化界面元素（纯虚函数，需子类实现） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfui_1_1_page_ac6a71503d7fd6990f50c123a065a5235}{init\+Message\+Binding}} ()=0
+\begin{DoxyCompactList}\small\item\em 初始化消息与事件绑定（纯虚函数，需子类实现） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_a81196cc0d825eb3ca0b4ca187c674982}{active\+Map}} (\mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}} key, const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&action)
+\begin{DoxyCompactList}\small\item\em 绑定按键与行为（实时输入） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_a08a68da4f1209edaf1cb43004dd5b6d0}{event\+Map}} (\mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}} key, const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&action)
+\begin{DoxyCompactList}\small\item\em 绑定按键与行为（事件输入） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_ab89c21b17bc6b0bd10d1d7ca412b3cd6}{event\+Map}} (\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}} mouse\+Button, const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&action)
+\begin{DoxyCompactList}\small\item\em 绑定鼠标按键与行为（事件输入，重载） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_a263fedceab2f1cb7237e1f3be8d96f96}{event\+Map}} (sf\+::\+Mouse\+::\+Button mouse\+Button, const \mbox{\hyperlink{classsfui_1_1_area}{Area}} \texorpdfstring{$\ast$}{*}area, const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&action)
+\begin{DoxyCompactList}\small\item\em 绑定\+SFML鼠标按键与区域及行为（事件输入，重载） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfui_1_1_page_a02f88b02f151711a36a5c96d2ef441c3}{update\+View}} ()=0
+\begin{DoxyCompactList}\small\item\em 根据窗口大小更新界面视图（纯虚函数，需子类实现） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_af9102384ae5beaeb91df393d2e53af26}{execute\+Key\+Press\+Once}} ()
+\begin{DoxyCompactList}\small\item\em 实时输入处理（处理按键行为） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_aee0045290a9beddf393c783d8e44fed7}{execute\+Event\+Binding}} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em 事件输入处理（处理事件行为） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfui_1_1_page_ac8067ba09633443eeb11d13c49d08b8f}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em 更新界面内容（纯虚函数，需子类实现） \end{DoxyCompactList}\item 
+sf\+::\+Color \mbox{\hyperlink{classsfui_1_1_page_a9def0265662c557aab9846fa36114521}{get\+Background\+Color}} () const
+\begin{DoxyCompactList}\small\item\em 获取界面背景颜色 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsfui_1_1_page_a9c39b5c590d92b5c86380fb6e94a2603}{set\+Background\+Color}} (const sf\+::\+Color \&background\+Color)
+\begin{DoxyCompactList}\small\item\em 设置界面背景颜色 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsfui_1_1_page_aae3845d200cc47f224a1e0b1be755568}{render}} ()=0
+\begin{DoxyCompactList}\small\item\em 渲染界面内容（纯虚函数，需子类实现） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_af7802cf36ee67e4944b825c034d4aff8}{request\+Page\+Switch}} (const \mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{Title}} \&target\+Page\+Title)
+\begin{DoxyCompactList}\small\item\em 发起界面跳转请求（由子类调用） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_window}{Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsfui_1_1_page_a3617d9b7521c79a7e2280701febc8b22}{mp\+\_\+window}} = nullptr
+\begin{DoxyCompactList}\small\item\em 界面绑定的窗口 \end{DoxyCompactList}\item 
+sf\+::\+Color \mbox{\hyperlink{classsfui_1_1_page_a785a36d852033b39a5ffcc67ad062ffa}{m\+\_\+background\+Color}}
+\begin{DoxyCompactList}\small\item\em 界面背景颜色 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_mouse}{Mouse}} \mbox{\hyperlink{classsfui_1_1_page_a0dd4f35e186e6190a09ffad9a2cde4b8}{m\+\_\+mouse}}
+\begin{DoxyCompactList}\small\item\em 鼠标对象 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_active_key_binding}{Active\+Key\+Binding}} \mbox{\hyperlink{classsfui_1_1_page_a784e9994c234340af5ef4a481f3ed584}{m\+\_\+active\+Key\+Binding}}
+\begin{DoxyCompactList}\small\item\em 按键事件绑定 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_evect_bingding}{Evect\+Bingding}} \mbox{\hyperlink{classsfui_1_1_page_a255a52e49f6fcd9579fda64b3d982b3a}{m\+\_\+event\+Binding}}
+\begin{DoxyCompactList}\small\item\em 消息事件绑定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+前置声明窗口类 
+
+界面抽象基类，定义界面生命周期、事件绑定、渲染等接口 
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00027}{27}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::Page@{sfui::Page}!Page@{Page}}
+\index{Page@{Page}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{Page()}{Page()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a1d645637dcd8fea7241f485ef4fe1b93} 
+sfui\+::\+Page\+::\+Page (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{p\+\_\+sfml\+\_\+\+Render\+Window}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00029}{29}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ :m\_mouse(p\_sfml\_RenderWindow)\{\}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00126}{m\+\_\+mouse}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_control_page_8hpp_source_l00012}{sfui\+::\+Control\+Page\+::\+Control\+Page()}} , 以及 \mbox{\hyperlink{_interactive_page_8hpp_source_l00013}{sfui\+::\+Interactive\+Page\+::\+Interactive\+Page()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsfui_1_1_page_a1d645637dcd8fea7241f485ef4fe1b93_icgraph}
+\end{center}
+\end{figure}
+\index{sfui::Page@{sfui::Page}!````~Page@{\texorpdfstring{$\sim$}{\string~}Page}}
+\index{````~Page@{\texorpdfstring{$\sim$}{\string~}Page}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Page()}{\string~Page()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a0a86ae7bab83d62fabfd7633fafc6b0a} 
+virtual sfui\+::\+Page\+::\texorpdfstring{$\sim$}{\string~}\+Page (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+虚析构函数 
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::Page@{sfui::Page}!activeMap@{activeMap}}
+\index{activeMap@{activeMap}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{activeMap()}{activeMap()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a81196cc0d825eb3ca0b4ca187c674982} 
+void sfui\+::\+Page\+::active\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}}}]{key}{, }\item[{const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+绑定按键与行为（实时输入） 
+
+
+\begin{DoxyParams}{参数}
+{\em key} & 按键 \\
+\hline
+{\em action} & 行为 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00042}{42}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ m\_activeKeyBinding.bindKey(key,\ action);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00127}{m\+\_\+active\+Key\+Binding}}.
+
+\index{sfui::Page@{sfui::Page}!eventMap@{eventMap}}
+\index{eventMap@{eventMap}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{eventMap()}{eventMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a08a68da4f1209edaf1cb43004dd5b6d0} 
+void sfui\+::\+Page\+::event\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}}}]{key}{, }\item[{const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+绑定按键与行为（事件输入） 
+
+
+\begin{DoxyParams}{参数}
+{\em key} & 按键 \\
+\hline
+{\em action} & 行为 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00046}{46}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ m\_eventBinding.bindEvent(key,\ action);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00128}{m\+\_\+event\+Binding}}.
+
+\index{sfui::Page@{sfui::Page}!eventMap@{eventMap}}
+\index{eventMap@{eventMap}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{eventMap()}{eventMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_ab89c21b17bc6b0bd10d1d7ca412b3cd6} 
+void sfui\+::\+Page\+::event\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}}}]{mouse\+Button}{, }\item[{const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+绑定鼠标按键与行为（事件输入，重载） 
+
+
+\begin{DoxyParams}{参数}
+{\em mouse\+Button} & 鼠标按键（自定义类型） \\
+\hline
+{\em action} & 行为 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00050}{50}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ m\_eventBinding.bindEvent(mouseButton,action);}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00128}{m\+\_\+event\+Binding}}.
+
+\index{sfui::Page@{sfui::Page}!eventMap@{eventMap}}
+\index{eventMap@{eventMap}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{eventMap()}{eventMap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a263fedceab2f1cb7237e1f3be8d96f96} 
+void sfui\+::\+Page\+::event\+Map (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{mouse\+Button}{, }\item[{const \mbox{\hyperlink{classsfui_1_1_area}{Area}} \texorpdfstring{$\ast$}{*}}]{area}{, }\item[{const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+绑定\+SFML鼠标按键与区域及行为（事件输入，重载） 
+
+
+\begin{DoxyParams}{参数}
+{\em mouse\+Button} & SFML鼠标按键 \\
+\hline
+{\em area} & 触发区域指针 \\
+\hline
+{\em action} & 行为 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00053}{53}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ m\_eventBinding.bindEvent(mouseButton,\ area,\ action);}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00128}{m\+\_\+event\+Binding}}.
+
+\index{sfui::Page@{sfui::Page}!executeEventBinding@{executeEventBinding}}
+\index{executeEventBinding@{executeEventBinding}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{executeEventBinding()}{executeEventBinding()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_aee0045290a9beddf393c783d8e44fed7} 
+void sfui\+::\+Page\+::execute\+Event\+Binding (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event}{}\end{DoxyParamCaption})}
+
+
+
+事件输入处理（处理事件行为） 
+
+
+\begin{DoxyParams}{参数}
+{\em event} & SFML事件 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00061}{61}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ m\_eventBinding.update(event);}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00128}{m\+\_\+event\+Binding}}.
+
+\index{sfui::Page@{sfui::Page}!executeKeyPressOnce@{executeKeyPressOnce}}
+\index{executeKeyPressOnce@{executeKeyPressOnce}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{executeKeyPressOnce()}{executeKeyPressOnce()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_af9102384ae5beaeb91df393d2e53af26} 
+void sfui\+::\+Page\+::execute\+Key\+Press\+Once (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+实时输入处理（处理按键行为） 
+
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00057}{57}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ m\_activeKeyBinding.update();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00127}{m\+\_\+active\+Key\+Binding}}.
+
+\index{sfui::Page@{sfui::Page}!getBackgroundColor@{getBackgroundColor}}
+\index{getBackgroundColor@{getBackgroundColor}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{getBackgroundColor()}{getBackgroundColor()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a9def0265662c557aab9846fa36114521} 
+sf\+::\+Color sfui\+::\+Page\+::get\+Background\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+获取界面背景颜色 
+
+\begin{DoxyReturn}{返回}
+背景颜色 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00065}{65}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{\ \textcolor{keywordflow}{return}\ m\_backgroundColor;\ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00125}{m\+\_\+background\+Color}}.
+
+\index{sfui::Page@{sfui::Page}!init@{init}}
+\index{init@{init}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a850940bfc83518726469a60c52a0fd76} 
+void sfui\+::\+Page\+::init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+初始化界面（元素和消息绑定） 
+
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00035}{35}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 初始化界面元素}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ initializePageElements();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ initMessageBinding();}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{classsfui_1_1_page_a05d3f9b98811d52cd74e49c35326aff9}{initialize\+Page\+Elements()}} , 以及 \mbox{\hyperlink{classsfui_1_1_page_ac6a71503d7fd6990f50c123a065a5235}{init\+Message\+Binding()}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classsfui_1_1_page_a850940bfc83518726469a60c52a0fd76_cgraph}
+\end{center}
+\end{figure}
+\index{sfui::Page@{sfui::Page}!initializePageElements@{initializePageElements}}
+\index{initializePageElements@{initializePageElements}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{initializePageElements()}{initializePageElements()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a05d3f9b98811d52cd74e49c35326aff9} 
+virtual void sfui\+::\+Page\+::initialize\+Page\+Elements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+初始化界面元素（纯虚函数，需子类实现） 
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8cpp_source_l00035}{init()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classsfui_1_1_page_a05d3f9b98811d52cd74e49c35326aff9_icgraph}
+\end{center}
+\end{figure}
+\index{sfui::Page@{sfui::Page}!initMessageBinding@{initMessageBinding}}
+\index{initMessageBinding@{initMessageBinding}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{initMessageBinding()}{initMessageBinding()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_ac6a71503d7fd6990f50c123a065a5235} 
+virtual void sfui\+::\+Page\+::init\+Message\+Binding (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+初始化消息与事件绑定（纯虚函数，需子类实现） 
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8cpp_source_l00035}{init()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classsfui_1_1_page_ac6a71503d7fd6990f50c123a065a5235_icgraph}
+\end{center}
+\end{figure}
+\index{sfui::Page@{sfui::Page}!render@{render}}
+\index{render@{render}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_aae3845d200cc47f224a1e0b1be755568} 
+virtual void sfui\+::\+Page\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+渲染界面内容（纯虚函数，需子类实现） 
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8cpp_source_l00019}{update\+Frame()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classsfui_1_1_page_aae3845d200cc47f224a1e0b1be755568_icgraph}
+\end{center}
+\end{figure}
+\index{sfui::Page@{sfui::Page}!requestPageSwitch@{requestPageSwitch}}
+\index{requestPageSwitch@{requestPageSwitch}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{requestPageSwitch()}{requestPageSwitch()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_af7802cf36ee67e4944b825c034d4aff8} 
+void sfui\+::\+Page\+::request\+Page\+Switch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{Title}} \&}]{target\+Page\+Title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+发起界面跳转请求（由子类调用） 
+
+
+\begin{DoxyParams}{参数}
+{\em target\+Page\+Title} & 目标页面标题 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00071}{71}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ mp\_window-\/>requestPageSwitch(targetPageTitle);}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00124}{mp\+\_\+window}}.
+
+\index{sfui::Page@{sfui::Page}!setBackgroundColor@{setBackgroundColor}}
+\index{setBackgroundColor@{setBackgroundColor}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{setBackgroundColor()}{setBackgroundColor()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a9c39b5c590d92b5c86380fb6e94a2603} 
+void sfui\+::\+Page\+::set\+Background\+Color (\begin{DoxyParamCaption}\item[{const sf\+::\+Color \&}]{background\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+设置界面背景颜色 
+
+
+\begin{DoxyParams}{参数}
+{\em background\+Color} & 新的背景颜色 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00067}{67}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ m\_backgroundColor\ =\ backgroundColor;}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00125}{m\+\_\+background\+Color}}.
+
+\index{sfui::Page@{sfui::Page}!setMouseWindow@{setMouseWindow}}
+\index{setMouseWindow@{setMouseWindow}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{setMouseWindow()}{setMouseWindow()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a61c79689dc38087a5278356c759d4f02} 
+void sfui\+::\+Page\+::set\+Mouse\+Window (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{p\+\_\+sfml\+\_\+\+Render\+Window}{}\end{DoxyParamCaption})}
+
+
+
+为界面鼠标绑定窗口 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+sfml\+\_\+\+Render\+Window} & SFML窗口指针 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00030}{30}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ m\_mouse.setWindow(p\_sfml\_RenderWindow);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00126}{m\+\_\+mouse}}.
+
+\index{sfui::Page@{sfui::Page}!setWindow@{setWindow}}
+\index{setWindow@{setWindow}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{setWindow()}{setWindow()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_ad4d457e53e9276bc1590a2559b99ee5a} 
+void sfui\+::\+Page\+::set\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsfui_1_1_window}{Window}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+window}{}\end{DoxyParamCaption})}
+
+
+
+绑定界面与所属窗口 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+window} & 窗口指针 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00026}{26}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ mp\_window\ =\ p\_window;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_page_8hpp_source_l00124}{mp\+\_\+window}}.
+
+\index{sfui::Page@{sfui::Page}!update@{update}}
+\index{update@{update}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_ac8067ba09633443eeb11d13c49d08b8f} 
+virtual void sfui\+::\+Page\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+更新界面内容（纯虚函数，需子类实现） 
+
+\index{sfui::Page@{sfui::Page}!updateFrame@{updateFrame}}
+\index{updateFrame@{updateFrame}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{updateFrame()}{updateFrame()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a04c4789b16160b0de9d715d6392652b7} 
+void sfui\+::\+Page\+::update\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+更新界面一帧（更新视图并渲染） 
+
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00019}{19}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 根据绑定窗口的大小来更新界面视图}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ updateView();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 渲染页面内容到窗口}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ render();}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{classsfui_1_1_page_aae3845d200cc47f224a1e0b1be755568}{render()}} , 以及 \mbox{\hyperlink{classsfui_1_1_page_a02f88b02f151711a36a5c96d2ef441c3}{update\+View()}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classsfui_1_1_page_a04c4789b16160b0de9d715d6392652b7_cgraph}
+\end{center}
+\end{figure}
+\index{sfui::Page@{sfui::Page}!updateView@{updateView}}
+\index{updateView@{updateView}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{updateView()}{updateView()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a02f88b02f151711a36a5c96d2ef441c3} 
+virtual void sfui\+::\+Page\+::update\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+根据窗口大小更新界面视图（纯虚函数，需子类实现） 
+
+
+
+在 \mbox{\hyperlink{classsfui_1_1_complex_page_a825c1f861ceff3d6b8e0b30699fb5bcf}{sfui\+::\+Complex\+Page}}, \mbox{\hyperlink{classsfui_1_1_control_page_ad29178eb40aac85f0b802f985c08582a}{sfui\+::\+Control\+Page}} , 以及 \mbox{\hyperlink{classsfui_1_1_interactive_page_a4560481c118112bb9d5cad056b41ec46}{sfui\+::\+Interactive\+Page}} 内被实现.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8cpp_source_l00019}{update\+Frame()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classsfui_1_1_page_a02f88b02f151711a36a5c96d2ef441c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::Page@{sfui::Page}!m\_activeKeyBinding@{m\_activeKeyBinding}}
+\index{m\_activeKeyBinding@{m\_activeKeyBinding}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{m\_activeKeyBinding}{m\_activeKeyBinding}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a784e9994c234340af5ef4a481f3ed584} 
+\mbox{\hyperlink{classsfui_1_1_active_key_binding}{Active\+Key\+Binding}} sfui\+::\+Page\+::m\+\_\+active\+Key\+Binding\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+按键事件绑定 
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00127}{127}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8cpp_source_l00042}{active\+Map()}} , 以及 \mbox{\hyperlink{_page_8cpp_source_l00057}{execute\+Key\+Press\+Once()}}.
+
+\index{sfui::Page@{sfui::Page}!m\_backgroundColor@{m\_backgroundColor}}
+\index{m\_backgroundColor@{m\_backgroundColor}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{m\_backgroundColor}{m\_backgroundColor}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a785a36d852033b39a5ffcc67ad062ffa} 
+sf\+::\+Color sfui\+::\+Page\+::m\+\_\+background\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+界面背景颜色 
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00125}{125}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8cpp_source_l00065}{get\+Background\+Color()}} , 以及 \mbox{\hyperlink{_page_8cpp_source_l00067}{set\+Background\+Color()}}.
+
+\index{sfui::Page@{sfui::Page}!m\_eventBinding@{m\_eventBinding}}
+\index{m\_eventBinding@{m\_eventBinding}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{m\_eventBinding}{m\_eventBinding}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a255a52e49f6fcd9579fda64b3d982b3a} 
+\mbox{\hyperlink{classsfui_1_1_evect_bingding}{Evect\+Bingding}} sfui\+::\+Page\+::m\+\_\+event\+Binding\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+消息事件绑定 
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00128}{128}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8cpp_source_l00046}{event\+Map()}}, \mbox{\hyperlink{_page_8cpp_source_l00050}{event\+Map()}}, \mbox{\hyperlink{_page_8cpp_source_l00053}{event\+Map()}} , 以及 \mbox{\hyperlink{_page_8cpp_source_l00061}{execute\+Event\+Binding()}}.
+
+\index{sfui::Page@{sfui::Page}!m\_mouse@{m\_mouse}}
+\index{m\_mouse@{m\_mouse}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{m\_mouse}{m\_mouse}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a0dd4f35e186e6190a09ffad9a2cde4b8} 
+\mbox{\hyperlink{classsfui_1_1_mouse}{Mouse}} sfui\+::\+Page\+::m\+\_\+mouse\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+鼠标对象 
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00126}{126}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_page_8hpp_source_l00029}{Page()}} , 以及 \mbox{\hyperlink{_page_8cpp_source_l00030}{set\+Mouse\+Window()}}.
+
+\index{sfui::Page@{sfui::Page}!mp\_window@{mp\_window}}
+\index{mp\_window@{mp\_window}!sfui::Page@{sfui::Page}}
+\doxysubsubsection{\texorpdfstring{mp\_window}{mp\_window}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_a3617d9b7521c79a7e2280701febc8b22} 
+\mbox{\hyperlink{classsfui_1_1_window}{Window}}\texorpdfstring{$\ast$}{*} sfui\+::\+Page\+::mp\+\_\+window = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+界面绑定的窗口 
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00124}{124}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_control_page_8hpp_source_l00042}{sfui\+::\+Control\+Page\+::draw()}}, \mbox{\hyperlink{_control_page_8hpp_source_l00065}{sfui\+::\+Control\+Page\+::draw()}}, \mbox{\hyperlink{_control_page_8hpp_source_l00060}{sfui\+::\+Control\+Page\+::draw()}}, \mbox{\hyperlink{_control_page_8hpp_source_l00051}{sfui\+::\+Control\+Page\+::draw()}}, \mbox{\hyperlink{_interactive_page_8hpp_source_l00052}{sfui\+::\+Interactive\+Page\+::draw()}}, \mbox{\hyperlink{_interactive_page_8hpp_source_l00062}{sfui\+::\+Interactive\+Page\+::draw()}}, \mbox{\hyperlink{_interactive_page_8hpp_source_l00092}{sfui\+::\+Interactive\+Page\+::draw()}}, \mbox{\hyperlink{_interactive_page_8hpp_source_l00082}{sfui\+::\+Interactive\+Page\+::draw()}}, \mbox{\hyperlink{_interactive_page_8hpp_source_l00072}{sfui\+::\+Interactive\+Page\+::draw()}}, \mbox{\hyperlink{_page_8cpp_source_l00071}{request\+Page\+Switch()}}, \mbox{\hyperlink{_page_8cpp_source_l00026}{set\+Window()}}, \mbox{\hyperlink{_control_page_8hpp_source_l00027}{sfui\+::\+Control\+Page\+::update\+View()}} , 以及 \mbox{\hyperlink{_interactive_page_8hpp_source_l00028}{sfui\+::\+Interactive\+Page\+::update\+View()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/core/pages/\mbox{\hyperlink{_page_8hpp}{Page.\+hpp}}\item 
+src/core/pages/\mbox{\hyperlink{_page_8cpp}{Page.\+cpp}}\end{DoxyCompactItemize}

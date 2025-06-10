@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <SFML/Graphics.hpp>
 
 namespace sfui {
@@ -13,8 +13,7 @@ namespace sfui {
         /**
          * @brief 构造函数
          */
-        Mouse();
-
+        Mouse(sf::RenderWindow *p_sfml_RenderWindow);
         /**
          * @brief 设置绑定的SFML窗口指针
          * @param p_sfml_RenderWindow 指向SFML窗口的指针
@@ -37,7 +36,7 @@ namespace sfui {
          * @brief 获取鼠标指针相对于视图的位置
          * @return 鼠标视图坐标
          */
-        Position getViewPosition();
+        Position getViewPosition() const;
 
         /**
          * @brief 判断鼠标左键是否按下

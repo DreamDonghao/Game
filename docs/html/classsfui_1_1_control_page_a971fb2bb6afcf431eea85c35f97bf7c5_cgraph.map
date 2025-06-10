@@ -1,0 +1,5 @@
+<map id="sfui::ControlPage::draw" name="sfui::ControlPage::draw">
+<area shape="rect" id="Node000001" title="绘制按钮" alt="" coords="5,5,164,32"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_button.html#a9bda2b07213ffd9a40fb2e231f084952" title="获取按钮的Sprite" alt="" coords="212,5,360,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,16,196,16,196,21,164,21"/>
+</map>

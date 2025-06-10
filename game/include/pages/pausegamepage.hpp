@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <ComplexPage.hpp>
 #include <elemental.hpp>

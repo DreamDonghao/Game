@@ -1,0 +1,16 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" href="$classsfui_1_1_page.html" title="前置声明窗口类" alt="" coords="5,56,86,83"/>
+<area shape="rect" id="Node000001" href="$classsfui_1_1_control_page.html" title="UI 控件页面，视图大小等于窗口大小，(0,0)为左上角" alt="" coords="143,31,266,57"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="101,58,142,51,143,56,101,63"/>
+<area shape="rect" id="Node000006" href="$classsfui_1_1_interactive_page.html" title="动态或实时更新的交互页面，视图中心可自定义" alt="" coords="134,81,275,108"/>
+<area shape="poly" id="edge10_Node000000_Node000006" title=" " alt="" coords="102,76,134,81,133,86,101,81"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_complex_page.html" title="混合界面类，结合了交互页面和控件页面的功能" alt="" coords="323,56,455,83"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="281,52,323,58,322,63,280,57"/>
+<area shape="rect" id="Node000003" href="$classgame_1_1_game_page.html" title=" " alt="" coords="522,5,648,32"/>
+<area shape="poly" id="edge7_Node000002_Node000003" title=" " alt="" coords="458,49,530,30,531,35,459,54"/>
+<area shape="rect" id="Node000004" href="$classgame_1_1_main_menu_page.html" title=" " alt="" coords="509,56,661,83"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="471,67,509,67,509,72,471,72"/>
+<area shape="rect" id="Node000005" href="$classgame_1_1_pause_game_page.html" title=" " alt="" coords="503,107,667,133"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="459,85,531,103,530,109,458,90"/>
+<area shape="poly" id="edge11_Node000006_Node000002" title=" " alt="" coords="290,80,322,76,323,81,291,85"/>
+</map>

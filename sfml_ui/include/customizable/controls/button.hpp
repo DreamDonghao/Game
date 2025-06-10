@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <TextureItem.hpp>
 #include <Area.hpp>
@@ -12,7 +12,7 @@ namespace sfui {
         /**
          * @brief 默认构造函数
          */
-        Button() : m_area() {}
+        Button() : m_area(0,0,0,0) {}
 
         /**
          * @brief 析构函数

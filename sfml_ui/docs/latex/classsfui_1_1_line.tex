@@ -1,0 +1,200 @@
+\doxysection{sfui\+::Line类 参考}
+\label{classsfui_1_1_line}\index{sfui::Line@{sfui::Line}}
+
+
+线段对象，支持初始化起止点和颜色  
+
+
+
+
+{\ttfamily \#include $<$line.\+hpp$>$}
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_line_a5b923cf464c2238a216fd65c5fbe3eef}{Line}} ()=default
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_line_a2a8029edeff2aee16b1d44032dcbe915}{init}} (const double \&\&x, const double \&\&y, const double \&\&xx, const double \&yy, const sf\+::\+Color \&\&color)
+\begin{DoxyCompactList}\small\item\em 初始化线段的起止点和颜色 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classsfui_1_1_line_ad0edf173f83e92cb04dd1c3abcd2a5b9}{m\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em 起点x \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsfui_1_1_line_ab2f27fbcffceeb63acce5c39be5b8263}{m\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em 起点y \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsfui_1_1_line_aecda2fb021bb909f9464d78ad73315f8}{m\+\_\+xx}}
+\begin{DoxyCompactList}\small\item\em 终点x \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsfui_1_1_line_aaf6e8d44d412aa50acbbae78f519cf5d}{m\+\_\+yy}}
+\begin{DoxyCompactList}\small\item\em 终点y \end{DoxyCompactList}\item 
+sf\+::\+Color \mbox{\hyperlink{classsfui_1_1_line_ab24ab001f4373c12685b1217bf63e01f}{m\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em 线段颜色 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+线段对象，支持初始化起止点和颜色 
+
+在文件 \mbox{\hyperlink{line_8hpp_source}{line.\+hpp}} 第 \mbox{\hyperlink{line_8hpp_source_l00007}{7}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::Line@{sfui::Line}!Line@{Line}}
+\index{Line@{Line}!sfui::Line@{sfui::Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_line_a5b923cf464c2238a216fd65c5fbe3eef} 
+sfui\+::\+Line\+::\+Line (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+默认构造函数 
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::Line@{sfui::Line}!init@{init}}
+\index{init@{init}!sfui::Line@{sfui::Line}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_line_a2a8029edeff2aee16b1d44032dcbe915} 
+bool sfui\+::\+Line\+::init (\begin{DoxyParamCaption}\item[{const double \&\&}]{x}{, }\item[{const double \&\&}]{y}{, }\item[{const double \&\&}]{xx}{, }\item[{const double \&}]{yy}{, }\item[{const sf\+::\+Color \&\&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+初始化线段的起止点和颜色 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & 起点x \\
+\hline
+{\em y} & 起点y \\
+\hline
+{\em xx} & 终点x \\
+\hline
+{\em yy} & 终点y \\
+\hline
+{\em color} & 线段颜色 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否初始化成功 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{line_8hpp_source}{line.\+hpp}} 第 \mbox{\hyperlink{line_8hpp_source_l00022}{22}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ m\_x\ =\ x;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ m\_y\ =\ y;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ m\_xx\ =\ xx;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ m\_yy\ =\ yy;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ m\_color\ =\ color;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{line_8hpp_source_l00035}{m\+\_\+color}}, \mbox{\hyperlink{line_8hpp_source_l00031}{m\+\_\+x}}, \mbox{\hyperlink{line_8hpp_source_l00033}{m\+\_\+xx}}, \mbox{\hyperlink{line_8hpp_source_l00032}{m\+\_\+y}} , 以及 \mbox{\hyperlink{line_8hpp_source_l00034}{m\+\_\+yy}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::Line@{sfui::Line}!m\_color@{m\_color}}
+\index{m\_color@{m\_color}!sfui::Line@{sfui::Line}}
+\doxysubsubsection{\texorpdfstring{m\_color}{m\_color}}
+{\footnotesize\ttfamily \label{classsfui_1_1_line_ab24ab001f4373c12685b1217bf63e01f} 
+sf\+::\+Color sfui\+::\+Line\+::m\+\_\+color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+线段颜色 
+
+
+
+在文件 \mbox{\hyperlink{line_8hpp_source}{line.\+hpp}} 第 \mbox{\hyperlink{line_8hpp_source_l00035}{35}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{line_8hpp_source_l00022}{init()}}.
+
+\index{sfui::Line@{sfui::Line}!m\_x@{m\_x}}
+\index{m\_x@{m\_x}!sfui::Line@{sfui::Line}}
+\doxysubsubsection{\texorpdfstring{m\_x}{m\_x}}
+{\footnotesize\ttfamily \label{classsfui_1_1_line_ad0edf173f83e92cb04dd1c3abcd2a5b9} 
+double sfui\+::\+Line\+::m\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+起点x 
+
+
+
+在文件 \mbox{\hyperlink{line_8hpp_source}{line.\+hpp}} 第 \mbox{\hyperlink{line_8hpp_source_l00031}{31}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{line_8hpp_source_l00022}{init()}}.
+
+\index{sfui::Line@{sfui::Line}!m\_xx@{m\_xx}}
+\index{m\_xx@{m\_xx}!sfui::Line@{sfui::Line}}
+\doxysubsubsection{\texorpdfstring{m\_xx}{m\_xx}}
+{\footnotesize\ttfamily \label{classsfui_1_1_line_aecda2fb021bb909f9464d78ad73315f8} 
+double sfui\+::\+Line\+::m\+\_\+xx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+终点x 
+
+
+
+在文件 \mbox{\hyperlink{line_8hpp_source}{line.\+hpp}} 第 \mbox{\hyperlink{line_8hpp_source_l00033}{33}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{line_8hpp_source_l00022}{init()}}.
+
+\index{sfui::Line@{sfui::Line}!m\_y@{m\_y}}
+\index{m\_y@{m\_y}!sfui::Line@{sfui::Line}}
+\doxysubsubsection{\texorpdfstring{m\_y}{m\_y}}
+{\footnotesize\ttfamily \label{classsfui_1_1_line_ab2f27fbcffceeb63acce5c39be5b8263} 
+double sfui\+::\+Line\+::m\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+起点y 
+
+
+
+在文件 \mbox{\hyperlink{line_8hpp_source}{line.\+hpp}} 第 \mbox{\hyperlink{line_8hpp_source_l00032}{32}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{line_8hpp_source_l00022}{init()}}.
+
+\index{sfui::Line@{sfui::Line}!m\_yy@{m\_yy}}
+\index{m\_yy@{m\_yy}!sfui::Line@{sfui::Line}}
+\doxysubsubsection{\texorpdfstring{m\_yy}{m\_yy}}
+{\footnotesize\ttfamily \label{classsfui_1_1_line_aaf6e8d44d412aa50acbbae78f519cf5d} 
+double sfui\+::\+Line\+::m\+\_\+yy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+终点y 
+
+
+
+在文件 \mbox{\hyperlink{line_8hpp_source}{line.\+hpp}} 第 \mbox{\hyperlink{line_8hpp_source_l00034}{34}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{line_8hpp_source_l00022}{init()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/customizable/components/\mbox{\hyperlink{line_8hpp}{line.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,340 @@
+\doxysection{sfui\+::Mouse类 参考}
+\label{classsfui_1_1_mouse}\index{sfui::Mouse@{sfui::Mouse}}
+
+
+实时鼠标操作类  
+
+
+
+
+{\ttfamily \#include $<$Mouse.\+hpp$>$}
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_mouse_af37c9effdb81f5af47d31f815c827c1e}{Mouse}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}p\+\_\+sfml\+\_\+\+Render\+Window)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_mouse_a79bc48bf5c2336c66b620f9e735151b2}{set\+Window}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}const p\+\_\+sfml\+\_\+\+Render\+Window)
+\begin{DoxyCompactList}\small\item\em 设置绑定的\+SFML窗口指针 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{Position}} \mbox{\hyperlink{classsfui_1_1_mouse_a371c4a99026619e8b0031a0bd24da5c6}{get\+Screen\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 获取鼠标指针相对于屏幕的位置 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{Position}} \mbox{\hyperlink{classsfui_1_1_mouse_ab198fe10937631d3641e4485500e0a57}{get\+Window\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 获取鼠标指针相对于窗口的位置 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{Position}} \mbox{\hyperlink{classsfui_1_1_mouse_a7e370e2d949e1d44b25d58e7a067d6b2}{get\+View\+Position}} () const
+\begin{DoxyCompactList}\small\item\em 获取鼠标指针相对于视图的位置 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_mouse_a27a69478c62220bfbfb2c4c43a4de3b8}{is\+Left\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em 判断鼠标左键是否按下 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_mouse_a312d31a81486df1a13560ef24f96a3b5}{is\+Right\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em 判断鼠标右键是否按下 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_mouse_a013a70a023655f6a863ce640605b60e8}{is\+Middle\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em 判断鼠标中键是否按下 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_mouse_a4f99989c670908b85613c3ab070d604e}{is\+XButton1\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em 判断鼠标\+XButton1是否按下 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_mouse_ac9e813970b0a78f482ed03d727eef883}{is\+XButton2\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em 判断鼠标\+XButton2是否按下 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsfui_1_1_mouse_af640b931459a345281cfb8a3756a2506}{m\+\_\+sf\+\_\+\+Render\+Window\+\_\+p}} = nullptr
+\begin{DoxyCompactList}\small\item\em 绑定的\+SFML窗口指针 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+实时鼠标操作类 
+
+封装了鼠标在屏幕、窗口、视图中的位置获取及按键状态。 
+
+在文件 \mbox{\hyperlink{_mouse_8hpp_source}{Mouse.\+hpp}} 第 \mbox{\hyperlink{_mouse_8hpp_source_l00011}{11}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::Mouse@{sfui::Mouse}!Mouse@{Mouse}}
+\index{Mouse@{Mouse}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{Mouse()}{Mouse()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_af37c9effdb81f5af47d31f815c827c1e} 
+sfui\+::\+Mouse\+::\+Mouse (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{p\+\_\+sfml\+\_\+\+Render\+Window}{}\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00008}{8}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :m\_sf\_RenderWindow\_p(p\_sfml\_RenderWindow)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_mouse_8hpp_source_l00071}{m\+\_\+sf\+\_\+\+Render\+Window\+\_\+p}}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::Mouse@{sfui::Mouse}!getScreenPosition@{getScreenPosition}}
+\index{getScreenPosition@{getScreenPosition}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{getScreenPosition()}{getScreenPosition()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_a371c4a99026619e8b0031a0bd24da5c6} 
+\mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{Position}} sfui\+::\+Mouse\+::get\+Screen\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+获取鼠标指针相对于屏幕的位置 
+
+\begin{DoxyReturn}{返回}
+鼠标屏幕坐标 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00013}{13}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Mouse::getPosition();}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::Mouse@{sfui::Mouse}!getViewPosition@{getViewPosition}}
+\index{getViewPosition@{getViewPosition}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{getViewPosition()}{getViewPosition()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_a7e370e2d949e1d44b25d58e7a067d6b2} 
+\mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{Position}} sfui\+::\+Mouse\+::get\+View\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+获取鼠标指针相对于视图的位置 
+
+\begin{DoxyReturn}{返回}
+鼠标视图坐标 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00019}{19}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ sf::Vector2i\ mousePosWindow\ =\ sf::Mouse::getPosition(*m\_sf\_RenderWindow\_p);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ sf::Vector2f\ mousePosView\ =\ m\_sf\_RenderWindow\_p-\/>mapPixelToCoords(mousePosWindow);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Position(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(mousePosView.x),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(mousePosView.y));}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_mouse_8hpp_source_l00071}{m\+\_\+sf\+\_\+\+Render\+Window\+\_\+p}}.
+
+\index{sfui::Mouse@{sfui::Mouse}!getWindowPosition@{getWindowPosition}}
+\index{getWindowPosition@{getWindowPosition}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{getWindowPosition()}{getWindowPosition()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_ab198fe10937631d3641e4485500e0a57} 
+\mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{Position}} sfui\+::\+Mouse\+::get\+Window\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+获取鼠标指针相对于窗口的位置 
+
+\begin{DoxyReturn}{返回}
+鼠标窗口坐标 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00016}{16}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Mouse::getPosition(*m\_sf\_RenderWindow\_p);}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_mouse_8hpp_source_l00071}{m\+\_\+sf\+\_\+\+Render\+Window\+\_\+p}}.
+
+\index{sfui::Mouse@{sfui::Mouse}!isLeftPressed@{isLeftPressed}}
+\index{isLeftPressed@{isLeftPressed}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{isLeftPressed()}{isLeftPressed()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_a27a69478c62220bfbfb2c4c43a4de3b8} 
+bool sfui\+::\+Mouse\+::is\+Left\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+判断鼠标左键是否按下 
+
+\begin{DoxyReturn}{返回}
+是否按下 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00024}{24}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Mouse::isButtonPressed(sf::Mouse::Left);}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::Mouse@{sfui::Mouse}!isMiddlePressed@{isMiddlePressed}}
+\index{isMiddlePressed@{isMiddlePressed}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{isMiddlePressed()}{isMiddlePressed()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_a013a70a023655f6a863ce640605b60e8} 
+bool sfui\+::\+Mouse\+::is\+Middle\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+判断鼠标中键是否按下 
+
+\begin{DoxyReturn}{返回}
+是否按下 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00030}{30}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Mouse::isButtonPressed(sf::Mouse::Middle);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::Mouse@{sfui::Mouse}!isRightPressed@{isRightPressed}}
+\index{isRightPressed@{isRightPressed}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{isRightPressed()}{isRightPressed()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_a312d31a81486df1a13560ef24f96a3b5} 
+bool sfui\+::\+Mouse\+::is\+Right\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+判断鼠标右键是否按下 
+
+\begin{DoxyReturn}{返回}
+是否按下 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00027}{27}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Mouse::isButtonPressed(sf::Mouse::Right);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::Mouse@{sfui::Mouse}!isXButton1Pressed@{isXButton1Pressed}}
+\index{isXButton1Pressed@{isXButton1Pressed}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{isXButton1Pressed()}{isXButton1Pressed()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_a4f99989c670908b85613c3ab070d604e} 
+bool sfui\+::\+Mouse\+::is\+XButton1\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+判断鼠标\+XButton1是否按下 
+
+\begin{DoxyReturn}{返回}
+是否按下 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00033}{33}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Mouse::isButtonPressed(sf::Mouse::XButton1);}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::Mouse@{sfui::Mouse}!isXButton2Pressed@{isXButton2Pressed}}
+\index{isXButton2Pressed@{isXButton2Pressed}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{isXButton2Pressed()}{isXButton2Pressed()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_ac9e813970b0a78f482ed03d727eef883} 
+bool sfui\+::\+Mouse\+::is\+XButton2\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+判断鼠标\+XButton2是否按下 
+
+\begin{DoxyReturn}{返回}
+是否按下 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00036}{36}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sf::Mouse::isButtonPressed(sf::Mouse::XButton2);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::Mouse@{sfui::Mouse}!setWindow@{setWindow}}
+\index{setWindow@{setWindow}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{setWindow()}{setWindow()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_a79bc48bf5c2336c66b620f9e735151b2} 
+void sfui\+::\+Mouse\+::set\+Window (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}const}]{p\+\_\+sfml\+\_\+\+Render\+Window}{}\end{DoxyParamCaption})}
+
+
+
+设置绑定的\+SFML窗口指针 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+sfml\+\_\+\+Render\+Window} & 指向\+SFML窗口的指针 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_mouse_8cpp_source}{Mouse.\+cpp}} 第 \mbox{\hyperlink{_mouse_8cpp_source_l00010}{10}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ m\_sf\_RenderWindow\_p\ =\ p\_sfml\_RenderWindow;}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_mouse_8hpp_source_l00071}{m\+\_\+sf\+\_\+\+Render\+Window\+\_\+p}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::Mouse@{sfui::Mouse}!m\_sf\_RenderWindow\_p@{m\_sf\_RenderWindow\_p}}
+\index{m\_sf\_RenderWindow\_p@{m\_sf\_RenderWindow\_p}!sfui::Mouse@{sfui::Mouse}}
+\doxysubsubsection{\texorpdfstring{m\_sf\_RenderWindow\_p}{m\_sf\_RenderWindow\_p}}
+{\footnotesize\ttfamily \label{classsfui_1_1_mouse_af640b931459a345281cfb8a3756a2506} 
+sf\+::\+Render\+Window\texorpdfstring{$\ast$}{*} sfui\+::\+Mouse\+::m\+\_\+sf\+\_\+\+Render\+Window\+\_\+p = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+绑定的\+SFML窗口指针 
+
+
+
+在文件 \mbox{\hyperlink{_mouse_8hpp_source}{Mouse.\+hpp}} 第 \mbox{\hyperlink{_mouse_8hpp_source_l00071}{71}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_mouse_8cpp_source_l00019}{get\+View\+Position()}}, \mbox{\hyperlink{_mouse_8cpp_source_l00016}{get\+Window\+Position()}}, \mbox{\hyperlink{_mouse_8cpp_source_l00008}{Mouse()}} , 以及 \mbox{\hyperlink{_mouse_8cpp_source_l00010}{set\+Window()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/core/message/\mbox{\hyperlink{_mouse_8hpp}{Mouse.\+hpp}}\item 
+src/core/message/\mbox{\hyperlink{_mouse_8cpp}{Mouse.\+cpp}}\end{DoxyCompactItemize}

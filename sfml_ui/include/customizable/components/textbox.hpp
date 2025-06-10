@@ -22,7 +22,7 @@ namespace sfui {
          * @param fontPath 字体文件路径
          * @param textString 文本内容
          */
-        TextBox(const double x, const double y, unsigned int testSize,
+        TextBox(const float x, const float y, unsigned int testSize,
                 const sf::Color testColor, const std::filesystem::path &fontPath,
                 std::string textString)
             : m_x(x), m_y(y), m_textString(std::move(textString)),
@@ -89,11 +89,13 @@ namespace sfui {
          * @param x 新的x坐标
          * @param y 新的y坐标
          */
-        void setPosition(const double x, const double y) {
+        void setPosition(const float x, const float y) {
             m_x = x;
             m_y = y;
-            m_text.setPosition(m_x, m_y);
+            m_text.setPosition(m_y, m_y);
         }
+
+        std::string getText()const { return m_text.getString(); }
 
         /**
          * @brief 获取SFML文本对象（用于绘制）
@@ -106,8 +108,8 @@ namespace sfui {
     private:
         sf::Text m_text;              ///< SFML文本对象
         sf::Font m_font;              ///< 字体对象
-        double m_x = 0;               ///< 文本框x坐标
-        double m_y = 0;               ///< 文本框y坐标
+        float m_x = 0;               ///< 文本框x坐标
+        float m_y = 0;               ///< 文本框y坐标
         std::string m_textString;     ///< 文本内容
         sf::Color m_textColor;        ///< 文本颜色
         unsigned int m_textSize = 0;  ///< 字体大小

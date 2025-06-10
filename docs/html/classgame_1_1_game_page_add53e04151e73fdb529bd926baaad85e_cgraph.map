@@ -1,0 +1,5 @@
+<map id="game::GamePage::initMessageBinding" name="game::GamePage::initMessageBinding">
+<area shape="rect" id="Node000001" title="初始化消息与事件绑定（纯虚函数，需子类实现）" alt="" coords="5,5,210,48"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0" title="绑定按键与行为（事件输入）" alt="" coords="258,13,403,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,24,242,24,242,29,210,29"/>
+</map>

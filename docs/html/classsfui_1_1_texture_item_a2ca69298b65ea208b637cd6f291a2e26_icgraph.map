@@ -1,0 +1,7 @@
+<map id="sfui::TextureItem::getSprite" name="sfui::TextureItem::getSprite">
+<area shape="rect" id="Node000001" title="获取加载内容（Sprite）" alt="" coords="212,27,339,69"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_control_page.html#ac4582cb09510ba62c036a99cdb835acc" title="绘制纹理项" alt="" coords="5,5,164,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,39,164,34,165,28,197,33"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_interactive_page.html#a527de72f9c0c24c42e1f33d741cd3b26" title="绘制纹理项" alt="" coords="14,56,155,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,63,156,69,155,64,196,57"/>
+</map>

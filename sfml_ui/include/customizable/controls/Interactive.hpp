@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 namespace sfui {
     /**
      * @brief 可交互对象，封装贴图和区域，支持区域更新

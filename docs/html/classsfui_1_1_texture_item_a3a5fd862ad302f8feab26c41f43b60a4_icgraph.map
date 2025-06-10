@@ -1,0 +1,9 @@
+<map id="sfui::TextureItem::TextureItem" name="sfui::TextureItem::TextureItem">
+<area shape="rect" id="Node000001" title="默认构造函数" alt="" coords="181,72,308,115"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_texture_item.html#a93f6ad7b8cb2e8266bc2afe418c74ce6" title="移动赋值运算符" alt="" coords="5,5,133,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,69,126,51,128,46,173,64"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_texture_item.html#a0e832fcf60b57860645b10df0609b9cb" title="拷贝构造函数" alt="" coords="5,72,133,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,96,133,96,133,91,165,91"/>
+<area shape="rect" id="Node000004" href="$classsfui_1_1_texture_item.html#ab997ea9499d2e9c0774be061a3391ed0" title="移动构造函数" alt="" coords="5,139,133,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,123,128,141,126,136,171,118"/>
+</map>

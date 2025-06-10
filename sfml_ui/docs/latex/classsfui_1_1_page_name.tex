@@ -1,0 +1,227 @@
+\doxysection{sfui\+::Page\+Name类 参考}
+\label{classsfui_1_1_page_name}\index{sfui::PageName@{sfui::PageName}}
+
+
+页面模板类，便于新建页面时继承和实现  
+
+
+
+
+{\ttfamily \#include $<$page\+\_\+emplate.\+hpp$>$}
+
+
+
+类 sfui\+::Page\+Name 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{classsfui_1_1_page_name__inherit__graph}
+\end{center}
+\end{figure}
+
+
+sfui\+::Page\+Name 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classsfui_1_1_page_name__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_page_name_ac3ed540390bdecc9290788f69854c703}{Page\+Name}} ()=default
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_name_a2e0990c8be9e20d1d8af69b8089939f0}{initialize\+Page\+Elements}} () override
+\begin{DoxyCompactList}\small\item\em 初始化界面元素 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_name_a200cf833987cc8dee93455740da67459}{init\+Message\+Binding}} () override
+\begin{DoxyCompactList}\small\item\em 初始化消息-\/事件映射 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_name_ab251b5137321826b45fb369cc9e70b7b}{update}} () override
+\begin{DoxyCompactList}\small\item\em 执行界面逻辑 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_page_name_ad68ab4ddc675703ef70c7ea7bdee1170}{render}} () override
+\begin{DoxyCompactList}\small\item\em 渲染页面内容到窗口 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_button}{Button}} \mbox{\hyperlink{classsfui_1_1_page_name_aa7d9843b96bb9f7b36e738bfbae58b19}{begin\+Game\+Button}}
+\begin{DoxyCompactList}\small\item\em 开始游戏按钮 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_button}{Button}} \mbox{\hyperlink{classsfui_1_1_page_name_aab921369a594e4529eca92e70b42004c}{setup\+Button}}
+\begin{DoxyCompactList}\small\item\em 设置按钮 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_button}{Button}} \mbox{\hyperlink{classsfui_1_1_page_name_ad6b69e903102ccba2cd5fe20477862dd}{exit\+Button}}
+\begin{DoxyCompactList}\small\item\em 退出按钮 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+页面模板类，便于新建页面时继承和实现 
+
+继承自\+Complex\+Page，包含常用控件成员。 
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00010}{10}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::PageName@{sfui::PageName}!PageName@{PageName}}
+\index{PageName@{PageName}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{PageName()}{PageName()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_ac3ed540390bdecc9290788f69854c703} 
+sfui\+::\+Page\+Name\+::\+Page\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+默认构造函数 
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::PageName@{sfui::PageName}!initializePageElements@{initializePageElements}}
+\index{initializePageElements@{initializePageElements}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{initializePageElements()}{initializePageElements()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_a2e0990c8be9e20d1d8af69b8089939f0} 
+void sfui\+::\+Page\+Name\+::initialize\+Page\+Elements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+初始化界面元素 
+
+\begin{DoxyNote}{注解}
+需在子类中实现具体逻辑 
+\end{DoxyNote}
+
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00025}{25}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::PageName@{sfui::PageName}!initMessageBinding@{initMessageBinding}}
+\index{initMessageBinding@{initMessageBinding}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{initMessageBinding()}{initMessageBinding()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_a200cf833987cc8dee93455740da67459} 
+void sfui\+::\+Page\+Name\+::init\+Message\+Binding (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+初始化消息-\/事件映射 
+
+\begin{DoxyNote}{注解}
+需在子类中实现具体逻辑 
+\end{DoxyNote}
+
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00033}{33}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::PageName@{sfui::PageName}!render@{render}}
+\index{render@{render}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_ad68ab4ddc675703ef70c7ea7bdee1170} 
+void sfui\+::\+Page\+Name\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+渲染页面内容到窗口 
+
+\begin{DoxyNote}{注解}
+需在子类中实现具体逻辑 
+\end{DoxyNote}
+
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00049}{49}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui::PageName@{sfui::PageName}!update@{update}}
+\index{update@{update}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_ab251b5137321826b45fb369cc9e70b7b} 
+void sfui\+::\+Page\+Name\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+执行界面逻辑 
+
+\begin{DoxyNote}{注解}
+需在子类中实现具体逻辑 
+\end{DoxyNote}
+
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00041}{41}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::PageName@{sfui::PageName}!beginGameButton@{beginGameButton}}
+\index{beginGameButton@{beginGameButton}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{beginGameButton}{beginGameButton}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_aa7d9843b96bb9f7b36e738bfbae58b19} 
+\mbox{\hyperlink{classsfui_1_1_button}{Button}} sfui\+::\+Page\+Name\+::begin\+Game\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+开始游戏按钮 
+
+
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00012}{12}} 行定义.
+
+\index{sfui::PageName@{sfui::PageName}!exitButton@{exitButton}}
+\index{exitButton@{exitButton}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{exitButton}{exitButton}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_ad6b69e903102ccba2cd5fe20477862dd} 
+\mbox{\hyperlink{classsfui_1_1_button}{Button}} sfui\+::\+Page\+Name\+::exit\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+退出按钮 
+
+
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00014}{14}} 行定义.
+
+\index{sfui::PageName@{sfui::PageName}!setupButton@{setupButton}}
+\index{setupButton@{setupButton}!sfui::PageName@{sfui::PageName}}
+\doxysubsubsection{\texorpdfstring{setupButton}{setupButton}}
+{\footnotesize\ttfamily \label{classsfui_1_1_page_name_aab921369a594e4529eca92e70b42004c} 
+\mbox{\hyperlink{classsfui_1_1_button}{Button}} sfui\+::\+Page\+Name\+::setup\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+设置按钮 
+
+
+
+在文件 \mbox{\hyperlink{page__emplate_8hpp_source}{page\+\_\+emplate.\+hpp}} 第 \mbox{\hyperlink{page__emplate_8hpp_source_l00013}{13}} 行定义.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/core/pages/\mbox{\hyperlink{page__emplate_8hpp}{page\+\_\+emplate.\+hpp}}\end{DoxyCompactItemize}

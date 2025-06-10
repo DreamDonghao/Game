@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: game/include/pages/MainMenuPage.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_main_menu_page_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MainMenuPage.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_main_menu_page_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="_complex_page_8hpp.html">ComplexPage.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// #include &lt;elemental.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// #include &lt;biology.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// #include &lt;world_elemental.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// #include &lt;player.hpp&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegame.html">game</a> {</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classgame_1_1_main_menu_page.html#a597d6a61f1bc9cf80e3a99e466fe678b">MainMenuPage</a> : <span class="keyword">public</span> <a class="code hl_class" href="classsfui_1_1_complex_page.html">sfui::ComplexPage</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a441eac380479c251592aac8083597157">   14</a></span>        <a class="code hl_class" href="classsfui_1_1_texture_item.html">sfui::TextureItem</a> <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#a441eac380479c251592aac8083597157">mainPage</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a9a4e0087be0084f98de66f0c6e243e6d">   15</a></span>        <a class="code hl_class" href="classsfui_1_1_button.html">sfui::Button</a> <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#a9a4e0087be0084f98de66f0c6e243e6d">beginButton</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a9d0cbb132978a7a57560cae9f963c86b">   16</a></span>        <a class="code hl_class" href="classsfui_1_1_button.html">sfui::Button</a> <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#a9d0cbb132978a7a57560cae9f963c86b">setButton</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a9b0a898208eaf25c2b65bfba368a1879">   17</a></span>        <a class="code hl_class" href="classsfui_1_1_button.html">sfui::Button</a> <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#a9b0a898208eaf25c2b65bfba368a1879">quitButton</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#ac78c3edb77c36094b4b93987ee786ecb">   18</a></span>        <a class="code hl_class" href="classsfui_1_1_text_box.html">sfui::TextBox</a> <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#ac78c3edb77c36094b4b93987ee786ecb">textBox</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a7332ce1a486cff46fa7ec5b8b7a9d29c">   19</a></span>        std::string <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#a7332ce1a486cff46fa7ec5b8b7a9d29c">str</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a2b11a73319d1ae63485b8af4a5fb36d4">   20</a></span>        <a class="code hl_class" href="classsfui_1_1_input_box.html">sfui::InputBox</a> <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#a2b11a73319d1ae63485b8af4a5fb36d4">inputbox</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a597d6a61f1bc9cf80e3a99e466fe678b">   22</a></span>        <a class="code hl_function" href="classgame_1_1_main_menu_page.html#a597d6a61f1bc9cf80e3a99e466fe678b">MainMenuPage</a>(sf::RenderWindow *p_sfml_RenderWindow):<a class="code hl_function" href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">Page</a>(p_sfml_RenderWindow),<a class="code hl_function" href="classsfui_1_1_complex_page.html#a3c97d3fcf521310edbd6b77ec693e4e9">ComplexPage</a>(p_sfml_RenderWindow),</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>             <a class="code hl_variable" href="classgame_1_1_main_menu_page.html#ac78c3edb77c36094b4b93987ee786ecb">textBox</a>(0,0,100,sf::Color::Black,R<span class="stringliteral">&quot;(C:\Users\donghao\AppData\Local\Programs\cursor\resources\app\out\media\jetbrains-mono-regular.ttf)&quot;,&quot;hello&quot;),</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="stringliteral">        inputbox(m_mouse,0,0,1000,1000){</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="stringliteral">        }</span></div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="stringliteral">        // 初始化界面元素</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a5542fd417bf12b94ec0ec4d739e569dc">   28</a></span><span class="stringliteral">        void initializePageElements() override {</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="stringliteral">            m_ratio = 0.5;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="stringliteral">            std::println(&quot;{}&quot;, m_ratio);</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="stringliteral">            mainPage.init(&quot;images\\main_page.png&quot;, 2560 * m_ratio, 1660 * m_ratio);</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="stringliteral">            beginButton.init(</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="stringliteral">                700 * m_ratio, 600 * m_ratio,</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="stringliteral">                800 * m_ratio, 200 * m_ratio,</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="stringliteral">                &quot;images\\button_begin_game.png&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="stringliteral">            );</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="stringliteral">            setButton.init(</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="stringliteral">                700 * m_ratio, 900 * m_ratio,</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="stringliteral">                800 * m_ratio, 200 * m_ratio,</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="stringliteral">                &quot;images\\button_set.png&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="stringliteral">            );</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="stringliteral">            quitButton.init(</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="stringliteral">                700 * m_ratio, 1200 * m_ratio,</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="stringliteral">                800 * m_ratio, 200 * m_ratio,</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="stringliteral">                &quot;images\\button_quit.png&quot;);</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="stringliteral">        }</span></div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="stringliteral">        // 初始化消息-事件映射</span></div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#abd1285edabecc078b367d856317a6d29">   49</a></span><span class="stringliteral">        void initMessageBinding() override {</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="stringliteral">            eventMap(sfui::MouseButton::Left, beginButton.getArea(), [&amp;]() {</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="stringliteral">                requestPageSwitch(sfui::TitleName(&quot;gamePage&quot;));</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="stringliteral">            });</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="stringliteral">            eventMap(sfui::MouseButton::Left, quitButton.getArea(), [&amp;]() -&gt; void {</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="stringliteral">                std::print(&quot;quit&quot;);</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="stringliteral">                mp_window-&gt;getSfRenderWindow().close();</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="stringliteral">            });</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="stringliteral">            // eventMap(sfui::Key::A,[&amp;]() {</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="stringliteral">            //     str+=&#39;A&#39;;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="stringliteral">            //     std::println(&quot;A&quot;);</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="stringliteral">            // });</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="stringliteral">            // eventMap(sfui::Key::B,[&amp;]() {</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="stringliteral">            //     str+=&#39;B&#39;;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="stringliteral">            //     std::println(&quot;B&quot;);</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="stringliteral">            // });</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="stringliteral">            // eventMap(sfui::MouseButton::Left,&amp;inputbox.getArea(),[&amp;]() {</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="stringliteral">            //     inputbox.run(mp_window-&gt;getEvent());</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="stringliteral">            // });</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="stringliteral">        }</span></div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="stringliteral">        // 执行界面逻辑</span></div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a5fb68c67f73cd4958e8f27eb53b54f17">   76</a></span><span class="stringliteral">        void update() override {</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="stringliteral">            textBox.setTestString(str);</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="stringliteral">            inputbox.run(mp_window-&gt;getEvent());</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="stringliteral">        }</span></div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="stringliteral">        // 渲染页面内容到窗口</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classgame_1_1_main_menu_page.html#a033c520661a9286fb634d359a5ac543b">   82</a></span><span class="stringliteral">        void render() override {</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="stringliteral">            drawForWindow(mainPage);</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="stringliteral">            drawForWindow(beginButton);</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="stringliteral">            drawForWindow(setButton);</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="stringliteral">            drawForWindow(quitButton);</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="stringliteral">            drawForWindow(textBox);</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="stringliteral">            drawForWindow(inputbox);</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="stringliteral">        }</span></div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="stringliteral">    };</span></div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="stringliteral">}</span></div>
+<div class="ttc" id="a_complex_page_8hpp_html"><div class="ttname"><a href="_complex_page_8hpp.html">ComplexPage.hpp</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_a2b11a73319d1ae63485b8af4a5fb36d4"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#a2b11a73319d1ae63485b8af4a5fb36d4">game::MainMenuPage::inputbox</a></div><div class="ttdeci">sfui::InputBox inputbox</div><div class="ttdef"><b>定义</b> <a href="#l00020">MainMenuPage.hpp:20</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_a441eac380479c251592aac8083597157"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#a441eac380479c251592aac8083597157">game::MainMenuPage::mainPage</a></div><div class="ttdeci">sfui::TextureItem mainPage</div><div class="ttdef"><b>定义</b> <a href="#l00014">MainMenuPage.hpp:14</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_a597d6a61f1bc9cf80e3a99e466fe678b"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#a597d6a61f1bc9cf80e3a99e466fe678b">game::MainMenuPage::MainMenuPage</a></div><div class="ttdeci">MainMenuPage(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="#l00022">MainMenuPage.hpp:22</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_a7332ce1a486cff46fa7ec5b8b7a9d29c"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#a7332ce1a486cff46fa7ec5b8b7a9d29c">game::MainMenuPage::str</a></div><div class="ttdeci">std::string str</div><div class="ttdef"><b>定义</b> <a href="#l00019">MainMenuPage.hpp:19</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_a9a4e0087be0084f98de66f0c6e243e6d"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#a9a4e0087be0084f98de66f0c6e243e6d">game::MainMenuPage::beginButton</a></div><div class="ttdeci">sfui::Button beginButton</div><div class="ttdef"><b>定义</b> <a href="#l00015">MainMenuPage.hpp:15</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_a9b0a898208eaf25c2b65bfba368a1879"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#a9b0a898208eaf25c2b65bfba368a1879">game::MainMenuPage::quitButton</a></div><div class="ttdeci">sfui::Button quitButton</div><div class="ttdef"><b>定义</b> <a href="#l00017">MainMenuPage.hpp:17</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_a9d0cbb132978a7a57560cae9f963c86b"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#a9d0cbb132978a7a57560cae9f963c86b">game::MainMenuPage::setButton</a></div><div class="ttdeci">sfui::Button setButton</div><div class="ttdef"><b>定义</b> <a href="#l00016">MainMenuPage.hpp:16</a></div></div>
+<div class="ttc" id="aclassgame_1_1_main_menu_page_html_ac78c3edb77c36094b4b93987ee786ecb"><div class="ttname"><a href="classgame_1_1_main_menu_page.html#ac78c3edb77c36094b4b93987ee786ecb">game::MainMenuPage::textBox</a></div><div class="ttdeci">sfui::TextBox textBox</div><div class="ttdef"><b>定义</b> <a href="#l00018">MainMenuPage.hpp:18</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_button_html"><div class="ttname"><a href="classsfui_1_1_button.html">sfui::Button</a></div><div class="ttdoc">按钮类，封装贴图和区域</div><div class="ttdef"><b>定义</b> <a href="button_8hpp_source.html#l00010">button.hpp:10</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_complex_page_html"><div class="ttname"><a href="classsfui_1_1_complex_page.html">sfui::ComplexPage</a></div><div class="ttdoc">混合界面类，结合了交互页面和控件页面的功能</div><div class="ttdef"><b>定义</b> <a href="_complex_page_8hpp_source.html#l00011">ComplexPage.hpp:11</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_complex_page_html_a3c97d3fcf521310edbd6b77ec693e4e9"><div class="ttname"><a href="classsfui_1_1_complex_page.html#a3c97d3fcf521310edbd6b77ec693e4e9">sfui::ComplexPage::ComplexPage</a></div><div class="ttdeci">ComplexPage(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="_complex_page_8hpp_source.html#l00013">ComplexPage.hpp:13</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_input_box_html"><div class="ttname"><a href="classsfui_1_1_input_box.html">sfui::InputBox</a></div><div class="ttdef"><b>定义</b> <a href="inputbox_8hpp_source.html#l00013">inputbox.hpp:13</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a1d645637dcd8fea7241f485ef4fe1b93"><div class="ttname"><a href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">sfui::Page::Page</a></div><div class="ttdeci">Page(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="_page_8hpp_source.html#l00029">Page.hpp:29</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_text_box_html"><div class="ttname"><a href="classsfui_1_1_text_box.html">sfui::TextBox</a></div><div class="ttdoc">文本框控件，支持自定义字体、颜色、内容、位置等</div><div class="ttdef"><b>定义</b> <a href="textbox_8hpp_source.html#l00014">textbox.hpp:14</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_texture_item_html"><div class="ttname"><a href="classsfui_1_1_texture_item.html">sfui::TextureItem</a></div><div class="ttdoc">贴图项，封装SFML贴图，支持加载、缩放、位置设置等</div><div class="ttdef"><b>定义</b> <a href="_texture_item_8hpp_source.html#l00009">TextureItem.hpp:9</a></div></div>
+<div class="ttc" id="anamespacegame_html"><div class="ttname"><a href="namespacegame.html">game</a></div><div class="ttdef"><b>定义</b> <a href="gamepage_8hpp_source.html#l00009">gamepage.hpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_37c6514aeece95293041e34c0f2e0784.html">game</a></li><li class="navelem"><a href="dir_799e54a6419ed2c37fa77fc1f6ae00fe.html">include</a></li><li class="navelem"><a href="dir_f6a4118898fb7af8afea165a220bb2d6.html">pages</a></li><li class="navelem"><a href="_main_menu_page_8hpp.html">MainMenuPage.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<map id="sfml_ui/include/customizable/controls/Area.hpp" name="sfml_ui/include/customizable/controls/Area.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="413,5,602,48"/>
+<area shape="rect" id="Node000002" href="$inputbox_8hpp.html" title=" " alt="" coords="307,187,497,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="490,63,416,188,412,185,485,60"/>
+<area shape="rect" id="Node000015" href="$button_8hpp.html" title=" " alt="" coords="518,96,707,139"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="545,56,590,93,586,97,542,60"/>
+<area shape="rect" id="Node000003" href="$_page_8hpp.html" title=" " alt="" coords="333,277,471,320"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="405,245,405,277,399,277,399,245"/>
+<area shape="rect" id="Node000004" href="$_control_page_8hpp.html" title=" " alt="" coords="368,459,529,501"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="437,330,449,347,459,367,464,391,465,416,458,458,452,458,459,416,459,392,454,369,445,350,432,333"/>
+<area shape="rect" id="Node000011" href="$_interactive_page_8hpp.html" title=" " alt="" coords="553,459,734,501"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="444,327,617,456,614,460,440,332"/>
+<area shape="rect" id="Node000012" href="$_window_8hpp.html" title=" " alt="" coords="300,368,445,411"/>
+<area shape="poly" id="edge12_Node000003_Node000012" title=" " alt="" coords="393,336,382,369,377,367,388,334"/>
+<area shape="rect" id="Node000013" href="$_page_8cpp.html" title="实现Page类及相关函数，负责界面生命周期、事件绑定、渲染等。" alt="" coords="5,459,159,501"/>
+<area shape="poly" id="edge17_Node000003_Node000013" title=" " alt="" coords="346,329,266,370,115,461,112,456,263,366,343,325"/>
+<area shape="rect" id="Node000014" href="$_window_8cpp.html" title=" " alt="" coords="182,459,344,501"/>
+<area shape="poly" id="edge18_Node000003_Node000014" title=" " alt="" coords="337,330,312,348,291,370,279,391,272,415,266,459,261,458,266,414,274,389,287,366,308,344,334,326"/>
+<area shape="rect" id="Node000005" href="$_complex_page_8hpp.html" title=" " alt="" coords="434,549,605,592"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="477,512,505,547,501,551,472,515"/>
+<area shape="rect" id="Node000006" href="$_main_menu_page_8hpp.html" title=" " alt="" coords="192,640,332,683"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="445,600,323,642,322,637,444,595"/>
+<area shape="rect" id="Node000008" href="$gamepage_8hpp.html" title=" " alt="" coords="356,640,493,683"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="488,605,448,642,445,638,485,601"/>
+<area shape="rect" id="Node000009" href="$pausegamepage_8hpp.html" title=" " alt="" coords="517,640,663,683"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="547,603,576,638,572,641,543,606"/>
+<area shape="rect" id="Node000010" href="$page__emplate_8hpp.html" title=" " alt="" coords="686,640,856,683"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="593,595,713,637,711,642,592,600"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="196,731,328,757"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="265,699,265,730,259,730,259,699"/>
+<area shape="poly" id="edge11_Node000011_Node000005" title=" " alt="" coords="604,513,550,551,547,547,601,508"/>
+<area shape="poly" id="edge13_Node000012_Node000004" title=" " alt="" coords="402,421,433,457,429,460,398,424"/>
+<area shape="poly" id="edge14_Node000012_Node000011" title=" " alt="" coords="451,413,581,455,579,461,449,418"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="291,418,151,461,149,455,289,413"/>
+<area shape="poly" id="edge16_Node000012_Node000014" title=" " alt="" coords="337,423,291,460,287,456,334,418"/>
+<area shape="poly" id="edge23_Node000015_Node000010" title=" " alt="" coords="669,145,695,163,719,185,743,212,760,236,771,262,774,297,774,481,774,640,769,640,769,481,769,297,765,263,755,238,738,215,715,189,692,167,666,149"/>
+<area shape="rect" id="Node000016" href="$_event_binding_8hpp.html" title=" " alt="" coords="520,187,705,229"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="615,154,615,186,610,186,610,154"/>
+<area shape="poly" id="edge21_Node000016_Node000003" title=" " alt="" coords="550,238,452,279,450,274,548,233"/>
+<area shape="rect" id="Node000017" href="$_event_binding_8cpp.html" title="实现EvectBingding类，负责事件与行为的绑定与触发。" alt="" coords="527,277,698,320"/>
+<area shape="poly" id="edge22_Node000016_Node000017" title=" " alt="" coords="615,245,615,277,610,277,610,245"/>
+</map>

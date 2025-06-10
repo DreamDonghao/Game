@@ -1,0 +1,41 @@
+\doxysection{Event\+Binding.\+cpp}
+\label{_event_binding_8cpp_source}\index{src/core/message/EventBinding.cpp@{src/core/message/EventBinding.cpp}}
+\mbox{\hyperlink{_event_binding_8cpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <EventBinding.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <print>}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }sfui\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ EvectBingding::EvectBingding()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ EvectBingding::bindEvent(Key\ key,\ Action\ action)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ m\_keyBindings[key]\ =\ std::move(action);}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ EvectBingding::bindEvent(MouseButton\ mouseButton,\ \textcolor{keyword}{const}\ Area\ *\textcolor{keyword}{const}\ area,\ \textcolor{keyword}{const}\ Action\&\ action)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ m\_mouseButtonBindings[mouseButton].emplace\_back(area,\ action);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ EvectBingding::update(sf::Event\ event)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理键盘事件}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::KeyPressed)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_keyBindings.contains(event.key.code))\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_keyBindings[\textcolor{keyword}{event}.key.code]();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::MouseButtonPressed)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_mouseBinding.contains(event.mouseButton.button))\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_mouseBinding[\textcolor{keyword}{event}.mouseButton.button]();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理按钮点击事件}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::MouseButtonPressed)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&[buttonArea,\ action]}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_mouseButtonBindings[event.mouseButton.button])\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (buttonArea-\/>isInArea(event.mouseButton.x,\ event.mouseButton.y))\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ action();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,13 @@
+<map id="sfui::ControlPage" name="sfui::ControlPage">
+<area shape="rect" id="Node000001" title="UI 控件页面，视图大小等于窗口大小，(0,0)为左上角" alt="" coords="170,80,292,107"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_complex_page.html" title="混合界面类，结合了交互页面和控件页面的功能" alt="" coords="165,155,297,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,122,234,154,228,154,228,122"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_page.html" title="前置声明窗口类" alt="" coords="191,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,48,234,80,228,80,228,48"/>
+<area shape="rect" id="Node000004" href="$classgame_1_1_game_page.html" title=" " alt="" coords="5,229,132,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,190,98,231,96,226,188,186"/>
+<area shape="rect" id="Node000005" href="$classgame_1_1_main_menu_page.html" title=" " alt="" coords="156,229,307,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="234,197,234,229,228,229,228,197"/>
+<area shape="rect" id="Node000006" href="$classgame_1_1_pause_game_page.html" title=" " alt="" coords="331,229,494,256"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="278,185,382,226,380,231,276,190"/>
+</map>

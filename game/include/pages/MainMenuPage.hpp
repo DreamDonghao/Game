@@ -1,6 +1,7 @@
-﻿#pragma once
+#pragma once
 
 #include <ComplexPage.hpp>
+#include <windows.h>
 // #include <elemental.hpp>
 // #include <biology.hpp>
 // #include <world_elemental.hpp>
@@ -15,10 +16,12 @@ namespace game {
         sfui::Button setButton;
         sfui::Button quitButton;
         sfui::TextBox textBox;
-
+        std::string str;
+        sfui::InputBox inputbox;
     public:
-        MainMenuPage()
-            : textBox(0,0,100,sf::Color::Black,R"(C:\Users\donghao\AppData\Local\Programs\cursor\_\resources\app\out\media\jetbrains-mono-regular.ttf)","hello") {
+        MainMenuPage(sf::RenderWindow *p_sfml_RenderWindow):Page(p_sfml_RenderWindow),ComplexPage(p_sfml_RenderWindow),
+             textBox(0,0,100,sf::Color::Black,R"(C:\Users\donghao\AppData\Local\Programs\cursor\resources\app\out\media\jetbrains-mono-regular.ttf)","hello"),
+        inputbox(m_mouse,0,0,1000,1000){
         }
 
         // 初始化界面元素
@@ -53,10 +56,26 @@ namespace game {
 
                 mp_window->getSfRenderWindow().close();
             });
+
+            // eventMap(sfui::Key::A,[&]() {
+            //     str+='A';
+            //     std::println("A");
+            // });
+            // eventMap(sfui::Key::B,[&]() {
+            //     str+='B';
+            //     std::println("B");
+            // });
+
+            // eventMap(sfui::MouseButton::Left,&inputbox.getArea(),[&]() {
+            //     inputbox.run(mp_window->getEvent());
+            // });
+
         }
 
         // 执行界面逻辑
         void update() override {
+            textBox.setTestString(str);
+            inputbox.run(mp_window->getEvent());
         }
 
         // 渲染页面内容到窗口
@@ -66,6 +85,7 @@ namespace game {
             drawForWindow(setButton);
             drawForWindow(quitButton);
             drawForWindow(textBox);
+            drawForWindow(inputbox);
         }
     };
 }

@@ -1,0 +1,5 @@
+<map id="sfui::InteractivePage::draw" name="sfui::InteractivePage::draw">
+<area shape="rect" id="Node000001" title="绘制交互区域" alt="" coords="5,5,147,48"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_interactive.html#aec1cf5d39e51312661526483e367e708" title="获取Sprite" alt="" coords="195,5,314,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,24,179,24,179,29,147,29"/>
+</map>

@@ -1,0 +1,156 @@
+\doxysection{Window.\+cpp}
+\label{_window_8cpp_source}\index{src/core/window/Window.cpp@{src/core/window/Window.cpp}}
+\mbox{\hyperlink{_window_8cpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <Window.hpp>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <Page.hpp>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }sfui\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \ \ \ \ Window::Window(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&height,\ \textcolor{keyword}{const}\ WindowState\ \&windowState)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ :m\_event(),\ m\_windowState(windowState)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::VideoMode\ desktopMode\ =\ sf::VideoMode::getDesktopMode();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ m\_screenSize.x\ =\ desktopMode.width;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ m\_screenSize.y\ =\ desktopMode.height;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ m\_windowSize\ =\ WindowSize(width,\ height);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (windowState\ ==\ WindowState::Windowed)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.create(sf::VideoMode(width,\ height),\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.create(sf::VideoMode::getDesktopMode(),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},\ sf::Style::Fullscreen);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ Window::init(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&framerateLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \&verticalSyncEnabled)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ m\_framerateLimit\ =\ framerateLimit;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ m\_verticalSyncEnabled\ =\ verticalSyncEnabled;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setVerticalSyncEnabled(m\_verticalSyncEnabled);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setFramerateLimit(m\_framerateLimit);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::addPage(\textcolor{keyword}{const}\ Title\ \&pageTitle,\ PagePtr<Page>\ page)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ m\_pages[pageTitle]\ =\ move(page);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ m\_pages[pageTitle]-\/>setWindow(\textcolor{keyword}{this});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ m\_pages[pageTitle]-\/>setMouseWindow(\&m\_sf\_renderWindow);}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::startShow(\textcolor{keyword}{const}\ Title\ \&firstPageTitle)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//切换到首界面}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ requestPageSwitch(firstPageTitle);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setTitle(m\_nowPageTitle);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//持续更新该窗口，直到点击关闭}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m\_sf\_renderWindow.isOpen())\ \{}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 获取窗口消息}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ procesMessage();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 显示一帧的画面}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ drawFrame();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::procesMessage()\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理窗口实时消息}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ handleRealTimeInput();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理页面实时消息}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ m\_pages[m\_nowPageTitle]-\/>executeKeyPressOnce();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m\_sf\_renderWindow.pollEvent(m\_event))\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理窗口事件消息}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ handleEventInput();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理页面事件消息}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pages[m\_nowPageTitle]-\/>executeEventBinding(m\_event);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 更新界面内容}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ m\_pages[m\_nowPageTitle]-\/>update();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::handleEventInput()\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_event.type\ ==\ sf::Event::Closed)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.close();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (m\_event.type\ ==\ sf::Event::KeyPressed)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_event.key.code\ ==\ sf::Keyboard::F11)\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ toggleFullscreen();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::handleRealTimeInput()\ \{}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::drawFrame()\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ updateView();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 更新页面，并把页面的图形加载到窗口}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ m\_pages[m\_nowPageTitle]-\/>updateFrame();}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 显示当前窗口的画面}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.display();}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.clear(m\_pages[m\_nowPageTitle]-\/>getBackgroundColor());}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::requestPageSwitch(\textcolor{keyword}{const}\ Title\ \&pageTitle)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 检测要切换页面是否存在，若不存在，抛出一个异常}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_pages.contains(pageTitle))\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Page\ don't\ exist!!!"{}});}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::runtime\_error\ \&err)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ std::wcerr\ <<\ \textcolor{stringliteral}{"{}Exception:\ "{}}\ <<\ pageTitle\ <<\ err.what()\ <<\ std::endl;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ m\_nowPageTitle\ =\ pageTitle;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setTitle(m\_nowPageTitle);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 初始化界面}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ m\_pages[m\_nowPageTitle]-\/>init();}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00149\ \ \ \ \ sf::RenderWindow\ \&Window::getSfRenderWindow()\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_sf\_renderWindow;}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \ \ \ \ WindowSize\ Window::getWindowSize()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{//return\ m\_windowSize;}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_sf\_renderWindow.getSize();}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keyword}{const}\ WindowSize\ \&Window::getScreenSize()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_screenSize;}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::updateView()\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ m\_pages[m\_nowPageTitle]-\/>updateView();}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{comment}{//m\_sf\_renderWindow.setView(m\_pages[m\_nowPageTitle]-\/>getView());}}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::toggleFullscreen()\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_windowState\ ==\ WindowState::Windowed)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ toFullscreen();}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ toWindowed();}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 在窗口切换时，会将窗口标题清除，即使全屏模式并看不到窗口标题，但是返回桌面在任}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 务栏仍可以看到窗口标题，因此在切换窗口后应将窗口标题重新设置}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setTitle(m\_nowPageTitle);}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::toFullscreen()\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ m\_windowState\ =\ WindowState::Fullscreen;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ m\_windowSize\ =\ m\_sf\_renderWindow.getSize();}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.create(sf::VideoMode::getDesktopMode(),}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},\ sf::Style::Fullscreen);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setVerticalSyncEnabled(m\_verticalSyncEnabled);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setFramerateLimit(m\_framerateLimit);}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ Window::toWindowed()\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ m\_windowState\ =\ WindowState::Windowed;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.create(sf::VideoMode(m\_windowSize.x,\ m\_windowSize.y),\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setVerticalSyncEnabled(m\_verticalSyncEnabled);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ m\_sf\_renderWindow.setFramerateLimit(m\_framerateLimit);}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \}}
+
+\end{DoxyCode}

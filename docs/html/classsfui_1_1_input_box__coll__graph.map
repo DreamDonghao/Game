@@ -1,0 +1,9 @@
+<map id="sfui::InputBox" name="sfui::InputBox">
+<area shape="rect" id="Node000001" title=" " alt="" coords="115,104,218,131"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_text_box.html" title="文本框控件，支持自定义字体、颜色、内容、位置等" alt="" coords="5,5,104,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,44,80,62,94,78,112,91,132,101,129,106,109,95,90,82,76,65,64,47"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_area.html" title="区域类，表示一个矩形区域，支持判定点是否在区域内" alt="" coords="128,5,205,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,48,169,104,164,104,164,48"/>
+<area shape="rect" id="Node000004" href="$classsfui_1_1_mouse.html" title="实时鼠标操作类" alt="" coords="234,5,323,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="272,48,264,66,251,82,232,96,212,106,210,101,230,91,247,78,259,63,268,46"/>
+</map>

@@ -1,10 +1,10 @@
-﻿#pragma once
+#pragma once
 #include <SFML/Window.hpp>
 #include <ActiveKeyBinding.hpp>
 #include <Mouse.hpp>
 #include <textbox.hpp>
 #include <EventBinding.hpp>
-
+#include <inputbox.hpp>
 namespace sfui {
     /**
      * @brief 标题类型，使用宽字符串
@@ -22,22 +22,23 @@ namespace sfui {
     class Window; ///< 前置声明窗口类
 
     /**
-     * @brief 界面抽象基类，定义了界面生命周期、事件绑定、渲染等接口
+     * @brief 界面抽象基类，定义界面生命周期、事件绑定、渲染等接口
      */
     class Page {
     public:
+        Page(sf::RenderWindow *p_sfml_RenderWindow):m_mouse(p_sfml_RenderWindow){}
         /**
          * @brief 虚析构函数
          */
         virtual ~Page() = default;
 
         /**
-         * @brief 更新界面一帧画面（更新视图并渲染）
+         * @brief 更新界面一帧（更新视图并渲染）
          */
         void updateFrame();
 
         /**
-         * @brief 绑定界面与包含它的窗口
+         * @brief 绑定界面与所属窗口
          * @param p_window 窗口指针
          */
         void setWindow(Window *p_window);
@@ -64,25 +65,36 @@ namespace sfui {
         virtual void initMessageBinding() = 0;
 
         /**
-         * @brief 事件映射
+         * @brief 绑定按键与行为（实时输入）
          * @param key 按键
          * @param action 行为
          */
         void activeMap(Key key, const Action &action);
 
         /**
-         * @brief 消息映射
+         * @brief 绑定按键与行为（事件输入）
          * @param key 按键
          * @param action 行为
          */
         void eventMap(Key key, const Action &action);
 
+        /**
+         * @brief 绑定鼠标按键与行为（事件输入，重载）
+         * @param mouseButton 鼠标按键（自定义类型）
+         * @param action 行为
+         */
         void eventMap(MouseButton mouseButton, const Action &action);
 
+        /**
+         * @brief 绑定SFML鼠标按键与区域及行为（事件输入，重载）
+         * @param mouseButton SFML鼠标按键
+         * @param area 触发区域指针
+         * @param action 行为
+         */
         void eventMap(sf::Mouse::Button mouseButton, const Area *area, const Action &action);
 
         /**
-         * @brief 根据绑定窗口的大小来更新界面视图（纯虚函数，需子类实现）
+         * @brief 根据窗口大小更新界面视图（纯虚函数，需子类实现）
          */
         virtual void updateView() = 0;
 
@@ -127,7 +139,7 @@ namespace sfui {
         virtual void render() = 0;
 
         /**
-         * @brief 界面跳转请求（由子类调用）
+         * @brief 发起界面跳转请求（由子类调用）
          * @param targetPageTitle 目标页面标题
          */
         void requestPageSwitch(const Title &targetPageTitle);

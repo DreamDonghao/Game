@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: include/core/message/ActiveKeyBinding.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_active_key_binding_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ActiveKeyBinding.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_active_key_binding_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespacesfui.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesfui.html">sfui</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">   10</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">Key</a> = sf::Keyboard::Key;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// 行为类型，表示一个无参数的可调用对象</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">   12</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> = std::function&lt;void()&gt;;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classsfui_1_1_active_key_binding.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classsfui_1_1_active_key_binding.html#a05574468b6d6d9e86156b39409ea2cc6">ActiveKeyBinding</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="classsfui_1_1_active_key_binding.html#a05574468b6d6d9e86156b39409ea2cc6">ActiveKeyBinding</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_active_key_binding.html#a2b01265faf7bcc088aab99540ab1bc22">bindKey</a>(<a class="code hl_typedef" href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">Key</a> key, <a class="code hl_typedef" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> action);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classsfui_1_1_active_key_binding.html#a90a7cb05be5ff05ea34257bc96a995a3">update</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classsfui_1_1_active_key_binding.html#a2b838591fe8dfc57b090bb1cab4a5a9b">   39</a></span>        std::unordered_map&lt;Key, Action&gt; <a class="code hl_variable" href="classsfui_1_1_active_key_binding.html#a2b838591fe8dfc57b090bb1cab4a5a9b">keyBindings</a>; </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    };</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="ttc" id="aclasssfui_1_1_active_key_binding_html_a05574468b6d6d9e86156b39409ea2cc6"><div class="ttname"><a href="classsfui_1_1_active_key_binding.html#a05574468b6d6d9e86156b39409ea2cc6">sfui::ActiveKeyBinding::ActiveKeyBinding</a></div><div class="ttdeci">ActiveKeyBinding()</div><div class="ttdoc">构造函数，初始化按键绑定表</div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8cpp_source.html#l00009">ActiveKeyBinding.cpp:9</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_active_key_binding_html_a2b01265faf7bcc088aab99540ab1bc22"><div class="ttname"><a href="classsfui_1_1_active_key_binding.html#a2b01265faf7bcc088aab99540ab1bc22">sfui::ActiveKeyBinding::bindKey</a></div><div class="ttdeci">void bindKey(Key key, Action action)</div><div class="ttdoc">绑定按键与行为</div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8cpp_source.html#l00019">ActiveKeyBinding.cpp:19</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_active_key_binding_html_a2b838591fe8dfc57b090bb1cab4a5a9b"><div class="ttname"><a href="classsfui_1_1_active_key_binding.html#a2b838591fe8dfc57b090bb1cab4a5a9b">sfui::ActiveKeyBinding::keyBindings</a></div><div class="ttdeci">std::unordered_map&lt; Key, Action &gt; keyBindings</div><div class="ttdoc">存储按键与行为的映射表</div><div class="ttdef"><b>定义</b> <a href="#l00039">ActiveKeyBinding.hpp:39</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_active_key_binding_html_a90a7cb05be5ff05ea34257bc96a995a3"><div class="ttname"><a href="classsfui_1_1_active_key_binding.html#a90a7cb05be5ff05ea34257bc96a995a3">sfui::ActiveKeyBinding::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">检查所有已绑定按键的状态，若被按下则执行对应行为</div><div class="ttdef"><b>定义</b> <a href="_active_key_binding_8cpp_source.html#l00011">ActiveKeyBinding.cpp:11</a></div></div>
+<div class="ttc" id="anamespacesfui_html"><div class="ttname"><a href="namespacesfui.html">sfui</a></div><div class="ttdef"><b>定义</b> <a href="#l00006">ActiveKeyBinding.hpp:6</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a2b73109f30fb81ecd18900d765742a34"><div class="ttname"><a href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">sfui::Action</a></div><div class="ttdeci">std::function&lt; void()&gt; Action</div><div class="ttdoc">行为类型，表示一个无参数的可调用对象</div><div class="ttdef"><b>定义</b> <a href="#l00012">ActiveKeyBinding.hpp:12</a></div></div>
+<div class="ttc" id="anamespacesfui_html_ae675da92866ddc52851d8fce49943fde"><div class="ttname"><a href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">sfui::Key</a></div><div class="ttdeci">sf::Keyboard::Key Key</div><div class="ttdoc">按键类型，等价于SFML的键盘按键</div><div class="ttdef"><b>定义</b> <a href="#l00010">ActiveKeyBinding.hpp:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_3d69f64eaf81436fe2b22361382717e5.html">core</a></li><li class="navelem"><a href="dir_c70c8bf39cf0040b5aeefab6e35c8a1e.html">message</a></li><li class="navelem"><a href="_active_key_binding_8hpp.html">ActiveKeyBinding.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

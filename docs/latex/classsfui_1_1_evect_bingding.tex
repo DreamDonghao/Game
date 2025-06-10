@@ -1,0 +1,275 @@
+\doxysection{sfui\+::Evect\+Bingding类 参考}
+\label{classsfui_1_1_evect_bingding}\index{sfui::EvectBingding@{sfui::EvectBingding}}
+
+
+按键和鼠标事件与行为的映射类  
+
+
+
+
+{\ttfamily \#include $<$Event\+Binding.\+hpp$>$}
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_evect_bingding_a26d6c16a0851e3feca51d5145b98c422}{Evect\+Bingding}} ()
+\begin{DoxyCompactList}\small\item\em 构造函数，初始化事件绑定表 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_evect_bingding_ac789330c78f63a59f24b7b5444ddacee}{bind\+Event}} (\mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}} key, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} action)
+\begin{DoxyCompactList}\small\item\em 绑定键盘事件与行为 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_evect_bingding_ab6f7e75a5ec27e1893a1e16e8fe84c80}{bind\+Event}} (\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}} mouse\+Button, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} action)
+\begin{DoxyCompactList}\small\item\em 绑定鼠标按钮事件与行为 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_evect_bingding_addf3805017b983cd81f91087e7a61646}{bind\+Event}} (\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}} mouse\+Button, const \mbox{\hyperlink{classsfui_1_1_area}{Area}} \texorpdfstring{$\ast$}{*}area, const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&action)
+\begin{DoxyCompactList}\small\item\em 绑定鼠标按钮+区域事件与行为 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_evect_bingding_a65ca4ce5a8f420c898ee755dacdabb5f}{update}} (sf\+::\+Event event)
+\begin{DoxyCompactList}\small\item\em 检查事件并执行对应的行为 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}}, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} $>$ \mbox{\hyperlink{classsfui_1_1_evect_bingding_a67f354af052040b4e18b8b2bebf4aa8e}{m\+\_\+key\+Bindings}}
+\begin{DoxyCompactList}\small\item\em 键盘事件映射表 \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}}, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} $>$ \mbox{\hyperlink{classsfui_1_1_evect_bingding_a43b1a5010bbe50b2958e0cd785b24b44}{m\+\_\+mouse\+Binding}}
+\begin{DoxyCompactList}\small\item\em 鼠标按钮事件映射表 \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}}, std\+::vector$<$ std\+::pair$<$ const \mbox{\hyperlink{classsfui_1_1_area}{Area}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} $>$ $>$ $>$ \mbox{\hyperlink{classsfui_1_1_evect_bingding_aa1b1b0eeb231f55557a3497b46a7e7c3}{m\+\_\+mouse\+Button\+Bindings}}
+\begin{DoxyCompactList}\small\item\em 鼠标按钮+区域事件映射表 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+按键和鼠标事件与行为的映射类 
+
+支持键盘、鼠标按钮、鼠标按钮+区域的事件绑定。 
+
+在文件 \mbox{\hyperlink{_event_binding_8hpp_source}{Event\+Binding.\+hpp}} 第 \mbox{\hyperlink{_event_binding_8hpp_source_l00023}{23}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::EvectBingding@{sfui::EvectBingding}!EvectBingding@{EvectBingding}}
+\index{EvectBingding@{EvectBingding}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{EvectBingding()}{EvectBingding()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_a26d6c16a0851e3feca51d5145b98c422} 
+sfui\+::\+Evect\+Bingding\+::\+Evect\+Bingding (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+构造函数，初始化事件绑定表 
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::EvectBingding@{sfui::EvectBingding}!bindEvent@{bindEvent}}
+\index{bindEvent@{bindEvent}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{bindEvent()}{bindEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_ac789330c78f63a59f24b7b5444ddacee} 
+void sfui\+::\+Evect\+Bingding\+::bind\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}}}]{key}{, }\item[{\mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}}}]{action}{}\end{DoxyParamCaption})}
+
+
+
+绑定键盘事件与行为 
+
+绑定瞬间消息与事件
+
+
+\begin{DoxyParams}{参数}
+{\em key} & 需要绑定的按键 \\
+\hline
+{\em action} & 按下该按键时执行的行为 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_event_binding_8cpp_source}{Event\+Binding.\+cpp}} 第 \mbox{\hyperlink{_event_binding_8cpp_source_l00018}{18}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ m\_keyBindings[key]\ =\ std::move(action);}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_event_binding_8hpp_source_l00061}{m\+\_\+key\+Bindings}}.
+
+\index{sfui::EvectBingding@{sfui::EvectBingding}!bindEvent@{bindEvent}}
+\index{bindEvent@{bindEvent}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{bindEvent()}{bindEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_ab6f7e75a5ec27e1893a1e16e8fe84c80} 
+void sfui\+::\+Evect\+Bingding\+::bind\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}}}]{mouse\+Button}{, }\item[{\mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+绑定鼠标按钮事件与行为 
+
+
+\begin{DoxyParams}{参数}
+{\em mouse\+Button} & 鼠标按钮 \\
+\hline
+{\em action} & 按下该按钮时执行的行为 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_event_binding_8hpp_source}{Event\+Binding.\+hpp}} 第 \mbox{\hyperlink{_event_binding_8hpp_source_l00042}{42}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ m\_mouseBinding[mouseButton]\ =\ std::move(action);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_event_binding_8hpp_source_l00062}{m\+\_\+mouse\+Binding}}.
+
+\index{sfui::EvectBingding@{sfui::EvectBingding}!bindEvent@{bindEvent}}
+\index{bindEvent@{bindEvent}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{bindEvent()}{bindEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_addf3805017b983cd81f91087e7a61646} 
+void sfui\+::\+Evect\+Bingding\+::bind\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}}}]{mouse\+Button}{, }\item[{const \mbox{\hyperlink{classsfui_1_1_area}{Area}} \texorpdfstring{$\ast$}{*}}]{area}{, }\item[{const \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} \&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+绑定鼠标按钮+区域事件与行为 
+
+
+\begin{DoxyParams}{参数}
+{\em mouse\+Button} & 鼠标按钮 \\
+\hline
+{\em area} & 区域指针 \\
+\hline
+{\em action} & 在区域内点击该按钮时执行的行为 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_event_binding_8cpp_source}{Event\+Binding.\+cpp}} 第 \mbox{\hyperlink{_event_binding_8cpp_source_l00027}{27}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ m\_mouseButtonBindings[mouseButton].emplace\_back(area,\ action);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_event_binding_8hpp_source_l00063}{m\+\_\+mouse\+Button\+Bindings}}.
+
+\index{sfui::EvectBingding@{sfui::EvectBingding}!update@{update}}
+\index{update@{update}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_a65ca4ce5a8f420c898ee755dacdabb5f} 
+void sfui\+::\+Evect\+Bingding\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event}{}\end{DoxyParamCaption})}
+
+
+
+检查事件并执行对应的行为 
+
+检查消息并执行消息对应的事件
+
+
+\begin{DoxyParams}{参数}
+{\em event} & SFML事件 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{_event_binding_8cpp_source}{Event\+Binding.\+cpp}} 第 \mbox{\hyperlink{_event_binding_8cpp_source_l00034}{34}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理键盘事件}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::KeyPressed)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_keyBindings.contains(event.key.code))\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_keyBindings[\textcolor{keyword}{event}.key.code]();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::MouseButtonPressed)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_mouseBinding.contains(event.mouseButton.button))\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_mouseBinding[\textcolor{keyword}{event}.mouseButton.button]();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 处理按钮点击事件}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (event.type\ ==\ sf::Event::MouseButtonPressed)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&[buttonArea,\ action]}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_mouseButtonBindings[event.mouseButton.button])\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (buttonArea-\/>isInArea(event.mouseButton.x,\ event.mouseButton.y))\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ action();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{_event_binding_8hpp_source_l00061}{m\+\_\+key\+Bindings}}, \mbox{\hyperlink{_event_binding_8hpp_source_l00062}{m\+\_\+mouse\+Binding}} , 以及 \mbox{\hyperlink{_event_binding_8hpp_source_l00063}{m\+\_\+mouse\+Button\+Bindings}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::EvectBingding@{sfui::EvectBingding}!m\_keyBindings@{m\_keyBindings}}
+\index{m\_keyBindings@{m\_keyBindings}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{m\_keyBindings}{m\_keyBindings}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_a67f354af052040b4e18b8b2bebf4aa8e} 
+std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}}, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}}$>$ sfui\+::\+Evect\+Bingding\+::m\+\_\+key\+Bindings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+键盘事件映射表 
+
+
+
+在文件 \mbox{\hyperlink{_event_binding_8hpp_source}{Event\+Binding.\+hpp}} 第 \mbox{\hyperlink{_event_binding_8hpp_source_l00061}{61}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_event_binding_8cpp_source_l00018}{bind\+Event()}} , 以及 \mbox{\hyperlink{_event_binding_8cpp_source_l00034}{update()}}.
+
+\index{sfui::EvectBingding@{sfui::EvectBingding}!m\_mouseBinding@{m\_mouseBinding}}
+\index{m\_mouseBinding@{m\_mouseBinding}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{m\_mouseBinding}{m\_mouseBinding}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_a43b1a5010bbe50b2958e0cd785b24b44} 
+std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}}, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}}$>$ sfui\+::\+Evect\+Bingding\+::m\+\_\+mouse\+Binding\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+鼠标按钮事件映射表 
+
+
+
+在文件 \mbox{\hyperlink{_event_binding_8hpp_source}{Event\+Binding.\+hpp}} 第 \mbox{\hyperlink{_event_binding_8hpp_source_l00062}{62}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_event_binding_8hpp_source_l00042}{bind\+Event()}} , 以及 \mbox{\hyperlink{_event_binding_8cpp_source_l00034}{update()}}.
+
+\index{sfui::EvectBingding@{sfui::EvectBingding}!m\_mouseButtonBindings@{m\_mouseButtonBindings}}
+\index{m\_mouseButtonBindings@{m\_mouseButtonBindings}!sfui::EvectBingding@{sfui::EvectBingding}}
+\doxysubsubsection{\texorpdfstring{m\_mouseButtonBindings}{m\_mouseButtonBindings}}
+{\footnotesize\ttfamily \label{classsfui_1_1_evect_bingding_aa1b1b0eeb231f55557a3497b46a7e7c3} 
+std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}}, std\+::vector$<$std\+::pair$<$const \mbox{\hyperlink{classsfui_1_1_area}{Area}}\texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}}$>$ $>$ $>$ sfui\+::\+Evect\+Bingding\+::m\+\_\+mouse\+Button\+Bindings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+鼠标按钮+区域事件映射表 
+
+
+
+在文件 \mbox{\hyperlink{_event_binding_8hpp_source}{Event\+Binding.\+hpp}} 第 \mbox{\hyperlink{_event_binding_8hpp_source_l00063}{63}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_event_binding_8cpp_source_l00027}{bind\+Event()}} , 以及 \mbox{\hyperlink{_event_binding_8cpp_source_l00034}{update()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sfml\+\_\+ui/include/core/message/\mbox{\hyperlink{_event_binding_8hpp}{Event\+Binding.\+hpp}}\item 
+sfml\+\_\+ui/src/core/message/\mbox{\hyperlink{_event_binding_8cpp}{Event\+Binding.\+cpp}}\end{DoxyCompactItemize}

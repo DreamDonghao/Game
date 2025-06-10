@@ -1,0 +1,16 @@
+<map id="sfui::Page::Page" name="sfui::Page::Page">
+<area shape="rect" id="Node000001" title=" " alt="" coords="630,79,749,106"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_control_page.html#afc330f12e794ff22b74203c5743bcc9f" title=" " alt="" coords="446,104,577,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="615,109,578,116,577,111,614,104"/>
+<area shape="rect" id="Node000004" href="$classgame_1_1_game_page.html#a91af173bceb6cb36da8332f25e8b7183" title=" " alt="" coords="5,42,205,68"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="659,71,624,47,582,28,524,16,465,9,405,8,346,12,240,26,157,44,156,39,239,21,346,6,405,3,465,4,525,10,583,23,626,42,662,67"/>
+<area shape="rect" id="Node000005" href="$classgame_1_1_main_menu_page.html#a597d6a61f1bc9cf80e3a99e466fe678b" title=" " alt="" coords="29,108,181,151"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="662,118,626,142,583,162,530,174,475,180,420,182,366,180,264,169,181,152,182,147,265,163,366,175,420,177,475,175,529,168,581,157,624,138,659,114"/>
+<area shape="rect" id="Node000006" href="$classsfui_1_1_interactive_page.html#ac553cc6c1df69243d54a316f67aa5f45" title=" " alt="" coords="441,38,582,80"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="614,81,582,75,583,70,615,76"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_complex_page.html#a3c97d3fcf521310edbd6b77ec693e4e9" title=" " alt="" coords="253,71,393,114"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,114,393,107,394,102,432,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="237,80,186,72,187,66,238,75"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="238,110,181,119,181,114,237,104"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="426,77,394,83,393,77,425,72"/>
+</map>

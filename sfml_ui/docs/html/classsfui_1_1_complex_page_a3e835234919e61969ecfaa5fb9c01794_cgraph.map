@@ -1,0 +1,7 @@
+<map id="sfui::ComplexPage::drawForView" name="sfui::ComplexPage::drawForView">
+<area shape="rect" id="Node000001" title="以视图为依据绘制对象" alt="" coords="5,5,146,48"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_interactive_page.html#ac65175a61dce2a643a73b1b3abde1b6d" title="绘制按钮" alt="" coords="194,5,335,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,24,178,24,178,29,146,29"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_button.html#a9bda2b07213ffd9a40fb2e231f084952" title="获取按钮的Sprite" alt="" coords="383,13,531,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,24,368,24,368,29,335,29"/>
+</map>

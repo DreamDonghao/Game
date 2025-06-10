@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <ComplexPage.hpp>
 // #include <elemental.hpp>
@@ -14,7 +14,7 @@ namespace game {
         sfui::Button returnGameButton;
 
     public:
-        GamePage(): isPause(false) {
+        GamePage(sf::RenderWindow *p_sfml_RenderWindow):Page(p_sfml_RenderWindow),ComplexPage(p_sfml_RenderWindow),isPause(false) {
         }
 
         // 初始化界面元素

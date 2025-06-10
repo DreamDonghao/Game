@@ -1,0 +1,51 @@
+\doxysection{button.\+hpp}
+\label{button_8hpp_source}\index{include/customizable/controls/button.hpp@{include/customizable/controls/button.hpp}}
+\mbox{\hyperlink{button_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <TextureItem.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <Area.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }sfui\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }Button\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ Button()\ :\ m\_area(0,0,0,0)\ \{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \string~Button()\ \{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ init(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&heigth,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FilePath\ \&filepath)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ m\_x\ =\ x;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ m\_y\ =\ y;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ m\_width\ =\ width;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ m\_height\ =\ heigth;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ m\_textureItem.init(filepath,\ m\_width,\ m\_height,\ m\_x,\ m\_y);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ m\_area.init(}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_x,\ m\_y,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_x\ +\ m\_width,\ m\_y\ +\ m\_height}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ Area\ *getArea()\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&m\_area;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::Sprite\ \&getSprite()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_textureItem.getSprite();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_x\ =\ 0.0;\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_y\ =\ 0.0;\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_width\ =\ 0;\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_height\ =\ 0;\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ Area\ m\_area;\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ TextureItem\ m\_textureItem;\ }
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}

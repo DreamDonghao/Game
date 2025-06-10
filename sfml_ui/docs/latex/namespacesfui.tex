@@ -1,0 +1,327 @@
+\doxysection{sfui 命名空间参考}
+\label{namespacesfui}\index{sfui@{sfui}}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsfui_1_1_active_key_binding}{Active\+Key\+Binding}}
+\begin{DoxyCompactList}\small\item\em 按键状态与行为的映射类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_area}{Area}}
+\begin{DoxyCompactList}\small\item\em 区域类，表示一个矩形区域，支持判定点是否在区域内 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_button}{Button}}
+\begin{DoxyCompactList}\small\item\em 按钮类，封装贴图和区域 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_complex_page}{Complex\+Page}}
+\begin{DoxyCompactList}\small\item\em 混合界面类，结合了交互页面和控件页面的功能 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_control_page}{Control\+Page}}
+\begin{DoxyCompactList}\small\item\em UI 控件页面，视图大小等于窗口大小，(0,0)为左上角 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_evect_bingding}{Evect\+Bingding}}
+\begin{DoxyCompactList}\small\item\em 按键和鼠标事件与行为的映射类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_frame_animated_sprite}{Frame\+Animated\+Sprite}}
+\begin{DoxyCompactList}\small\item\em 窗口帧率循环动图类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_input_box}{Input\+Box}}
+\item 
+class \mbox{\hyperlink{classsfui_1_1_interactive}{Interactive}}
+\begin{DoxyCompactList}\small\item\em 可交互对象，封装贴图和区域，支持区域更新 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_interactive_page}{Interactive\+Page}}
+\begin{DoxyCompactList}\small\item\em 动态或实时更新的交互页面，视图中心可自定义 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_line}{Line}}
+\begin{DoxyCompactList}\small\item\em 线段对象，支持初始化起止点和颜色 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_mouse}{Mouse}}
+\begin{DoxyCompactList}\small\item\em 实时鼠标操作类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_page}{Page}}
+\begin{DoxyCompactList}\small\item\em 前置声明窗口类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_page_name}{Page\+Name}}
+\begin{DoxyCompactList}\small\item\em 页面模板类，便于新建页面时继承和实现 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_text}{Text}}
+\begin{DoxyCompactList}\small\item\em 文本对象，预留扩展 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_text_box}{Text\+Box}}
+\begin{DoxyCompactList}\small\item\em 文本框控件，支持自定义字体、颜色、内容、位置等 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_texture_item}{Texture\+Item}}
+\begin{DoxyCompactList}\small\item\em 贴图项，封装\+SFML贴图，支持加载、缩放、位置设置等 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_time_animated_sprite}{Time\+Animated\+Sprite}}
+\begin{DoxyCompactList}\small\item\em 以时间为依据循环播放的动图类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsfui_1_1_window}{Window}}
+\begin{DoxyCompactList}\small\item\em 窗口类，负责窗口创建、页面管理、事件循环、全屏切换等。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{Key}} = sf\+::\+Keyboard\+::\+Key
+\begin{DoxyCompactList}\small\item\em 按键类型，等价于\+SFML的键盘按键 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{Action}} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em 行为类型，表示一个无参数的可调用对象 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{Mouse\+Button}} = sf\+::\+Mouse\+::\+Button
+\item 
+using \mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{Position}} = sf\+::\+Vector2i
+\item 
+using \mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{Title}} = std\+::wstring
+\begin{DoxyCompactList}\small\item\em 标题类型，使用宽字符串 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacesfui_ae34f6d4fda54f1f950fc14956101295d}{view\+Size}} = sf\+::\+Vector2f
+\begin{DoxyCompactList}\small\item\em 视图大小类型 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Page\+Type$>$ }\\using \mbox{\hyperlink{namespacesfui_afcea08736be0f52e8604563ca8677c70}{Page\+Ptr}} = std\+::unique\+\_\+ptr$<$Page\+Type$>$
+\begin{DoxyCompactList}\small\item\em UI页面的智能指针类型。 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacesfui_a5f77e4dd693a9e71ebb3d3d882a22628}{Page\+Map}} = std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{Title}}, \mbox{\hyperlink{namespacesfui_afcea08736be0f52e8604563ca8677c70}{Page\+Ptr}}$<$\mbox{\hyperlink{classsfui_1_1_page}{Page}}$>$ $>$
+\begin{DoxyCompactList}\small\item\em 页面标题到页面指针的映射表。 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacesfui_add19d31228ec52899ab7ae72ea3c11a2}{Window\+Size}} = sf\+::\+Vector2u
+\begin{DoxyCompactList}\small\item\em 表示窗口大小的类型。 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacesfui_a3914e89931c8852cbe1322d380701e62}{File\+Path}} = std\+::string
+\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacesfui_a98343da21a28c0d445591ea12c4bc6fa}{Window\+State}} \{ \mbox{\hyperlink{namespacesfui_a98343da21a28c0d445591ea12c4bc6faab13311ab51c4c34757f67f26580018dd}{Windowed}}
+, \mbox{\hyperlink{namespacesfui_a98343da21a28c0d445591ea12c4bc6faa0829ea6734059d66e6bf87096b215dc1}{Fullscreen}}
+ \}
+\begin{DoxyCompactList}\small\item\em 表示窗口状态（窗口/全屏）。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{Title}} \mbox{\hyperlink{namespacesfui_a92f7a2203cd1f549830bf28cd2447d4b}{Title\+Name}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em 将std\+::string转换为\+Title（std\+::wstring） \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Page\+Type, typename... Args$>$ }\\\mbox{\hyperlink{namespacesfui_afcea08736be0f52e8604563ca8677c70}{Page\+Ptr}}$<$ Page\+Type $>$ \mbox{\hyperlink{namespacesfui_a90be12c04a2fc9de082dba031c599f2c}{make\+Page}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em 创建一个新的页面实例。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\doxysubsection{类型定义说明}
+\index{sfui@{sfui}!Action@{Action}}
+\index{Action@{Action}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{Action}{Action}}
+{\footnotesize\ttfamily \label{namespacesfui_a2b73109f30fb81ecd18900d765742a34} 
+typedef std\+::function$<$ void()$>$ \mbox{\hyperlink{namespacesfui_a2b73109f30fb81ecd18900d765742a34}{sfui\+::\+Action}} = std\+::function$<$void()$>$}
+
+
+
+行为类型，表示一个无参数的可调用对象 
+
+
+
+在文件 \mbox{\hyperlink{_active_key_binding_8hpp_source}{Active\+Key\+Binding.\+hpp}} 第 \mbox{\hyperlink{_active_key_binding_8hpp_source_l00012}{12}} 行定义.
+
+\index{sfui@{sfui}!FilePath@{FilePath}}
+\index{FilePath@{FilePath}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{FilePath}{FilePath}}
+{\footnotesize\ttfamily \label{namespacesfui_a3914e89931c8852cbe1322d380701e62} 
+using \mbox{\hyperlink{namespacesfui_a3914e89931c8852cbe1322d380701e62}{sfui\+::\+File\+Path}} = std\+::string}
+
+
+
+在文件 \mbox{\hyperlink{_texture_item_8hpp_source}{Texture\+Item.\+hpp}} 第 \mbox{\hyperlink{_texture_item_8hpp_source_l00005}{5}} 行定义.
+
+\index{sfui@{sfui}!Key@{Key}}
+\index{Key@{Key}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily \label{namespacesfui_ae675da92866ddc52851d8fce49943fde} 
+using \mbox{\hyperlink{namespacesfui_ae675da92866ddc52851d8fce49943fde}{sfui\+::\+Key}} = sf\+::\+Keyboard\+::\+Key}
+
+
+
+按键类型，等价于\+SFML的键盘按键 
+
+
+
+在文件 \mbox{\hyperlink{_active_key_binding_8hpp_source}{Active\+Key\+Binding.\+hpp}} 第 \mbox{\hyperlink{_active_key_binding_8hpp_source_l00010}{10}} 行定义.
+
+\index{sfui@{sfui}!MouseButton@{MouseButton}}
+\index{MouseButton@{MouseButton}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{MouseButton}{MouseButton}}
+{\footnotesize\ttfamily \label{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1} 
+using \mbox{\hyperlink{namespacesfui_a0110ad9214b6430c7b841e0b88f73fa1}{sfui\+::\+Mouse\+Button}} = sf\+::\+Mouse\+::\+Button}
+
+
+
+在文件 \mbox{\hyperlink{_event_binding_8hpp_source}{Event\+Binding.\+hpp}} 第 \mbox{\hyperlink{_event_binding_8hpp_source_l00016}{16}} 行定义.
+
+\index{sfui@{sfui}!PageMap@{PageMap}}
+\index{PageMap@{PageMap}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{PageMap}{PageMap}}
+{\footnotesize\ttfamily \label{namespacesfui_a5f77e4dd693a9e71ebb3d3d882a22628} 
+using \mbox{\hyperlink{namespacesfui_a5f77e4dd693a9e71ebb3d3d882a22628}{sfui\+::\+Page\+Map}} = std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{Title}}, \mbox{\hyperlink{namespacesfui_afcea08736be0f52e8604563ca8677c70}{Page\+Ptr}}$<$\mbox{\hyperlink{classsfui_1_1_page}{Page}}$>$ $>$}
+
+
+
+页面标题到页面指针的映射表。 
+
+
+
+在文件 \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}} 第 \mbox{\hyperlink{_window_8hpp_source_l00029}{29}} 行定义.
+
+\index{sfui@{sfui}!PagePtr@{PagePtr}}
+\index{PagePtr@{PagePtr}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{PagePtr}{PagePtr}}
+{\footnotesize\ttfamily \label{namespacesfui_afcea08736be0f52e8604563ca8677c70} 
+template$<$typename Page\+Type$>$ \\
+using \mbox{\hyperlink{namespacesfui_afcea08736be0f52e8604563ca8677c70}{sfui\+::\+Page\+Ptr}} = std\+::unique\+\_\+ptr$<$Page\+Type$>$}
+
+
+
+UI页面的智能指针类型。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Page\+Type} & 页面类型。 \\
+\hline
+\end{DoxyTemplParams}
+
+
+在文件 \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}} 第 \mbox{\hyperlink{_window_8hpp_source_l00012}{12}} 行定义.
+
+\index{sfui@{sfui}!Position@{Position}}
+\index{Position@{Position}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily \label{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8} 
+using \mbox{\hyperlink{namespacesfui_ab5eb83c506683e6ae2e2c1a19181d9e8}{sfui\+::\+Position}} = sf\+::\+Vector2i}
+
+
+
+在文件 \mbox{\hyperlink{_mouse_8hpp_source}{Mouse.\+hpp}} 第 \mbox{\hyperlink{_mouse_8hpp_source_l00005}{5}} 行定义.
+
+\index{sfui@{sfui}!Title@{Title}}
+\index{Title@{Title}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{Title}{Title}}
+{\footnotesize\ttfamily \label{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d} 
+using \mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{sfui\+::\+Title}} = std\+::wstring}
+
+
+
+标题类型，使用宽字符串 
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00012}{12}} 行定义.
+
+\index{sfui@{sfui}!viewSize@{viewSize}}
+\index{viewSize@{viewSize}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{viewSize}{viewSize}}
+{\footnotesize\ttfamily \label{namespacesfui_ae34f6d4fda54f1f950fc14956101295d} 
+using \mbox{\hyperlink{namespacesfui_ae34f6d4fda54f1f950fc14956101295d}{sfui\+::view\+Size}} = sf\+::\+Vector2f}
+
+
+
+视图大小类型 
+
+
+
+在文件 \mbox{\hyperlink{_page_8hpp_source}{Page.\+hpp}} 第 \mbox{\hyperlink{_page_8hpp_source_l00021}{21}} 行定义.
+
+\index{sfui@{sfui}!WindowSize@{WindowSize}}
+\index{WindowSize@{WindowSize}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{WindowSize}{WindowSize}}
+{\footnotesize\ttfamily \label{namespacesfui_add19d31228ec52899ab7ae72ea3c11a2} 
+using \mbox{\hyperlink{namespacesfui_add19d31228ec52899ab7ae72ea3c11a2}{sfui\+::\+Window\+Size}} = sf\+::\+Vector2u}
+
+
+
+表示窗口大小的类型。 
+
+
+
+在文件 \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}} 第 \mbox{\hyperlink{_window_8hpp_source_l00034}{34}} 行定义.
+
+
+
+\label{doc-enum-members}
+\doxysubsection{枚举类型说明}
+\index{sfui@{sfui}!WindowState@{WindowState}}
+\index{WindowState@{WindowState}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{WindowState}{WindowState}}
+{\footnotesize\ttfamily \label{namespacesfui_a98343da21a28c0d445591ea12c4bc6fa} 
+enum class \mbox{\hyperlink{namespacesfui_a98343da21a28c0d445591ea12c4bc6fa}{sfui\+::\+Window\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+表示窗口状态（窗口/全屏）。 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Windowed@{Windowed}!sfui@{sfui}}\index{sfui@{sfui}!Windowed@{Windowed}}}\label{namespacesfui_a98343da21a28c0d445591ea12c4bc6faab13311ab51c4c34757f67f26580018dd} 
+Windowed&窗口模式 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fullscreen@{Fullscreen}!sfui@{sfui}}\index{sfui@{sfui}!Fullscreen@{Fullscreen}}}\label{namespacesfui_a98343da21a28c0d445591ea12c4bc6faa0829ea6734059d66e6bf87096b215dc1} 
+Fullscreen&全屏模式 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+在文件 \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}} 第 \mbox{\hyperlink{_window_8hpp_source_l00039}{39}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ Windowed,\ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ Fullscreen\ }
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\doxysubsection{函数说明}
+\index{sfui@{sfui}!makePage@{makePage}}
+\index{makePage@{makePage}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{makePage()}{makePage()}}
+{\footnotesize\ttfamily \label{namespacesfui_a90be12c04a2fc9de082dba031c599f2c} 
+template$<$typename Page\+Type, typename... Args$>$ \\
+\mbox{\hyperlink{namespacesfui_afcea08736be0f52e8604563ca8677c70}{Page\+Ptr}}$<$ Page\+Type $>$ sfui\+::make\+Page (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+创建一个新的页面实例。 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Page\+Type} & 页面类型。 \\
+\hline
+{\em Args} & 构造参数类型。 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{参数}
+{\em args} & 转发给页面构造函数的参数。 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+创建的页面智能指针。 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_window_8hpp_source}{Window.\+hpp}} 第 \mbox{\hyperlink{_window_8hpp_source_l00022}{22}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<PageType>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\index{sfui@{sfui}!TitleName@{TitleName}}
+\index{TitleName@{TitleName}!sfui@{sfui}}
+\doxysubsubsection{\texorpdfstring{TitleName()}{TitleName()}}
+{\footnotesize\ttfamily \label{namespacesfui_a92f7a2203cd1f549830bf28cd2447d4b} 
+\mbox{\hyperlink{namespacesfui_ac49a7e91cc81d7ac921e6b93abd9851d}{Title}} sfui\+::\+Title\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str}{}\end{DoxyParamCaption})}
+
+
+
+将std\+::string转换为\+Title（std\+::wstring） 
+
+
+\begin{DoxyParams}{参数}
+{\em str} & 输入的字符串 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+转换后的宽字符串 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{_page_8cpp_source}{Page.\+cpp}} 第 \mbox{\hyperlink{_page_8cpp_source_l00011}{11}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ size\_needed\ =\ MultiByteToWideChar(CP\_UTF8,\ 0,\ str.c\_str(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(str.size()),\ \textcolor{keyword}{nullptr},\ 0);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ std::wstring\ wstr(size\_needed,\ 0);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ MultiByteToWideChar(CP\_UTF8,\ 0,\ str.c\_str(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(str.size()),\ \&wstr[0],\ size\_needed);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ wstr;}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+
+\end{DoxyCode}

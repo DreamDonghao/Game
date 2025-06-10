@@ -1,0 +1,7 @@
+<map id="sfui::Page::eventMap" name="sfui::Page::eventMap">
+<area shape="rect" id="Node000001" title="绑定按键与行为（事件输入）" alt="" coords="258,47,403,73"/>
+<area shape="rect" id="Node000002" href="$classgame_1_1_game_page.html#add53e04151e73fdb529bd926baaad85e" title="初始化消息与事件绑定（纯虚函数，需子类实现）" alt="" coords="5,5,210,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,50,210,45,210,39,243,44"/>
+<area shape="rect" id="Node000003" href="$classgame_1_1_pause_game_page.html#a8a95bf5893cfc470c077e362231ccd35" title="初始化消息与事件绑定（纯虚函数，需子类实现）" alt="" coords="26,72,189,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,76,190,84,189,78,242,70"/>
+</map>

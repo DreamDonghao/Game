@@ -1,0 +1,32 @@
+\doxysection{main.\+cpp}
+\label{main_8cpp_source}\index{game/src/main.cpp@{game/src/main.cpp}}
+\mbox{\hyperlink{main_8cpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <MainMenuPage.hpp>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Window.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <gamepage.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\#include\ <box2d.h>}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ width\ =\ 16;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ heigth\ =\ 10;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ ratio\ =\ 80;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{auto}\ main()\ -\/>\ \textcolor{keywordtype}{int}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//FreeConsole();\ \ //\ 现代C++依然支持隐藏控制台窗口}}
+\DoxyCodeLine{00015\ \ \ \ \ sfui::Window\ window(width*ratio,\ heigth*ratio,\ sfui::WindowState::Windowed);}
+\DoxyCodeLine{00016\ \ \ \ \ window.init(165,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00017\ \ \ \ \ window.addPage(sfui::TitleName(\textcolor{stringliteral}{"{}mainPage"{}}),\ sfui::makePage<game::MainMenuPage>(\&window.getSfRenderWindow()));}
+\DoxyCodeLine{00018\ \ \ \ \ window.addPage(sfui::TitleName(\textcolor{stringliteral}{"{}gamePage"{}}),\ sfui::makePage<game::GamePage>(\&window.getSfRenderWindow()));}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//window.addPage(sfui::TitleName("{}pauseGamePage"{}),\ sfui::makePage<game::PauseGamePage>());}}
+\DoxyCodeLine{00020\ \ \ \ \ window.startShow(sfui::TitleName(\textcolor{stringliteral}{"{}mainPage"{}}));}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+
+\end{DoxyCode}

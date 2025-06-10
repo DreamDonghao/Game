@@ -1,0 +1,8 @@
+<map id="elemental/include/biology.hpp" name="elemental/include/biology.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="68,5,260,32"/>
+<area shape="rect" id="Node000002" href="$player_8hpp.html" title=" " alt="" coords="5,80,192,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,45,112,81,108,78,140,42"/>
+<area shape="rect" id="Node000003" href="$pausegamepage_8hpp.html" title=" " alt="" coords="91,155,236,197"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="187,43,206,79,208,100,203,121,184,155,179,153,199,119,203,100,201,81,183,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,117,149,153,145,156,116,121"/>
+</map>

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: game/include/pages/gamepage.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('gamepage_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">gamepage.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="gamepage_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="_complex_page_8hpp.html">ComplexPage.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// #include &lt;elemental.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// #include &lt;biology.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// #include &lt;world_elemental.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// #include &lt;player.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespacegame.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegame.html">game</a> {</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classgame_1_1_game_page.html#a91af173bceb6cb36da8332f25e8b7183">GamePage</a> : <span class="keyword">public</span> <a class="code hl_class" href="classsfui_1_1_complex_page.html">sfui::ComplexPage</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">   12</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">isPause</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#a4b379edf1650e8ec4ea17775518ba807">   13</a></span>        <a class="code hl_class" href="classsfui_1_1_button.html">sfui::Button</a> <a class="code hl_variable" href="classgame_1_1_game_page.html#a4b379edf1650e8ec4ea17775518ba807">returnMainPageButton</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#aec9b34d7045f10602c679c12e92ed06a">   14</a></span>        <a class="code hl_class" href="classsfui_1_1_button.html">sfui::Button</a> <a class="code hl_variable" href="classgame_1_1_game_page.html#aec9b34d7045f10602c679c12e92ed06a">returnGameButton</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#a91af173bceb6cb36da8332f25e8b7183">   17</a></span>        <a class="code hl_function" href="classgame_1_1_game_page.html#a91af173bceb6cb36da8332f25e8b7183">GamePage</a>(sf::RenderWindow *p_sfml_RenderWindow):<a class="code hl_function" href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">Page</a>(p_sfml_RenderWindow),<a class="code hl_function" href="classsfui_1_1_complex_page.html#a3c97d3fcf521310edbd6b77ec693e4e9">ComplexPage</a>(p_sfml_RenderWindow),<a class="code hl_variable" href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">isPause</a>(false) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="comment">// 初始化界面元素</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#a250b969240520dac4042d9161af47f96">   21</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classgame_1_1_game_page.html#a250b969240520dac4042d9161af47f96">initializePageElements</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a> = 0.5;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_variable" href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">isPause</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_variable" href="classgame_1_1_game_page.html#aec9b34d7045f10602c679c12e92ed06a">returnGameButton</a>.init(</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                700 * <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>, 500 * <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                800 * <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>, 200 * <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                <span class="stringliteral">&quot;images\\button_return_game.png&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            );</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <a class="code hl_variable" href="classgame_1_1_game_page.html#a4b379edf1650e8ec4ea17775518ba807">returnMainPageButton</a>.init(</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                700 * <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>, 800 * <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                800 * <a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>, 200*<a class="code hl_variable" href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="stringliteral">&quot;images\\button_return_main_page.png&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            );</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// 初始化消息-事件映射</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#add53e04151e73fdb529bd926baaad85e">   37</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classgame_1_1_game_page.html#add53e04151e73fdb529bd926baaad85e">initMessageBinding</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="comment">// 点击ESC时切换游戏暂停状态</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_function" href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">eventMap</a>(sfui::Key::Escape, [&amp;]() {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <a class="code hl_variable" href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">isPause</a> = !<a class="code hl_variable" href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">isPause</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            });</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="comment">// 当暂停时,点击继续游戏按钮回到游戏</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_function" href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">eventMap</a>(sfui::MouseButton::Left, <a class="code hl_variable" href="classgame_1_1_game_page.html#aec9b34d7045f10602c679c12e92ed06a">returnGameButton</a>.getArea(), [&amp;]() {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                if (isPause) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    isPause = !isPause;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            });</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="comment">// 暂停时,点击回到主界面按钮回到主界面</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_function" href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">eventMap</a>(sfui::MouseButton::Left, <a class="code hl_variable" href="classgame_1_1_game_page.html#a4b379edf1650e8ec4ea17775518ba807">returnMainPageButton</a>.<a class="code hl_function" href="classsfui_1_1_button.html#ae226cdcb5552584e449cda1cda1e6765">getArea</a>(), [&amp;]() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                if (isPause) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    requestPageSwitch(sfui::TitleName(<span class="stringliteral">&quot;mainPage&quot;</span>));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            });</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// 执行界面逻辑</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#ab4902107e9b51bb3850987418452e21f">   57</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classgame_1_1_game_page.html#ab4902107e9b51bb3850987418452e21f">update</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">// 渲染页面内容到窗口</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classgame_1_1_game_page.html#a2e31f8daab5616ded15be1e119be1ef9">   61</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classgame_1_1_game_page.html#a2e31f8daab5616ded15be1e119be1ef9">render</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="comment">//zooms(2);</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">isPause</a>) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <a class="code hl_function" href="classsfui_1_1_complex_page.html#aa891757590b0909bb44a4e8de89b0846">drawForWindow</a>(<a class="code hl_variable" href="classgame_1_1_game_page.html#a4b379edf1650e8ec4ea17775518ba807">returnMainPageButton</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <a class="code hl_function" href="classsfui_1_1_complex_page.html#aa891757590b0909bb44a4e8de89b0846">drawForWindow</a>(<a class="code hl_variable" href="classgame_1_1_game_page.html#aec9b34d7045f10602c679c12e92ed06a">returnGameButton</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="ttc" id="a_complex_page_8hpp_html"><div class="ttname"><a href="_complex_page_8hpp.html">ComplexPage.hpp</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_a250b969240520dac4042d9161af47f96"><div class="ttname"><a href="classgame_1_1_game_page.html#a250b969240520dac4042d9161af47f96">game::GamePage::initializePageElements</a></div><div class="ttdeci">void initializePageElements() override</div><div class="ttdoc">初始化界面元素（纯虚函数，需子类实现）</div><div class="ttdef"><b>定义</b> <a href="#l00021">gamepage.hpp:21</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_a2e31f8daab5616ded15be1e119be1ef9"><div class="ttname"><a href="classgame_1_1_game_page.html#a2e31f8daab5616ded15be1e119be1ef9">game::GamePage::render</a></div><div class="ttdeci">void render() override</div><div class="ttdoc">渲染界面内容（纯虚函数，需子类实现）</div><div class="ttdef"><b>定义</b> <a href="#l00061">gamepage.hpp:61</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_a4b379edf1650e8ec4ea17775518ba807"><div class="ttname"><a href="classgame_1_1_game_page.html#a4b379edf1650e8ec4ea17775518ba807">game::GamePage::returnMainPageButton</a></div><div class="ttdeci">sfui::Button returnMainPageButton</div><div class="ttdef"><b>定义</b> <a href="#l00013">gamepage.hpp:13</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_a7a36ee394b8a44ae029dfaaf62d4bb66"><div class="ttname"><a href="classgame_1_1_game_page.html#a7a36ee394b8a44ae029dfaaf62d4bb66">game::GamePage::isPause</a></div><div class="ttdeci">bool isPause</div><div class="ttdef"><b>定义</b> <a href="#l00012">gamepage.hpp:12</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_a91af173bceb6cb36da8332f25e8b7183"><div class="ttname"><a href="classgame_1_1_game_page.html#a91af173bceb6cb36da8332f25e8b7183">game::GamePage::GamePage</a></div><div class="ttdeci">GamePage(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="#l00017">gamepage.hpp:17</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_ab4902107e9b51bb3850987418452e21f"><div class="ttname"><a href="classgame_1_1_game_page.html#ab4902107e9b51bb3850987418452e21f">game::GamePage::update</a></div><div class="ttdeci">void update() override</div><div class="ttdoc">更新界面内容（纯虚函数，需子类实现）</div><div class="ttdef"><b>定义</b> <a href="#l00057">gamepage.hpp:57</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_add53e04151e73fdb529bd926baaad85e"><div class="ttname"><a href="classgame_1_1_game_page.html#add53e04151e73fdb529bd926baaad85e">game::GamePage::initMessageBinding</a></div><div class="ttdeci">void initMessageBinding() override</div><div class="ttdoc">初始化消息与事件绑定（纯虚函数，需子类实现）</div><div class="ttdef"><b>定义</b> <a href="#l00037">gamepage.hpp:37</a></div></div>
+<div class="ttc" id="aclassgame_1_1_game_page_html_aec9b34d7045f10602c679c12e92ed06a"><div class="ttname"><a href="classgame_1_1_game_page.html#aec9b34d7045f10602c679c12e92ed06a">game::GamePage::returnGameButton</a></div><div class="ttdeci">sfui::Button returnGameButton</div><div class="ttdef"><b>定义</b> <a href="#l00014">gamepage.hpp:14</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_button_html"><div class="ttname"><a href="classsfui_1_1_button.html">sfui::Button</a></div><div class="ttdoc">按钮类，封装贴图和区域</div><div class="ttdef"><b>定义</b> <a href="button_8hpp_source.html#l00010">button.hpp:10</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_button_html_ae226cdcb5552584e449cda1cda1e6765"><div class="ttname"><a href="classsfui_1_1_button.html#ae226cdcb5552584e449cda1cda1e6765">sfui::Button::getArea</a></div><div class="ttdeci">Area * getArea()</div><div class="ttdoc">获取按钮区域</div><div class="ttdef"><b>定义</b> <a href="button_8hpp_source.html#l00050">button.hpp:50</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_complex_page_html"><div class="ttname"><a href="classsfui_1_1_complex_page.html">sfui::ComplexPage</a></div><div class="ttdoc">混合界面类，结合了交互页面和控件页面的功能</div><div class="ttdef"><b>定义</b> <a href="_complex_page_8hpp_source.html#l00011">ComplexPage.hpp:11</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_complex_page_html_a3c97d3fcf521310edbd6b77ec693e4e9"><div class="ttname"><a href="classsfui_1_1_complex_page.html#a3c97d3fcf521310edbd6b77ec693e4e9">sfui::ComplexPage::ComplexPage</a></div><div class="ttdeci">ComplexPage(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="_complex_page_8hpp_source.html#l00013">ComplexPage.hpp:13</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_complex_page_html_a8b877883ed1ba9c2448f51a7d83cc4ca"><div class="ttname"><a href="classsfui_1_1_complex_page.html#a8b877883ed1ba9c2448f51a7d83cc4ca">sfui::ComplexPage::m_ratio</a></div><div class="ttdeci">double m_ratio</div><div class="ttdoc">当前缩放比例</div><div class="ttdef"><b>定义</b> <a href="_complex_page_8hpp_source.html#l00072">ComplexPage.hpp:72</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_complex_page_html_aa891757590b0909bb44a4e8de89b0846"><div class="ttname"><a href="classsfui_1_1_complex_page.html#aa891757590b0909bb44a4e8de89b0846">sfui::ComplexPage::drawForWindow</a></div><div class="ttdeci">void drawForWindow(const DrawObject &amp;drawObject)</div><div class="ttdoc">以窗口为依据绘制对象</div><div class="ttdef"><b>定义</b> <a href="_complex_page_8hpp_source.html#l00058">ComplexPage.hpp:58</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a08a68da4f1209edaf1cb43004dd5b6d0"><div class="ttname"><a href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">sfui::Page::eventMap</a></div><div class="ttdeci">void eventMap(Key key, const Action &amp;action)</div><div class="ttdoc">绑定按键与行为（事件输入）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00046">Page.cpp:46</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_page_html_a1d645637dcd8fea7241f485ef4fe1b93"><div class="ttname"><a href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">sfui::Page::Page</a></div><div class="ttdeci">Page(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="_page_8hpp_source.html#l00029">Page.hpp:29</a></div></div>
+<div class="ttc" id="anamespacegame_html"><div class="ttname"><a href="namespacegame.html">game</a></div><div class="ttdef"><b>定义</b> <a href="#l00009">gamepage.hpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_37c6514aeece95293041e34c0f2e0784.html">game</a></li><li class="navelem"><a href="dir_799e54a6419ed2c37fa77fc1f6ae00fe.html">include</a></li><li class="navelem"><a href="dir_f6a4118898fb7af8afea165a220bb2d6.html">pages</a></li><li class="navelem"><a href="gamepage_8hpp.html">gamepage.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

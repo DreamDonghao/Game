@@ -1,0 +1,79 @@
+\doxysection{Window.\+hpp}
+\label{_window_8hpp_source}\index{sfml\_ui/include/core/window/Window.hpp@{sfml\_ui/include/core/window/Window.hpp}}
+\mbox{\hyperlink{_window_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Window/Event.hpp>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <Page.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }sfui\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ PageType>}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{using\ }PagePtr\ =\ std::unique\_ptr<PageType>;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ PageType,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{inline}\ PagePtr<PageType>\ makePage(Args\ \&\&...\ args)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<PageType>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }PageMap\ =\ std::unordered\_map<Title,\ PagePtr<Page>\ >;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{using\ }WindowSize\ =\ sf::Vector2u;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{enum\ class}\ WindowState\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ Windowed,\ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ Fullscreen\ }
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{class\ }Window\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ Window(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&height,\ \textcolor{keyword}{const}\ WindowState\ \&windowState);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \string~Window()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ init(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&framerateLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \&verticalSyncEnabled);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addPage(\textcolor{keyword}{const}\ Title\ \&pageTitle,\ PagePtr<Page>\ page);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ startShow(\textcolor{keyword}{const}\ Title\ \&firstPageTitle);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ requestPageSwitch(\textcolor{keyword}{const}\ Title\ \&pageTitle);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ sf::RenderWindow\ \&getSfRenderWindow();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ WindowSize\ getWindowSize()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ WindowSize\ \&getScreenSize()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::Event\ \&getEvent()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_event;\ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ sf::RenderWindow\ m\_sf\_renderWindow;\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ WindowSize\ m\_windowSize;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ WindowSize\ m\_screenSize;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ PageMap\ m\_pages;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ Title\ m\_nowPageTitle;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ sf::Event\ m\_event;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ WindowState\ m\_windowState;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_framerateLimit\ =\ 60;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_verticalSyncEnabled\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ updateView();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ procesMessage();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ handleRealTimeInput();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ handleEventInput();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ drawFrame();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toggleFullscreen();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toFullscreen();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toWindowed();}
+\DoxyCodeLine{00160\ \ \ \ \ \};}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}

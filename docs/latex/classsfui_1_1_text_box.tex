@@ -1,0 +1,497 @@
+\doxysection{sfui\+::Text\+Box类 参考}
+\label{classsfui_1_1_text_box}\index{sfui::TextBox@{sfui::TextBox}}
+
+
+文本框控件，支持自定义字体、颜色、内容、位置等  
+
+
+
+
+{\ttfamily \#include $<$textbox.\+hpp$>$}
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_text_box_a8df1f30d194a2db1d3d5fb2499c49391}{Text\+Box}} (const float x, const float y, unsigned int test\+Size, const sf\+::\+Color test\+Color, const std\+::filesystem\+::path \&font\+Path, std\+::string text\+String)
+\begin{DoxyCompactList}\small\item\em 构造函数，初始化文本框的内容、字体、颜色、大小和位置 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_text_box_af84799875408bc275cc1fb37c97d1b24}{init}} (const std\+::filesystem\+::path \&font\+Path)
+\begin{DoxyCompactList}\small\item\em 初始化字体和文本属性（可用于重新加载字体） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_text_box_a5b76006daa0b1db49818bb9bff55f804}{set\+Font}} (const std\+::filesystem\+::path \&font\+Path)
+\begin{DoxyCompactList}\small\item\em 设置字体 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_text_box_afa52fa493fddfa2ee3fd24d36717c1f8}{set\+Test\+Size}} (unsigned int test\+Size)
+\begin{DoxyCompactList}\small\item\em 设置字体大小 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_text_box_a09fa232e68e6df0ddb4466dff36f8149}{set\+Test\+String}} (std\+::string test\+String)
+\begin{DoxyCompactList}\small\item\em 设置文本内容 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_text_box_add8d156cf8b44c47936efd269bf6acfa}{set\+Test\+Color}} (sf\+::\+Color test\+Color)
+\begin{DoxyCompactList}\small\item\em 设置文本颜色 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsfui_1_1_text_box_a874108fa121f037777400028da9c2d86}{set\+Position}} (const float x, const float y)
+\begin{DoxyCompactList}\small\item\em 设置文本框位置 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classsfui_1_1_text_box_a0b3073d86e94b8226f4c8fff7dec891f}{get\+Text}} () const
+\item 
+const sf\+::\+Text \& \mbox{\hyperlink{classsfui_1_1_text_box_abd97748c59cdb1169d02bb18f8543747}{get\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em 获取\+SFML文本对象（用于绘制） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Text \mbox{\hyperlink{classsfui_1_1_text_box_a7f795102ab9160dd39de493781e4d0be}{m\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em SFML文本对象 \end{DoxyCompactList}\item 
+sf\+::\+Font \mbox{\hyperlink{classsfui_1_1_text_box_aaa27b99185727a959f5dc69666fea1af}{m\+\_\+font}}
+\begin{DoxyCompactList}\small\item\em 字体对象 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_text_box_a5688d5031c90b2d330b9f67522894b35}{m\+\_\+x}} = 0
+\begin{DoxyCompactList}\small\item\em 文本框x坐标 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_text_box_ad8a4bd46795560b124b01d382f52dd85}{m\+\_\+y}} = 0
+\begin{DoxyCompactList}\small\item\em 文本框y坐标 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classsfui_1_1_text_box_aafc17ee4e1e539603dcc2f264c29559e}{m\+\_\+text\+String}}
+\begin{DoxyCompactList}\small\item\em 文本内容 \end{DoxyCompactList}\item 
+sf\+::\+Color \mbox{\hyperlink{classsfui_1_1_text_box_abe3282ce9375779efd69f27ebc426d20}{m\+\_\+text\+Color}}
+\begin{DoxyCompactList}\small\item\em 文本颜色 \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classsfui_1_1_text_box_aa5c6090737e7050aecaeea0958085223}{m\+\_\+text\+Size}} = 0
+\begin{DoxyCompactList}\small\item\em 字体大小 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+文本框控件，支持自定义字体、颜色、内容、位置等 
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00014}{14}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::TextBox@{sfui::TextBox}!TextBox@{TextBox}}
+\index{TextBox@{TextBox}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{TextBox()}{TextBox()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_a8df1f30d194a2db1d3d5fb2499c49391} 
+sfui\+::\+Text\+Box\+::\+Text\+Box (\begin{DoxyParamCaption}\item[{const float}]{x}{, }\item[{const float}]{y}{, }\item[{unsigned int}]{test\+Size}{, }\item[{const sf\+::\+Color}]{test\+Color}{, }\item[{const std\+::filesystem\+::path \&}]{font\+Path}{, }\item[{std\+::string}]{text\+String}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数，初始化文本框的内容、字体、颜色、大小和位置 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & 文本框左上角x坐标 \\
+\hline
+{\em y} & 文本框左上角y坐标 \\
+\hline
+{\em test\+Size} & 字体大小 \\
+\hline
+{\em test\+Color} & 字体颜色 \\
+\hline
+{\em font\+Path} & 字体文件路径 \\
+\hline
+{\em text\+String} & 文本内容 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00025}{25}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ :\ m\_x(x),\ m\_y(y),\ m\_textString(std::move(textString)),}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_textColor(testColor),\ m\_textSize(std::move(testSize))\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ m\_font.loadFromFile(fontPath.string());}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setFont(m\_font);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setString(m\_textString);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setCharacterSize(m\_textSize);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setFillColor(m\_textColor);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setPosition(m\_x,\ m\_y);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00110}{m\+\_\+font}}, \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}}, \mbox{\hyperlink{textbox_8hpp_source_l00114}{m\+\_\+text\+Color}}, \mbox{\hyperlink{textbox_8hpp_source_l00115}{m\+\_\+text\+Size}}, \mbox{\hyperlink{textbox_8hpp_source_l00113}{m\+\_\+text\+String}}, \mbox{\hyperlink{textbox_8hpp_source_l00111}{m\+\_\+x}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00112}{m\+\_\+y}}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::TextBox@{sfui::TextBox}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_abd97748c59cdb1169d02bb18f8543747} 
+const sf\+::\+Text \& sfui\+::\+Text\+Box\+::get\+Sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取\+SFML文本对象（用于绘制） 
+
+\begin{DoxyReturn}{返回}
+SFML的\+Text对象引用 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00104}{104}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_text;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_control_page_8hpp_source_l00060}{sfui\+::\+Control\+Page\+::draw()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classsfui_1_1_text_box_abd97748c59cdb1169d02bb18f8543747_icgraph}
+\end{center}
+\end{figure}
+\index{sfui::TextBox@{sfui::TextBox}!getText@{getText}}
+\index{getText@{getText}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_a0b3073d86e94b8226f4c8fff7dec891f} 
+std\+::string sfui\+::\+Text\+Box\+::get\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00098}{98}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \{\ \textcolor{keywordflow}{return}\ m\_text.getString();\ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!init@{init}}
+\index{init@{init}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_af84799875408bc275cc1fb37c97d1b24} 
+void sfui\+::\+Text\+Box\+::init (\begin{DoxyParamCaption}\item[{const std\+::filesystem\+::path \&}]{font\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+初始化字体和文本属性（可用于重新加载字体） 
+
+
+\begin{DoxyParams}{参数}
+{\em font\+Path} & 字体文件路径 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00042}{42}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ m\_font.loadFromFile(fontPath.string());}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setFont(m\_font);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setString(m\_textString);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setCharacterSize(m\_textSize);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setFillColor(m\_textColor);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setPosition(m\_x,\ m\_y);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00110}{m\+\_\+font}}, \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}}, \mbox{\hyperlink{textbox_8hpp_source_l00114}{m\+\_\+text\+Color}}, \mbox{\hyperlink{textbox_8hpp_source_l00115}{m\+\_\+text\+Size}}, \mbox{\hyperlink{textbox_8hpp_source_l00113}{m\+\_\+text\+String}}, \mbox{\hyperlink{textbox_8hpp_source_l00111}{m\+\_\+x}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00112}{m\+\_\+y}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!setFont@{setFont}}
+\index{setFont@{setFont}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_a5b76006daa0b1db49818bb9bff55f804} 
+void sfui\+::\+Text\+Box\+::set\+Font (\begin{DoxyParamCaption}\item[{const std\+::filesystem\+::path \&}]{font\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置字体 
+
+
+\begin{DoxyParams}{参数}
+{\em font\+Path} & 字体文件路径 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00055}{55}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ m\_font.loadFromFile(fontPath.string());}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setFont(m\_font);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00110}{m\+\_\+font}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_a874108fa121f037777400028da9c2d86} 
+void sfui\+::\+Text\+Box\+::set\+Position (\begin{DoxyParamCaption}\item[{const float}]{x}{, }\item[{const float}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置文本框位置 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & 新的x坐标 \\
+\hline
+{\em y} & 新的y坐标 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00092}{92}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ m\_x\ =\ x;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ m\_y\ =\ y;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setPosition(m\_y,\ m\_y);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}}, \mbox{\hyperlink{textbox_8hpp_source_l00111}{m\+\_\+x}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00112}{m\+\_\+y}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!setTestColor@{setTestColor}}
+\index{setTestColor@{setTestColor}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{setTestColor()}{setTestColor()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_add8d156cf8b44c47936efd269bf6acfa} 
+void sfui\+::\+Text\+Box\+::set\+Test\+Color (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{test\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置文本颜色 
+
+
+\begin{DoxyParams}{参数}
+{\em test\+Color} & 新的颜色 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00082}{82}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ m\_textColor\ =\ std::move(testColor);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setFillColor(m\_textColor);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00114}{m\+\_\+text\+Color}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!setTestSize@{setTestSize}}
+\index{setTestSize@{setTestSize}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{setTestSize()}{setTestSize()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_afa52fa493fddfa2ee3fd24d36717c1f8} 
+void sfui\+::\+Text\+Box\+::set\+Test\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{test\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置字体大小 
+
+
+\begin{DoxyParams}{参数}
+{\em test\+Size} & 字体大小 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00064}{64}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ m\_textSize\ =\ std::move(testSize);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setCharacterSize(m\_textSize);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00115}{m\+\_\+text\+Size}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!setTestString@{setTestString}}
+\index{setTestString@{setTestString}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{setTestString()}{setTestString()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_a09fa232e68e6df0ddb4466dff36f8149} 
+void sfui\+::\+Text\+Box\+::set\+Test\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{test\+String}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置文本内容 
+
+
+\begin{DoxyParams}{参数}
+{\em test\+String} & 新的文本内容 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00073}{73}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ m\_textString\ =\ std::move(testString);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ m\_text.setString(m\_textString);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{textbox_8hpp_source_l00109}{m\+\_\+text}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00113}{m\+\_\+text\+String}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::TextBox@{sfui::TextBox}!m\_font@{m\_font}}
+\index{m\_font@{m\_font}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{m\_font}{m\_font}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_aaa27b99185727a959f5dc69666fea1af} 
+sf\+::\+Font sfui\+::\+Text\+Box\+::m\+\_\+font\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+字体对象 
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00110}{110}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{textbox_8hpp_source_l00042}{init()}}, \mbox{\hyperlink{textbox_8hpp_source_l00055}{set\+Font()}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00025}{Text\+Box()}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!m\_text@{m\_text}}
+\index{m\_text@{m\_text}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{m\_text}{m\_text}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_a7f795102ab9160dd39de493781e4d0be} 
+sf\+::\+Text sfui\+::\+Text\+Box\+::m\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+SFML文本对象 
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00109}{109}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{textbox_8hpp_source_l00104}{get\+Sprite()}}, \mbox{\hyperlink{textbox_8hpp_source_l00098}{get\+Text()}}, \mbox{\hyperlink{textbox_8hpp_source_l00042}{init()}}, \mbox{\hyperlink{textbox_8hpp_source_l00055}{set\+Font()}}, \mbox{\hyperlink{textbox_8hpp_source_l00092}{set\+Position()}}, \mbox{\hyperlink{textbox_8hpp_source_l00082}{set\+Test\+Color()}}, \mbox{\hyperlink{textbox_8hpp_source_l00064}{set\+Test\+Size()}}, \mbox{\hyperlink{textbox_8hpp_source_l00073}{set\+Test\+String()}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00025}{Text\+Box()}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!m\_textColor@{m\_textColor}}
+\index{m\_textColor@{m\_textColor}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{m\_textColor}{m\_textColor}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_abe3282ce9375779efd69f27ebc426d20} 
+sf\+::\+Color sfui\+::\+Text\+Box\+::m\+\_\+text\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+文本颜色 
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00114}{114}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{textbox_8hpp_source_l00042}{init()}}, \mbox{\hyperlink{textbox_8hpp_source_l00082}{set\+Test\+Color()}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00025}{Text\+Box()}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!m\_textSize@{m\_textSize}}
+\index{m\_textSize@{m\_textSize}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{m\_textSize}{m\_textSize}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_aa5c6090737e7050aecaeea0958085223} 
+unsigned int sfui\+::\+Text\+Box\+::m\+\_\+text\+Size = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+字体大小 
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00115}{115}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{textbox_8hpp_source_l00042}{init()}}, \mbox{\hyperlink{textbox_8hpp_source_l00064}{set\+Test\+Size()}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00025}{Text\+Box()}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!m\_textString@{m\_textString}}
+\index{m\_textString@{m\_textString}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{m\_textString}{m\_textString}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_aafc17ee4e1e539603dcc2f264c29559e} 
+std\+::string sfui\+::\+Text\+Box\+::m\+\_\+text\+String\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+文本内容 
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00113}{113}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{textbox_8hpp_source_l00042}{init()}}, \mbox{\hyperlink{textbox_8hpp_source_l00073}{set\+Test\+String()}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00025}{Text\+Box()}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!m\_x@{m\_x}}
+\index{m\_x@{m\_x}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{m\_x}{m\_x}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_a5688d5031c90b2d330b9f67522894b35} 
+float sfui\+::\+Text\+Box\+::m\+\_\+x = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+文本框x坐标 
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00111}{111}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{textbox_8hpp_source_l00042}{init()}}, \mbox{\hyperlink{textbox_8hpp_source_l00092}{set\+Position()}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00025}{Text\+Box()}}.
+
+\index{sfui::TextBox@{sfui::TextBox}!m\_y@{m\_y}}
+\index{m\_y@{m\_y}!sfui::TextBox@{sfui::TextBox}}
+\doxysubsubsection{\texorpdfstring{m\_y}{m\_y}}
+{\footnotesize\ttfamily \label{classsfui_1_1_text_box_ad8a4bd46795560b124b01d382f52dd85} 
+float sfui\+::\+Text\+Box\+::m\+\_\+y = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+文本框y坐标 
+
+
+
+在文件 \mbox{\hyperlink{textbox_8hpp_source}{textbox.\+hpp}} 第 \mbox{\hyperlink{textbox_8hpp_source_l00112}{112}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{textbox_8hpp_source_l00042}{init()}}, \mbox{\hyperlink{textbox_8hpp_source_l00092}{set\+Position()}} , 以及 \mbox{\hyperlink{textbox_8hpp_source_l00025}{Text\+Box()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sfml\+\_\+ui/include/customizable/components/\mbox{\hyperlink{textbox_8hpp}{textbox.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+<map id="sfui::Window::toWindowed" name="sfui::Window::toWindowed">
+<area shape="rect" id="Node000001" title="切换到窗口模式。" alt="" coords="1034,13,1211,40"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_window.html#ae92de433502a60e90de1494307e91291" title="切换窗口/全屏模式。" alt="" coords="786,13,986,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1018,29,987,29,987,24,1018,24"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_window.html#adfd7ab642e978cb4bac3b6ccb2093712" title="处理SFML事件输入。" alt="" coords="560,5,738,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="770,29,738,29,738,24,770,24"/>
+<area shape="rect" id="Node000004" href="$classsfui_1_1_window.html#a2ab4ee75de63cdb7df571d69bc2902a1" title="处理窗口和页面事件，收到关闭事件时关闭窗口。" alt="" coords="315,13,512,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="544,29,513,29,513,24,544,24"/>
+<area shape="rect" id="Node000005" href="$classsfui_1_1_window.html#a2d60139900440e63f10e535d5287af9b" title="显示首页并进入主循环。" alt="" coords="103,13,267,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="299,29,268,29,268,24,299,24"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#a8216c1645620cdb2f629cde3ac02ffef" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,29,55,29,55,24,87,24"/>
+</map>

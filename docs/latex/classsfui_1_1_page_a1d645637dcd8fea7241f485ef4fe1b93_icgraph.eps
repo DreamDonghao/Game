@@ -1,0 +1,524 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 13.0.0 (20250608.1624)
+%%Title: sfui::Page::Page
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 602 175
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 566 139 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Node1
+gsave
+0 0 0.6 nodecolor
+newpath 557.5 75.196 moveto
+468.75 75.196 lineto
+468.75 55.196 lineto
+557.5 55.196 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 557.5 75.196 moveto
+468.75 75.196 lineto
+468.75 55.196 lineto
+557.5 55.196 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+476.75 61.696 moveto 72.75 (sfui::Page::Page) alignedtext
+grestore
+% Node2
+gsave
+[ /Rect [ 330.875 24.196 428.625 56.196 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classsfui_1_1_control_page.html#afc330f12e794ff22b74203c5743bcc9f) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 428.625 56.196 moveto
+330.875 56.196 lineto
+330.875 24.196 lineto
+428.625 24.196 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 428.625 56.196 moveto
+330.875 56.196 lineto
+330.875 24.196 lineto
+428.625 24.196 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+338.875 42.696 moveto 81.75 (sfui::ControlPage::) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+352.75 30.696 moveto 54 (ControlPage) alignedtext
+grestore
+% Node1->Node2
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 457.119 54.728 moveto
+447.723 52.94 438.026 51.095 428.827 49.344 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 456.414 58.157 moveto
+466.892 56.588 lineto
+457.723 51.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 456.414 58.157 moveto
+466.892 56.588 lineto
+457.723 51.28 lineto
+closepath stroke
+grestore
+% Node4
+gsave
+[ /Rect [ 0 83.196 149.5 103.196 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classgame_1_1_game_page.html#a91af173bceb6cb36da8332f25e8b7183) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 149.5 103.196 moveto
+0 103.196 lineto
+0 83.196 lineto
+149.5 83.196 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 149.5 103.196 moveto
+0 103.196 lineto
+0 83.196 lineto
+149.5 83.196 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+8 89.696 moveto 133.5 (game::GamePage::GamePage) alignedtext
+grestore
+% Node1->Node4
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 491.585 82.726 moveto
+476.426 94.454 454.699 108.859 432.75 115.196 curveto
+320.142 147.706 179.515 120.317 113.402 103.683 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 493.763 85.465 moveto
+499.355 76.466 lineto
+489.372 80.014 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 493.763 85.465 moveto
+499.355 76.466 lineto
+489.372 80.014 lineto
+closepath stroke
+grestore
+% Node5
+gsave
+[ /Rect [ 18 21.196 131.5 53.196 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classgame_1_1_main_menu_page.html#a597d6a61f1bc9cf80e3a99e466fe678b) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 131.5 53.196 moveto
+18 53.196 lineto
+18 21.196 lineto
+131.5 21.196 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 131.5 53.196 moveto
+18 53.196 lineto
+18 21.196 lineto
+131.5 21.196 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+26 39.696 moveto 97.5 (game::MainMenuPage) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+38 27.696 moveto 73.5 (::MainMenuPage) alignedtext
+grestore
+% Node1->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 491.585 47.665 moveto
+476.426 35.937 454.699 21.532 432.75 15.196 curveto
+329.687 -14.56 203.155 5.861 131.759 22.289 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 489.372 50.377 moveto
+499.355 53.925 lineto
+493.763 44.926 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 489.372 50.377 moveto
+499.355 53.925 lineto
+493.763 44.926 lineto
+closepath stroke
+grestore
+% Node6
+gsave
+[ /Rect [ 326.75 74.196 432.75 106.196 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classsfui_1_1_interactive_page.html#ac553cc6c1df69243d54a316f67aa5f45) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 432.75 106.196 moveto
+326.75 106.196 lineto
+326.75 74.196 lineto
+432.75 74.196 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 432.75 106.196 moveto
+326.75 106.196 lineto
+326.75 74.196 lineto
+432.75 74.196 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+334.75 92.696 moveto 90 (sfui::InteractivePage) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+342.625 80.696 moveto 74.25 (::InteractivePage) alignedtext
+grestore
+% Node1->Node6
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 457.225 75.643 moveto
+449.194 77.171 440.943 78.741 432.968 80.259 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 457.723 79.111 moveto
+466.892 73.803 lineto
+456.414 72.234 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 457.723 79.111 moveto
+466.892 73.803 lineto
+456.414 72.234 lineto
+closepath stroke
+grestore
+% Node3
+gsave
+[ /Rect [ 185.5 49.196 290.75 81.196 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classsfui_1_1_complex_page.html#a3c97d3fcf521310edbd6b77ec693e4e9) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 290.75 81.196 moveto
+185.5 81.196 lineto
+185.5 49.196 lineto
+290.75 49.196 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 290.75 81.196 moveto
+185.5 81.196 lineto
+185.5 49.196 lineto
+290.75 49.196 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+193.5 67.696 moveto 89.25 (sfui::ComplexPage::) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+207.375 55.696 moveto 61.5 (ComplexPage) alignedtext
+grestore
+% Node2->Node3
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 319.394 50.823 moveto
+309.981 52.509 300.308 54.241 291.082 55.893 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 319.983 54.274 moveto
+329.209 49.066 lineto
+318.749 47.383 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 319.983 54.274 moveto
+329.209 49.066 lineto
+318.749 47.383 lineto
+closepath stroke
+grestore
+% Node3->Node4
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 173.926 76.161 moveto
+161.456 78.325 148.401 80.59 136.03 82.736 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 174.431 79.626 moveto
+183.685 74.468 lineto
+173.234 72.729 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 174.431 79.626 moveto
+183.685 74.468 lineto
+173.234 72.729 lineto
+closepath stroke
+grestore
+% Node3->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 174.161 54.271 moveto
+160.184 51.846 145.46 49.291 131.782 46.918 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 173.234 57.662 moveto
+183.685 55.923 lineto
+174.431 50.765 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 173.234 57.662 moveto
+183.685 55.923 lineto
+174.431 50.765 lineto
+closepath stroke
+grestore
+% Node6->Node3
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 315.042 78.789 moveto
+306.952 77.34 298.751 75.872 290.879 74.462 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 314.411 82.231 moveto
+324.872 80.549 lineto
+315.645 75.341 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 314.411 82.231 moveto
+324.872 80.549 lineto
+315.645 75.341 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 602 175
+end
+restore
+%%EOF

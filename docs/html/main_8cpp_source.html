@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: game/src/main.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('main_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="_main_menu_page_8hpp.html">MainMenuPage.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="_window_8hpp.html">Window.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="gamepage_8hpp.html">gamepage.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//#include &lt;box2d.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="main_8cpp.html#a229d697f97d697703cd11ce11d76f53b">    9</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a229d697f97d697703cd11ce11d76f53b">width</a> = 16;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="main_8cpp.html#a53e2906a6247d5b6e12cca1737a5fdc2">   10</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a53e2906a6247d5b6e12cca1737a5fdc2">heigth</a> = 10;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">   11</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a> = 80;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="main_8cpp.html#a8216c1645620cdb2f629cde3ac02ffef">   13</a></span><span class="keyword">auto</span> <a class="code hl_function" href="main_8cpp.html#a8216c1645620cdb2f629cde3ac02ffef">main</a>() -&gt; <span class="keywordtype">int</span> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">//FreeConsole();  // 现代C++依然支持隐藏控制台窗口</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="classsfui_1_1_window.html">sfui::Window</a> window(<a class="code hl_variable" href="main_8cpp.html#a229d697f97d697703cd11ce11d76f53b">width</a>*<a class="code hl_variable" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a>, <a class="code hl_variable" href="main_8cpp.html#a53e2906a6247d5b6e12cca1737a5fdc2">heigth</a>*<a class="code hl_variable" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a>, <a class="code hl_enumvalue" href="namespacesfui.html#a98343da21a28c0d445591ea12c4bc6faab13311ab51c4c34757f67f26580018dd">sfui::WindowState::Windowed</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    window.<a class="code hl_function" href="classsfui_1_1_window.html#a36f4ef2a40d3b9f545f97dbfb29b2ae7">init</a>(165, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    window.<a class="code hl_function" href="classsfui_1_1_window.html#a31a5eca8633b7d660898e1935402cf8d">addPage</a>(<a class="code hl_function" href="namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b">sfui::TitleName</a>(<span class="stringliteral">&quot;mainPage&quot;</span>), <a class="code hl_function" href="namespacesfui.html#a90be12c04a2fc9de082dba031c599f2c">sfui::makePage&lt;game::MainMenuPage&gt;</a>(&amp;window.<a class="code hl_function" href="classsfui_1_1_window.html#ad157b04a2de51a321bf376914f106427">getSfRenderWindow</a>()));</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    window.<a class="code hl_function" href="classsfui_1_1_window.html#a31a5eca8633b7d660898e1935402cf8d">addPage</a>(<a class="code hl_function" href="namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b">sfui::TitleName</a>(<span class="stringliteral">&quot;gamePage&quot;</span>), <a class="code hl_function" href="namespacesfui.html#a90be12c04a2fc9de082dba031c599f2c">sfui::makePage&lt;game::GamePage&gt;</a>(&amp;window.<a class="code hl_function" href="classsfui_1_1_window.html#ad157b04a2de51a321bf376914f106427">getSfRenderWindow</a>()));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">//window.addPage(sfui::TitleName(&quot;pauseGamePage&quot;), sfui::makePage&lt;game::PauseGamePage&gt;());</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    window.<a class="code hl_function" href="classsfui_1_1_window.html#a2d60139900440e63f10e535d5287af9b">startShow</a>(<a class="code hl_function" href="namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b">sfui::TitleName</a>(<span class="stringliteral">&quot;mainPage&quot;</span>));</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="ttc" id="a_main_menu_page_8hpp_html"><div class="ttname"><a href="_main_menu_page_8hpp.html">MainMenuPage.hpp</a></div></div>
+<div class="ttc" id="a_window_8hpp_html"><div class="ttname"><a href="_window_8hpp.html">Window.hpp</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_window_html"><div class="ttname"><a href="classsfui_1_1_window.html">sfui::Window</a></div><div class="ttdoc">窗口类，负责窗口创建、页面管理、事件循环、全屏切换等。</div><div class="ttdef"><b>定义</b> <a href="_window_8hpp_source.html#l00048">Window.hpp:48</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_window_html_a2d60139900440e63f10e535d5287af9b"><div class="ttname"><a href="classsfui_1_1_window.html#a2d60139900440e63f10e535d5287af9b">sfui::Window::startShow</a></div><div class="ttdeci">void startShow(const Title &amp;firstPageTitle)</div><div class="ttdoc">显示首页并进入主循环。</div><div class="ttdef"><b>定义</b> <a href="_window_8cpp_source.html#l00058">Window.cpp:58</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_window_html_a31a5eca8633b7d660898e1935402cf8d"><div class="ttname"><a href="classsfui_1_1_window.html#a31a5eca8633b7d660898e1935402cf8d">sfui::Window::addPage</a></div><div class="ttdeci">void addPage(const Title &amp;pageTitle, PagePtr&lt; Page &gt; page)</div><div class="ttdoc">向窗口添加页面。</div><div class="ttdef"><b>定义</b> <a href="_window_8cpp_source.html#l00048">Window.cpp:48</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_window_html_a36f4ef2a40d3b9f545f97dbfb29b2ae7"><div class="ttname"><a href="classsfui_1_1_window.html#a36f4ef2a40d3b9f545f97dbfb29b2ae7">sfui::Window::init</a></div><div class="ttdeci">bool init(const int &amp;framerateLimit, const bool &amp;verticalSyncEnabled)</div><div class="ttdoc">初始化窗口参数。</div><div class="ttdef"><b>定义</b> <a href="_window_8cpp_source.html#l00035">Window.cpp:35</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_window_html_ad157b04a2de51a321bf376914f106427"><div class="ttname"><a href="classsfui_1_1_window.html#ad157b04a2de51a321bf376914f106427">sfui::Window::getSfRenderWindow</a></div><div class="ttdeci">sf::RenderWindow &amp; getSfRenderWindow()</div><div class="ttdoc">获取底层SFML窗口对象。</div><div class="ttdef"><b>定义</b> <a href="_window_8cpp_source.html#l00149">Window.cpp:149</a></div></div>
+<div class="ttc" id="agamepage_8hpp_html"><div class="ttname"><a href="gamepage_8hpp.html">gamepage.hpp</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a229d697f97d697703cd11ce11d76f53b"><div class="ttname"><a href="main_8cpp.html#a229d697f97d697703cd11ce11d76f53b">width</a></div><div class="ttdeci">constexpr int width</div><div class="ttdef"><b>定义</b> <a href="#l00009">main.cpp:9</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a53e2906a6247d5b6e12cca1737a5fdc2"><div class="ttname"><a href="main_8cpp.html#a53e2906a6247d5b6e12cca1737a5fdc2">heigth</a></div><div class="ttdeci">constexpr int heigth</div><div class="ttdef"><b>定义</b> <a href="#l00010">main.cpp:10</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a7182db3232d4c830032a7c6081f7e8a2"><div class="ttname"><a href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a></div><div class="ttdeci">constexpr int ratio</div><div class="ttdef"><b>定义</b> <a href="#l00011">main.cpp:11</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a8216c1645620cdb2f629cde3ac02ffef"><div class="ttname"><a href="main_8cpp.html#a8216c1645620cdb2f629cde3ac02ffef">main</a></div><div class="ttdeci">auto main() -&gt; int</div><div class="ttdef"><b>定义</b> <a href="#l00013">main.cpp:13</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a90be12c04a2fc9de082dba031c599f2c"><div class="ttname"><a href="namespacesfui.html#a90be12c04a2fc9de082dba031c599f2c">sfui::makePage</a></div><div class="ttdeci">PagePtr&lt; PageType &gt; makePage(Args &amp;&amp;... args)</div><div class="ttdoc">创建一个新的页面实例。</div><div class="ttdef"><b>定义</b> <a href="_window_8hpp_source.html#l00022">Window.hpp:22</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a92f7a2203cd1f549830bf28cd2447d4b"><div class="ttname"><a href="namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b">sfui::TitleName</a></div><div class="ttdeci">Title TitleName(const std::string &amp;str)</div><div class="ttdoc">将std::string转换为Title（std::wstring）</div><div class="ttdef"><b>定义</b> <a href="_page_8cpp_source.html#l00011">Page.cpp:11</a></div></div>
+<div class="ttc" id="anamespacesfui_html_a98343da21a28c0d445591ea12c4bc6faab13311ab51c4c34757f67f26580018dd"><div class="ttname"><a href="namespacesfui.html#a98343da21a28c0d445591ea12c4bc6faab13311ab51c4c34757f67f26580018dd">sfui::WindowState::Windowed</a></div><div class="ttdeci">@ Windowed</div><div class="ttdoc">窗口模式</div><div class="ttdef"><b>定义</b> <a href="_window_8hpp_source.html#l00040">Window.hpp:40</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_37c6514aeece95293041e34c0f2e0784.html">game</a></li><li class="navelem"><a href="dir_fd1fc52505cfa4c86ecd59c02433df11.html">src</a></li><li class="navelem"><a href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

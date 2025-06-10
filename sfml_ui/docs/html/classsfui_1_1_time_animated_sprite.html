@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: sfui::TimeAnimatedSprite类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classsfui_1_1_time_animated_sprite.html','','classsfui_1_1_time_animated_sprite-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sfui::TimeAnimatedSprite类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>以时间为依据循环播放的动图类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4197c9705a65eadd3b195c807e8d5f4c" id="r_a4197c9705a65eadd3b195c807e8d5f4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4197c9705a65eadd3b195c807e8d5f4c">TimeAnimatedSprite</a> ()</td></tr>
+<tr class="memdesc:a4197c9705a65eadd3b195c807e8d5f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <br /></td></tr>
+<tr class="memitem:aadbeefa37506f5b0aca57a6a4aefad7e" id="r_aadbeefa37506f5b0aca57a6a4aefad7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadbeefa37506f5b0aca57a6a4aefad7e">init</a> (const float &amp;continuationtTime, const int &amp;width, const int &amp;height, const float &amp;x, const float &amp;y)</td></tr>
+<tr class="memdesc:aadbeefa37506f5b0aca57a6a4aefad7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化循环动图的持续时间、大小、坐标  <br /></td></tr>
+<tr class="memitem:a09d6173f1355939808211b0ccf412ec8" id="r_a09d6173f1355939808211b0ccf412ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09d6173f1355939808211b0ccf412ec8">addTextureItems</a> (const <a class="el" href="namespacesfui.html#a3914e89931c8852cbe1322d380701e62">FilePath</a> &amp;filepath)</td></tr>
+<tr class="memdesc:a09d6173f1355939808211b0ccf412ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加循环播放的图片  <br /></td></tr>
+<tr class="memitem:a0de9c6276522261ae9dd836c391c7703" id="r_a0de9c6276522261ae9dd836c391c7703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0de9c6276522261ae9dd836c391c7703">set</a> (const float &amp;continuationtTime, const int &amp;width, const int &amp;height, const float &amp;x, const float &amp;y)</td></tr>
+<tr class="memdesc:a0de9c6276522261ae9dd836c391c7703"><td class="mdescLeft">&#160;</td><td class="mdescRight">重新设置大小和坐标  <br /></td></tr>
+<tr class="memitem:a081b3cf5e5689f66b6022ec0a68f1e8f" id="r_a081b3cf5e5689f66b6022ec0a68f1e8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a081b3cf5e5689f66b6022ec0a68f1e8f">setXY</a> (const float &amp;x, const float &amp;y)</td></tr>
+<tr class="memdesc:a081b3cf5e5689f66b6022ec0a68f1e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置动图的坐标  <br /></td></tr>
+<tr class="memitem:af0ecab4a2e8c0e929cc455d72a5af38e" id="r_af0ecab4a2e8c0e929cc455d72a5af38e"><td class="memItemLeft" align="right" valign="top">const sf::Sprite &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0ecab4a2e8c0e929cc455d72a5af38e">getSprite</a> ()</td></tr>
+<tr class="memdesc:af0ecab4a2e8c0e929cc455d72a5af38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前帧的Sprite（每次调用会自动切换帧）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5a70f6e4daf038ff3bc9b65719a98fed" id="r_a5a70f6e4daf038ff3bc9b65719a98fed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsfui_1_1_texture_item.html">TextureItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a70f6e4daf038ff3bc9b65719a98fed">m_textureItems</a></td></tr>
+<tr class="memdesc:a5a70f6e4daf038ff3bc9b65719a98fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">动画帧图片集合  <br /></td></tr>
+<tr class="memitem:aeb7e1c4967378d4d1ed5d30d222e4d9c" id="r_aeb7e1c4967378d4d1ed5d30d222e4d9c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">m_x</a> = 0.0</td></tr>
+<tr class="memdesc:aeb7e1c4967378d4d1ed5d30d222e4d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">X坐标  <br /></td></tr>
+<tr class="memitem:a092d1a84e73b1faf93169a7b34412ca1" id="r_a092d1a84e73b1faf93169a7b34412ca1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a092d1a84e73b1faf93169a7b34412ca1">m_y</a> = 0.0</td></tr>
+<tr class="memdesc:a092d1a84e73b1faf93169a7b34412ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y坐标  <br /></td></tr>
+<tr class="memitem:a347202642388e6519d9757376b59a490" id="r_a347202642388e6519d9757376b59a490"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a347202642388e6519d9757376b59a490">m_width</a> = 0</td></tr>
+<tr class="memdesc:a347202642388e6519d9757376b59a490"><td class="mdescLeft">&#160;</td><td class="mdescRight">图片宽度  <br /></td></tr>
+<tr class="memitem:a7cf1f63df4aa7d120dcd14bcccca3eef" id="r_a7cf1f63df4aa7d120dcd14bcccca3eef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cf1f63df4aa7d120dcd14bcccca3eef">m_height</a> = 0</td></tr>
+<tr class="memdesc:a7cf1f63df4aa7d120dcd14bcccca3eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">图片高度  <br /></td></tr>
+<tr class="memitem:abea03245e2fa1a0fc6dcd6fe496502d9" id="r_abea03245e2fa1a0fc6dcd6fe496502d9"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abea03245e2fa1a0fc6dcd6fe496502d9">m_nowTextureItemsIndex</a> = 0</td></tr>
+<tr class="memdesc:abea03245e2fa1a0fc6dcd6fe496502d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前图片索引  <br /></td></tr>
+<tr class="memitem:a98728d8aee95cabc35eca1d1a657f8e2" id="r_a98728d8aee95cabc35eca1d1a657f8e2"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98728d8aee95cabc35eca1d1a657f8e2">m_clock</a></td></tr>
+<tr class="memdesc:a98728d8aee95cabc35eca1d1a657f8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">计时器  <br /></td></tr>
+<tr class="memitem:a54b71143a5132517b6d2fc9ebc37b844" id="r_a54b71143a5132517b6d2fc9ebc37b844"><td class="memItemLeft" align="right" valign="top">sf::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b71143a5132517b6d2fc9ebc37b844">m_continuationTime</a></td></tr>
+<tr class="memdesc:a54b71143a5132517b6d2fc9ebc37b844"><td class="mdescLeft">&#160;</td><td class="mdescRight">持续时间  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>以时间为依据循环播放的动图类 </p>
+<p>支持多帧图片的循环播放，基于时间切换。 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00009">9</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a4197c9705a65eadd3b195c807e8d5f4c" name="a4197c9705a65eadd3b195c807e8d5f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4197c9705a65eadd3b195c807e8d5f4c">&#9670;&#160;</a></span>TimeAnimatedSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sfui::TimeAnimatedSprite::TimeAnimatedSprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认构造函数 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8cpp_source.html">TimeAnimatedSprite.cpp</a> 第 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00005">5</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">    5</span>{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a09d6173f1355939808211b0ccf412ec8" name="a09d6173f1355939808211b0ccf412ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d6173f1355939808211b0ccf412ec8">&#9670;&#160;</a></span>addTextureItems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TimeAnimatedSprite::addTextureItems </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacesfui.html#a3914e89931c8852cbe1322d380701e62">FilePath</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加循环播放的图片 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>图片文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8cpp_source.html">TimeAnimatedSprite.cpp</a> 第 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00016">16</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                     {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="#a5a70f6e4daf038ff3bc9b65719a98fed">m_textureItems</a>.emplace_back().init(filepath, <a class="code hl_variable" href="#a347202642388e6519d9757376b59a490">m_width</a>, <a class="code hl_variable" href="#a7cf1f63df4aa7d120dcd14bcccca3eef">m_height</a>, <a class="code hl_variable" href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">m_x</a>, <a class="code hl_variable" href="#a092d1a84e73b1faf93169a7b34412ca1">m_y</a>);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_a092d1a84e73b1faf93169a7b34412ca1"><div class="ttname"><a href="#a092d1a84e73b1faf93169a7b34412ca1">sfui::TimeAnimatedSprite::m_y</a></div><div class="ttdeci">float m_y</div><div class="ttdoc">Y坐标</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00061">TimeAnimatedSprite.hpp:61</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_a347202642388e6519d9757376b59a490"><div class="ttname"><a href="#a347202642388e6519d9757376b59a490">sfui::TimeAnimatedSprite::m_width</a></div><div class="ttdeci">int m_width</div><div class="ttdoc">图片宽度</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00062">TimeAnimatedSprite.hpp:62</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_a5a70f6e4daf038ff3bc9b65719a98fed"><div class="ttname"><a href="#a5a70f6e4daf038ff3bc9b65719a98fed">sfui::TimeAnimatedSprite::m_textureItems</a></div><div class="ttdeci">std::vector&lt; TextureItem &gt; m_textureItems</div><div class="ttdoc">动画帧图片集合</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00059">TimeAnimatedSprite.hpp:59</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_a7cf1f63df4aa7d120dcd14bcccca3eef"><div class="ttname"><a href="#a7cf1f63df4aa7d120dcd14bcccca3eef">sfui::TimeAnimatedSprite::m_height</a></div><div class="ttdeci">int m_height</div><div class="ttdoc">图片高度</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00063">TimeAnimatedSprite.hpp:63</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_aeb7e1c4967378d4d1ed5d30d222e4d9c"><div class="ttname"><a href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">sfui::TimeAnimatedSprite::m_x</a></div><div class="ttdeci">float m_x</div><div class="ttdoc">X坐标</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00060">TimeAnimatedSprite.hpp:60</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00063">m_height</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00059">m_textureItems</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00062">m_width</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00060">m_x</a> , 以及 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00061">m_y</a>.</p>
+
+</div>
+</div>
+<a id="af0ecab4a2e8c0e929cc455d72a5af38e" name="af0ecab4a2e8c0e929cc455d72a5af38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ecab4a2e8c0e929cc455d72a5af38e">&#9670;&#160;</a></span>getSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sf::Sprite &amp; sfui::TimeAnimatedSprite::getSprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前帧的Sprite（每次调用会自动切换帧） </p>
+<dl class="section return"><dt>返回</dt><dd>当前帧的Sprite引用 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8cpp_source.html">TimeAnimatedSprite.cpp</a> 第 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00031">31</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                  {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a98728d8aee95cabc35eca1d1a657f8e2">m_clock</a>.getElapsedTime() &gt;= <a class="code hl_variable" href="#a54b71143a5132517b6d2fc9ebc37b844">m_continuationTime</a>) {</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="#a98728d8aee95cabc35eca1d1a657f8e2">m_clock</a>.restart();</div>
+<div class="line"><span class="lineno">   34</span>            ++<a class="code hl_variable" href="#abea03245e2fa1a0fc6dcd6fe496502d9">m_nowTextureItemsIndex</a>;</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abea03245e2fa1a0fc6dcd6fe496502d9">m_nowTextureItemsIndex</a> == <a class="code hl_variable" href="#a5a70f6e4daf038ff3bc9b65719a98fed">m_textureItems</a>.size()) {</div>
+<div class="line"><span class="lineno">   36</span>                <a class="code hl_variable" href="#abea03245e2fa1a0fc6dcd6fe496502d9">m_nowTextureItemsIndex</a> = 0;</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5a70f6e4daf038ff3bc9b65719a98fed">m_textureItems</a>[<a class="code hl_variable" href="#abea03245e2fa1a0fc6dcd6fe496502d9">m_nowTextureItemsIndex</a>].getSprite();</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_a54b71143a5132517b6d2fc9ebc37b844"><div class="ttname"><a href="#a54b71143a5132517b6d2fc9ebc37b844">sfui::TimeAnimatedSprite::m_continuationTime</a></div><div class="ttdeci">sf::Time m_continuationTime</div><div class="ttdoc">持续时间</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00066">TimeAnimatedSprite.hpp:66</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_a98728d8aee95cabc35eca1d1a657f8e2"><div class="ttname"><a href="#a98728d8aee95cabc35eca1d1a657f8e2">sfui::TimeAnimatedSprite::m_clock</a></div><div class="ttdeci">sf::Clock m_clock</div><div class="ttdoc">计时器</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00065">TimeAnimatedSprite.hpp:65</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_time_animated_sprite_html_abea03245e2fa1a0fc6dcd6fe496502d9"><div class="ttname"><a href="#abea03245e2fa1a0fc6dcd6fe496502d9">sfui::TimeAnimatedSprite::m_nowTextureItemsIndex</a></div><div class="ttdeci">std::size_t m_nowTextureItemsIndex</div><div class="ttdoc">当前图片索引</div><div class="ttdef"><b>定义</b> <a href="_time_animated_sprite_8hpp_source.html#l00064">TimeAnimatedSprite.hpp:64</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00065">m_clock</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00066">m_continuationTime</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00064">m_nowTextureItemsIndex</a> , 以及 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00059">m_textureItems</a>.</p>
+
+</div>
+</div>
+<a id="aadbeefa37506f5b0aca57a6a4aefad7e" name="aadbeefa37506f5b0aca57a6a4aefad7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbeefa37506f5b0aca57a6a4aefad7e">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sfui::TimeAnimatedSprite::init </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>continuationtTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化循环动图的持续时间、大小、坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">continuationtTime</td><td>持续时间（秒） </td></tr>
+    <tr><td class="paramname">width</td><td>图片宽度 </td></tr>
+    <tr><td class="paramname">height</td><td>图片高度 </td></tr>
+    <tr><td class="paramname">x</td><td>X坐标 </td></tr>
+    <tr><td class="paramname">y</td><td>Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否初始化成功 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8cpp_source.html">TimeAnimatedSprite.cpp</a> 第 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00007">7</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>                                                                             {</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_variable" href="#a54b71143a5132517b6d2fc9ebc37b844">m_continuationTime</a> = sf::seconds(continuationtTime);</div>
+<div class="line"><span class="lineno">   10</span>        <a class="code hl_variable" href="#a347202642388e6519d9757376b59a490">m_width</a> = width;</div>
+<div class="line"><span class="lineno">   11</span>        <a class="code hl_variable" href="#a7cf1f63df4aa7d120dcd14bcccca3eef">m_height</a> = height;</div>
+<div class="line"><span class="lineno">   12</span>        <a class="code hl_variable" href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">m_x</a> = x;</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_variable" href="#a092d1a84e73b1faf93169a7b34412ca1">m_y</a> = y;</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00066">m_continuationTime</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00063">m_height</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00062">m_width</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00060">m_x</a> , 以及 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00061">m_y</a>.</p>
+
+</div>
+</div>
+<a id="a0de9c6276522261ae9dd836c391c7703" name="a0de9c6276522261ae9dd836c391c7703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de9c6276522261ae9dd836c391c7703">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TimeAnimatedSprite::set </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>continuationtTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重新设置大小和坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">continuationtTime</td><td>持续时间（秒） </td></tr>
+    <tr><td class="paramname">width</td><td>图片宽度 </td></tr>
+    <tr><td class="paramname">height</td><td>图片高度 </td></tr>
+    <tr><td class="paramname">x</td><td>X坐标 </td></tr>
+    <tr><td class="paramname">y</td><td>Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8cpp_source.html">TimeAnimatedSprite.cpp</a> 第 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00019">19</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                             {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="#a54b71143a5132517b6d2fc9ebc37b844">m_continuationTime</a> = sf::seconds(continuationtTime);</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_variable" href="#a347202642388e6519d9757376b59a490">m_width</a> = width;</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="#a7cf1f63df4aa7d120dcd14bcccca3eef">m_height</a> = height;</div>
+<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">m_x</a> = x;</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="#a092d1a84e73b1faf93169a7b34412ca1">m_y</a> = y;;</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;textureItem : <a class="code hl_variable" href="#a5a70f6e4daf038ff3bc9b65719a98fed">m_textureItems</a>) {</div>
+<div class="line"><span class="lineno">   27</span>            textureItem.setPosition(<a class="code hl_variable" href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">m_x</a>, <a class="code hl_variable" href="#a092d1a84e73b1faf93169a7b34412ca1">m_y</a>);</div>
+<div class="line"><span class="lineno">   28</span>            textureItem.setShowSize(<a class="code hl_variable" href="#a347202642388e6519d9757376b59a490">m_width</a>, <a class="code hl_variable" href="#a7cf1f63df4aa7d120dcd14bcccca3eef">m_height</a>);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00066">m_continuationTime</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00063">m_height</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00059">m_textureItems</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00062">m_width</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00060">m_x</a> , 以及 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00061">m_y</a>.</p>
+
+</div>
+</div>
+<a id="a081b3cf5e5689f66b6022ec0a68f1e8f" name="a081b3cf5e5689f66b6022ec0a68f1e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081b3cf5e5689f66b6022ec0a68f1e8f">&#9670;&#160;</a></span>setXY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::TimeAnimatedSprite::setXY </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置动图的坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X坐标 </td></tr>
+    <tr><td class="paramname">y</td><td>Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8cpp_source.html">TimeAnimatedSprite.cpp</a> 第 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00042">42</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                 {</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">m_x</a> = x;</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="#a092d1a84e73b1faf93169a7b34412ca1">m_y</a> = y;</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;textureItem : <a class="code hl_variable" href="#a5a70f6e4daf038ff3bc9b65719a98fed">m_textureItems</a>) {</div>
+<div class="line"><span class="lineno">   46</span>            textureItem.setPosition(<a class="code hl_variable" href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">m_x</a>, <a class="code hl_variable" href="#a092d1a84e73b1faf93169a7b34412ca1">m_y</a>);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00059">m_textureItems</a>, <a class="el" href="_time_animated_sprite_8hpp_source.html#l00060">m_x</a> , 以及 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00061">m_y</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a98728d8aee95cabc35eca1d1a657f8e2" name="a98728d8aee95cabc35eca1d1a657f8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98728d8aee95cabc35eca1d1a657f8e2">&#9670;&#160;</a></span>m_clock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Clock sfui::TimeAnimatedSprite::m_clock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计时器 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00065">65</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00031">getSprite()</a>.</p>
+
+</div>
+</div>
+<a id="a54b71143a5132517b6d2fc9ebc37b844" name="a54b71143a5132517b6d2fc9ebc37b844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b71143a5132517b6d2fc9ebc37b844">&#9670;&#160;</a></span>m_continuationTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Time sfui::TimeAnimatedSprite::m_continuationTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>持续时间 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00066">66</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00031">getSprite()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00007">init()</a> , 以及 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00019">set()</a>.</p>
+
+</div>
+</div>
+<a id="a7cf1f63df4aa7d120dcd14bcccca3eef" name="a7cf1f63df4aa7d120dcd14bcccca3eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf1f63df4aa7d120dcd14bcccca3eef">&#9670;&#160;</a></span>m_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sfui::TimeAnimatedSprite::m_height = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>图片高度 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00063">63</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00016">addTextureItems()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00007">init()</a> , 以及 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00019">set()</a>.</p>
+
+</div>
+</div>
+<a id="abea03245e2fa1a0fc6dcd6fe496502d9" name="abea03245e2fa1a0fc6dcd6fe496502d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea03245e2fa1a0fc6dcd6fe496502d9">&#9670;&#160;</a></span>m_nowTextureItemsIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t sfui::TimeAnimatedSprite::m_nowTextureItemsIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前图片索引 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00064">64</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00031">getSprite()</a>.</p>
+
+</div>
+</div>
+<a id="a5a70f6e4daf038ff3bc9b65719a98fed" name="a5a70f6e4daf038ff3bc9b65719a98fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a70f6e4daf038ff3bc9b65719a98fed">&#9670;&#160;</a></span>m_textureItems</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classsfui_1_1_texture_item.html">TextureItem</a>&gt; sfui::TimeAnimatedSprite::m_textureItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动画帧图片集合 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00059">59</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00016">addTextureItems()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00031">getSprite()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00019">set()</a> , 以及 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00042">setXY()</a>.</p>
+
+</div>
+</div>
+<a id="a347202642388e6519d9757376b59a490" name="a347202642388e6519d9757376b59a490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347202642388e6519d9757376b59a490">&#9670;&#160;</a></span>m_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sfui::TimeAnimatedSprite::m_width = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>图片宽度 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00062">62</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00016">addTextureItems()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00007">init()</a> , 以及 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00019">set()</a>.</p>
+
+</div>
+</div>
+<a id="aeb7e1c4967378d4d1ed5d30d222e4d9c" name="aeb7e1c4967378d4d1ed5d30d222e4d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7e1c4967378d4d1ed5d30d222e4d9c">&#9670;&#160;</a></span>m_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sfui::TimeAnimatedSprite::m_x = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>X坐标 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00060">60</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00016">addTextureItems()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00007">init()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00019">set()</a> , 以及 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00042">setXY()</a>.</p>
+
+</div>
+</div>
+<a id="a092d1a84e73b1faf93169a7b34412ca1" name="a092d1a84e73b1faf93169a7b34412ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092d1a84e73b1faf93169a7b34412ca1">&#9670;&#160;</a></span>m_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sfui::TimeAnimatedSprite::m_y = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Y坐标 </p>
+
+<p class="definition">在文件 <a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a> 第 <a class="el" href="_time_animated_sprite_8hpp_source.html#l00061">61</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00016">addTextureItems()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00007">init()</a>, <a class="el" href="_time_animated_sprite_8cpp_source.html#l00019">set()</a> , 以及 <a class="el" href="_time_animated_sprite_8cpp_source.html#l00042">setXY()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/customizable/components/<a class="el" href="_time_animated_sprite_8hpp_source.html">TimeAnimatedSprite.hpp</a></li>
+<li>src/customizable/components/<a class="el" href="_time_animated_sprite_8cpp_source.html">TimeAnimatedSprite.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacesfui.html">sfui</a></li><li class="navelem"><a href="classsfui_1_1_time_animated_sprite.html">TimeAnimatedSprite</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

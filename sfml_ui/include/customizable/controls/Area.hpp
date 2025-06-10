@@ -1,5 +1,5 @@
-﻿#pragma once
-#include <print>
+#pragma once
+
 namespace sfui {
     /**
      * @brief 区域类，表示一个矩形区域，支持判定点是否在区域内
@@ -9,7 +9,7 @@ namespace sfui {
         /**
          * @brief 默认构造函数
          */
-        Area() = default;
+        Area(const float left,float up,float right,float lower):m_left(left),m_up(up),m_right(right),m_lower(lower){}
 
         /**
          * @brief 初始化区域
@@ -42,9 +42,9 @@ namespace sfui {
         }
 
     private:
-        float m_left;  ///< 左边界
-        float m_up;    ///< 上边界
-        float m_right; ///< 右边界
-        float m_lower; ///< 下边界
+        float m_left = 0;  ///< 左边界
+        float m_up = 0;    ///< 上边界
+        float m_right = 0; ///< 右边界
+        float m_lower = 0; ///< 下边界
     };
 }

@@ -1,0 +1,11 @@
+<map id="sfui::PageName" name="sfui::PageName">
+<area shape="rect" id="Node000001" title="页面模板类，便于新建页面时继承和实现" alt="" coords="12,245,127,272"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,104,91,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,146,70,244,65,245,50,146"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_button.html" title="按钮类，封装贴图和区域" alt="" coords="114,104,203,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,145,80,246,75,243,140,142"/>
+<area shape="rect" id="Node000004" href="$classsfui_1_1_area.html" title="区域类，表示一个矩形区域，支持判定点是否在区域内" alt="" coords="59,5,136,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,44,153,102,149,105,111,46"/>
+<area shape="rect" id="Node000005" href="$classsfui_1_1_texture_item.html" title="贴图项，封装SFML贴图，支持加载、缩放、位置设置等" alt="" coords="160,5,280,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="211,48,193,81,173,105,169,102,188,79,207,45"/>
+</map>

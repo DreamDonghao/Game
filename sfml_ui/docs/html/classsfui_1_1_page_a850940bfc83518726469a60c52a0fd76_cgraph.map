@@ -1,0 +1,7 @@
+<map id="sfui::Page::init" name="sfui::Page::init">
+<area shape="rect" id="Node000001" title="初始化界面（元素和消息绑定）" alt="" coords="5,43,111,69"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_page.html#a05d3f9b98811d52cd74e49c35326aff9" title="初始化界面元素（纯虚函数，需子类实现）" alt="" coords="177,5,342,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,46,161,38,161,44,111,51"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_page.html#ac6a71503d7fd6990f50c123a065a5235" title="初始化消息与事件绑定（纯虚函数，需子类实现）" alt="" coords="159,72,360,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,61,149,67,148,72,111,66"/>
+</map>

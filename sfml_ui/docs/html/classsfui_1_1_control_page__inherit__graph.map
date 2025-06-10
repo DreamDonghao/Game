@@ -1,0 +1,7 @@
+<map id="sfui::ControlPage" name="sfui::ControlPage">
+<area shape="rect" id="Node000001" title="UI 控件页面，视图大小等于窗口大小，(0,0)为左上角" alt="" coords="10,80,133,107"/>
+<area shape="rect" id="Node000003" href="$classsfui_1_1_complex_page.html" title="混合界面类，结合了交互页面和控件页面的功能" alt="" coords="5,155,138,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="74,122,74,154,69,154,69,122"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_page.html" title="前置声明窗口类" alt="" coords="31,5,112,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,48,74,80,69,80,69,48"/>
+</map>

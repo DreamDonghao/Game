@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sfml_ui: sfui::ComplexPage类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">sfml_ui<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">用于 Windows 的 SFML UI 框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classsfui_1_1_complex_page.html','','classsfui_1_1_complex_page-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sfui::ComplexPage类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>混合界面类，结合了交互页面和控件页面的功能  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>类 sfui::ComplexPage 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page__inherit__graph.svg" width="500" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>sfui::ComplexPage 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page__coll__graph.svg" width="567" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3c97d3fcf521310edbd6b77ec693e4e9" id="r_a3c97d3fcf521310edbd6b77ec693e4e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c97d3fcf521310edbd6b77ec693e4e9">ComplexPage</a> (sf::RenderWindow *p_sfml_RenderWindow)</td></tr>
+<tr class="memitem:afd29eac3ccb03d4c8270ae7d481467fc" id="r_afd29eac3ccb03d4c8270ae7d481467fc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd29eac3ccb03d4c8270ae7d481467fc">~ComplexPage</a> () override=default</td></tr>
+<tr class="memdesc:afd29eac3ccb03d4c8270ae7d481467fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="memitem:a5601b5a621249c6156468b274bd9bcd5" id="r_a5601b5a621249c6156468b274bd9bcd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5601b5a621249c6156468b274bd9bcd5">zooms</a> (const double &amp;<a class="el" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a>)</td></tr>
+<tr class="memdesc:a5601b5a621249c6156468b274bd9bcd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">同时缩放控件和交互内容  <br /></td></tr>
+<tr class="memitem:a825c1f861ceff3d6b8e0b30699fb5bcf" id="r_a825c1f861ceff3d6b8e0b30699fb5bcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a825c1f861ceff3d6b8e0b30699fb5bcf">updateView</a> () override</td></tr>
+<tr class="memdesc:a825c1f861ceff3d6b8e0b30699fb5bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新视图，分别更新控件和交互内容的视图  <br /></td></tr>
+<tr class="memitem:aeba71eef698ca4153884b18b25ef101f" id="r_aeba71eef698ca4153884b18b25ef101f"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeba71eef698ca4153884b18b25ef101f">getWindowView</a> () const</td></tr>
+<tr class="memdesc:aeba71eef698ca4153884b18b25ef101f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取窗口视图  <br /></td></tr>
+<tr class="memitem:a173fedfccf006edcafaea850a311052e" id="r_a173fedfccf006edcafaea850a311052e"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a173fedfccf006edcafaea850a311052e">getWorldView</a> () const</td></tr>
+<tr class="memdesc:a173fedfccf006edcafaea850a311052e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取世界视图  <br /></td></tr>
+<tr class="memitem:aa891757590b0909bb44a4e8de89b0846" id="r_aa891757590b0909bb44a4e8de89b0846"><td class="memTemplParams" colspan="2">template&lt;typename DrawObject&gt; </td></tr>
+<tr class="memitem:aa891757590b0909bb44a4e8de89b0846 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa891757590b0909bb44a4e8de89b0846">drawForWindow</a> (const DrawObject &amp;drawObject)</td></tr>
+<tr class="memdesc:aa891757590b0909bb44a4e8de89b0846"><td class="mdescLeft">&#160;</td><td class="mdescRight">以窗口为依据绘制对象  <br /></td></tr>
+<tr class="memitem:a3e835234919e61969ecfaa5fb9c01794" id="r_a3e835234919e61969ecfaa5fb9c01794"><td class="memTemplParams" colspan="2">template&lt;typename DrawObject&gt; </td></tr>
+<tr class="memitem:a3e835234919e61969ecfaa5fb9c01794 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e835234919e61969ecfaa5fb9c01794">drawForView</a> (const DrawObject &amp;drawObject)</td></tr>
+<tr class="memdesc:a3e835234919e61969ecfaa5fb9c01794"><td class="mdescLeft">&#160;</td><td class="mdescRight">以视图为依据绘制对象  <br /></td></tr>
+<tr class="inherit_header pub_methods_classsfui_1_1_interactive_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classsfui_1_1_interactive_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="classsfui_1_1_interactive_page.html">sfui::InteractivePage</a></td></tr>
+<tr class="memitem:ac553cc6c1df69243d54a316f67aa5f45 inherit pub_methods_classsfui_1_1_interactive_page" id="r_ac553cc6c1df69243d54a316f67aa5f45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#ac553cc6c1df69243d54a316f67aa5f45">InteractivePage</a> (sf::RenderWindow *p_sfml_RenderWindow)</td></tr>
+<tr class="inherit_header pub_methods_classsfui_1_1_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classsfui_1_1_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="classsfui_1_1_page.html">sfui::Page</a></td></tr>
+<tr class="memitem:a1d645637dcd8fea7241f485ef4fe1b93 inherit pub_methods_classsfui_1_1_page" id="r_a1d645637dcd8fea7241f485ef4fe1b93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a1d645637dcd8fea7241f485ef4fe1b93">Page</a> (sf::RenderWindow *p_sfml_RenderWindow)</td></tr>
+<tr class="memitem:a0a86ae7bab83d62fabfd7633fafc6b0a inherit pub_methods_classsfui_1_1_page" id="r_a0a86ae7bab83d62fabfd7633fafc6b0a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a0a86ae7bab83d62fabfd7633fafc6b0a">~Page</a> ()=default</td></tr>
+<tr class="memdesc:a0a86ae7bab83d62fabfd7633fafc6b0a inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚析构函数  <br /></td></tr>
+<tr class="memitem:a04c4789b16160b0de9d715d6392652b7 inherit pub_methods_classsfui_1_1_page" id="r_a04c4789b16160b0de9d715d6392652b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a04c4789b16160b0de9d715d6392652b7">updateFrame</a> ()</td></tr>
+<tr class="memdesc:a04c4789b16160b0de9d715d6392652b7 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新界面一帧（更新视图并渲染）  <br /></td></tr>
+<tr class="memitem:ad4d457e53e9276bc1590a2559b99ee5a inherit pub_methods_classsfui_1_1_page" id="r_ad4d457e53e9276bc1590a2559b99ee5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#ad4d457e53e9276bc1590a2559b99ee5a">setWindow</a> (<a class="el" href="classsfui_1_1_window.html">Window</a> *p_window)</td></tr>
+<tr class="memdesc:ad4d457e53e9276bc1590a2559b99ee5a inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定界面与所属窗口  <br /></td></tr>
+<tr class="memitem:a61c79689dc38087a5278356c759d4f02 inherit pub_methods_classsfui_1_1_page" id="r_a61c79689dc38087a5278356c759d4f02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a61c79689dc38087a5278356c759d4f02">setMouseWindow</a> (sf::RenderWindow *p_sfml_RenderWindow)</td></tr>
+<tr class="memdesc:a61c79689dc38087a5278356c759d4f02 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">为界面鼠标绑定窗口  <br /></td></tr>
+<tr class="memitem:a850940bfc83518726469a60c52a0fd76 inherit pub_methods_classsfui_1_1_page" id="r_a850940bfc83518726469a60c52a0fd76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a850940bfc83518726469a60c52a0fd76">init</a> ()</td></tr>
+<tr class="memdesc:a850940bfc83518726469a60c52a0fd76 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化界面（元素和消息绑定）  <br /></td></tr>
+<tr class="memitem:a05d3f9b98811d52cd74e49c35326aff9 inherit pub_methods_classsfui_1_1_page" id="r_a05d3f9b98811d52cd74e49c35326aff9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a05d3f9b98811d52cd74e49c35326aff9">initializePageElements</a> ()=0</td></tr>
+<tr class="memdesc:a05d3f9b98811d52cd74e49c35326aff9 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化界面元素（纯虚函数，需子类实现）  <br /></td></tr>
+<tr class="memitem:ac6a71503d7fd6990f50c123a065a5235 inherit pub_methods_classsfui_1_1_page" id="r_ac6a71503d7fd6990f50c123a065a5235"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#ac6a71503d7fd6990f50c123a065a5235">initMessageBinding</a> ()=0</td></tr>
+<tr class="memdesc:ac6a71503d7fd6990f50c123a065a5235 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化消息与事件绑定（纯虚函数，需子类实现）  <br /></td></tr>
+<tr class="memitem:a81196cc0d825eb3ca0b4ca187c674982 inherit pub_methods_classsfui_1_1_page" id="r_a81196cc0d825eb3ca0b4ca187c674982"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a81196cc0d825eb3ca0b4ca187c674982">activeMap</a> (<a class="el" href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">Key</a> key, const <a class="el" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action)</td></tr>
+<tr class="memdesc:a81196cc0d825eb3ca0b4ca187c674982 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定按键与行为（实时输入）  <br /></td></tr>
+<tr class="memitem:a08a68da4f1209edaf1cb43004dd5b6d0 inherit pub_methods_classsfui_1_1_page" id="r_a08a68da4f1209edaf1cb43004dd5b6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0">eventMap</a> (<a class="el" href="namespacesfui.html#ae675da92866ddc52851d8fce49943fde">Key</a> key, const <a class="el" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action)</td></tr>
+<tr class="memdesc:a08a68da4f1209edaf1cb43004dd5b6d0 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定按键与行为（事件输入）  <br /></td></tr>
+<tr class="memitem:ab89c21b17bc6b0bd10d1d7ca412b3cd6 inherit pub_methods_classsfui_1_1_page" id="r_ab89c21b17bc6b0bd10d1d7ca412b3cd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#ab89c21b17bc6b0bd10d1d7ca412b3cd6">eventMap</a> (<a class="el" href="namespacesfui.html#a0110ad9214b6430c7b841e0b88f73fa1">MouseButton</a> mouseButton, const <a class="el" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action)</td></tr>
+<tr class="memdesc:ab89c21b17bc6b0bd10d1d7ca412b3cd6 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定鼠标按键与行为（事件输入，重载）  <br /></td></tr>
+<tr class="memitem:a263fedceab2f1cb7237e1f3be8d96f96 inherit pub_methods_classsfui_1_1_page" id="r_a263fedceab2f1cb7237e1f3be8d96f96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a263fedceab2f1cb7237e1f3be8d96f96">eventMap</a> (sf::Mouse::Button mouseButton, const <a class="el" href="classsfui_1_1_area.html">Area</a> *area, const <a class="el" href="namespacesfui.html#a2b73109f30fb81ecd18900d765742a34">Action</a> &amp;action)</td></tr>
+<tr class="memdesc:a263fedceab2f1cb7237e1f3be8d96f96 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定SFML鼠标按键与区域及行为（事件输入，重载）  <br /></td></tr>
+<tr class="memitem:af9102384ae5beaeb91df393d2e53af26 inherit pub_methods_classsfui_1_1_page" id="r_af9102384ae5beaeb91df393d2e53af26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#af9102384ae5beaeb91df393d2e53af26">executeKeyPressOnce</a> ()</td></tr>
+<tr class="memdesc:af9102384ae5beaeb91df393d2e53af26 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">实时输入处理（处理按键行为）  <br /></td></tr>
+<tr class="memitem:aee0045290a9beddf393c783d8e44fed7 inherit pub_methods_classsfui_1_1_page" id="r_aee0045290a9beddf393c783d8e44fed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#aee0045290a9beddf393c783d8e44fed7">executeEventBinding</a> (const sf::Event &amp;event)</td></tr>
+<tr class="memdesc:aee0045290a9beddf393c783d8e44fed7 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件输入处理（处理事件行为）  <br /></td></tr>
+<tr class="memitem:ac8067ba09633443eeb11d13c49d08b8f inherit pub_methods_classsfui_1_1_page" id="r_ac8067ba09633443eeb11d13c49d08b8f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#ac8067ba09633443eeb11d13c49d08b8f">update</a> ()=0</td></tr>
+<tr class="memdesc:ac8067ba09633443eeb11d13c49d08b8f inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新界面内容（纯虚函数，需子类实现）  <br /></td></tr>
+<tr class="memitem:a9def0265662c557aab9846fa36114521 inherit pub_methods_classsfui_1_1_page" id="r_a9def0265662c557aab9846fa36114521"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a9def0265662c557aab9846fa36114521">getBackgroundColor</a> () const</td></tr>
+<tr class="memdesc:a9def0265662c557aab9846fa36114521 inherit pub_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取界面背景颜色  <br /></td></tr>
+<tr class="inherit_header pub_methods_classsfui_1_1_control_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classsfui_1_1_control_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="classsfui_1_1_control_page.html">sfui::ControlPage</a></td></tr>
+<tr class="memitem:afc330f12e794ff22b74203c5743bcc9f inherit pub_methods_classsfui_1_1_control_page" id="r_afc330f12e794ff22b74203c5743bcc9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#afc330f12e794ff22b74203c5743bcc9f">ControlPage</a> (sf::RenderWindow *p_sfml_RenderWindow)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a8b877883ed1ba9c2448f51a7d83cc4ca" id="r_a8b877883ed1ba9c2448f51a7d83cc4ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b877883ed1ba9c2448f51a7d83cc4ca">m_ratio</a> = 1</td></tr>
+<tr class="memdesc:a8b877883ed1ba9c2448f51a7d83cc4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前缩放比例  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classsfui_1_1_interactive_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classsfui_1_1_interactive_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="classsfui_1_1_interactive_page.html">sfui::InteractivePage</a></td></tr>
+<tr class="memitem:a742cb543ceb8f10a4c85c46e53236a6b inherit pro_attribs_classsfui_1_1_interactive_page" id="r_a742cb543ceb8f10a4c85c46e53236a6b"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a742cb543ceb8f10a4c85c46e53236a6b">m_view</a></td></tr>
+<tr class="memdesc:a742cb543ceb8f10a4c85c46e53236a6b inherit pro_attribs_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">交互页面的视图  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classsfui_1_1_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classsfui_1_1_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="classsfui_1_1_page.html">sfui::Page</a></td></tr>
+<tr class="memitem:a3617d9b7521c79a7e2280701febc8b22 inherit pro_attribs_classsfui_1_1_page" id="r_a3617d9b7521c79a7e2280701febc8b22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsfui_1_1_window.html">Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a3617d9b7521c79a7e2280701febc8b22">mp_window</a> = nullptr</td></tr>
+<tr class="memdesc:a3617d9b7521c79a7e2280701febc8b22 inherit pro_attribs_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">界面绑定的窗口  <br /></td></tr>
+<tr class="memitem:a785a36d852033b39a5ffcc67ad062ffa inherit pro_attribs_classsfui_1_1_page" id="r_a785a36d852033b39a5ffcc67ad062ffa"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a785a36d852033b39a5ffcc67ad062ffa">m_backgroundColor</a></td></tr>
+<tr class="memdesc:a785a36d852033b39a5ffcc67ad062ffa inherit pro_attribs_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">界面背景颜色  <br /></td></tr>
+<tr class="memitem:a0dd4f35e186e6190a09ffad9a2cde4b8 inherit pro_attribs_classsfui_1_1_page" id="r_a0dd4f35e186e6190a09ffad9a2cde4b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsfui_1_1_mouse.html">Mouse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a0dd4f35e186e6190a09ffad9a2cde4b8">m_mouse</a></td></tr>
+<tr class="memdesc:a0dd4f35e186e6190a09ffad9a2cde4b8 inherit pro_attribs_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">鼠标对象  <br /></td></tr>
+<tr class="memitem:a784e9994c234340af5ef4a481f3ed584 inherit pro_attribs_classsfui_1_1_page" id="r_a784e9994c234340af5ef4a481f3ed584"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsfui_1_1_active_key_binding.html">ActiveKeyBinding</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a784e9994c234340af5ef4a481f3ed584">m_activeKeyBinding</a></td></tr>
+<tr class="memdesc:a784e9994c234340af5ef4a481f3ed584 inherit pro_attribs_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">按键事件绑定  <br /></td></tr>
+<tr class="memitem:a255a52e49f6fcd9579fda64b3d982b3a inherit pro_attribs_classsfui_1_1_page" id="r_a255a52e49f6fcd9579fda64b3d982b3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsfui_1_1_evect_bingding.html">EvectBingding</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a255a52e49f6fcd9579fda64b3d982b3a">m_eventBinding</a></td></tr>
+<tr class="memdesc:a255a52e49f6fcd9579fda64b3d982b3a inherit pro_attribs_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息事件绑定  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classsfui_1_1_control_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classsfui_1_1_control_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="classsfui_1_1_control_page.html">sfui::ControlPage</a></td></tr>
+<tr class="memitem:a0a185784a1c623fd6855dc8b998d5f25 inherit pro_attribs_classsfui_1_1_control_page" id="r_a0a185784a1c623fd6855dc8b998d5f25"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#a0a185784a1c623fd6855dc8b998d5f25">m_view</a></td></tr>
+<tr class="memdesc:a0a185784a1c623fd6855dc8b998d5f25 inherit pro_attribs_classsfui_1_1_control_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">控件页面的视图  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classsfui_1_1_interactive_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classsfui_1_1_interactive_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="classsfui_1_1_interactive_page.html">sfui::InteractivePage</a></td></tr>
+<tr class="memitem:a4f50c34a9fda2da792c3cdf01c0e4871 inherit pro_methods_classsfui_1_1_interactive_page" id="r_a4f50c34a9fda2da792c3cdf01c0e4871"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a4f50c34a9fda2da792c3cdf01c0e4871">zoom</a> (const double &amp;<a class="el" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a>)</td></tr>
+<tr class="memdesc:a4f50c34a9fda2da792c3cdf01c0e4871 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">按比例缩放视图  <br /></td></tr>
+<tr class="memitem:a4560481c118112bb9d5cad056b41ec46 inherit pro_methods_classsfui_1_1_interactive_page" id="r_a4560481c118112bb9d5cad056b41ec46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a4560481c118112bb9d5cad056b41ec46">updateView</a> () override</td></tr>
+<tr class="memdesc:a4560481c118112bb9d5cad056b41ec46 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据绑定窗口的实时状态来更新界面视图  <br /></td></tr>
+<tr class="memitem:aef8ee6acfbad92d3ecdf1c29f911d1fb inherit pro_methods_classsfui_1_1_interactive_page" id="r_aef8ee6acfbad92d3ecdf1c29f911d1fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#aef8ee6acfbad92d3ecdf1c29f911d1fb">setViewCenter</a> (const float &amp;x, const float &amp;y)</td></tr>
+<tr class="memdesc:aef8ee6acfbad92d3ecdf1c29f911d1fb inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置视图中心坐标（世界坐标系）  <br /></td></tr>
+<tr class="memitem:ac65175a61dce2a643a73b1b3abde1b6d inherit pro_methods_classsfui_1_1_interactive_page" id="r_ac65175a61dce2a643a73b1b3abde1b6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#ac65175a61dce2a643a73b1b3abde1b6d">draw</a> (const <a class="el" href="classsfui_1_1_button.html">Button</a> &amp;button) const</td></tr>
+<tr class="memdesc:ac65175a61dce2a643a73b1b3abde1b6d inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制按钮  <br /></td></tr>
+<tr class="memitem:ab203e31e600ac29f10850750f77cd863 inherit pro_methods_classsfui_1_1_interactive_page" id="r_ab203e31e600ac29f10850750f77cd863"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#ab203e31e600ac29f10850750f77cd863">draw</a> (const <a class="el" href="classsfui_1_1_interactive.html">Interactive</a> &amp;interActive) const</td></tr>
+<tr class="memdesc:ab203e31e600ac29f10850750f77cd863 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制交互区域  <br /></td></tr>
+<tr class="memitem:a527de72f9c0c24c42e1f33d741cd3b26 inherit pro_methods_classsfui_1_1_interactive_page" id="r_a527de72f9c0c24c42e1f33d741cd3b26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a527de72f9c0c24c42e1f33d741cd3b26">draw</a> (const <a class="el" href="classsfui_1_1_texture_item.html">TextureItem</a> &amp;textureItem) const</td></tr>
+<tr class="memdesc:a527de72f9c0c24c42e1f33d741cd3b26 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制纹理项  <br /></td></tr>
+<tr class="memitem:a8f51d8a678762842527df0a218b5b747 inherit pro_methods_classsfui_1_1_interactive_page" id="r_a8f51d8a678762842527df0a218b5b747"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a8f51d8a678762842527df0a218b5b747">draw</a> (const sf::VertexArray &amp;vertexArray) const</td></tr>
+<tr class="memdesc:a8f51d8a678762842527df0a218b5b747 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制顶点数组  <br /></td></tr>
+<tr class="memitem:ab58ec48d3ce96a1444798fa22c33cdd8 inherit pro_methods_classsfui_1_1_interactive_page" id="r_ab58ec48d3ce96a1444798fa22c33cdd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#ab58ec48d3ce96a1444798fa22c33cdd8">draw</a> (const sf::Text &amp;text) const</td></tr>
+<tr class="memdesc:ab58ec48d3ce96a1444798fa22c33cdd8 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制文本  <br /></td></tr>
+<tr class="memitem:a0ac9a3ad4b2b9c9d40f336b709e3aed7 inherit pro_methods_classsfui_1_1_interactive_page" id="r_a0ac9a3ad4b2b9c9d40f336b709e3aed7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a0ac9a3ad4b2b9c9d40f336b709e3aed7">getX</a> () const</td></tr>
+<tr class="memdesc:a0ac9a3ad4b2b9c9d40f336b709e3aed7 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取界面中心对应世界坐标系的X坐标  <br /></td></tr>
+<tr class="memitem:a4c0c78188c529122f8abab9521194320 inherit pro_methods_classsfui_1_1_interactive_page" id="r_a4c0c78188c529122f8abab9521194320"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a4c0c78188c529122f8abab9521194320">getY</a> () const</td></tr>
+<tr class="memdesc:a4c0c78188c529122f8abab9521194320 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取界面中心对应世界坐标系的Y坐标  <br /></td></tr>
+<tr class="memitem:a121b69c732506fd87d8e72c65fce26f1 inherit pro_methods_classsfui_1_1_interactive_page" id="r_a121b69c732506fd87d8e72c65fce26f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesfui.html#add19d31228ec52899ab7ae72ea3c11a2">WindowSize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_interactive_page.html#a121b69c732506fd87d8e72c65fce26f1">getWindowSize</a> () const</td></tr>
+<tr class="memdesc:a121b69c732506fd87d8e72c65fce26f1 inherit pro_methods_classsfui_1_1_interactive_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取与界面绑定窗口的大小  <br /></td></tr>
+<tr class="inherit_header pro_methods_classsfui_1_1_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classsfui_1_1_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="classsfui_1_1_page.html">sfui::Page</a></td></tr>
+<tr class="memitem:a9c39b5c590d92b5c86380fb6e94a2603 inherit pro_methods_classsfui_1_1_page" id="r_a9c39b5c590d92b5c86380fb6e94a2603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#a9c39b5c590d92b5c86380fb6e94a2603">setBackgroundColor</a> (const sf::Color &amp;backgroundColor)</td></tr>
+<tr class="memdesc:a9c39b5c590d92b5c86380fb6e94a2603 inherit pro_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置界面背景颜色  <br /></td></tr>
+<tr class="memitem:aae3845d200cc47f224a1e0b1be755568 inherit pro_methods_classsfui_1_1_page" id="r_aae3845d200cc47f224a1e0b1be755568"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#aae3845d200cc47f224a1e0b1be755568">render</a> ()=0</td></tr>
+<tr class="memdesc:aae3845d200cc47f224a1e0b1be755568 inherit pro_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染界面内容（纯虚函数，需子类实现）  <br /></td></tr>
+<tr class="memitem:af7802cf36ee67e4944b825c034d4aff8 inherit pro_methods_classsfui_1_1_page" id="r_af7802cf36ee67e4944b825c034d4aff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_page.html#af7802cf36ee67e4944b825c034d4aff8">requestPageSwitch</a> (const <a class="el" href="namespacesfui.html#ac49a7e91cc81d7ac921e6b93abd9851d">Title</a> &amp;targetPageTitle)</td></tr>
+<tr class="memdesc:af7802cf36ee67e4944b825c034d4aff8 inherit pro_methods_classsfui_1_1_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">发起界面跳转请求（由子类调用）  <br /></td></tr>
+<tr class="inherit_header pro_methods_classsfui_1_1_control_page"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classsfui_1_1_control_page')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="classsfui_1_1_control_page.html">sfui::ControlPage</a></td></tr>
+<tr class="memitem:a7d0690dfd118a8cb045b2f7897b5b94f inherit pro_methods_classsfui_1_1_control_page" id="r_a7d0690dfd118a8cb045b2f7897b5b94f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#a7d0690dfd118a8cb045b2f7897b5b94f">zoom</a> (const double &amp;<a class="el" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a>)</td></tr>
+<tr class="memdesc:a7d0690dfd118a8cb045b2f7897b5b94f inherit pro_methods_classsfui_1_1_control_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">按比例缩放视图  <br /></td></tr>
+<tr class="memitem:ad29178eb40aac85f0b802f985c08582a inherit pro_methods_classsfui_1_1_control_page" id="r_ad29178eb40aac85f0b802f985c08582a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#ad29178eb40aac85f0b802f985c08582a">updateView</a> () override</td></tr>
+<tr class="memdesc:ad29178eb40aac85f0b802f985c08582a inherit pro_methods_classsfui_1_1_control_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据绑定窗口的大小来更新界面视图  <br /></td></tr>
+<tr class="memitem:a971fb2bb6afcf431eea85c35f97bf7c5 inherit pro_methods_classsfui_1_1_control_page" id="r_a971fb2bb6afcf431eea85c35f97bf7c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#a971fb2bb6afcf431eea85c35f97bf7c5">draw</a> (const <a class="el" href="classsfui_1_1_button.html">Button</a> &amp;button) const</td></tr>
+<tr class="memdesc:a971fb2bb6afcf431eea85c35f97bf7c5 inherit pro_methods_classsfui_1_1_control_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制按钮  <br /></td></tr>
+<tr class="memitem:ac4582cb09510ba62c036a99cdb835acc inherit pro_methods_classsfui_1_1_control_page" id="r_ac4582cb09510ba62c036a99cdb835acc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#ac4582cb09510ba62c036a99cdb835acc">draw</a> (const <a class="el" href="classsfui_1_1_texture_item.html">TextureItem</a> &amp;textureItem) const</td></tr>
+<tr class="memdesc:ac4582cb09510ba62c036a99cdb835acc inherit pro_methods_classsfui_1_1_control_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制纹理项  <br /></td></tr>
+<tr class="memitem:a850423dcde14dbe473ee9b0ab6587dd4 inherit pro_methods_classsfui_1_1_control_page" id="r_a850423dcde14dbe473ee9b0ab6587dd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#a850423dcde14dbe473ee9b0ab6587dd4">draw</a> (const <a class="el" href="classsfui_1_1_text_box.html">sfui::TextBox</a> &amp;textBox) const</td></tr>
+<tr class="memdesc:a850423dcde14dbe473ee9b0ab6587dd4 inherit pro_methods_classsfui_1_1_control_page"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制文本框  <br /></td></tr>
+<tr class="memitem:a7a606527a10cdebc79455b636e68d7ec inherit pro_methods_classsfui_1_1_control_page" id="r_a7a606527a10cdebc79455b636e68d7ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsfui_1_1_control_page.html#a7a606527a10cdebc79455b636e68d7ec">draw</a> (const <a class="el" href="classsfui_1_1_input_box.html">sfui::InputBox</a> &amp;inputBox) const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>混合界面类，结合了交互页面和控件页面的功能 </p>
+<p>既支持控件布局，也支持动态交互内容。 </p>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00011">11</a> 行定义.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a3c97d3fcf521310edbd6b77ec693e4e9" name="a3c97d3fcf521310edbd6b77ec693e4e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c97d3fcf521310edbd6b77ec693e4e9">&#9670;&#160;</a></span>ComplexPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sfui::ComplexPage::ComplexPage </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow *</td>          <td class="paramname"><span class="paramname"><em>p_sfml_RenderWindow</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00013">13</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>:<a class="code hl_function" href="classsfui_1_1_interactive_page.html#ac553cc6c1df69243d54a316f67aa5f45">InteractivePage</a>(p_sfml_RenderWindow),<a class="code hl_function" href="classsfui_1_1_control_page.html#afc330f12e794ff22b74203c5743bcc9f">ControlPage</a>(p_sfml_RenderWindow){}</div>
+<div class="ttc" id="aclasssfui_1_1_control_page_html_afc330f12e794ff22b74203c5743bcc9f"><div class="ttname"><a href="classsfui_1_1_control_page.html#afc330f12e794ff22b74203c5743bcc9f">sfui::ControlPage::ControlPage</a></div><div class="ttdeci">ControlPage(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="_control_page_8hpp_source.html#l00012">ControlPage.hpp:12</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_page_html_ac553cc6c1df69243d54a316f67aa5f45"><div class="ttname"><a href="classsfui_1_1_interactive_page.html#ac553cc6c1df69243d54a316f67aa5f45">sfui::InteractivePage::InteractivePage</a></div><div class="ttdeci">InteractivePage(sf::RenderWindow *p_sfml_RenderWindow)</div><div class="ttdef"><b>定义</b> <a href="_interactive_page_8hpp_source.html#l00013">InteractivePage.hpp:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_control_page_8hpp_source.html#l00012">sfui::ControlPage::ControlPage()</a> , 以及 <a class="el" href="_interactive_page_8hpp_source.html#l00013">sfui::InteractivePage::InteractivePage()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="gamepage_8hpp_source.html#l00017">game::GamePage::GamePage()</a> , 以及 <a class="el" href="_main_menu_page_8hpp_source.html#l00022">game::MainMenuPage::MainMenuPage()</a>.</p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>函数调用图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page_a3c97d3fcf521310edbd6b77ec693e4e9_cgraph.svg" width="507" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>这是这个函数的调用关系图:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page_a3c97d3fcf521310edbd6b77ec693e4e9_icgraph.svg" width="399" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="afd29eac3ccb03d4c8270ae7d481467fc" name="afd29eac3ccb03d4c8270ae7d481467fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd29eac3ccb03d4c8270ae7d481467fc">&#9670;&#160;</a></span>~ComplexPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sfui::ComplexPage::~ComplexPage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a3e835234919e61969ecfaa5fb9c01794" name="a3e835234919e61969ecfaa5fb9c01794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e835234919e61969ecfaa5fb9c01794">&#9670;&#160;</a></span>drawForView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DrawObject&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::ComplexPage::drawForView </td>
+          <td>(</td>
+          <td class="paramtype">const DrawObject &amp;</td>          <td class="paramname"><span class="paramname"><em>drawObject</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>以视图为依据绘制对象 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">DrawObject</td><td>可绘制对象类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawObject</td><td>绘制对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00068">68</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                       {</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_function" href="classsfui_1_1_interactive_page.html#ac65175a61dce2a643a73b1b3abde1b6d">InteractivePage::draw</a>(drawObject);</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="ttc" id="aclasssfui_1_1_interactive_page_html_ac65175a61dce2a643a73b1b3abde1b6d"><div class="ttname"><a href="classsfui_1_1_interactive_page.html#ac65175a61dce2a643a73b1b3abde1b6d">sfui::InteractivePage::draw</a></div><div class="ttdeci">void draw(const Button &amp;button) const</div><div class="ttdoc">绘制按钮</div><div class="ttdef"><b>定义</b> <a href="_interactive_page_8hpp_source.html#l00052">InteractivePage.hpp:52</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_interactive_page_8hpp_source.html#l00052">sfui::InteractivePage::draw()</a>.</p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>函数调用图:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page_a3e835234919e61969ecfaa5fb9c01794_cgraph.svg" width="538" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa891757590b0909bb44a4e8de89b0846" name="aa891757590b0909bb44a4e8de89b0846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa891757590b0909bb44a4e8de89b0846">&#9670;&#160;</a></span>drawForWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DrawObject&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::ComplexPage::drawForWindow </td>
+          <td>(</td>
+          <td class="paramtype">const DrawObject &amp;</td>          <td class="paramname"><span class="paramname"><em>drawObject</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>以窗口为依据绘制对象 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">DrawObject</td><td>可绘制对象类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawObject</td><td>绘制对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00058">58</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                          {</div>
+<div class="line"><span class="lineno">   59</span>            <a class="code hl_function" href="classsfui_1_1_control_page.html#a971fb2bb6afcf431eea85c35f97bf7c5">ControlPage::draw</a>(drawObject);</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="ttc" id="aclasssfui_1_1_control_page_html_a971fb2bb6afcf431eea85c35f97bf7c5"><div class="ttname"><a href="classsfui_1_1_control_page.html#a971fb2bb6afcf431eea85c35f97bf7c5">sfui::ControlPage::draw</a></div><div class="ttdeci">void draw(const Button &amp;button) const</div><div class="ttdoc">绘制按钮</div><div class="ttdef"><b>定义</b> <a href="_control_page_8hpp_source.html#l00042">ControlPage.hpp:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_control_page_8hpp_source.html#l00042">sfui::ControlPage::draw()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="gamepage_8hpp_source.html#l00061">game::GamePage::render()</a> , 以及 <a class="el" href="pausegamepage_8hpp_source.html#l00040">game::PauseGamePage::render()</a>.</p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>函数调用图:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page_aa891757590b0909bb44a4e8de89b0846_cgraph.svg" width="554" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>这是这个函数的调用关系图:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page_aa891757590b0909bb44a4e8de89b0846_icgraph.svg" width="370" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aeba71eef698ca4153884b18b25ef101f" name="aeba71eef698ca4153884b18b25ef101f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba71eef698ca4153884b18b25ef101f">&#9670;&#160;</a></span>getWindowView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::View sfui::ComplexPage::getWindowView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取窗口视图 </p>
+<dl class="section return"><dt>返回</dt><dd>窗口视图 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00040">40</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                     {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classsfui_1_1_interactive_page.html#a742cb543ceb8f10a4c85c46e53236a6b">InteractivePage::m_view</a>;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="ttc" id="aclasssfui_1_1_interactive_page_html_a742cb543ceb8f10a4c85c46e53236a6b"><div class="ttname"><a href="classsfui_1_1_interactive_page.html#a742cb543ceb8f10a4c85c46e53236a6b">sfui::InteractivePage::m_view</a></div><div class="ttdeci">sf::View m_view</div><div class="ttdoc">交互页面的视图</div><div class="ttdef"><b>定义</b> <a href="_interactive_page_8hpp_source.html#l00015">InteractivePage.hpp:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_interactive_page_8hpp_source.html#l00015">sfui::InteractivePage::m_view</a>.</p>
+
+</div>
+</div>
+<a id="a173fedfccf006edcafaea850a311052e" name="a173fedfccf006edcafaea850a311052e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173fedfccf006edcafaea850a311052e">&#9670;&#160;</a></span>getWorldView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::View sfui::ComplexPage::getWorldView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取世界视图 </p>
+<dl class="section return"><dt>返回</dt><dd>世界视图 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00048">48</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                    {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classsfui_1_1_control_page.html#a0a185784a1c623fd6855dc8b998d5f25">ControlPage::m_view</a>;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="ttc" id="aclasssfui_1_1_control_page_html_a0a185784a1c623fd6855dc8b998d5f25"><div class="ttname"><a href="classsfui_1_1_control_page.html#a0a185784a1c623fd6855dc8b998d5f25">sfui::ControlPage::m_view</a></div><div class="ttdeci">sf::View m_view</div><div class="ttdoc">控件页面的视图</div><div class="ttdef"><b>定义</b> <a href="_control_page_8hpp_source.html#l00014">ControlPage.hpp:14</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_control_page_8hpp_source.html#l00014">sfui::ControlPage::m_view</a>.</p>
+
+</div>
+</div>
+<a id="a825c1f861ceff3d6b8e0b30699fb5bcf" name="a825c1f861ceff3d6b8e0b30699fb5bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a825c1f861ceff3d6b8e0b30699fb5bcf">&#9670;&#160;</a></span>updateView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::ComplexPage::updateView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新视图，分别更新控件和交互内容的视图 </p>
+
+<p>实现了 <a class="el" href="classsfui_1_1_page.html#a02f88b02f151711a36a5c96d2ef441c3">sfui::Page</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00031">31</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                  {</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_function" href="classsfui_1_1_control_page.html#ad29178eb40aac85f0b802f985c08582a">ControlPage::updateView</a>();</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_function" href="classsfui_1_1_interactive_page.html#a4560481c118112bb9d5cad056b41ec46">InteractivePage::updateView</a>();</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="ttc" id="aclasssfui_1_1_control_page_html_ad29178eb40aac85f0b802f985c08582a"><div class="ttname"><a href="classsfui_1_1_control_page.html#ad29178eb40aac85f0b802f985c08582a">sfui::ControlPage::updateView</a></div><div class="ttdeci">void updateView() override</div><div class="ttdoc">根据绑定窗口的大小来更新界面视图</div><div class="ttdef"><b>定义</b> <a href="_control_page_8hpp_source.html#l00027">ControlPage.hpp:27</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_page_html_a4560481c118112bb9d5cad056b41ec46"><div class="ttname"><a href="classsfui_1_1_interactive_page.html#a4560481c118112bb9d5cad056b41ec46">sfui::InteractivePage::updateView</a></div><div class="ttdeci">void updateView() override</div><div class="ttdoc">根据绑定窗口的实时状态来更新界面视图</div><div class="ttdef"><b>定义</b> <a href="_interactive_page_8hpp_source.html#l00028">InteractivePage.hpp:28</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="_control_page_8hpp_source.html#l00027">sfui::ControlPage::updateView()</a> , 以及 <a class="el" href="_interactive_page_8hpp_source.html#l00028">sfui::InteractivePage::updateView()</a>.</p>
+<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>函数调用图:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page_a825c1f861ceff3d6b8e0b30699fb5bcf_cgraph.svg" width="340" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5601b5a621249c6156468b274bd9bcd5" name="a5601b5a621249c6156468b274bd9bcd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5601b5a621249c6156468b274bd9bcd5">&#9670;&#160;</a></span>zooms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sfui::ComplexPage::zooms </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>同时缩放控件和交互内容 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ratio</td><td>缩放比例 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00023">23</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                                       {</div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_function" href="classsfui_1_1_control_page.html#a7d0690dfd118a8cb045b2f7897b5b94f">ControlPage::zoom</a>(<a class="code hl_variable" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a>);</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_function" href="classsfui_1_1_interactive_page.html#a4f50c34a9fda2da792c3cdf01c0e4871">InteractivePage::zoom</a>(<a class="code hl_variable" href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a>);</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="ttc" id="aclasssfui_1_1_control_page_html_a7d0690dfd118a8cb045b2f7897b5b94f"><div class="ttname"><a href="classsfui_1_1_control_page.html#a7d0690dfd118a8cb045b2f7897b5b94f">sfui::ControlPage::zoom</a></div><div class="ttdeci">virtual void zoom(const double &amp;ratio)</div><div class="ttdoc">按比例缩放视图</div><div class="ttdef"><b>定义</b> <a href="_control_page_8hpp_source.html#l00020">ControlPage.hpp:20</a></div></div>
+<div class="ttc" id="aclasssfui_1_1_interactive_page_html_a4f50c34a9fda2da792c3cdf01c0e4871"><div class="ttname"><a href="classsfui_1_1_interactive_page.html#a4f50c34a9fda2da792c3cdf01c0e4871">sfui::InteractivePage::zoom</a></div><div class="ttdeci">virtual void zoom(const double &amp;ratio)</div><div class="ttdoc">按比例缩放视图</div><div class="ttdef"><b>定义</b> <a href="_interactive_page_8hpp_source.html#l00021">InteractivePage.hpp:21</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a7182db3232d4c830032a7c6081f7e8a2"><div class="ttname"><a href="main_8cpp.html#a7182db3232d4c830032a7c6081f7e8a2">ratio</a></div><div class="ttdeci">constexpr int ratio</div><div class="ttdef"><b>定义</b> <a href="main_8cpp_source.html#l00011">main.cpp:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">引用了 <a class="el" href="main_8cpp_source.html#l00011">ratio</a>, <a class="el" href="_control_page_8hpp_source.html#l00020">sfui::ControlPage::zoom()</a> , 以及 <a class="el" href="_interactive_page_8hpp_source.html#l00021">sfui::InteractivePage::zoom()</a>.</p>
+<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>函数调用图:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classsfui_1_1_complex_page_a5601b5a621249c6156468b274bd9bcd5_cgraph.svg" width="362" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a8b877883ed1ba9c2448f51a7d83cc4ca" name="a8b877883ed1ba9c2448f51a7d83cc4ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b877883ed1ba9c2448f51a7d83cc4ca">&#9670;&#160;</a></span>m_ratio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double sfui::ComplexPage::m_ratio = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前缩放比例 </p>
+
+<p class="definition">在文件 <a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a> 第 <a class="el" href="_complex_page_8hpp_source.html#l00072">72</a> 行定义.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="gamepage_8hpp_source.html#l00021">game::GamePage::initializePageElements()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sfml_ui/include/core/pages/<a class="el" href="_complex_page_8hpp_source.html">ComplexPage.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacesfui.html">sfui</a></li><li class="navelem"><a href="classsfui_1_1_complex_page.html">ComplexPage</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

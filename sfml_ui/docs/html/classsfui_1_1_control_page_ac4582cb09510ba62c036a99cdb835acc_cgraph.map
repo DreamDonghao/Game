@@ -1,0 +1,5 @@
+<map id="sfui::ControlPage::draw" name="sfui::ControlPage::draw">
+<area shape="rect" id="Node000001" title="绘制纹理项" alt="" coords="5,13,164,40"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_texture_item.html#a2ca69298b65ea208b637cd6f291a2e26" title="获取加载内容（Sprite）" alt="" coords="212,5,339,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,24,196,24,196,29,164,29"/>
+</map>

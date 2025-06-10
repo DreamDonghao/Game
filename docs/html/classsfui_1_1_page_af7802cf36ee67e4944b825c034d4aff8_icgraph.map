@@ -1,0 +1,5 @@
+<map id="sfui::Page::requestPageSwitch" name="sfui::Page::requestPageSwitch">
+<area shape="rect" id="Node000001" title="发起界面跳转请求（由子类调用）" alt="" coords="217,13,418,40"/>
+<area shape="rect" id="Node000002" href="$classgame_1_1_pause_game_page.html#a8a95bf5893cfc470c077e362231ccd35" title="初始化消息与事件绑定（纯虚函数，需子类实现）" alt="" coords="5,5,169,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,29,169,29,169,24,201,24"/>
+</map>

@@ -1,0 +1,270 @@
+\doxysection{game\+::World\+Elemental类 参考}
+\label{classgame_1_1_world_elemental}\index{game::WorldElemental@{game::WorldElemental}}
+
+
+{\ttfamily \#include $<$world\+\_\+elemental.\+hpp$>$}
+
+
+
+类 game\+::World\+Elemental 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classgame_1_1_world_elemental__inherit__graph}
+\end{center}
+\end{figure}
+
+
+game\+::World\+Elemental 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classgame_1_1_world_elemental__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classgame_1_1_world_elemental_ab395269fdb3028ad01a5fdc3e863602a}{getX}} () const
+\item 
+double \mbox{\hyperlink{classgame_1_1_world_elemental_ab601dd57847ccf0b6c2d227c7f68dc1a}{getY}} () const
+\item 
+const sf\+::\+Sprite \& \mbox{\hyperlink{classgame_1_1_world_elemental_a0545c9b3f2d6e512a96731d25156a2e5}{get\+Sprite}} ()
+\item 
+virtual bool \mbox{\hyperlink{classgame_1_1_world_elemental_ad215406fa2d6b799f75db50237febcd4}{init}} (const float \&continuationt\+Time, const int \&\mbox{\hyperlink{main_8cpp_a229d697f97d697703cd11ce11d76f53b}{width}}, const int \&height, const float \&x, const float \&y)
+\item 
+void \mbox{\hyperlink{classgame_1_1_world_elemental_ac0254df3be4c5e740ceba184b146ddbd}{move\+ToX}} (const double \&x)
+\item 
+void \mbox{\hyperlink{classgame_1_1_world_elemental_aec70a1c2dc36b8b4194855a229a6a9aa}{move\+ToY}} (const double \&y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \mbox{\hyperlink{classgame_1_1_elemental}{game\+::\+Elemental}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_elemental_a445e5916244f49f98e9682abe017e87e}{Elemental}} ()
+\item 
+virtual \mbox{\hyperlink{classgame_1_1_elemental_aaf5613ed4f0b51bbdbc4793de9f5a993}{\texorpdfstring{$\sim$}{\string~}\+Elemental}} ()=default
+\item 
+int \mbox{\hyperlink{classgame_1_1_elemental_a90b835fc2e70757ba2a4384657c32873}{get\+Id}} () const
+\item 
+void \mbox{\hyperlink{classgame_1_1_elemental_a284747463939dbd056726f6fe417adf1}{set\+Active}} (bool active\+State)
+\item 
+bool \mbox{\hyperlink{classgame_1_1_elemental_ad6a37c2c1f3e717141862e722ac20aaf}{is\+Active}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classgame_1_1_world_elemental_ab1579279b3939c3938952129c1c9ce27}{m\+\_\+x}}
+\item 
+double \mbox{\hyperlink{classgame_1_1_world_elemental_ac82f6e2d9ba2bc7b54403b2d11ca9c9e}{m\+\_\+y}}
+\item 
+\mbox{\hyperlink{classsfui_1_1_time_animated_sprite}{sfui\+::\+Time\+Animated\+Sprite}} \mbox{\hyperlink{classgame_1_1_world_elemental_a4dbdec6617fccb727007785eebe18d90}{m\+\_\+frame\+Animated\+Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{额外继承的成员函数}
+\doxysubsection*{Protected 成员函数 继承自 \mbox{\hyperlink{classgame_1_1_elemental}{game\+::\+Elemental}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_elemental_a302241cb8a2d12c20e9bbe76d4b1d9e0}{Elemental}} (int id, bool active)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00010}{10}} 行定义.
+
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{game::WorldElemental@{game::WorldElemental}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_a0545c9b3f2d6e512a96731d25156a2e5} 
+const sf\+::\+Sprite \& game\+::\+World\+Elemental\+::get\+Sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00016}{16}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\ \textcolor{keywordflow}{return}\ m\_frameAnimatedSprite.getSprite();\ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{world__elemental_8hpp_source_l00037}{m\+\_\+frame\+Animated\+Sprite}}.
+
+\index{game::WorldElemental@{game::WorldElemental}!getX@{getX}}
+\index{getX@{getX}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_ab395269fdb3028ad01a5fdc3e863602a} 
+double game\+::\+World\+Elemental\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [nodiscard]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00012}{12}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{\ \textcolor{keywordflow}{return}\ m\_x;\ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{world__elemental_8hpp_source_l00035}{m\+\_\+x}}.
+
+\index{game::WorldElemental@{game::WorldElemental}!getY@{getY}}
+\index{getY@{getY}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_ab601dd57847ccf0b6c2d227c7f68dc1a} 
+double game\+::\+World\+Elemental\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [nodiscard]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00014}{14}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{\ \textcolor{keywordflow}{return}\ m\_y;\ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{world__elemental_8hpp_source_l00036}{m\+\_\+y}}.
+
+\index{game::WorldElemental@{game::WorldElemental}!init@{init}}
+\index{init@{init}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_ad215406fa2d6b799f75db50237febcd4} 
+virtual bool game\+::\+World\+Elemental\+::init (\begin{DoxyParamCaption}\item[{const float \&}]{continuationt\+Time}{, }\item[{const int \&}]{width}{, }\item[{const int \&}]{height}{, }\item[{const float \&}]{x}{, }\item[{const float \&}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+被 \mbox{\hyperlink{classgame_1_1_player_ae28363e5ab32a410962eab422b6affda}{game\+::\+Player}} 重载.
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00018}{18}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ m\_frameAnimatedSprite.init(continuationtTime,\ width,\ height,\ x,\ y);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{world__elemental_8hpp_source_l00037}{m\+\_\+frame\+Animated\+Sprite}} , 以及 \mbox{\hyperlink{main_8cpp_source_l00009}{width}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{player_8hpp_source_l00012}{game\+::\+Player\+::init()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classgame_1_1_world_elemental_ad215406fa2d6b799f75db50237febcd4_icgraph}
+\end{center}
+\end{figure}
+\index{game::WorldElemental@{game::WorldElemental}!moveToX@{moveToX}}
+\index{moveToX@{moveToX}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{moveToX()}{moveToX()}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_ac0254df3be4c5e740ceba184b146ddbd} 
+void game\+::\+World\+Elemental\+::move\+ToX (\begin{DoxyParamCaption}\item[{const double \&}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00024}{24}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ m\_x\ =\ x;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ m\_frameAnimatedSprite.setXY(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(m\_x),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(m\_y));}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{world__elemental_8hpp_source_l00037}{m\+\_\+frame\+Animated\+Sprite}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00035}{m\+\_\+x}} , 以及 \mbox{\hyperlink{world__elemental_8hpp_source_l00036}{m\+\_\+y}}.
+
+\index{game::WorldElemental@{game::WorldElemental}!moveToY@{moveToY}}
+\index{moveToY@{moveToY}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{moveToY()}{moveToY()}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_aec70a1c2dc36b8b4194855a229a6a9aa} 
+void game\+::\+World\+Elemental\+::move\+ToY (\begin{DoxyParamCaption}\item[{const double \&}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00029}{29}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ m\_y\ =\ y;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ m\_frameAnimatedSprite.setXY(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(m\_x),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(m\_y));}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{world__elemental_8hpp_source_l00037}{m\+\_\+frame\+Animated\+Sprite}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00035}{m\+\_\+x}} , 以及 \mbox{\hyperlink{world__elemental_8hpp_source_l00036}{m\+\_\+y}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{game::WorldElemental@{game::WorldElemental}!m\_frameAnimatedSprite@{m\_frameAnimatedSprite}}
+\index{m\_frameAnimatedSprite@{m\_frameAnimatedSprite}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{m\_frameAnimatedSprite}{m\_frameAnimatedSprite}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_a4dbdec6617fccb727007785eebe18d90} 
+\mbox{\hyperlink{classsfui_1_1_time_animated_sprite}{sfui\+::\+Time\+Animated\+Sprite}} game\+::\+World\+Elemental\+::m\+\_\+frame\+Animated\+Sprite\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00037}{37}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{world__elemental_8hpp_source_l00016}{get\+Sprite()}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00018}{init()}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00024}{move\+To\+X()}} , 以及 \mbox{\hyperlink{world__elemental_8hpp_source_l00029}{move\+To\+Y()}}.
+
+\index{game::WorldElemental@{game::WorldElemental}!m\_x@{m\_x}}
+\index{m\_x@{m\_x}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{m\_x}{m\_x}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_ab1579279b3939c3938952129c1c9ce27} 
+double game\+::\+World\+Elemental\+::m\+\_\+x\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00035}{35}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{world__elemental_8hpp_source_l00012}{get\+X()}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00024}{move\+To\+X()}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00029}{move\+To\+Y()}} , 以及 \mbox{\hyperlink{player_8hpp_source_l00007}{game\+::\+Player\+::\+Player()}}.
+
+\index{game::WorldElemental@{game::WorldElemental}!m\_y@{m\_y}}
+\index{m\_y@{m\_y}!game::WorldElemental@{game::WorldElemental}}
+\doxysubsubsection{\texorpdfstring{m\_y}{m\_y}}
+{\footnotesize\ttfamily \label{classgame_1_1_world_elemental_ac82f6e2d9ba2bc7b54403b2d11ca9c9e} 
+double game\+::\+World\+Elemental\+::m\+\_\+y\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+在文件 \mbox{\hyperlink{world__elemental_8hpp_source}{world\+\_\+elemental.\+hpp}} 第 \mbox{\hyperlink{world__elemental_8hpp_source_l00036}{36}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{world__elemental_8hpp_source_l00014}{get\+Y()}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00024}{move\+To\+X()}}, \mbox{\hyperlink{world__elemental_8hpp_source_l00029}{move\+To\+Y()}} , 以及 \mbox{\hyperlink{player_8hpp_source_l00007}{game\+::\+Player\+::\+Player()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+elemental/include/\mbox{\hyperlink{world__elemental_8hpp}{world\+\_\+elemental.\+hpp}}\end{DoxyCompactItemize}

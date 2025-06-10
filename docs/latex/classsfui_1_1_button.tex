@@ -1,0 +1,342 @@
+\doxysection{sfui\+::Button类 参考}
+\label{classsfui_1_1_button}\index{sfui::Button@{sfui::Button}}
+
+
+按钮类，封装贴图和区域  
+
+
+
+
+{\ttfamily \#include $<$button.\+hpp$>$}
+
+
+
+sfui\+::Button 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classsfui_1_1_button__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsfui_1_1_button_a735366c9952839d28bad3caab80b996d}{Button}} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_button_aaa15fef0651f3e72aabc91618fa22ca5}{\texorpdfstring{$\sim$}{\string~}\+Button}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsfui_1_1_button_a6fd8060592d3ad33a535fd39e57c962a}{init}} (const float \&x, const float \&y, const int \&\mbox{\hyperlink{main_8cpp_a229d697f97d697703cd11ce11d76f53b}{width}}, const int \&\mbox{\hyperlink{main_8cpp_a53e2906a6247d5b6e12cca1737a5fdc2}{heigth}}, const \mbox{\hyperlink{namespacesfui_a3914e89931c8852cbe1322d380701e62}{File\+Path}} \&filepath)
+\begin{DoxyCompactList}\small\item\em 初始化按钮 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_area}{Area}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsfui_1_1_button_ae226cdcb5552584e449cda1cda1e6765}{get\+Area}} ()
+\begin{DoxyCompactList}\small\item\em 获取按钮区域 \end{DoxyCompactList}\item 
+const sf\+::\+Sprite \& \mbox{\hyperlink{classsfui_1_1_button_a9bda2b07213ffd9a40fb2e231f084952}{get\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em 获取按钮的\+Sprite \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classsfui_1_1_button_a9797fb87305f4195d75d7d52eff87e45}{m\+\_\+x}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em 按钮左上角x坐标 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classsfui_1_1_button_a72c395221093f831a6d6bc5a946a8348}{m\+\_\+y}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em 按钮左上角y坐标 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsfui_1_1_button_ac111e7dd8cc0c6337b181c071e4eb1ad}{m\+\_\+width}} = 0
+\begin{DoxyCompactList}\small\item\em 按钮宽度 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsfui_1_1_button_a5e0489a421f92ecd8db281a249ed1030}{m\+\_\+height}} = 0
+\begin{DoxyCompactList}\small\item\em 按钮高度 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_area}{Area}} \mbox{\hyperlink{classsfui_1_1_button_a66d330dec22ea09800d5c4a813b5d10c}{m\+\_\+area}}
+\begin{DoxyCompactList}\small\item\em 按钮区域 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsfui_1_1_texture_item}{Texture\+Item}} \mbox{\hyperlink{classsfui_1_1_button_a5310be16192346c1818ad5cedbc46639}{m\+\_\+texture\+Item}}
+\begin{DoxyCompactList}\small\item\em 按钮贴图 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+按钮类，封装贴图和区域 
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00010}{10}} 行定义.
+
+
+
+\label{doc-constructors}
+\doxysubsection{构造及析构函数说明}
+\index{sfui::Button@{sfui::Button}!Button@{Button}}
+\index{Button@{Button}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a735366c9952839d28bad3caab80b996d} 
+sfui\+::\+Button\+::\+Button (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+默认构造函数 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00015}{15}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ :\ m\_area(0,0,0,0)\ \{\}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{button_8hpp_source_l00067}{m\+\_\+area}}.
+
+\index{sfui::Button@{sfui::Button}!````~Button@{\texorpdfstring{$\sim$}{\string~}Button}}
+\index{````~Button@{\texorpdfstring{$\sim$}{\string~}Button}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Button()}{\string~Button()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_aaa15fef0651f3e72aabc91618fa22ca5} 
+sfui\+::\+Button\+::\texorpdfstring{$\sim$}{\string~}\+Button (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+析构函数 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00020}{20}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\doxysubsection{成员函数说明}
+\index{sfui::Button@{sfui::Button}!getArea@{getArea}}
+\index{getArea@{getArea}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{getArea()}{getArea()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_ae226cdcb5552584e449cda1cda1e6765} 
+\mbox{\hyperlink{classsfui_1_1_area}{Area}} \texorpdfstring{$\ast$}{*} sfui\+::\+Button\+::get\+Area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取按钮区域 
+
+\begin{DoxyReturn}{返回}
+区域指针 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00050}{50}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&m\_area;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{button_8hpp_source_l00067}{m\+\_\+area}}.
+
+\index{sfui::Button@{sfui::Button}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a9bda2b07213ffd9a40fb2e231f084952} 
+const sf\+::\+Sprite \& sfui\+::\+Button\+::get\+Sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取按钮的\+Sprite 
+
+\begin{DoxyReturn}{返回}
+SFML Sprite对象引用 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00058}{58}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_textureItem.getSprite();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{button_8hpp_source_l00068}{m\+\_\+texture\+Item}}.
+
+
+
+被这些函数引用 \mbox{\hyperlink{_control_page_8hpp_source_l00042}{sfui\+::\+Control\+Page\+::draw()}} , 以及 \mbox{\hyperlink{_interactive_page_8hpp_source_l00052}{sfui\+::\+Interactive\+Page\+::draw()}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsfui_1_1_button_a9bda2b07213ffd9a40fb2e231f084952_icgraph}
+\end{center}
+\end{figure}
+\index{sfui::Button@{sfui::Button}!init@{init}}
+\index{init@{init}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a6fd8060592d3ad33a535fd39e57c962a} 
+bool sfui\+::\+Button\+::init (\begin{DoxyParamCaption}\item[{const float \&}]{x}{, }\item[{const float \&}]{y}{, }\item[{const int \&}]{width}{, }\item[{const int \&}]{heigth}{, }\item[{const \mbox{\hyperlink{namespacesfui_a3914e89931c8852cbe1322d380701e62}{File\+Path}} \&}]{filepath}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+初始化按钮 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & 按钮左上角x坐标 \\
+\hline
+{\em y} & 按钮左上角y坐标 \\
+\hline
+{\em width} & 按钮宽度 \\
+\hline
+{\em heigth} & 按钮高度 \\
+\hline
+{\em filepath} & 按钮图片路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否初始化成功 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00031}{31}} 行定义.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ m\_x\ =\ x;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ m\_y\ =\ y;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ m\_width\ =\ width;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ m\_height\ =\ heigth;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ m\_textureItem.init(filepath,\ m\_width,\ m\_height,\ m\_x,\ m\_y);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ m\_area.init(}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_x,\ m\_y,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_x\ +\ m\_width,\ m\_y\ +\ m\_height}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+引用了 \mbox{\hyperlink{main_8cpp_source_l00010}{heigth}}, \mbox{\hyperlink{button_8hpp_source_l00067}{m\+\_\+area}}, \mbox{\hyperlink{button_8hpp_source_l00066}{m\+\_\+height}}, \mbox{\hyperlink{button_8hpp_source_l00068}{m\+\_\+texture\+Item}}, \mbox{\hyperlink{button_8hpp_source_l00065}{m\+\_\+width}}, \mbox{\hyperlink{button_8hpp_source_l00063}{m\+\_\+x}}, \mbox{\hyperlink{button_8hpp_source_l00064}{m\+\_\+y}} , 以及 \mbox{\hyperlink{main_8cpp_source_l00009}{width}}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{类成员变量说明}
+\index{sfui::Button@{sfui::Button}!m\_area@{m\_area}}
+\index{m\_area@{m\_area}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{m\_area}{m\_area}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a66d330dec22ea09800d5c4a813b5d10c} 
+\mbox{\hyperlink{classsfui_1_1_area}{Area}} sfui\+::\+Button\+::m\+\_\+area\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+按钮区域 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00067}{67}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{button_8hpp_source_l00015}{Button()}}, \mbox{\hyperlink{button_8hpp_source_l00050}{get\+Area()}} , 以及 \mbox{\hyperlink{button_8hpp_source_l00031}{init()}}.
+
+\index{sfui::Button@{sfui::Button}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a5e0489a421f92ecd8db281a249ed1030} 
+int sfui\+::\+Button\+::m\+\_\+height = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+按钮高度 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00066}{66}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{button_8hpp_source_l00031}{init()}}.
+
+\index{sfui::Button@{sfui::Button}!m\_textureItem@{m\_textureItem}}
+\index{m\_textureItem@{m\_textureItem}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{m\_textureItem}{m\_textureItem}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a5310be16192346c1818ad5cedbc46639} 
+\mbox{\hyperlink{classsfui_1_1_texture_item}{Texture\+Item}} sfui\+::\+Button\+::m\+\_\+texture\+Item\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+按钮贴图 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00068}{68}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{button_8hpp_source_l00058}{get\+Sprite()}} , 以及 \mbox{\hyperlink{button_8hpp_source_l00031}{init()}}.
+
+\index{sfui::Button@{sfui::Button}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_ac111e7dd8cc0c6337b181c071e4eb1ad} 
+int sfui\+::\+Button\+::m\+\_\+width = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+按钮宽度 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00065}{65}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{button_8hpp_source_l00031}{init()}}.
+
+\index{sfui::Button@{sfui::Button}!m\_x@{m\_x}}
+\index{m\_x@{m\_x}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{m\_x}{m\_x}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a9797fb87305f4195d75d7d52eff87e45} 
+float sfui\+::\+Button\+::m\+\_\+x = 0.\+0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+按钮左上角x坐标 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00063}{63}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{button_8hpp_source_l00031}{init()}}.
+
+\index{sfui::Button@{sfui::Button}!m\_y@{m\_y}}
+\index{m\_y@{m\_y}!sfui::Button@{sfui::Button}}
+\doxysubsubsection{\texorpdfstring{m\_y}{m\_y}}
+{\footnotesize\ttfamily \label{classsfui_1_1_button_a72c395221093f831a6d6bc5a946a8348} 
+float sfui\+::\+Button\+::m\+\_\+y = 0.\+0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+按钮左上角y坐标 
+
+
+
+在文件 \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}} 第 \mbox{\hyperlink{button_8hpp_source_l00064}{64}} 行定义.
+
+
+
+被这些函数引用 \mbox{\hyperlink{button_8hpp_source_l00031}{init()}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sfml\+\_\+ui/include/customizable/controls/\mbox{\hyperlink{button_8hpp}{button.\+hpp}}\end{DoxyCompactItemize}

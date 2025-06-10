@@ -1,0 +1,5 @@
+<map id="sfui::Window::requestPageSwitch" name="sfui::Window::requestPageSwitch">
+<area shape="rect" id="Node000001" title="切换到指定页面。" alt="" coords="218,5,396,48"/>
+<area shape="rect" id="Node000002" href="$classsfui_1_1_window.html#a2d60139900440e63f10e535d5287af9b" title="显示首页并进入主循环。" alt="" coords="5,13,170,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,29,170,29,170,24,202,24"/>
+</map>
