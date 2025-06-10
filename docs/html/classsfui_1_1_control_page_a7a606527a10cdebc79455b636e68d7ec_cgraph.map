@@ -1,5 +1,0 @@
-<map id="sfui::ControlPage::draw" name="sfui::ControlPage::draw">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_input_box.html#a00d8bb1aec333751738b1153ff4c5b32" title=" " alt="" coords="212,5,377,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,16,196,16,196,21,164,21"/>
-</map>

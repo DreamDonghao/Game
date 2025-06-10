@@ -1,5 +1,0 @@
-<map id="sfui::ControlPage::draw" name="sfui::ControlPage::draw">
-<area shape="rect" id="Node000001" title="绘制文本框" alt="" coords="5,5,164,32"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_text_box.html#abd97748c59cdb1169d02bb18f8543747" title="获取SFML文本对象（用于绘制）" alt="" coords="212,5,370,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,16,196,16,196,21,164,21"/>
-</map>

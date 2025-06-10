@@ -1,5 +1,0 @@
-<map id="sfui::ControlPage::updateView" name="sfui::ControlPage::updateView">
-<area shape="rect" id="Node000001" title="根据绑定窗口的大小来更新界面视图" alt="" coords="194,5,324,48"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_complex_page.html#a825c1f861ceff3d6b8e0b30699fb5bcf" title="更新视图，分别更新控件和交互内容的视图" alt="" coords="5,5,146,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,29,146,29,146,24,178,24"/>
-</map>

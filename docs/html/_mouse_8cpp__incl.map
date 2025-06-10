@@ -1,7 +1,0 @@
-<map id="sfml_ui/src/core/message/Mouse.cpp" name="sfml_ui/src/core/message/Mouse.cpp">
-<area shape="rect" id="Node000001" title="实现Mouse类，封装鼠标相关操作。" alt="" coords="5,5,177,48"/>
-<area shape="rect" id="Node000002" href="$_mouse_8hpp.html" title=" " alt="" coords="48,96,134,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,49,94,80,88,80,88,49"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="22,171,160,197"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,123,94,155,88,155,88,123"/>
-</map>

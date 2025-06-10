@@ -1,9 +1,0 @@
-<map id="game::GamePage::render" name="game::GamePage::render">
-<area shape="rect" id="Node000001" title="渲染界面内容（纯虚函数，需子类实现）" alt="" coords="5,13,176,40"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_complex_page.html#aa891757590b0909bb44a4e8de89b0846" title="以窗口为依据绘制对象" alt="" coords="224,5,364,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,24,208,24,208,29,176,29"/>
-<area shape="rect" id="Node000003" href="$classsfui_1_1_control_page.html#a971fb2bb6afcf431eea85c35f97bf7c5" title="绘制按钮" alt="" coords="412,13,570,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="364,24,396,24,396,29,364,29"/>
-<area shape="rect" id="Node000004" href="$classsfui_1_1_button.html#a9bda2b07213ffd9a40fb2e231f084952" title="获取按钮的Sprite" alt="" coords="618,13,767,40"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="570,24,603,24,603,29,570,29"/>
-</map>

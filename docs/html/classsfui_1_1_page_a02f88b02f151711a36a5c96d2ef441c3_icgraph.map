@@ -1,5 +1,0 @@
-<map id="sfui::Page::updateView" name="sfui::Page::updateView">
-<area shape="rect" id="Node000001" title="根据窗口大小更新界面视图（纯虚函数，需子类实现）" alt="" coords="218,5,374,32"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_page.html#a04c4789b16160b0de9d715d6392652b7" title="更新界面一帧（更新视图并渲染）" alt="" coords="5,5,170,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,21,170,21,170,16,202,16"/>
-</map>

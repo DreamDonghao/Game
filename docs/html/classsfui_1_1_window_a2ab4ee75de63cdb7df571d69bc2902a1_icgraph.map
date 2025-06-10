@@ -1,7 +1,0 @@
-<map id="sfui::Window::procesMessage" name="sfui::Window::procesMessage">
-<area shape="rect" id="Node000001" title="处理窗口和页面事件，收到关闭事件时关闭窗口。" alt="" coords="315,5,512,32"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_window.html#a2d60139900440e63f10e535d5287af9b" title="显示首页并进入主循环。" alt="" coords="103,5,267,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,21,268,21,268,16,299,16"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#a8216c1645620cdb2f629cde3ac02ffef" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-</map>

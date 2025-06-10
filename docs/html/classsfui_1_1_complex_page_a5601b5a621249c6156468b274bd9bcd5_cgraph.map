@@ -1,7 +1,0 @@
-<map id="sfui::ComplexPage::zooms" name="sfui::ComplexPage::zooms">
-<area shape="rect" id="Node000001" title="同时缩放控件和交互内容" alt="" coords="5,27,146,69"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_control_page.html#a7d0690dfd118a8cb045b2f7897b5b94f" title="按比例缩放视图" alt="" coords="194,5,356,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,35,178,30,178,36,147,40"/>
-<area shape="rect" id="Node000003" href="$classsfui_1_1_interactive_page.html#a4f50c34a9fda2da792c3cdf01c0e4871" title="按比例缩放视图" alt="" coords="204,56,346,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,56,190,62,189,67,146,61"/>
-</map>

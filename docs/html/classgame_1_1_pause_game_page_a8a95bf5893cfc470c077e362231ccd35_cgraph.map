@@ -1,9 +1,0 @@
-<map id="game::PauseGamePage::initMessageBinding" name="game::PauseGamePage::initMessageBinding">
-<area shape="rect" id="Node000001" title="初始化消息与事件绑定（纯虚函数，需子类实现）" alt="" coords="5,48,169,91"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_page.html#a08a68da4f1209edaf1cb43004dd5b6d0" title="绑定按键与行为（事件输入）" alt="" coords="245,5,390,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,49,238,33,239,38,170,54"/>
-<area shape="rect" id="Node000003" href="$classsfui_1_1_page.html#af7802cf36ee67e4944b825c034d4aff8" title="发起界面跳转请求（由子类调用）" alt="" coords="217,56,418,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,67,201,67,201,72,169,72"/>
-<area shape="rect" id="Node000004" href="$namespacesfui.html#a92f7a2203cd1f549830bf28cd2447d4b" title="将std::string转换为Title（std::wstring）" alt="" coords="262,107,372,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,85,248,102,246,107,169,90"/>
-</map>
