@@ -1,19 +1,20 @@
-INCLUDE_PATH = include include/core include/customizable
-USE_MDFILE_AS_MAINPAGE = README.md
 # =================== 项目信息 ===================
 PROJECT_NAME           = sfml_ui
 PROJECT_BRIEF          = 用于 Windows 的 SFML UI 框架
 PROJECT_NUMBER         = v1.0
 OUTPUT_DIRECTORY       = docs
-CREATE_SUBDIRS         = NO
 OUTPUT_LANGUAGE        = Chinese
-USE_MDFILE_AS_MAINPAGE = description.md
+USE_MDFILE_AS_MAINPAGE = README.md
 
 # =================== 输入设置 ===================
-INPUT                  = include src sfml_ui game elemental assets README.mdv
+INPUT                  = sfml_ui game elemental README.md
 RECURSIVE              = YES
 FILE_PATTERNS          = *.cpp *.c *.h *.hpp
+RECURSIVE              = YES
 EXCLUDE_PATTERNS       = */test/*
+
+# 如果你的 include 和 src 目录存在，就添加：
+# INPUT += include src
 
 # =================== 提取设置 ===================
 EXTRACT_ALL            = YES
@@ -23,10 +24,8 @@ EXTRACT_LOCAL_CLASSES  = YES
 EXTRACT_ANON_NSPACES   = YES
 
 # =================== 显示控制 ===================
-SHOW_FILES             = YES
-SHOW_DIRECTORIES       = YES
-SHOW_USED_FILES        = YES
-SHOW_INCLUDE_FILES     = YES
+SHOW_FILES             = NO
+SHOW_USED_FILES        = NO
 INLINE_SOURCES         = YES
 SOURCE_BROWSER         = YES
 REFERENCED_BY_RELATION = YES
@@ -45,7 +44,6 @@ DISABLE_INDEX          = NO
 HAVE_DOT               = YES
 DOT_NUM_THREADS        = 4
 DOT_MULTI_TARGETS      = YES
-CLASS_DIAGRAMS         = YES
 CALL_GRAPH             = YES
 CALLER_GRAPH           = YES
 COLLABORATION_GRAPH    = YES
@@ -59,28 +57,11 @@ INTERACTIVE_SVG        = YES
 # =================== Markdown 设置 ===================
 MARKDOWN_SUPPORT       = YES
 AUTOLINK_SUPPORT       = YES
-USE_MDFILE_AS_MAINPAGE = description.md
 
 # =================== 编码设置 ===================
 INPUT_ENCODING         = UTF-8
-# 如果你的文件有 BOM，可以用下面这个设置，但最好别带 BOM
-# MSCGEN_PATH         =
 
-# =================== 其他 ===================
+# =================== 关闭其他格式生成 ===================
 GENERATE_LATEX         = NO
 GENERATE_XML           = NO
 GENERATE_MAN           = NO
-QUIET                  = NO
-WARNINGS               = YES
-WARN_IF_UNDOCUMENTED   = NO
-
-GENERATE_LATEX       = YES
-LATEX_OUTPUT         = latex
-OUTPUT_DIRECTORY     = docs
-PDF_HYPERLINKS       = YES
-USE_PDFLATEX         = NO      # ❗一定设为 NO
-LATEX_BATCHMODE      = NO
-LATEX_SOURCE_CODE    = YES
-
-USE_MDFILE_AS_MAINPAGE = README.md
-
