@@ -1,5 +1,0 @@
-<map id="sfui::Page::initializePageElements" name="sfui::Page::initializePageElements">
-<area shape="rect" id="Node000001" title="初始化界面元素（纯虚函数，需子类实现）" alt="" coords="159,5,324,48"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_page.html#a850940bfc83518726469a60c52a0fd76" title="初始化界面（元素和消息绑定）" alt="" coords="5,13,111,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,29,111,29,111,24,143,24"/>
-</map>

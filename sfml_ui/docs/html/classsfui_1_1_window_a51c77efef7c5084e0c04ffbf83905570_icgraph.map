@@ -1,7 +1,0 @@
-<map id="sfui::Window::updateView" name="sfui::Window::updateView">
-<area shape="rect" id="Node000001" title="更新当前页面视图。" alt="" coords="436,5,609,32"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_window.html#ac3654758cf94834f792bb540e3631f2c" title="绘制当前帧到窗口。" alt="" coords="218,5,388,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="420,21,389,21,389,16,420,16"/>
-<area shape="rect" id="Node000003" href="$classsfui_1_1_window.html#a2d60139900440e63f10e535d5287af9b" title="显示首页并进入主循环。" alt="" coords="5,5,170,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="202,21,170,21,170,16,202,16"/>
-</map>

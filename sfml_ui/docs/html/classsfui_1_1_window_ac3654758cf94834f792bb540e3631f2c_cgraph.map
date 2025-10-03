@@ -1,5 +1,0 @@
-<map id="sfui::Window::drawFrame" name="sfui::Window::drawFrame">
-<area shape="rect" id="Node000001" title="绘制当前帧到窗口。" alt="" coords="5,5,176,32"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_window.html#a51c77efef7c5084e0c04ffbf83905570" title="更新当前页面视图。" alt="" coords="224,5,397,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,16,208,16,208,21,176,21"/>
-</map>

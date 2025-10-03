@@ -1,7 +1,0 @@
-<map id="sfui::ComplexPage::updateView" name="sfui::ComplexPage::updateView">
-<area shape="rect" id="Node000001" title="更新视图，分别更新控件和交互内容的视图" alt="" coords="5,39,146,81"/>
-<area shape="rect" id="Node000002" href="$classsfui_1_1_control_page.html#ad29178eb40aac85f0b802f985c08582a" title="根据绑定窗口的大小来更新界面视图" alt="" coords="199,5,330,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,45,183,38,184,44,147,50"/>
-<area shape="rect" id="Node000003" href="$classsfui_1_1_interactive_page.html#a4560481c118112bb9d5cad056b41ec46" title="根据绑定窗口的实时状态来更新界面视图" alt="" coords="194,72,335,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,70,179,76,178,81,146,75"/>
-</map>
