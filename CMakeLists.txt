@@ -1,5 +1,5 @@
 # 指定最低的 CMake 版本要求，这里要求版本 3.8 或更高
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.26)
 
 # 如果支持，启用 MSVC 编译器的热重载功能（用于调试时的更高效率）
 if (POLICY CMP0141)
@@ -8,7 +8,7 @@ endif ()
 
 set(CMAKE_CXX_STANDARD 23)
 
-project(GAME)
+project(adventure_game)
 
 # 设置 SFML动态库 路径
 set(SFML_DIR _library/SFML-2.6.1)
@@ -25,9 +25,7 @@ include_directories(
         "${SFMLUI_INCLUDE}/core/window"
         "${SFMLUI_INCLUDE}/test"
         "${SFML_DIR}/include"
-
         "game/include/pages"
-
         "include/game"
         "include/core/tool"
         "include/core/audio"
@@ -38,7 +36,7 @@ link_directories(${SFML_DIR}/lib)
 # 设置库文件目录
 #link_directories("_library/box2d/lib")
 # 添加源文件
-add_executable(GAME
+add_executable(adventure_game
         "src/core/window/Window.cpp"
         "src/test/main.cpp"
         "src/core/message/ActiveKeyBinding.cpp"
@@ -48,31 +46,16 @@ add_executable(GAME
         "src/customizable/components/TextureItem.cpp"
         "src/core/message/EventBinding.cpp"
         src/customizable/components/textbox.cpp
-        include/customizable/components/textbox.hpp
-        include/customizable/components/inputbox.hpp
         include/core/tool.hpp
         src/customizable/components/inputbox.cpp
-        include/customizable/components/Circle.hpp
-        include/customizable/components/ParticleBuilder.hpp
-        include/customizable/components/timepiece.hpp
-        include/game/player.hpp
-        include/game/hitbox.hpp
-        include/game/boss.hpp
-        include/game/bullet.hpp
-        include/game/playerWithCircle.hpp
-        include/core/tool/co.hpp
-        include/test/tkl.hpp
-        include/customizable/components/Rectangle.hpp
-        include/core/tool/Angle.hpp
         src/game/boss.cpp
-        include/game/test/boss_a.hpp
         src/game/buttle.cpp
-        include/customizable/components/progressBar.hpp
-        include/game/test/player_a.hpp
-        include/core/audio/soundEffect.hpp
-        include/game/item.hpp
-        include/game/test/weapon1.hpp
-        include/game/word.hpp
+        include/game/test/testitems.hpp
+        include/game/Item_Inventory.hpp
+        include/game/base/npc.hpp
+        include/game/test/testnpc.hpp
+        include/game/base/speaker.hpp
+        include/game/base/message_box.hpp
 )
 
 # 链接 SFML 的库
@@ -80,7 +63,7 @@ add_executable(GAME
 set(SFML_LIBS sfml-audio sfml-graphics sfml-network sfml-system sfml-window)
 
 foreach (lib IN LISTS SFML_LIBS)
-    target_link_libraries(GAME
+    target_link_libraries(adventure_game
             debug ${lib}-d
             optimized ${lib}
     )

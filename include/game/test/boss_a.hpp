@@ -219,8 +219,8 @@ namespace game {
             std::for_each(
                 std::execution::par_unseq, abc.begin(), abc.end(),
                 [this](auto &a) {
-                    a.setPosition(getX() + 60 * angle.getCos(), getY() + 60 * angle.getSin());
-                    angle.revolve(2 * sfui::PI / static_cast<float>(abc.size()));
+                    a.setPosition(getX() + 60 * static_cast<float>(angle.getCos()), getY() + 60 * static_cast<float>(angle.getSin()));
+                    angle.revolve(static_cast<float>(2 * sfui::PI )/ static_cast<float>(abc.size()));
                 });
 
             if (distance(player.getX(), player.getY(), getX(), getY()) > 1000) {

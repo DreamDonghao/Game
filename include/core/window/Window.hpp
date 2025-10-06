@@ -49,7 +49,7 @@ namespace sfui {
     /**
      * @class Window
      * @brief 窗口类，负责窗口创建、页面管理、事件循环、全屏切换等。
-     */--
+     */
     class Window {
     public:
         /**

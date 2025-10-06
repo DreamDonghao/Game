@@ -3,7 +3,7 @@
 //
 #ifndef BULLET_HPP
 #define BULLET_HPP
-#include <hitbox.hpp>
+#include <base/hitbox.hpp>
 #include <algorithm>
 #include <execution>
 #include <tool.hpp>

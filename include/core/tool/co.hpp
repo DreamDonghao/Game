@@ -7,84 +7,13 @@
 #include <exception>
 
 namespace sfui {
-    template<typename ReturnType>
     struct Task {
         struct promise_type {
             Task get_return_object() {
                 return Task(std::coroutine_handle<promise_type>::from_promise(*this));
             }
 
-            [[nodiscard]] std::suspend_never initial_suspend() const { return {}; }
-            [[nodiscard]] std::suspend_always final_suspend() const noexcept { return {}; }
-
-            void return_value(ReturnType val) { m_val = val; }
-
-            auto yield_value(ReturnType val) {
-                m_val = val;
-                return std::suspend_always{};
-            }
-
-            void unhandled_exception() const { std::terminate(); }
-            ReturnType m_val;
-        };
-
-        explicit Task(std::coroutine_handle<promise_type> h)
-            : m_coroutine(h) {
-        }
-
-        Task(const Task &) = delete;
-
-        Task &operator=(const Task &) = delete;
-
-        Task(Task &&other) noexcept
-            : m_coroutine(other.m_coroutine) {
-            other.m_coroutine = nullptr;
-        }
-
-        Task &operator=(Task &&other) noexcept {
-            if (this != &other) {
-                if (m_coroutine) m_coroutine.destroy();
-                m_coroutine = other.m_coroutine;
-                other.m_coroutine = nullptr;
-            }
-            return *this;
-        }
-
-        ~Task() {
-            if (m_coroutine) {
-                if (!m_coroutine.done())
-                    m_coroutine.resume();
-                m_coroutine.destroy();
-            }
-        }
-
-        void resume(){
-            if (!m_coroutine.done()) {
-                m_coroutine.resume();
-            }
-        }
-
-        ReturnType getValue() {
-            return m_coroutine.promise().m_val;
-        }
-
-        [[nodiscard]] bool done() const {
-            return !m_coroutine || m_coroutine.done();
-        }
-
-    private:
-        std::coroutine_handle<promise_type> m_coroutine;
-    };
-
-
-    template<>
-    struct Task<void> {
-        struct promise_type {
-            Task get_return_object() {
-                return Task(std::coroutine_handle<promise_type>::from_promise(*this));
-            }
-
-            [[nodiscard]] std::suspend_never initial_suspend() const { return {}; }
+            [[nodiscard]] std::suspend_always initial_suspend() const { return {}; }
             [[nodiscard]] std::suspend_always final_suspend() const noexcept { return {}; }
 
             void return_void() const {
@@ -93,7 +22,7 @@ namespace sfui {
             void unhandled_exception() const { std::terminate(); }
         };
 
-        explicit Task(std::coroutine_handle<promise_type> h)
+        explicit Task(const std::coroutine_handle<promise_type> h)
             : m_coroutine(h) {
         }
 
@@ -120,7 +49,7 @@ namespace sfui {
         }
 
         // ReSharper disable once CppMemberFunctionMayBeConst
-        void resume(){
+        void resume() {
             if (!m_coroutine.done()) {
                 m_coroutine.resume();
             }
@@ -132,6 +61,29 @@ namespace sfui {
 
     private:
         std::coroutine_handle<promise_type> m_coroutine;
+    };
+
+    class TaskScheduler {
+    public:
+        TaskScheduler() = default;
+
+        ~TaskScheduler() = default;
+
+        void addTask(Task task) {
+            m_tasks.emplace_back(std::move(task));
+        }
+
+        void resume() {
+            std::ranges::for_each(m_tasks, [this](auto &task) {
+                task.resume();
+            });
+            std::erase_if(m_tasks, [](auto &task) {
+                return task.done();
+            });
+        }
+
+    private:
+        std::vector<Task> m_tasks;
     };
 }
 #endif //COROUTINE_HPP

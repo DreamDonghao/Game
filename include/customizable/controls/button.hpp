@@ -14,6 +14,8 @@ namespace sfui {
          */
         Button() : m_area(0,0,0,0) {}
 
+        Button(const float x,const float y, const float w, const float h) : m_area(x,y,w,h) {}
+
         /**
          * @brief 析构函数
          */
@@ -35,7 +37,7 @@ namespace sfui {
             m_width = width;
             m_height = heigth;
             m_textureItem.init(filepath, m_width, m_height, m_x, m_y);
-            m_area.init(
+            m_area.set(
                     m_x, m_y,
                     m_x + static_cast<float>( m_width), m_y +static_cast<float> (m_height)
             );

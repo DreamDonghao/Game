@@ -105,11 +105,11 @@ namespace game {
                     constexpr int tileSize = 32;
                     const int count = y * 32 + x;
 
-                    const sf::Vector2f p0((m_x + x) * tileSize, (m_y + y) * tileSize);
+                    const sf::Vector2f p0(static_cast<float>((m_x + x) * tileSize), static_cast<float>((m_y + y) * tileSize));
                     //printf("%d %d\n",(m_x + x) * tileSize, (m_y + y) * tileSize);
-                    const sf::Vector2f p1((m_x + x) * tileSize + tileSize, (m_y + y) * tileSize);
-                    const sf::Vector2f p2((m_x + x) * tileSize + tileSize, (m_y + y) * tileSize + tileSize);
-                    const sf::Vector2f p3((m_x + x) * tileSize, (m_y + y) * tileSize + tileSize);
+                    const sf::Vector2f p1(static_cast<float>((m_x + x) * tileSize + tileSize),static_cast<float> ((m_y + y) * tileSize));
+                    const sf::Vector2f p2(static_cast<float>((m_x + x) * tileSize + tileSize), static_cast<float>((m_y + y) * tileSize + tileSize));
+                    const sf::Vector2f p3(static_cast<float>((m_x + x) * tileSize), static_cast<float>((m_y + y) * tileSize + tileSize));
                     if (getBlock(x, y)->getId() == Block1::id) {
                         const sf::Vector2f t0(0, 0);
                         const sf::Vector2f t1(tileSize, 0);

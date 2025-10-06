@@ -145,9 +145,13 @@ namespace sfui {
 
         void updateView();
 
-        void setViewCenter(const float &x, const float &y) {
-            mi_x = x;
-            mi_y = y;
+        void setWorldViewCenter(const float &x, const float &y) {
+            m_worldViewCenter.x = x;
+            m_worldViewCenter.y = y;
+        }
+
+        void setWorldViewCenter(const sf::Vector2f worldViewCenter) {
+            m_worldViewCenter = worldViewCenter;
         }
 
     protected:
@@ -177,8 +181,7 @@ namespace sfui {
 
         double m_ratio = 1; ///< 当前缩放比例
         sf::View m_view;
-        float mi_x = 0.0; ///< 视图中心x坐标
-        float mi_y = 0.0; ///< 视图中心y坐标
+        sf::Vector2f m_worldViewCenter{0.0f, 0.0f};
         // 窗口大小
         WindowSize m_windowSize;
     };

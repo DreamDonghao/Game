@@ -67,7 +67,7 @@ namespace sfui {
             handleEventInput();
             // 处理页面事件消息
             m_pages[m_nowPageTitle]->executeEventBinding(m_event);
-            // 更新界面内容
+
             m_pages[m_nowPageTitle]->updateByMessage();
         }
     }

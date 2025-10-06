@@ -101,7 +101,7 @@ namespace sfui {
          * @brief 获取SFML文本对象（用于绘制）
          * @return SFML的Text对象引用
          */
-        const sf::Text &getSprite() const {
+        const sf::Text &getSprite()const{
             return m_text;
         }
 

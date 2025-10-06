@@ -1,4 +1,5 @@
 #pragma once
+#include <cassert>
 
 namespace sfui {
     /**
@@ -6,45 +7,30 @@ namespace sfui {
      */
     class Area {
     public:
-        /**
-         * @brief 默认构造函数
-         */
-        Area(const float left,float up,float right,float lower):m_left(left),m_up(up),m_right(right),m_lower(lower){}
-
-        /**
-         * @brief 初始化区域
-         * @param left 左边界
-         * @param up 上边界
-         * @param right 右边界
-         * @param lower 下边界
-         * @return 是否初始化成功
-         */
-        bool init(const float left, const float up, const float right, const float lower) {
-            m_left = left;
-            m_up = up;
-            m_right = right;
-            m_lower = lower;
-            return true;
+        Area(const float minX, const float maxX, const float minY, const float maxY)
+            : m_minX(minX), m_maxX(maxX), m_minY(minY), m_maxY(maxY) {
         }
 
-        /**
-         * @brief 判断一个坐标是否在区域内
-         * @param x X坐标
-         * @param y Y坐标
-         * @return 是否在区域内
-         */
-        bool isInArea(const int &x, const int &y) const {
-            if (m_left <= x && x <= m_right && m_up <= y && y <= m_lower) {
+        void set(const float minX, const float maxX, const float minY, const float maxY) {
+            assert(minX <= maxX && "Area: minX must be <= maxX");
+            assert(minY <= maxY && "Area: minY must be <= maxY");
+            m_minX = minX;
+            m_maxX = maxX;
+            m_minY = minY;
+            m_maxY = maxY;
+        }
+
+        [[nodiscard]] bool isInArea(const float &x, const float &y) const {
+            if (m_minX <= x && x <= m_maxX && m_minY <= y && y <= m_maxY) {
                 return true;
-            } else {
-                return false;
             }
+            return false;
         }
 
     private:
-        float m_left = 0;  ///< 左边界
-        float m_up = 0;    ///< 上边界
-        float m_right = 0; ///< 右边界
-        float m_lower = 0; ///< 下边界
+        float m_minX = 0;
+        float m_maxX = 0;
+        float m_minY = 0;
+        float m_maxY = 0;
     };
 }

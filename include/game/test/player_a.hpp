@@ -26,11 +26,11 @@ namespace game {
 
         void draw(sf::RenderWindow &window) const {
             sf::Sprite sprite;
-            const sfui::Rectangle a(m_nowItemIndex*210+110,30+100,220,220,sf::Color::Cyan,sf::Color::Cyan);
+            const sfui::Rectangle a(static_cast<float>(m_nowItemIndex*210+110),30+100,220,220,sf::Color::Cyan,sf::Color::Cyan);
             a.draw(window);
             for (size_t i = 0; i < m_items.size(); ++i) {
                 sprite.setTexture(m_items[i]->getIcon());
-                sprite.setPosition( i * 220 ,30);
+                sprite.setPosition( static_cast<float>(i * 220) ,30);
                 sprite.setScale(
                     200 / static_cast<float>(m_items[i]->getIcon().getSize().x),
                     200 / static_cast<float>(m_items[i]->getIcon().getSize().y)
@@ -49,7 +49,7 @@ namespace game {
     public:
         Player_a(const float x, const float y, const float hitboxWidth, const float hitboxHeight,
                  const float speed, const double health)
-            : Player(x, y, hitboxWidth, hitboxHeight, speed, health), m_noDodgeSpeed(speed) {
+            : Player(x, y, hitboxWidth, hitboxHeight, speed,sfui::Angle(0.0), health), m_noDodgeSpeed(speed) {
             m_items.addItem(std::make_unique<Weapon1>("wp1", "assets/images/gun.png"));
             m_items.addItem(std::make_unique<bow1>("bow1", "assets/images/bow1.png"));
         }
@@ -75,13 +75,12 @@ namespace game {
             while (getHealth() > 0) {
                 changeHealth(-enemyBarrage.dealDamage(getHitbox()));
                 if (m_isDodge) {
-                    setSpeed(m_dodgeSpeed);
                     m_isDodge = false;
                     t2.reset();
                 }
 
                 if (t2.elapsedMs() > 50) {
-                    setSpeed(m_noDodgeSpeed);
+
                 }
                 m_items.getNowItem()->use( getX(), getY(), mouse,barrage, boss);
                 co_await std::suspend_always{};
@@ -103,7 +102,6 @@ namespace game {
         sfui::TimeInterval dt;
         float m_dodgeSpeed{87};
         float m_noDodgeSpeed;
-
 
         Inventory m_items;
     };

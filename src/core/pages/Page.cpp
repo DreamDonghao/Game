@@ -29,7 +29,7 @@ namespace sfui {
         m_activeKeyBinding.bindKey(key, action);
     }
 
-    void Page::eventMap(Key key, const Action &action) {
+    void Page::eventMap(const Key key, const Action &action) {
         m_eventBinding.bindEvent(key, action);
     }
 
@@ -46,7 +46,7 @@ namespace sfui {
     }
 
     void Page::executeEventBinding(const sf::Event &event) {
-        m_eventBinding.update(event);
+        m_eventBinding.update(event,mp_window->getSfRenderWindow(),mp_window->getSfRenderWindow().getView());
     }
 
     sf::Color Page::getBackgroundColor() const { return m_backgroundColor; }
@@ -57,7 +57,8 @@ namespace sfui {
             static_cast<float>(m_windowSize.x),
             static_cast<float>(m_windowSize.y)
         );
-        m_view.setCenter(mi_x, mi_y);
+        m_view.setCenter(m_worldViewCenter);
+        m_view.setSize(m_view.getSize().x, -m_view.getSize().y);
         mp_window->getSfRenderWindow().setView(m_view);
     }
 

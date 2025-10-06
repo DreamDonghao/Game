@@ -28,6 +28,18 @@ namespace game {
             m_y = y;
         }
 
+        void moveX(const float x) {
+            m_x += x;
+        }
+
+        void moveY(const float y) {
+            m_y += y;
+        }
+
+        void move(float x, float y) {
+            m_x += x;
+            m_y += y;
+        }
         void setWidth(const float width) {
             m_width = width;
         }

@@ -3,114 +3,111 @@
 //
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
-#include <hitbox.hpp>
-//#include <timepiece.hpp>
-
+#include <array>
+#include "co.hpp"
+#include <base/entity.hpp>
+#include "Circle.hpp"
+#include <test/testitems.hpp>
+#include <Item_Inventory.hpp>
 
 namespace game {
-    class Player {
+    class Player : public Entity {
     public:
-        /**
-        * @brief 构造函数，T 为 void 时调用
-        *
-        * @param x 玩家初始横坐标
-        * @param y 玩家初始纵坐标
-        * @param hitboxWidth 碰撞盒宽度
-        * @param hitboxHeight 碰撞盒高度
-        * @param speed 玩家移动速度
-        * @param health 玩家生命值
-        */
         Player(const float x, const float y, const float hitboxWidth, const float hitboxHeight,
-               const float speed, const double health)
-            : m_x(x), m_y(y), m_hitbox(x, y, hitboxWidth, hitboxHeight), m_speed(speed), m_health(health) {
+               const float speed, const float maxSpeed, const double health)
+            : Entity(x, y, hitboxWidth, hitboxHeight, speed, sfui::Angle(0), health), m_maxSpeed(maxSpeed) {
+        }
+
+        ~Player() override = default;
+
+        void moveLift() {
+            m_moveFlags[Left] = true;
+            setSpeed(m_maxSpeed);
+        }
+
+        void moveUp() {
+            m_moveFlags[Up] = true;
+            setSpeed(m_maxSpeed);
+        }
+
+        void moveRight() {
+            m_moveFlags[Right] = true;
+            setSpeed(m_maxSpeed);
+        }
+
+        void moveDown() {
+            m_moveFlags[Down] = true;
+            setSpeed(m_maxSpeed);
+        }
+
+        void turn() {
+            sf::Vector2f dir{0.f, 0.f};
+            if (m_moveFlags[Left]) {
+                dir.x -= 1.f;
+            }
+            if (m_moveFlags[Right]) {
+                dir.x += 1.f;
+            }
+            if (m_moveFlags[Up]) {
+                dir.y -= 1.f;
+            }
+            if (m_moveFlags[Down]) {
+                dir.y += 1.f;
+            }
+
+            if (dir.x != 0.f || dir.y != 0.f) {
+                setMoveAngle(std::atan2(-dir.y, dir.x));
+            }
+        }
+
+        void resetMoveStatu() {
+            m_moveFlags.fill(false);
+            setSpeed(0.0f);
+        }
+
+        void obtainItems(const std::string &name, int num) {
+            const auto it =
+                    std::ranges::find_if(
+                        m_items, [&](auto &item) {
+                            return item.first->getName() == name;
+                        });
+
+            if (it != m_items.end()) {
+                it->second += num;
+            } else {
+                m_items.emplace_back(ItemFactory::instance().create(name), num);
+            }
         }
 
 
-        virtual ~Player() = default;
-
-        void setX(const float x) {
-            m_x = x;
-            m_hitbox.setPosition(m_x, m_y);
+        virtual sfui::Task update(const float &dt) {
+            while (isAlive()) {
+                m_itemInventory.printItemMessage();
+                turn();
+                updateMovement(dt);
+                resetMoveStatu();
+                co_await std::suspend_always{};
+            }
+            co_return;
         }
 
-        void setY(const float y) {
-            m_y = y;
-            m_hitbox.setPosition(m_x, m_y);
+        virtual void draw(sf::RenderWindow &window) {
+            circle.setPosition(getX(), getY());
+            circle.setRadius(10);
+            circle.draw(window);
         }
-
-        void setSpeed(const float speed) {
-            m_speed = speed;
-        }
-
-        void moveX(const float x) {
-            m_x += x;
-            m_hitbox.setPosition(m_x, m_y);
-        }
-
-        void moveY(const float y) {
-            m_y += y;
-            m_hitbox.setPosition(m_x, m_y);
-        }
-
-        void moveLift(const double dt) {
-            m_x -= m_speed * static_cast<float>(dt);
-            //m_time.reset();
-            m_hitbox.setPosition(m_x, m_y);
-        }
-
-        void moveUp(const double dt) {
-            m_y -= m_speed * static_cast<float>(dt);
-            //m_time.reset();
-            m_hitbox.setPosition(m_x, m_y);
-        }
-
-        void moveRight(const double dt) {
-            m_x += m_speed * static_cast<float>(dt);
-            //m_time.reset();
-            m_hitbox.setPosition(m_x, m_y);
-        }
-
-        void moveDown(const double dt) {
-            std::cout<<dt<<std::endl;
-            m_y += m_speed * static_cast<float>(dt);
-            //m_time.reset();
-            m_hitbox.setPosition(m_x, m_y);
-        }
-
-        [[nodiscard]] float getX() const {
-            return m_x;
-        }
-
-        [[nodiscard]] float getY() const {
-            return m_y;
-        }
-
-        void setHealth(const float health) {
-            m_health = health;
-        }
-
-        void changeHealth(const double health) {
-            m_health += health;
-        }
-
-        [[nodiscard]] double getHealth() const {
-            return m_health;
-        }
-
-        [[nodiscard]] Hitbox &getHitbox() {
-            return m_hitbox;
-        }
-
-        virtual void draw(sf::RenderWindow &window) = 0;
 
     private:
-        //sfui::TimeInterval m_time;
-        float m_x;
-        float m_y;
-        Hitbox m_hitbox;
-        float m_speed;
+        sfui::Circle circle;
 
-        double m_health;
+        enum Direction { Left = 0, Up = 1, Right = 2, Down = 3 };
+
+        std::array<bool, 4> m_moveFlags{false, false, false, false};
+        float m_maxSpeed;
+
+        std::vector<std::pair<std::unique_ptr<Item>, int> > m_items;
+
+        Item_Inventory m_itemInventory{&m_items};
     };
 } // game
 

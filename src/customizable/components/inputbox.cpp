@@ -14,13 +14,12 @@
 #include "tool.hpp"
 #pragma comment(lib, "imm32.lib")
 namespace sfui{
-
         InputBox::InputBox(Mouse &mouse, const float x, const float y, const int width, const int height, const sf::Color& color,
                            const unsigned int textSize, const sf::RenderWindow &renderWindow)
             :  m_x(x), m_y(y), m_width(width), m_height(height), m_textbox(
                   m_x, m_y, textSize, color,
                   R"(C:\Windows\Fonts\msyh.ttc)",
-                  "hello)"), m_inputArea(x, y, x + width, y + height), m_mouse(mouse) {
+                  "hello)"), m_inputArea(x, y, x +static_cast<float>( width), y + static_cast<float>(height)), m_mouse(mouse) {
             hwnd = renderWindow.getSystemHandle();
             hIMC = ImmGetContext(hwnd);
             ImmAssociateContext(hwnd, hIMC);
@@ -29,7 +28,9 @@ namespace sfui{
         void InputBox::run(const sf::Event &event) {
             if (m_mouse.isLeftPressed()) {
                 // 获取鼠标位置，设置 IME 提示框位置
-                if (m_inputArea.isInArea(m_mouse.getWindowPos().x, m_mouse.getWindowPos().y)) {
+                if (m_inputArea.isInArea(
+                    static_cast<float>(m_mouse.getWindowPos().x),
+                    static_cast<float>(m_mouse.getWindowPos().y))) {
                     isActive = true;
                     POINT pt;
                     GetCursorPos(&pt);         // 屏幕坐标

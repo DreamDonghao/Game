@@ -22,7 +22,6 @@ namespace game {
         sfui::TextBox textBox;
 
 
-        game::Player_a player;
         game::Boss_a boss;
         sfui::Task<void> bossUpdate;
         sfui::Task<void> playerUpdate;
@@ -46,7 +45,7 @@ namespace game {
               textBox(400, 300, 100, sf::Color::White,
                       R"(assets/ttf/zh-cn.ttf)",
                       L"F11 全屏\n B 开始\n 空格 冲刺\n 数字 切换武器"),
-              player(0, 0.f, 50.f, 50.f, 100, 100),
+
 
               boss(500, 0, 100, 100, 10000),
               bossUpdate(boss.update(deltaTime,barrage, myBarrage, player)),
@@ -116,7 +115,7 @@ namespace game {
                     isEnd = true;
                 }
             }
-            setViewCenter(player.getX(), player.getY());
+            setWorldViewCenter(player.getX(), player.getY());
         }
 
         // 渲染页面内容到窗口

@@ -55,7 +55,7 @@ namespace sfui {
          * @brief 检查事件并执行对应的行为
          * @param event SFML事件
          */
-        void update(const sf::Event &event);
+        void update(const sf::Event &event, const sf::RenderWindow &window, const sf::View &view);
 
     private:
         std::unordered_map<Key, Action> m_keyBindings;          ///< 键盘事件映射表
